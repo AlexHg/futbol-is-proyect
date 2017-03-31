@@ -9,7 +9,7 @@
             <div class="form-group">
                 <label class="control-label">Correo</label>
                 <div class="form-control-cont">
-                    <input type="email"  class="form-control full"  data-validation="email" data-validation-error-msg="no has proporcionado un correo valido, verifique  su entrada" id="example-email" name="example-email" class="form-control" placeholder="alex@ingdesoft.com.mx">
+                    <input type="email"  class="form-control full"  data-validation="email" data-validation-error-msg="No has proporcionado un correo valido, verifique su entrada" id="example-email" name="example-email" class="form-control" placeholder="alex@ingdesoft.com.mx">
                 </div>
             </div>
             <div class="form-group">
@@ -19,14 +19,15 @@
                 </div>
             </div>
             <div>
-                No tienes una cuenta?<a href=registrarCuenta.php> Registrate</a>
+                No tienes una cuenta?<a href='registrarCuenta'> Registrate</a>
                 <br><br>
-                <a href=recuperarContrasena.php>Recuperar Contraseña</a>
+                <a href='recuperarCuenta'>Recuperar Contraseña</a>
                 <br><br>
             </div>
             <div>
                 <div class="box">
                     <input id="cancelarInvitacion" type="submit" class="btn btn-primary" value="Iniciar sesión"/>
+                    <br><br>
                 </div>
             </div>
         </form> 

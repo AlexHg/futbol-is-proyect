@@ -1,5 +1,5 @@
 <?php
-require 'lib/flight/Flight.php';
+require 'core/flight/Flight.php';
 Flight::set('flight.views.path', 'source/view');
  
 Flight::route("/", function(){
@@ -17,7 +17,6 @@ Flight::route("/", function(){
 
 Flight::route('/iniciarSesion', function(){
     #if session is not open
-    
     View::render('template/ini.noaside'); #Html head, menu, header
     View::render('iniciarSesion'); #html content
     View::render('template/fin'); #Html footer
@@ -25,9 +24,20 @@ Flight::route('/iniciarSesion', function(){
     //Flight::redirect('/');
 });
 
-Flight::route('/register', function(){
+Flight::route('/registrarCuenta', function(){
     #if session is not open
-    echo "Registro de usuario";
+    View::render('template/ini.noaside'); #Html head, menu, header
+    View::render('registrarCuenta'); #html content
+    View::render('template/fin'); #Html footer
+    #if is -> redirect to /
+    //Flight::redirect('/');
+});
+
+Flight::route('/recuperarCuenta', function(){
+    #if session is not open
+    View::render('template/ini.noaside'); #Html head, menu, header
+    View::render('recuperarContrasena'); #html content
+    View::render('template/fin'); #Html footer
     #if is -> redirect to /
     //Flight::redirect('/');
 });
