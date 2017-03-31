@@ -1,4 +1,7 @@
 <?php
+#lib
+require "lib/view.php";
+
 #Database require
 
 #Database ini
@@ -9,3 +12,4 @@
 require 'routing.php';
 
 #Session end
+

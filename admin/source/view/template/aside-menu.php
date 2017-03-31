@@ -3,9 +3,9 @@
         <h3>
             Alejandro Hernández
             <small>Administrator</small>
-        </h3>     
+        </h3>
     </div>
-    <ul>       
+    <ul>
         <li class="submenu active" >
             <a href="#">
                 <span>
@@ -37,10 +37,10 @@
                 <li><a href="#"><span><i class="ti-plus"></i>Nuevo Equipo</span></a></li>
                 <li><a href="#"><span><i class="ti-eye"></i>Todos los Equipos</span></a></li>
             </ul>
-        </li>   
+        </li>
         <li>
             <a href="#">
-                <span><i class="ti-folder"></i>Solicitudes</span>          
+                <span><i class="ti-folder"></i>Solicitudes</span>
             </a>
         </li>
         <li class="submenu" >
@@ -52,12 +52,12 @@
                 <li><a href="#"><span><i class="ti-plus"></i>Nuevo Usuario</span></a></li>
                 <li><a href="#"><span><i class="ti-eye"></i>Todos los Usuarios</span></a></li>
                 <li><a href="#"><span><i class="ti-medall"></i>Roles de Usuario</span></a></li>
-            </ul>     
+            </ul>
         </li>
         <li>
             <a href="#">
                 <span><i class="ti-calendar"></i>Calendario</span>
             </a>
-        </li>    
-    </ul>        
+        </li>
+    </ul>
 </aside>
