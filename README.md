@@ -15,6 +15,8 @@ Las vistas
     DEBERN IR EN LA CARPETA admin/source/view Y DEBEN TENER UN NOMBRE DESCRIPTIVO DE 
     LO QUE MUESTRAN O DE PARA QUE SIVE:
     iniciarSesion.php, registrarCuenta.php, torneoGeneral.php, tablaPartidos.php, etc.
+    AL CREAR UNA VISTA, EN ELLA SE DEBEN EXCLUIR LOS HEADERS Y FOOTERS, POR LO TANTO SOLO DEBE TOMARSE EN CUENTA 
+    EL CONTENIDO DE LA ETIQUETA <section id="content">
 
 Los controladores
 
