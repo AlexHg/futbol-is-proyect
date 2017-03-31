@@ -20,7 +20,6 @@
 </head>
 <body>
     <div id="page-content">
-        <?php require "header.php"; ?>
+        <?php require "header.nosession.php"; ?>
         <section id="container">
-            <?php require "aside-menu.php"; ?>
-            <section id="content">
+            <section id="content" style="width: calc(100% - 35px);">

@@ -23,7 +23,19 @@
         document.querySelector('#openMenuB').style="";
     }
     </script>
-    <!-- Navigator -->
+
+    <!--Codigo de validacion-->
+    <script src="source/js/form-validator/jquery.form-validator.js"></script>
+    <script>
+        $.validate({
+            modules : 'location, date, security, file, toggleDisabled',
+            disabledFormFilter : 'form.toggle-disabled'
+        });
+        // Restrict presentation length
+        $('#presentation').restrictLength( $('#pres-max-length') );
+    </script>
+
+    <!-- Navigator
     <script src="source/js/navigator.js" async="async"></script>
     <!-- end Navigator -->
 </body>

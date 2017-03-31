@@ -1,23 +1,26 @@
 <?php
 require 'lib/flight/Flight.php';
 Flight::set('flight.views.path', 'source/view');
-
+ 
 Flight::route("/", function(){
-    Flight::redirect('/demo');
+    //Flight::redirect('/demo');
     #if session is open & the user have the correct role
     /*echo "inicio<br>";
     if(isset($_GET["u"]) ){
         echo $_GET["u"];
     }*/
     #if is not opened -> redirect to /login
-    //Flight::redirect('/login');
+    Flight::redirect('/iniciarSesion');
     #if have not the correct role -> redirect to /login
     //Flight::redirect('/inaccesible');
 });
 
-Flight::route('/login', function(){
+Flight::route('/iniciarSesion', function(){
     #if session is not open
-    echo "Inicio de sesión";
+    
+    View::render('template/ini.noaside'); #Html head, menu, header
+    View::render('iniciarSesion'); #html content
+    View::render('template/fin'); #Html footer
     #if is -> redirect to /
     //Flight::redirect('/');
 });

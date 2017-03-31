@@ -1,6 +1,7 @@
 <?php
-#lib
+#libs
 require "lib/view.php";
+require "lib/controller.php";
 
 #Database require
 

@@ -1,3 +1,4 @@
+
 @media (max-width: 990px){
     #navigator{
         position: fixed;
@@ -408,3 +409,12 @@ code{
 #user h3 small{
     font-weight: 500;
 }
+.help-block{
+        position:absolute;
+        right:-310px;
+        width:300px;
+        display:flex;
+        text-align:left;
+        align-items:center;
+        height:45px;
+    } 
