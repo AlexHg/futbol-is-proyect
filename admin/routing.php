@@ -4,15 +4,8 @@ Flight::set('flight.views.path', 'source/view');
 
 #CONTROLADORES
 Flight::route('/action/@controller', function($controller){
-    #if session is open & the user have the correct role
     Controller::run($controller);
     Controller::print_path($controller);
-    
-    #if is not opened -> redirect to /login
-    //Flight::redirect('/iniciarSesion');
-
-    #if have not the correct role -> redirect to /login
-    //Flight::redirect('/inaccesible');
 });
 
 
@@ -20,61 +13,68 @@ Flight::route('/action/@controller', function($controller){
 #Inicio - Raiz
 Flight::route("/", function(){
     //Flight::redirect('/demo');
-    #if session is open & the user have the correct role
-    /*echo "inicio<br>";
-    if(isset($_GET["u"]) ){
-        echo $_GET["u"];
-    }*/
-
-    #if is not opened -> redirect to /login
-    Flight::redirect('/iniciarSesion');
-
-    #if have not the correct role -> redirect to /login
-    //Flight::redirect('/inaccesible');
+    if(isset($_SESSION["role"])){
+        if($_SESSION["role"] > -1 ){
+            View::render('template/ini'); #Html head, menu, header
+            View::render('demo'); #html content
+            View::render('template/fin'); #Html footer
+        }else{
+            Flight::redirect('/inaccesible');
+        }
+    }else{
+        Flight::redirect('/iniciarSesion');
+    }
 });
 #Final - Raiz
 
 
-# Inicio - Sin sesión ni permisos
+# Inicio - Solo sin sesión ni permisos
 Flight::route('/iniciarSesion', function(){
     #if session is not open
-    View::render('template/ini.noaside'); #Html head, menu, header
-    View::render('iniciarSesion'); #html content
-    View::render('template/fin'); #Html footer
-
-    #if is -> redirect to /
-    //Flight::redirect('/');
+    if(!isset($_SESSION["role"])){
+        View::render('template/ini.noaside'); #Html head, menu, header
+        View::render('iniciarSesion'); #html content
+        View::render('template/fin'); #Html footer
+    }else{
+        Flight::redirect('/');
+    }
 });
 
 Flight::route('/registrarCuenta', function(){
     #if session is not open
-    View::render('template/ini.noaside'); #Html head, menu, header
-    View::render('registrarCuenta'); #html content
-    View::render('template/fin'); #Html footer
-
-    #if is -> redirect to /
-    //Flight::redirect('/');
+    if(!isset($_SESSION["role"])){
+        View::render('template/ini.noaside'); #Html head, menu, header
+        View::render('registrarCuenta'); #html content
+        View::render('template/fin'); #Html footer
+    }else{
+        Flight::redirect('/');
+    }
 });
 
 Flight::route('/recuperarCuenta', function(){
     #if session is not open
-    View::render('template/ini.noaside'); #Html head, menu, header
-    View::render('recuperarContrasena'); #html content
-    View::render('template/fin'); #Html footer
-
-    #if is -> redirect to /
-    //Flight::redirect('/');
+    if(!isset($_SESSION["role"])){
+        View::render('template/ini.noaside'); #Html head, menu, header
+        View::render('recuperarContrasena'); #html content
+        View::render('template/fin'); #Html footer
+    }else{
+        Flight::redirect('/');
+    }
 });
 
-Flight::route('/demo', function(){
-    $hola = "Hola a todos";
-    #if session is open & the user have the correct role
-    View::render('template/ini', array("hola" => $hola)); #Html head, menu, header
+Flight::route('/creditos', function(){
+
+    View::render('template/ini.noaside'); #Html head, menu, header
+    View::render('creditos'); #html content
+    View::render('template/fin'); #Html footer
+
+});
+
+Flight::route('/designDemo', function(){
+    View::render('template/ini'); #Html head, menu, header
     View::render('demo'); #html content
     View::render('template/fin'); #Html footer
 
-    #if is not -> redirect to /login
-    //Flight::redirect('/')
 });
 # Final - Sin sesión ni permisos
 

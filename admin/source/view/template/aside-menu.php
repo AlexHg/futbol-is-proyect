@@ -1,8 +1,8 @@
 <aside id="navigator">
     <div id="user">
         <h3>
-            Alejandro Hernández
-            <small>Administrator</small>
+            <?php echo $_SESSION["name"]; ?>
+            <small><?php echo $_SESSION["rolename"]; ?></small>
         </h3>
     </div>
     <ul>

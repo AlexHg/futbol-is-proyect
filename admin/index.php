@@ -2,12 +2,10 @@
 #core
 require "core/view.php";
 require "core/controller.php";
-
-#Database require
-
-#Database ini
+require "core/model.php";
 
 #Session start 
+session_start();
 
 #Content require
 require 'routing.php';

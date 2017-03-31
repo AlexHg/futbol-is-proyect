@@ -7,9 +7,9 @@
         </div>
         <div id="topbar-op" style="justify-content:flex-end;">
             <nav>
-                <a href="#">Registrar cuenta</a>
-                <a href="#">Iniciar sesión</a>
-                <a href="#">Creditos</a>
+                <a href="iniciarSesion">Iniciar sesión</a>
+                <a href="registrarCuenta">Registrar cuenta</a>
+                <a href="creditos">Creditos</a>
             </nav>
         </div>
     </header>

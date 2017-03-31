@@ -4,7 +4,7 @@
 </div>
 <div id="content-body" style="display:flex; justify-content:center; align-items:center; min-height:60vh;">
     <center>
-        <form class="form-control" role="form" style="transform:scale(1.2)">         
+        <form class="form-control" role="form" style="transform:scale(1.2)" action="action/iniciarSesion.submit">         
             <h3>Ingresa los siguientes datos requeridos:</h3>                 
             <div class="form-group">
                 <label class="control-label">Correo</label>
