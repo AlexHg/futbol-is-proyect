@@ -1,6 +1,6 @@
 <?php
 class Controller{
-    public function render($path, $_VIEW = NULL){
+    public function run($path, $_CONTROLLER = NULL){
         require Controller::path_base().$path.".php";
     }
     public function path_complete($path){

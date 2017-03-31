@@ -1,7 +1,23 @@
 <?php
 require 'core/flight/Flight.php';
 Flight::set('flight.views.path', 'source/view');
- 
+
+#CONTROLADORES
+Flight::route('/action/@controller', function($controller){
+    #if session is open & the user have the correct role
+    Controller::run($controller);
+    Controller::print_path($controller);
+    
+    #if is not opened -> redirect to /login
+    //Flight::redirect('/iniciarSesion');
+
+    #if have not the correct role -> redirect to /login
+    //Flight::redirect('/inaccesible');
+});
+
+
+#VISTAS
+#Inicio - Raiz
 Flight::route("/", function(){
     //Flight::redirect('/demo');
     #if session is open & the user have the correct role
@@ -9,17 +25,23 @@ Flight::route("/", function(){
     if(isset($_GET["u"]) ){
         echo $_GET["u"];
     }*/
+
     #if is not opened -> redirect to /login
     Flight::redirect('/iniciarSesion');
+
     #if have not the correct role -> redirect to /login
     //Flight::redirect('/inaccesible');
 });
+#Final - Raiz
 
+
+# Inicio - Sin sesión ni permisos
 Flight::route('/iniciarSesion', function(){
     #if session is not open
     View::render('template/ini.noaside'); #Html head, menu, header
     View::render('iniciarSesion'); #html content
     View::render('template/fin'); #Html footer
+
     #if is -> redirect to /
     //Flight::redirect('/');
 });
@@ -29,6 +51,7 @@ Flight::route('/registrarCuenta', function(){
     View::render('template/ini.noaside'); #Html head, menu, header
     View::render('registrarCuenta'); #html content
     View::render('template/fin'); #Html footer
+
     #if is -> redirect to /
     //Flight::redirect('/');
 });
@@ -38,6 +61,7 @@ Flight::route('/recuperarCuenta', function(){
     View::render('template/ini.noaside'); #Html head, menu, header
     View::render('recuperarContrasena'); #html content
     View::render('template/fin'); #Html footer
+
     #if is -> redirect to /
     //Flight::redirect('/');
 });
@@ -48,9 +72,27 @@ Flight::route('/demo', function(){
     View::render('template/ini', array("hola" => $hola)); #Html head, menu, header
     View::render('demo'); #html content
     View::render('template/fin'); #Html footer
+
     #if is not -> redirect to /login
+    //Flight::redirect('/')
+});
+# Final - Sin sesión ni permisos
+
+
+# Inicio - Vistas de errores & excepciones
+Flight::route('/inaccesible', function(){
+    echo "No tiene los permisos necesarios para acceder a esta funcionalidad";
 });
 
+Flight::map('notFound', function(){
+    View::render('template/ini.noaside'); #Html head, menu, header
+    View::render('404'); #html content
+    View::render('template/fin'); #Html footer
+});
+# Final - Vistas de errores & excepciones
+
+
+#Inicio - Otros
 Flight::route('/user/[0-9]+', function(){
     echo "hello";
 });
@@ -58,14 +100,8 @@ Flight::route('/user/[0-9]+', function(){
 Flight::route('/users/@name', function($name){
     echo "hello, $name !";
 });
+#Final - Otros
 
-Flight::route('/inaccesible', function(){
-    echo "No tiene los permisos necesarios para acceder a esta funcionalidad";
-});
-
-Flight::map('notFound', function(){
-    echo "404 not found!";
-});
 
 #Flight start
 Flight::start();
