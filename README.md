@@ -8,12 +8,14 @@ http://flightphp.com/learn/
 Se está utilizando actualmente solo para el ruteo 
 
 
+
 CREAR UNA RUTA NUEVA:
 1. entrar a admin/routing.php
 2. agregar una ruta de la forma
   Flight::route("/", function(){ //Contenido ruta- Accion a seguir });
   
   
+
 RENDERIZAR UNA VISTA:
 Normalmente se deberia de incluir en el contenido de una ruta: 
 
