@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Created by PhpStorm.
  * User: christophercastro
@@ -7,17 +6,18 @@
  * Time: 14:29
  */
 require_once 'conexion.php';
+
 class Jugador extends usuario
 {
- private $idJugador;
     const TABLAJ = 'Jugador';
     const TABLAS = 'Solicitud';
+    private $idJugador;
 
-    public function __construct($idJugador,$correo, $nombre, $apellidos, $password, $telefono, $imagen, $isCapitan = false)
- {
-     parent::__construct($correo, $nombre, $apellidos, $password, $telefono, $imagen, $isCapitan);
-    $this->idJugador=$idJugador;
- }
+    public function __construct($idJugador, $correo, $nombre, $apellidos, $password, $telefono, $imagen, $isCapitan = false)
+    {
+        parent::__construct($correo, $nombre, $apellidos, $password, $telefono, $imagen, $isCapitan);
+        $this->idJugador = $idJugador;
+    }
 
     public function guardar()
     {
@@ -33,12 +33,13 @@ class Jugador extends usuario
             $consulta->bindParam(':idJugador', $this->idJugador);
             $consulta->bindParam(':correo', $this->getCorreo());
             $consulta->execute();
-           // $this->idJugador = $conexion->lastInsertId(); not this time bro :(
+            // $this->idJugador = $conexion->lastInsertId(); not this time bro :(
         }
         $conexion = null;
     }
 
-    public  function  enviarSolicitud($IDEquipo,$TipoSolicitud){
+    public function enviarSolicitud($IDEquipo, $TipoSolicitud)
+    {
         $conexion = new Conexion();
         $consulta = $conexion->prepare('INSERT INTO' . self::TABLAS . '(IDEquipo,IDJugador,Tipo_Solicitud) VALUES(:idEquipo,:idJugador,:tipoSolicitud)');
         $consulta->bindParam(':idEquipo', $IDEquipo);

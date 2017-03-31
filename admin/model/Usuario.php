@@ -51,7 +51,7 @@ class Usuario
             $consulta->bindParam(':imagen', $this->imagen);
             $consulta->bindParam(':isCapitan', $this->isCapitan);
             $consulta->execute();
-           // $this->id = $conexion->lastInsertId(); not this time bro :(
+            // $this->id = $conexion->lastInsertId(); not this time bro :(
         }
         $conexion = null;
     }
