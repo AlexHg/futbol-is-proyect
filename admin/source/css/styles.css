@@ -19,7 +19,7 @@
         display: block!important;
     }
     #content{
-        width: 100%!important;
+        width: calc(100% - 70px)!important;
     }
     #navigator{
         overflow:scroll;

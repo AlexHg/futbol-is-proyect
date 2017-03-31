@@ -23,8 +23,8 @@
         document.querySelector('#openMenuB').style="";
     }
     </script>
-    <!-- Navigator 
-    <script src="js/navigator.js" async="async"></script>
+    <!-- Navigator -->
+    <script src="source/js/navigator.js" async="async"></script>
     <!-- end Navigator -->
 </body>
 </html>
