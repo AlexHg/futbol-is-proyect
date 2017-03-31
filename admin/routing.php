@@ -24,9 +24,9 @@ Flight::route('/register', function(){
 
 Flight::route('/demo', function(){
     #if session is open & the user have the correct role
-    require "source/ini.php"; #Html head, menu, header
+    require "source/ini.tlp"; #Html head, menu, header
     require "source/view/demo.html"; #html content
-    require "source/fin.php"; #Html footer
+    require "source/fin.tlp"; #Html footer
     #if is not -> redirect to /login
 });
 
