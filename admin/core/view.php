@@ -7,7 +7,7 @@ class View{
         return View::path_base().$path.".php";
     }
     public function path_base(){
-        return "source/view/";
+        return "view/";
     }
     public function print_path($path){
         echo View::path_base().$path.".php";

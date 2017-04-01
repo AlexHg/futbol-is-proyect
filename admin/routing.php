@@ -1,6 +1,5 @@
 <?php
 require 'core/flight/Flight.php';
-Flight::set('flight.views.path', 'source/view');
 
 #CONTROLADORES
 Flight::route('/action/@controller', function($controller){
