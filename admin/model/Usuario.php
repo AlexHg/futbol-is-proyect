@@ -6,9 +6,10 @@
  * Date: 30/03/17
  * Time: 13:50
  */
+require_once 'conexion.php';
 class Usuario
 {
-    const TABLAU = 'Usuario';
+    const TABLAU = 'usuario';
     private $correo;
     private $nombre;
     private $apellidos;
@@ -17,8 +18,7 @@ class Usuario
     private $imagen;
     private $isCapitan;
 
-    public function __construct($correo, $nombre, $apellidos, $password, $telefono, $imagen, $isCapitan = false)
-    {
+    public function __construct($correo, $nombre, $apellidos, $password, $telefono, $imagen, $isCapitan = 0){
         $this->correo = $correo;
         $this->nombre = $nombre;
         $this->apellidos = $apellidos;
@@ -31,18 +31,18 @@ class Usuario
     public function guardar()
     {
         $conexion = new Conexion();
-        if ($this->correo) /*Modifica*/ {
-            $consulta = $conexion->prepare('UPDATE ' . self::TABLAU . ' SET Correo = :correo, Nombre = :nombre, Apellidos = :apellidos, Password = :password, Telefono = :telefono, Imagen = :imagen, EsCapitan = :isCapitan  WHERE Correo = :correo');
-            $consulta->bindParam(':correo', $this->correo);
-            $consulta->bindParam(':nombre', $this->nombre);
-            $consulta->bindParam(':apellidos', $this->apellidos);
-            $consulta->bindParam(':password', $this->password);
-            $consulta->bindParam(':telefono', $this->telefono);
-            $consulta->bindParam(':imagen', $this->imagen);
-            $consulta->bindParam(':isCapitan', $this->isCapitan);
-            $consulta->execute();
-        } else /*Inserta*/ {
-            $consulta = $conexion->prepare('INSERT INTO' . self::TABLAU . '(Correo,Nombre,Apellidos,Contraseña,Telefono,Imagen,EsCapitan) VALUES( :correo, :nombre, :apellidos, :password, :telefono, :imagen, :isCapitan)');
+         if ($conexion->record_exists(self::TABLAU,'correo',$this->correo))/*Modifica*/ {
+             $consulta = $conexion->prepare('UPDATE ' . self::TABLAU . ' SET Correo = :correo, Nombre = :nombre, Apellidos = :apellidos, Password = :password, Telefono = :telefono, Imagen = :imagen, EsCapitan = :isCapitan  WHERE Correo = :correo');
+             $consulta->bindParam(':correo', $this->correo);
+             $consulta->bindParam(':nombre', $this->nombre);
+             $consulta->bindParam(':apellidos', $this->apellidos);
+             $consulta->bindParam(':password', $this->password);
+             $consulta->bindParam(':telefono', $this->telefono);
+             $consulta->bindParam(':imagen', $this->imagen);
+             $consulta->bindParam(':isCapitan', $this->isCapitan);
+             $consulta->execute();
+         } else /*Inserta */{
+        $consulta = $conexion->prepare('INSERT INTO '.self::TABLAU.' (Correo,Nombre,Apellidos,Password,Telefono,Imagen,EsCapitan) VALUES( :correo, :nombre, :apellidos, :password, :telefono, :imagen, :isCapitan)');
             $consulta->bindParam(':correo', $this->correo);
             $consulta->bindParam(':nombre', $this->nombre);
             $consulta->bindParam(':apellidos', $this->apellidos);
@@ -52,7 +52,7 @@ class Usuario
             $consulta->bindParam(':isCapitan', $this->isCapitan);
             $consulta->execute();
             // $this->id = $conexion->lastInsertId(); not this time bro :(
-        }
+       }
         $conexion = null;
     }
 
@@ -155,7 +155,7 @@ class Usuario
     /**
      * @return bool
      */
-    public function isIsCapitan()
+    public function isCapitan()
     {
         return $this->isCapitan;
     }
