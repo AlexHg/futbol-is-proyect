@@ -13,7 +13,7 @@ Flight::route('/action/@controller', function($controller){
 #Inicio - Raiz
 Flight::route("/", function(){
     //Flight::redirect('/demo');
-    Session::access(array("minRole" => -1), function(){
+    Session::access(array("minRole" => 1), function(){
         View::render('template/ini'); #Html head, menu, header
         View::render('blank'); #html content
         View::render('template/fin'); #Html footer
@@ -69,7 +69,9 @@ Flight::route('/designDemo', function(){
 
 # Inicio - Vistas de errores & excepciones
 Flight::route('/inaccesible', function(){
-    echo "No tiene los permisos necesarios para acceder a esta funcionalidad";
+    View::render('template/ini.noaside'); #Html head, menu, header
+    View::render('inaccesible'); #html content
+    View::render('template/fin'); #Html footer
 });
 
 Flight::map('notFound', function(){

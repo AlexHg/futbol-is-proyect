@@ -19,7 +19,7 @@ class Session{
     }
     function access($dataAccess,callable $callback){
         if(isset($_SESSION["role"])){
-            if($_SESSION["role"] > $dataAccess["minRole"] ){
+            if($_SESSION["role"] >= $dataAccess["minRole"] ){
                 $callback();
             }else{
                 Flight::redirect('/inaccesible');
