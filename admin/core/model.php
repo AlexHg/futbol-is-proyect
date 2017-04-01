@@ -1,6 +1,8 @@
 <?php
+//require "core/DataBase.php";
+
 class Model{
-    public function render($path, $_MODEL = NULL){
+    public function use($path){
         require Model::path_base().$path.".php";
     }
     public function path_complete($path){
@@ -13,3 +15,6 @@ class Model{
         echo Model::path_base().$path.".php";
     }
 }
+
+
+

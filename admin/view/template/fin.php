@@ -2,8 +2,7 @@
         </section>
     </div>
     <script src="source/js/jquery.js"></script>
-    <!-- Charts Morris -->
-    
+    <!-- Charts Morris 
     <script src="source/js/rafael.js"></script>
     <script src="source/js/morris/morris.js"></script>
     <script src="source/js/morris/morris.init.js"></script>

@@ -11,7 +11,8 @@ Flight::route('/designDemo', function(){
     View::render('template/fin'); #Html footer
 });
 Flight::route('/user/[0-9]+', function(){
-    echo "hello";
+    //Model::use("Consultas.temp");
+    //print_r(DatosJugador("capitan@hotmail.com"));
 });
 Flight::route('/users/@name', function($name){
     echo "hello, $name !";

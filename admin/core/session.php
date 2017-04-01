@@ -52,4 +52,17 @@ class Session{
                 $callback();
         }
     }
+    function roleName($num){
+        if($num == 1){
+            return "Jugador";
+        }else if($num == 2){
+            return "Capitán";
+        }
+        else if($num == 3){
+            return "Coordinador";
+        }
+        else{
+            return "NoRole";
+        }
+    }
 }
