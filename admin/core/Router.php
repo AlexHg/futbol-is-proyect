@@ -9,4 +9,5 @@ require 'core/router/coordinador.php'; //Disponible solo para quien tenga permis
 require 'core/router/controller.php'; //Ruteo de controladores
 require 'core/router/exception.php'; //Disponible cuando hay algun error o excepcion
 require 'core/router/other.php'; //Otros ruteos no descritos
+require 'core/router/temporal.php'; //Los que aun no se donde clasificarlos
 

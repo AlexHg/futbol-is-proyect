@@ -2,7 +2,7 @@
 //require "core/DataBase.php";
 
 class Model{
-    public function use($path){
+    public function load($path){
         require Model::path_base().$path.".php";
     }
     public function path_complete($path){

@@ -9,7 +9,7 @@
     <ul>
         <?php Session::showOnly(array("role" => 1 ), function(){ ?>
             <li class="<?php isActive('/') ?>">
-                <a href="">
+                <a href="home">
                     <span>
                         <i class="ti-dashboard"></i>Resumen
                     </span>
@@ -48,7 +48,7 @@
         <?php }) ?> 
         <?php Session::showOnly(array("role" => 2 ), function(){ ?>
             <li class="<?php isActive('/') ?>">
-                <a href="">
+                <a href="home">
                     <span>
                         <i class="ti-dashboard"></i>Resumen
                     </span>
@@ -82,7 +82,7 @@
                 </ul>
             </li>
             <li class="submenu <?php isActive('/jugadores') ?>">
-                <a href="/jugadores">
+                <a href="jugadores">
                     <span> 
                         <i class="ti-user"></i>Jugadores
                     </span>
@@ -106,7 +106,7 @@
         <?php }) ?> 
         <?php Session::showOnly(array("role" => 3 ), function(){ ?>
             <li class="<?php isActive('/') ?>">
-                <a href="">
+                <a href="home">
                     <span>
                         <i class="ti-dashboard"></i>Resumen
                     </span>

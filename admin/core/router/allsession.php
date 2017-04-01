@@ -8,5 +8,12 @@ Flight::route("/", function(){
         View::render('template/fin'); #Html footer
     });
 });
+
+Flight::route("/home", function(){
+    //Flight::redirect('/demo');
+    Session::access(array("minRole" => 1), function(){
+        Flight::redirect('/');
+    });
+});
 #Final - Raiz
 

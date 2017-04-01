@@ -1,11 +1,11 @@
 <?php
 Class Database{
     public function connect(){
-        $conexion = new mysqli("localhost", "root", "", "torneos");
-        $conexion->query("SET NAMES 'utf8'");
-        // Check for errors
-        if(mysqli_connect_errno()){
-            echo mysqli_connect_error();
+        $conexion = mysqli_connect('localhost','root','','torneos');
+        mysqli_query($conexion, "SET NAMES 'utf8'");
+
+        if ($conexion->connect_errno) {
+            echo "Fallo al conectar a MySQL: (" . $conexion->connect_errno . ") " . $conexion->connect_error;
         }
         return $conexion;
     }

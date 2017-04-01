@@ -3,6 +3,7 @@
 require 'core/flight/Flight.php';
 
 # Core require
+require "core/Config.php";
 require "core/Database.php";
 require "core/View.php";
 require "core/Controller.php";

@@ -1,6 +1,6 @@
 <?php 
-Model::use("Coordinador");
-Model::use("Usuario");
+Model::load("Coordinador");
+Model::load("Usuario");
 
 $admin = Coordinador::login($_POST["email"], $_POST["pass"]);
 $user = Usuario::login($_POST["email"], $_POST["pass"]);
