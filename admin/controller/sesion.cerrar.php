@@ -1,4 +1,3 @@
 <?php 
-$_SESSION = array();
-session_destroy();
+Session::destroy();
 Flight::redirect('/');

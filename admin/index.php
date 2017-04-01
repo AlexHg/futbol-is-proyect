@@ -3,6 +3,7 @@
 require "core/view.php";
 require "core/controller.php";
 require "core/model.php";
+require "core/session.php";
 
 #Session start 
 session_start();

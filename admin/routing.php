@@ -13,17 +13,11 @@ Flight::route('/action/@controller', function($controller){
 #Inicio - Raiz
 Flight::route("/", function(){
     //Flight::redirect('/demo');
-    if(isset($_SESSION["role"])){
-        if($_SESSION["role"] > -1 ){
-            View::render('template/ini'); #Html head, menu, header
-            View::render('demo'); #html content
-            View::render('template/fin'); #Html footer
-        }else{
-            Flight::redirect('/inaccesible');
-        }
-    }else{
-        Flight::redirect('/iniciarSesion');
-    }
+    Session::access(array("minRole" => -1), function(){
+        View::render('template/ini'); #Html head, menu, header
+        View::render('blank'); #html content
+        View::render('template/fin'); #Html footer
+    });
 });
 #Final - Raiz
 
@@ -31,35 +25,29 @@ Flight::route("/", function(){
 # Inicio - Solo sin sesión ni permisos
 Flight::route('/iniciarSesion', function(){
     #if session is not open
-    if(!isset($_SESSION["role"])){
+    Session::preAccess(function(){
         View::render('template/ini.noaside'); #Html head, menu, header
         View::render('iniciarSesion'); #html content
         View::render('template/fin'); #Html footer
-    }else{
-        Flight::redirect('/');
-    }
+    });
 });
 
 Flight::route('/registrarCuenta', function(){
     #if session is not open
-    if(!isset($_SESSION["role"])){
+    Session::preAccess(function(){
         View::render('template/ini.noaside'); #Html head, menu, header
         View::render('registrarCuenta'); #html content
         View::render('template/fin'); #Html footer
-    }else{
-        Flight::redirect('/');
-    }
+    });
 });
 
 Flight::route('/recuperarCuenta', function(){
     #if session is not open
-    if(!isset($_SESSION["role"])){
+    Session::preAccess(function(){
         View::render('template/ini.noaside'); #Html head, menu, header
         View::render('recuperarContrasena'); #html content
         View::render('template/fin'); #Html footer
-    }else{
-        Flight::redirect('/');
-    }
+    });
 });
 
 Flight::route('/creditos', function(){
