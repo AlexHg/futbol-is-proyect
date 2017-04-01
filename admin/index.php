@@ -10,7 +10,4 @@ session_start();
 
 Session::start();
 #Content require
-require 'routing.php';
-
-#Session end
-
+require 'router.php';

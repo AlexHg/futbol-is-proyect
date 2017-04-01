@@ -7,6 +7,13 @@
     </div>
     <ul>
         <?php Session::showOnly(array("role" => 1 ), function(){ ?>
+            <li>
+                <a href="">
+                    <span>
+                        <i class="ti-dashboard"></i>Resumen
+                    </span>
+                </a>
+            </li>
             <li class="submenu">
                 <a href="torneo">
                     <span>
@@ -39,6 +46,13 @@
             </li>
         <?php }) ?> 
         <?php Session::showOnly(array("role" => 2 ), function(){ ?>
+            <li>
+                <a href="">
+                    <span>
+                        <i class="ti-dashboard"></i>Resumen
+                    </span>
+                </a>
+            </li>
             <li class="submenu">
                 <a href="torneo">
                     <span>
@@ -90,6 +104,13 @@
             </li>
         <?php }) ?> 
         <?php Session::showOnly(array("role" => 3 ), function(){ ?>
+            <li>
+                <a href="">
+                    <span>
+                        <i class="ti-dashboard"></i>Resumen
+                    </span>
+                </a>
+            </li>
             <li class="submenu">
                 <a href="torneo">
                     <span>
@@ -100,7 +121,7 @@
                 <ul class="submenu-content">
                     <li><a href="crearTorneo"><span><i class="ti-plus"></i>Nuevo Torneo</span></a></li>
                     <li><a href="eliminarTorneo"><span><i class="ti-minus"></i>Eliminar Torneo</span></a></li>
-                    <li><a href="darDeBajaEquipo"><span><i class="ti-close"></i>Dar Equipo de Baja</span></a></li>
+                    <li><a href="bajaEquipo"><span><i class="ti-close"></i>Dar Equipo de Baja</span></a></li>
                     <li><a href="registrarResultados"><span><i class="ti-pencil-alt"></i>Registrar Resultados</span></a></li> 
                 </ul>
             </li>
