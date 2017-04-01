@@ -1,16 +1,17 @@
 <?php
 /*
     Roles
-    Coordinador: 3
-    Capitan: 2
-    jugador: 1
+        Coordinador: 3
+        Capitan: 2
+        Jugador: 1
 */
 class Session{
-    function start(){
-        $_SESSION["role"] = 3;
-        $_SESSION["rolename"] = "Coordinador";
-        $_SESSION["name"] = "Alejandro Hernandez";
-        $_SESSION["mail"] = "alexxh42@gmail.com" ;
+    function start($_DB){
+        $_SESSION["role"] = $_DB["role"];
+        $_SESSION["rolename"] = $_DB["rolename"];
+        $_SESSION["name"] = $_DB["name"];
+        $_SESSION["email"] = $_DB["email"];
+        $_SESSION["avatar"] = $_DB["avatar"];
     }
     function destroy(){
         $_SESSION = array();

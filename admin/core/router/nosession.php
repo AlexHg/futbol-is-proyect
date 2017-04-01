@@ -1,5 +1,4 @@
 <?php
-
 # Inicio - Solo sin sesión ni permisos
 Flight::route('/iniciarSesion', function(){
     #if session is not open
@@ -28,20 +27,6 @@ Flight::route('/recuperarCuenta', function(){
     });
 });
 
-Flight::route('/creditos', function(){
-
-    View::render('template/ini.noaside'); #Html head, menu, header
-    View::render('creditos'); #html content
-    View::render('template/fin'); #Html footer
-
-});
-
-Flight::route('/designDemo', function(){
-    View::render('template/ini'); #Html head, menu, header
-    View::render('demo'); #html content
-    View::render('template/fin'); #Html footer
-
-});
 # Final - Sin sesión ni permisos
 
 

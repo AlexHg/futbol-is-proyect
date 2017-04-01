@@ -1,7 +1,7 @@
 <aside id="navigator">
     <div id="user">
         <h3>
-            <?php echo $_SESSION["name"]; ?>
+            <?php echo $_SESSION["name"]; ?><br>
             <small><?php echo $_SESSION["rolename"]; ?></small>
         </h3>
     </div>

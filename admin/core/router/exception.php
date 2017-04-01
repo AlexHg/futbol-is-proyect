@@ -1,6 +1,4 @@
 <?php
-
-
 # Inicio - Vistas de errores & excepciones
 Flight::route('/inaccesible', function(){
     View::render('template/ini.noaside'); #Html head, menu, header

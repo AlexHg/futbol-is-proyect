@@ -1,5 +1,4 @@
 <?php
-require 'core/flight/Flight.php';
 
 #Routing include
 require 'core/router/allsession.php'; //Disponible para todos los permisos
@@ -10,6 +9,3 @@ require 'core/router/coordinador.php'; //Disponible solo para quien tenga permis
 require 'core/router/controller.php'; //Ruteo de controladores
 require 'core/router/exception.php'; //Disponible cuando hay algun error o excepcion
 require 'core/router/other.php'; //Otros ruteos no descritos
-
-#Flight start
-Flight::start();

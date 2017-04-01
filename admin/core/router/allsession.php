@@ -1,6 +1,4 @@
 <?php
-
-#VISTAS
 #Inicio - Raiz
 Flight::route("/", function(){
     //Flight::redirect('/demo');
