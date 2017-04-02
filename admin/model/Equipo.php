@@ -1,6 +1,6 @@
 <?php
 class Equipo{
-    function getResultados($NombreEquipo){
+    public static function getResultados($NombreEquipo){
         $conexion = Database::connect();
 
         $consulta1="select count(*) as juegosTotales from equipo e, JuegosResultado j

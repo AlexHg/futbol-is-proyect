@@ -1,6 +1,6 @@
 <?php
 class Coordinador{
-    public function login($email, $password){
+    public static function login($email, $password){
         $db = Database::connect();
         $sql = "select * from coordinador where Correo='$email' and Contraseña='$password'";
         if($res=$db->query($sql)){

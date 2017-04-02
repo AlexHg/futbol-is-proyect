@@ -1,6 +1,6 @@
 <?php
 class Torneo{
-    function getEquipos($idTorneo){
+    public static function getEquipos($idTorneo){
         $conexion = Database::connect();
         $consulta ="SELECT nombreequipo from equipo
                     JOIN equipo_torneo USING(IDEquipo)

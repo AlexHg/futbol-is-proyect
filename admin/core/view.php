@@ -1,15 +1,15 @@
 <?php
 class View{
-    public function render($path, $_VIEW = NULL){
+    public static function render($path, $_VIEW = NULL){
         require View::path_base().$path.".php";
     }
-    public function path_complete($path){
+    public static function path_complete($path){
         return View::path_base().$path.".php";
     }
-    public function path_base(){
+    public static function path_base(){
         return "view/";
     }
-    public function print_path($path){
+    public static function print_path($path){
         echo View::path_base().$path.".php";
     }
 }

@@ -1,6 +1,6 @@
 <?php
 Class Database{
-    public function connect(){
+    public static function connect(){
         $dbconfig = Config::database;
         $conexion = mysqli_connect($dbconfig['host'],$dbconfig['user'],$dbconfig['pass'],$dbconfig['db']);
         mysqli_query($conexion, "SET NAMES 'utf8'");

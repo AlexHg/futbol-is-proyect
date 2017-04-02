@@ -6,25 +6,25 @@
         Jugador: 1
 */
 class Session{
-    function start($_DB){
+    public static function start($_DB){
         $_SESSION["role"] = $_DB["role"];
         $_SESSION["rolename"] = $_DB["rolename"];
         $_SESSION["name"] = $_DB["name"];
         $_SESSION["email"] = $_DB["email"];
         $_SESSION["avatar"] = 'source/img/avatar/'.$_DB["avatar"];
     }
-    function destroy(){
+    public static function destroy(){
         $_SESSION = array();
         session_destroy();
     }
-    function preAccess(callable $callback){
+    public static function preAccess(callable $callback){
         if(!isset($_SESSION["role"])){
             $callback();
         }else{
             Flight::redirect('/');
         }
     }
-    function access($dataAccess,callable $callback){
+    public static function access($dataAccess,callable $callback){
         if(isset($_SESSION["role"])){
             if($_SESSION["role"] >= $dataAccess["minRole"] ){
                 $callback();
@@ -35,7 +35,7 @@ class Session{
             Flight::redirect('/iniciarSesion');
         }
     }
-    function accessOnly($dataAccess,callable $callback){
+    public static function accessOnly($dataAccess,callable $callback){
         if(isset($_SESSION["role"])){
             if($_SESSION["role"] >= $dataAccess["role"] ){
                 $callback();
@@ -46,13 +46,13 @@ class Session{
             Flight::redirect('/iniciarSesion');
         }
     }
-    function showOnly($dataAccess,callable $callback){
+    public static function showOnly($dataAccess,callable $callback){
         if(isset($_SESSION["role"])){
             if($_SESSION["role"] == $dataAccess["role"] )
                 $callback();
         }
     }
-    function roleName($num){
+    public static function roleName($num){
         if($num == 1){
             return "Jugador";
         }else if($num == 2){
