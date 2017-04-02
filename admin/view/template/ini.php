@@ -17,7 +17,6 @@
     <link rel="stylesheet" href="source/css/font-awesome.min.css">
     <link rel="stylesheet" href="source/css/themify-icons.css">
     <link rel="stylesheet" href="source/css/alerts.css">
-    <base href="<?php// echo $CONFIG['baseUrl'] ?>">
 </head>
 <body>
     <div id="page-content">

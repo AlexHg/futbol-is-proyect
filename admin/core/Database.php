@@ -1,7 +1,8 @@
 <?php
 Class Database{
     public function connect(){
-        $conexion = mysqli_connect('localhost','root','','torneos');
+        $dbconfig = Config::database;
+        $conexion = mysqli_connect($dbconfig['host'],$dbconfig['user'],$dbconfig['pass'],$dbconfig['db']);
         mysqli_query($conexion, "SET NAMES 'utf8'");
 
         if ($conexion->connect_errno) {
