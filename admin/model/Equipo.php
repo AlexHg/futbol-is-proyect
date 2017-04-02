@@ -27,4 +27,24 @@ class Equipo{
         return $res;
         mysqli_close($conexion);
     }
+    function eliminarEquipo($nombreEquipo,$nombreCapitan,$apellidosCapitan){
+        $conexion = Database::connect();
+        if ($resultado=$conexion->query("Call p2('$nombreEquipo','$nombreCapitan','$apellidosCapitan')")) {
+            return 1;
+        } else {
+            return "Error: " . mysqli_error($conexion);
+        }
+        mysqli_close($conexion);
+    }
+    function getEquipos(){
+        $conexion = Database::connect();
+        $consulta ="SELECT nombreequipo from equipo
+                    JOIN equipo_torneo USING(IDEquipo);";
+        if ($resultado=$conexion->query($consulta)) {
+            return $resultado;
+        } else {
+            return "Error: " . mysqli_error($conexion);
+        }
+        mysqli_close($conexion);
+    }
 }

@@ -37,7 +37,7 @@ class Session{
     }
     public static function accessOnly($dataAccess,callable $callback){
         if(isset($_SESSION["role"])){
-            if($_SESSION["role"] >= $dataAccess["role"] ){
+            if($_SESSION["role"] == $dataAccess["role"] ){
                 $callback();
             }else{
                 Flight::redirect('/inaccesible');

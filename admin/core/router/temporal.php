@@ -27,13 +27,3 @@ Flight::route("/consultarEquipos", function(){
         View::render('template/fin'); #Html footer
     });
 });
-
-Flight::route("/gestionarEquipos", function(){
-    //Flight::redirect('/demo');
-    Session::accessOnly(array("role" => 3), function(){
-        Controller::run("gestionarEquipos");
-        View::render('template/ini'); #Html head, menu, header
-        View::render('gestionarEquipos'); #html content
-        View::render('template/fin'); #Html footer
-    });
-});
