@@ -73,7 +73,7 @@
                 </a>
             </li>
             <li class="submenu <?php isActive('/consultarEquipos') ?>">
-                <a href="consultarEquipos">
+                <a href="#">
                     <span><i class="ti-heart"></i>Equipos</span>
                     <i class="ti-angle-right submenu-arrow"></i>
                 </a>
