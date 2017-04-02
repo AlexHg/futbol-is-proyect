@@ -45,7 +45,7 @@
                     </a></li>
                 </ul>
                 <a href="#" id="profile">
-                    <img src="source/img/profile.jpg" alt="">
+                    <img src="<?php echo $_SESSION['avatar'] ?>" alt="">
                 </a>
                 <ul id="profil">
                     <li><a href=""><i class="ti-user"></i>Perfil</a></li>

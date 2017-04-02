@@ -11,7 +11,7 @@ class Session{
         $_SESSION["rolename"] = $_DB["rolename"];
         $_SESSION["name"] = $_DB["name"];
         $_SESSION["email"] = $_DB["email"];
-        $_SESSION["avatar"] = $_DB["avatar"];
+        $_SESSION["avatar"] = 'source/img/avatar/'.$_DB["avatar"];
     }
     function destroy(){
         $_SESSION = array();
