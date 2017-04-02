@@ -8,3 +8,13 @@ Flight::route("/eliminarJugador", function(){
         View::render('template/fin'); #Html footer
     });
 });
+
+Flight::route("/enviarInvitacion", function(){
+    //Flight::redirect('/demo');
+    Session::accessOnly(array("role" => 2), function(){
+        Controller::run("enviarInvitacion");
+        View::render('template/ini'); #Html head, menu, header
+        View::render('enviarInvitacion'); #html content
+        View::render('template/fin'); #Html footer
+    });
+});

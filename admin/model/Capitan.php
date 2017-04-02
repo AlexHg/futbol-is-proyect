@@ -1,6 +1,6 @@
 <?php
 class Capitan{
-    function getCapitan($nombreEquipo){
+    public static function getCapitan($nombreEquipo){
         $conexion = Database::connect();
         $consulta="select Nombre,Apellidos from usuario u, capitan c, equipo e
                     where u.correo=c.correo
