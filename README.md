@@ -33,8 +33,8 @@ Los modelos
     PODER HACER TODAS LAS ACCIONES A LA BASE DE DATOS Y ESTAR LISTO PARA SER USADO DESDE LOS CONTROLADORES
 
 CREAR UNA RUTA NUEVA:
-1. entrar a admin/routing.php
-2. agregar una ruta de la forma
+1. entrar a admin/core/router/ 
+2. agregar en la categoria (el archivo que cumpla las necesidades) una ruta de la forma
   Flight::route("/", function(){ //Contenido ruta- Accion a seguir });
   
   
@@ -68,5 +68,7 @@ Tambien es posible correr un controlador desde el codigo php (en una vista, por 
     Controller::run(jugadores.getJugadores);
     
 Al llamar de ambas al controlador, en su codigo estarán disponibles las variables globales $_GET, $_POST, $_SESSION
+
+LLAMAR UN MODELO:
 
 
