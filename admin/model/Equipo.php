@@ -27,7 +27,7 @@ class Equipo{
         return $res;
         mysqli_close($conexion);
     }
-    function eliminarEquipo($nombreEquipo,$nombreCapitan,$apellidosCapitan){
+    public static function eliminarEquipo($nombreEquipo,$nombreCapitan,$apellidosCapitan){
         $conexion = Database::connect();
         if ($resultado=$conexion->query("Call p2('$nombreEquipo','$nombreCapitan','$apellidosCapitan')")) {
             return 1;
@@ -36,10 +36,38 @@ class Equipo{
         }
         mysqli_close($conexion);
     }
-    function getEquipos(){
+    public static function eliminarJugadorEquipo($correoEliminar,$idCapitan){
+        $conexion = Database::connect();
+        $consulta ="DELETE d from equipo_jugador d
+                    JOIN jugador USING(IDJugador)
+                    JOIN equipo USING(IDEquipo)
+                    JOIN capitan USING(IDCapitan)
+                    WHERE jugador.Correo='$correoEliminar' AND capitan.IDCapitan='$idCapitan';";
+        if ($conexion->query($consulta)) {
+            return 1;
+        } else {
+            return "Error: " . mysqli_error($conexion);
+        }
+        mysqli_close($conexion);
+    }
+    public static function getEquipos(){
         $conexion = Database::connect();
         $consulta ="SELECT nombreequipo from equipo
                     JOIN equipo_torneo USING(IDEquipo);";
+        if ($resultado=$conexion->query($consulta)) {
+            return $resultado;
+        } else {
+            return "Error: " . mysqli_error($conexion);
+        }
+        mysqli_close($conexion);
+    }
+    public static function getJugadoresEquipo($idCapitan){
+        $conexion = Database::connect();
+        $consulta ="SELECT usuario.Nombre,usuario.Apellidos,usuario.Correo FROM usuario
+                    JOIN jugador USING(Correo)
+                    JOIN equipo_jugador USING(IDJugador)
+                    JOIN  equipo USING(IDEquipo)
+                    WHERE IDCapitan ='$idCapitan';";
         if ($resultado=$conexion->query($consulta)) {
             return $resultado;
         } else {

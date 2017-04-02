@@ -2,7 +2,7 @@
 class Usuario{
     public static function login($email, $password){
         $db = Database::connect();
-        $sql = "select * from usuario where Correo='$email' and Contraseña='$password'";
+        $sql = "select * from usuario where Correo='$email' and password='$password'";
         if($res=$db->query($sql)){
 			$Datos = mysqli_fetch_array($res, MYSQLI_ASSOC);
 				return $Datos;
