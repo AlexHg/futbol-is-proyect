@@ -25,6 +25,7 @@
 
     <!--Codigo de validacion-->
     <script src="source/js/form-validator/jquery.form-validator.js"></script>
+    <script src="source/js/validacion.js"></script>
     <script>
         $.validate({
             modules : 'location, date, security, file, toggleDisabled',
