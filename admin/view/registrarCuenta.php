@@ -75,7 +75,7 @@
             <center>La cuenta ya ha sido registrada anteriormente</center>
             <br/>
             <center>
-               <button class="btn btn-danger">Reintentar</button>
+               <button class="btn btn-danger close">Reintentar</button>
             </center>
         </div>
     </div>

@@ -49,4 +49,18 @@ class Jugador{
 		}
 		mysqli_close($conexion);
 	}
+
+    public static function registrarEquipo($correoJugador,$nombreEquipo,$descEquipo){
+        $db = Database::connect();
+        $res = $db->query("SELECT NombreEquipo FROM equipo WHERE NombreEquipo='$nombreEquipo'");
+        if(mysqli_num_rows($res) > 0){ // Si ya existe ese nombre
+            return 1;
+        }else{
+            $db->query("INSERT INTO capitan (Correo) VALUES ('$correoJugador')");
+            $db->query("DELETE FROM jugador WHERE Correo='$correoJugador'");
+            $db->query("INSERT INTO equipo (Correo,NombreEquipo,DescripcionUniforme) values ('$correoJugador','$nombreEquipo','$descEquipo')");
+            $db->query("UPDATE usuario set EsCapitan='1' where correo='$correoJugador'");
+            return 0;
+        }
+    }
 }
