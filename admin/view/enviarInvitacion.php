@@ -1,13 +1,15 @@
 <div id="content-title">
-    <h2>Enviar Invitaciones para agregar jugadores.</h2>
+    <h2>Envia una Invitación para agregar jugadores</h2>
 </div>
-
-<button type="button" class="btn btn-primary">Torneo Soccer.</button>
-<button type="button" class="btn btn-primary">Torneo rápido.</button>
+<h3>Selecciona la categoría a buscar: </h3>
+                <center>
+                <button type="button" class="btn btn-dark">Torneo Soccer</button>
+                <button type="button" class="btn btn-primary">Torneo rápido</button>
+                </center>
 
 <br><br>
 
-<h3>Jugadores Disponibles.</h3>
+<h3>Jugadores Disponibles: </h3>
 <form action="enviarInvitacion" method="post">
     <table class="table table-striped " style="overflow-x: hidden; overflow-y: scroll;">
         <thead>
@@ -30,6 +32,17 @@
 
     <br><br>
     <center>
-        <input type="submit" value="Enviar Invitacion" class="button" data-type="zoomin" />
+         <center><button type="submit" class="btn btn-success" data-type="alerta">Enviar Invitación</button></center>
     </center>
 </form>
+<!--Mensaje de confirmacion de envío-->
+<div class="overlay-container">
+                        <div class="window-container alerta">
+                            <h3>Envío Exitoso</h3> 
+                            Se ha enviado la invitación<br/>
+                            <br/>
+                            <center>
+                            <button class="btn btn-success close">Aceptar</button>
+                            </center>
+                        </div>
+</div>
