@@ -54,7 +54,7 @@
                             Cuenta registrada exitosamente<br/>
                             <br/>
                             <center>
-                            <button class="btn btn-success close" >Aceptar</button>
+                            <button class="button btn btn-primary" >Iniciar Sesión</button>
                             </center>
                         </div>
           </div>
@@ -67,7 +67,7 @@
                             La cuenta ya ha sido registrada anteriormente<br/>
                             <br/>
                             <center>
-                            <button class="btn btn-success close" >Aceptar</button>
+                            <button class="btn btn-danger" >Reintentar</button>
                             </center>
                         </div>
           </div>
