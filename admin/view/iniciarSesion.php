@@ -41,7 +41,7 @@
                             Los datos ingresados son incorrectos o no se encuentran registrados, favor de verificarlos<br/>
                             <br/>
                             <center>
-                            <button class="btn btn-success close" >Aceptar</button>
+                            <button class="btn btn-danger" >Reintentar</button>
                             </center>
                         </div>
           </div></script>
