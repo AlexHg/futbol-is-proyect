@@ -51,11 +51,20 @@
     </table>
     <br>
     <div align="center">
-        <button type="button" class="btn btn-success" onclick="myFunction3()">Guardar Cambios</button>
+        <button type="button" class="btn btn-success" onclick="myFunction3()" data-type="alerta" >Guardar Cambios</button>
 
         <script>
             function myFunction3() {
-                alert("No se han podido guardar los cambios. Uno o más partidos no se han llevado a cabo.");
+                <div class="overlay-container">
+                        <div class="window-container alerta">
+                             <h3>No se ha podido guardar los cambios</h3> 
+                             No se han podido guardar los cambios. Uno o más partidos no se han llevado a cabo
+                            <br/>
+                            <center>
+                            <button class="btn btn-danger" >Reintentar</button>
+                            </center>
+                        </div>
+                    </div>
             }
         </script>
         <script>
