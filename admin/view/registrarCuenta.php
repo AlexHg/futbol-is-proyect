@@ -40,14 +40,36 @@
                 </div>
             </div>
             <br>
-            <input type="submit" name="submit" value="Registrarse" class="btn btn-primary">
+            <input type="submit" name="submit" value="Registrarse" class="btn btn-primary" data-type="alerta">
             <br><br>
         </form>
     </center>
 </div>
 
 <?php if(isset($_GET['n']) && strcasecmp($_GET['n'],'exito') == 0){ ?>
-    <script>alert("Cuenta registrada exitosamente");</script>
+    <script>
+        <div class="overlay-container">
+                        <div class="window-container alerta">
+                            <h3>Confirmación de Registro</h3> 
+                            Cuenta registrada exitosamente<br/>
+                            <br/>
+                            <center>
+                            <button class="btn btn-success close" >Aceptar</button>
+                            </center>
+                        </div>
+          </div>
+    </script>
 <?php } else if(isset($_GET['n']) && strcasecmp($_GET['n'],'error') == 0){ // Checar MSG?>
-    <script>alert("Cuenta ya existe");</script> 
+    <script>
+        <div class="overlay-container">
+                        <div class="window-container alerta">
+                            <h3>Alerta de Registro</h3> 
+                            La cuenta ya ha sido registrada anteriormente<br/>
+                            <br/>
+                            <center>
+                            <button class="btn btn-success close" >Aceptar</button>
+                            </center>
+                        </div>
+          </div>
+    </script> 
 <?php }?>
