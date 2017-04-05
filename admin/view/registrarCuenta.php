@@ -50,7 +50,7 @@
     <script>
         <div class="overlay-container">
                         <div class="window-container alerta">
-                            <h3>Confirmación de Registro</h3> 
+                            <h3>Registro de Cuenta Exitoso</h3> 
                             Cuenta registrada exitosamente<br/>
                             <br/>
                             <center>
@@ -63,7 +63,7 @@
     <script>
         <div class="overlay-container">
                         <div class="window-container alerta">
-                            <h3>Alerta de Registro</h3> 
+                            <h3>Correo Existente</h3> 
                             La cuenta ya ha sido registrada anteriormente<br/>
                             <br/>
                             <center>
