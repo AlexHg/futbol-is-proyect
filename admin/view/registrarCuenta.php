@@ -46,30 +46,42 @@
     </center>
 </div>
 
-<?php if(isset($_GET['n']) && strcasecmp($_GET['n'],'exito') == 0){ ?>
+<?php if(isset($_SESSION['n']) && strcasecmp($_SESSION['n'],'exito') == 0){ 
+    unset($_SESSION['n']);?>
+    <div class="overlay-container">
+        <div class="window-container exito">
+            <h3>Registro de Cuenta Exitoso</h3>
+            <center>Cuenta registrada exitosamente</center>
+            <br/>
+            <center>
+               <button class="btn btn-primary close">Iniciar Sesion</button>
+            </center>
+        </div>
+    </div>
     <script>
-        <div class="overlay-container">
-                        <div class="window-container alerta">
-                            <h3>Registro de Cuenta Exitoso</h3> 
-                            Cuenta registrada exitosamente<br/>
-                            <br/>
-                            <center>
-                            <button class="button btn btn-primary" >Iniciar Sesión</button>
-                            </center>
-                        </div>
-          </div>
+        $('.overlay-container').fadeIn(function() {
+            window.setTimeout(function(){
+                $('.window-container.exito').addClass('window-container-visible');
+            }, 100);            
+        });
     </script>
-<?php } else if(isset($_GET['n']) && strcasecmp($_GET['n'],'error') == 0){ // Checar MSG?>
+<?php } else if(isset($_SESSION['n']) && strcasecmp($_SESSION['n'],'error') == 0){
+    unset($_SESSION['n'])?>
+    <div class="overlay-container">
+        <div class="window-container error">
+            <h3>Correo Existente</h3>
+            <center>La cuenta ya ha sido registrada anteriormente</center>
+            <br/>
+            <center>
+               <button class="btn btn-danger">Reintentar</button>
+            </center>
+        </div>
+    </div>
     <script>
-        <div class="overlay-container">
-                        <div class="window-container alerta">
-                            <h3>Correo Existente</h3> 
-                            La cuenta ya ha sido registrada anteriormente<br/>
-                            <br/>
-                            <center>
-                            <button class="btn btn-danger" >Reintentar</button>
-                            </center>
-                        </div>
-          </div>
-    </script> 
+        $('.overlay-container').fadeIn(function() {
+            window.setTimeout(function(){
+                $('.window-container.error').addClass('window-container-visible');
+            }, 100);            
+        });
+    </script>
 <?php }?>

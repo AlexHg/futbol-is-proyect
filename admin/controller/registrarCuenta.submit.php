@@ -6,10 +6,12 @@ $user = Usuario::registrarCuenta($_POST["nombre"],$_POST["apellidos"],$_POST["co
 
 switch ($user) {
     case 0:
-        Flight::redirect('/registrarCuenta?n=exito');
+    	$_SESSION['n'] = "exito";
+        Flight::redirect('/registrarCuenta');
         break;
     case 1:
-        Flight::redirect('/registrarCuenta?n=error');
+    	$_SESSION['n'] = "error";
+        Flight::redirect('/registrarCuenta');
     default:
         // Otro Error
         echo $user;
