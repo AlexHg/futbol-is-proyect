@@ -26,7 +26,7 @@
             </div>
             <div>
                 <div class="box">
-                    <input id="cancelarInvitacion" type="submit" class="btn btn-primary" value="Iniciar sesión"/>
+                    <input id="cancelarInvitacion" type="submit" class="btn btn-primary" value="Iniciar sesión" data-type="alerta"/>
                     <br><br>
                 </div>
             </div>
