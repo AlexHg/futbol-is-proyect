@@ -27,9 +27,31 @@
                 </div>
                 <br>
                 <br>
-                <input type="submit" class="btn btn-success" name="Aceptar" value="Aceptar"/>
-                <input type="submit" class="btn btn-danger" name="Cancelar" value="Rechazar"/>
+                <input type="submit" class="btn btn-success" name="Aceptar" value="Aceptar" data-type="alerta"/>
             </form>
         </div>                        
     </div> 
+</div>
+ <!--Mensaje de confirmacion-->
+<div class="overlay-container">
+                        <div class="window-container alerta">
+                            <h3>Confirmación de Eliminación de Equipo</h3> 
+                            ¿Esta seguro que desea eliminar el equipo?<br/>
+                            <br/>
+                            <center>
+                            <button class="btn btn-success close" data-type="aceptar">Aceptar</button>
+                            <button class="btn btn-danger" >Cancelar</button>
+                            </center>
+                        </div>
+</div>
+ <!--Mensaje de operacion exitosa-->
+<div class="overlay-container">
+                        <div class="window-container aceptar">
+                            <h3>Operación realizada exitosamente</h3> 
+                            La operación se realizó exitosamente<br/>
+                            <br/>
+                            <center>
+                            <button class="btn btn-success close" >Aceptar</button>
+                            </center>
+                        </div>
 </div>
