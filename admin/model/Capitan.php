@@ -13,4 +13,19 @@ class Capitan{
         }
         mysqli_close($conexion);
     }
+    public static function Idcapitan($sesion){
+		$conexion = Database::connect();
+		
+		$sql = "select IDCapitan from capitan where Correo='$sesion'";
+		
+		if($res=$conexion->query($sql)){
+		$IDCapitan = mysqli_fetch_array($res, MYSQLI_NUM);
+			return $IDCapitan;
+		}
+		else {
+			return "Error: " . mysqli_error($conexion);
+		}
+		
+		mysqli_close($conexion);
+    }
 }

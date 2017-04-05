@@ -33,4 +33,20 @@ class Jugador{
 		}
 		mysqli_close($conexion);
     }
+
+    public static function getSolicitudesDeJugador($idCapitan){
+		$conexion = Database::connect();
+		$consulta ="SELECT usuario.Nombre, usuario.Apellidos,usuario.Correo FROM usuario
+					JOIN jugador USING(Correo)
+					JOIN solicitud USING(IDJugador)
+					JOIN equipo USING(IDEquipo)
+					JOIN capitan USING(IDCapitan)
+					WHERE Tipo_Solicitud=0 AND IDCapitan='$idCapitan';";
+		if ($resultado=$conexion->query($consulta)) {
+			return $resultado;
+		} else {
+			return "Error: " . mysqli_error($conexion);
+		}
+		mysqli_close($conexion);
+	}
 }

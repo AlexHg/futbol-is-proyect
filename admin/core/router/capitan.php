@@ -27,3 +27,31 @@ Flight::route("/elegirHorario", function(){
         View::render('template/fin'); #Html footer
     });
 });
+
+Flight::route("/aceptarInvitacionEquipo", function(){
+    //Flight::redirect('/demo');
+    Session::accessOnly(array("role" => 2), function(){
+        View::render('template/ini'); #Html head, menu, header
+        View::render('aceptarInvitacionEquipo'); #html content
+        View::render('template/fin'); #Html footer
+    });
+});
+
+Flight::route("/aceptarPeticionJugador", function(){
+    //Flight::redirect('/demo');
+    Session::accessOnly(array("role" => 2), function(){
+        Controller::run('aceptarPeticionJugador'); #html content
+        View::render('template/ini'); #Html head, menu, header
+        View::render('aceptarPeticionJugador'); #html content
+        View::render('template/fin'); #Html footer
+    });
+});
+
+Flight::route("/modificarHorario", function(){
+    //Flight::redirect('/demo');
+    Session::accessOnly(array("role" => 2), function(){
+        View::render('template/ini'); #Html head, menu, header
+        View::render('modificarHorario'); #html content
+        View::render('template/fin'); #Html footer
+    });
+});

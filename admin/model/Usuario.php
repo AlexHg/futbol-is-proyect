@@ -31,4 +31,6 @@ class Usuario{
 		mysqli_close($db);
 	}
 
+	
+
 }

@@ -75,4 +75,30 @@ class Equipo{
         }
         mysqli_close($conexion);
     }
+    public static function aceptarSolicitudDeJugador($idCapitan,$correoJugador){
+        $conexion = Database::connect();
+        $consulta ="INSERT INTO equipo_jugador(IDEquipo, IDJugador)
+                    VALUES((SELECT IDEquipo FROM equipo WHERE IDCapitan='$idCapitan') ,
+                    (SELECT IDJugador from jugador WHERE Correo='$correoJugador'))";
+        $consulta2="DELETE FROM solicitud WHERE
+                    IDEquipo=(SELECT IDEquipo FROM equipo WHERE IDCapitan='$idCapitan') AND IDJugador=(SELECT IDJugador from jugador WHERE Correo='$correoJugador');";
+        if ($conexion->query($consulta) && $conexion->query($consulta2)) {
+            return 1;
+        } else {
+            return "Error: " . mysqli_error($conexion);
+        }
+        mysqli_close($conexion);
+
+    }
+    public static function rechazarSolicitudDeJugador($idCapitan,$correoJugador){
+        $conexion = Database::connect();
+        $consulta="DELETE FROM solicitud WHERE
+                    IDEquipo=(SELECT IDEquipo FROM equipo WHERE IDCapitan='$idCapitan') AND IDJugador=(SELECT IDJugador from jugador WHERE Correo='$correoJugador');";
+        if ($conexion->query($consulta)) {
+            return 1;
+        } else {
+            return "Error: " . mysqli_error($conexion);
+        }
+        mysqli_close($conexion);
+    }
 }

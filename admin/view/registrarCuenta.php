@@ -3,7 +3,7 @@
 </div>
 <div id="content-body" style="display:flex; justify-content:center; align-items:center; min-height:60vh;">
     <center>
-        <form class="form-control" role="form" method="post" style="transform:scale(1.2)" action="action/registrarCuenta.submit">
+        <form class="form-control" role="form" method="post" action="action/registrarCuenta.submit">
             <h3>Ingrese los siguientes datos para crear una cuenta</h3>                  
             <div class="form-group">
                 <label class="control-label">Nombre</label>
@@ -40,6 +40,14 @@
                 </div>
             </div>
             <br>
+            <div class="form-group">
+                <label class="control-label" >Elija su avatar</label>
+                <input type="file" class="filestyle" data-buttonname="btn-default" id="image" accept="image/*" tabindex="-1" style="position: absolute; clip: rect(0px 0px 0px 0px);">
+                <div style="margin-left:20px;"></div>
+                <label for="image" style="padding-top:9px;"><div class="btn btn-primary"><i class="ti-file"></i> imagen</div></label>
+
+            </div>
+            <br><br>
             <input type="submit" name="submit" value="Registrarse" class="btn btn-primary" data-type="alerta">
             <br><br>
         </form>

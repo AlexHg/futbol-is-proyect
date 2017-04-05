@@ -27,3 +27,36 @@ Flight::route("/consultarEquipos", function(){
         View::render('template/fin'); #Html footer
     });
 });
+
+Flight::route("/aceptarPeticiones", function(){
+    //Flight::redirect('/demo');
+    Session::accessOnly(array("role" => 1), function(){
+        View::render('template/ini'); #Html head, menu, header
+        View::render('aceptarPeticiones'); #html content
+        View::render('template/fin'); #Html footer
+    });
+    Session::accessOnly(array("role" => 2), function(){
+        View::render('template/ini'); #Html head, menu, header
+        View::render('aceptarPeticiones'); #html content
+        View::render('template/fin'); #Html footer
+    });
+});
+
+Flight::route("/registrarEquipo", function(){
+    Session::accessOnly(array("role" => 2), function(){
+        //Controller::run('registrarEquipo'); 
+        View::render('template/ini'); #Html head, menu, header
+        View::render('registrarEquipo'); #html content
+        View::render('template/fin'); #Html footer
+    });
+    Session::accessOnly(array("role" => 3), function(){
+        //Controller::run('registrarEquipo');
+        View::render('template/ini'); #Html head, menu, header
+        View::render('registrarEquipo'); #html content
+        View::render('template/fin'); #Html footer
+    });
+});
+
+
+
+

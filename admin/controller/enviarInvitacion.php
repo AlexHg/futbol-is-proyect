@@ -8,7 +8,7 @@ function seleccion(){
             foreach ($jugador as $seleccionado){
                 echo "Se envio la invitacion a ".$seleccionado."<br />";
                 //Cambiar por Correo obtenido de sesión
-                $mensaje=Jugador::enviarInvitacion($seleccionado,$sesion);
+                $mensaje=Jugador::enviarInvitacion($seleccionado,$_SESSION["email"]);
                 echo $mensaje;
             }
         }
