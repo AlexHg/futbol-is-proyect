@@ -25,8 +25,31 @@
         </table>
         <br>
         <center>
-            <button id="aceptarInvitacion" type="button" class="btn btn-danger">Eliminar</button>
-            <input type="submit" value="Eliminar" class="button" data-type="zoomin" />
+            <button id="aceptarInvitacion" type="button" class="btn btn-danger" data-type="alerta">Eliminar</button>
+            <input type="submit" value="Eliminar" class="button" data-type="zoomin" data-type="alerta"/>
         </center>
     </form>
+</div>
+<!--Mensaje de confirmacion-->
+<div class="overlay-container">
+                        <div class="window-container alerta">
+                            <h3>Confirmación de Eliminación de Jugador</h3> 
+                            ¿Esta seguro que desea eliminar al jugador?<br/>
+                            <br/>
+                            <center>
+                            <button class="btn btn-success close" data-type="aceptar">Aceptar</button>
+                            <button class="btn btn-danger" >Cancelar</button>
+                            </center>
+                        </div>
+</div>
+ <!--Mensaje de operacion exitosa-->
+<div class="overlay-container">
+                        <div class="window-container aceptar">
+                            <h3>Operación realizada exitosamente</h3> 
+                            La operación se realizó exitosamente<br/>
+                            <br/>
+                            <center>
+                            <button class="btn btn-success close" >Aceptar</button>
+                            </center>
+                        </div>
 </div>
