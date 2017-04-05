@@ -71,7 +71,7 @@
  <div class="overlay-container">
                         <div class="window-container alerta">
                              <h3>Confirmación de solicitud de Equipo</h3> 
-                           	¿Estas seguro de que deseas pertenecer a este equipo?
+                           	¿Estás seguro de que deseas pertenecer a este equipo?
                             <br/>
                             <center>
                             <button class="btn btn-success close" class="window-container aceptar" >Aceptar</button>
@@ -93,7 +93,7 @@
  <div class="overlay-container">
                         <div class="window-container alerta">
                              <h3>Confirmación de Rechazo de Equipo</h3> 
-                           	¿Estas seguro de que deseas rechazar a este equipo?
+                           	¿Estás seguro de que deseas rechazar a este equipo?
                             <br/>
                             <center>
                             <button class="btn btn-success close" class="window-container rechazar" >Aceptar</button>
