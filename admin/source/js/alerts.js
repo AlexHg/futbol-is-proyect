@@ -1,16 +1,16 @@
+function openWindow(name){
+	$('.overlay-container').fadeIn(function() {
+		window.setTimeout(function(){
+			$('.window-container.'+name).addClass('window-container-visible');
+		}, 100);
+	});
+}
+
 $(document).ready(function() {
 	
 	$('.button').click(function() {
-		
 		type = $(this).attr('data-type');
-		
-		$('.overlay-container').fadeIn(function() {
-			
-			window.setTimeout(function(){
-				$('.window-container.'+type).addClass('window-container-visible');
-			}, 100);
-			
-		});
+		openWindow(type)		
 	});
 	
 	$('.close').click(function() {

@@ -54,17 +54,11 @@
             <center>Cuenta registrada exitosamente</center>
             <br/>
             <center>
-               <button class="btn btn-primary close">Iniciar Sesion</button>
+               <button class="btn btn-primary" onclick="location.href = 'iniciarSesion';">Iniciar Sesion</button>
             </center>
         </div>
     </div>
-    <script>
-        $('.overlay-container').fadeIn(function() {
-            window.setTimeout(function(){
-                $('.window-container.exito').addClass('window-container-visible');
-            }, 100);            
-        });
-    </script>
+    <script>$(document).ready(function(){openWindow("exito")});</script>
 <?php } else if(isset($_SESSION['n']) && strcasecmp($_SESSION['n'],'error') == 0){
     unset($_SESSION['n'])?>
     <div class="overlay-container">
@@ -77,11 +71,5 @@
             </center>
         </div>
     </div>
-    <script>
-        $('.overlay-container').fadeIn(function() {
-            window.setTimeout(function(){
-                $('.window-container.error').addClass('window-container-visible');
-            }, 100);            
-        });
-    </script>
+    <script>$(document).ready(function(){openWindow("error")});</script>
 <?php }?>

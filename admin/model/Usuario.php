@@ -16,7 +16,7 @@ class Usuario{
 
     public static function registrarCuenta($nombre,$apellidos,$correo,$telefono,$contrasena){
 		$db = Database::connect();
-		$consulta1="INSERT INTO usuario(Correo,Nombre,Apellidos,contra,Telefono,EsCapitan,Imagen) values('$correo','$nombre','$apellidos','$contrasena','$telefono',0,'111.JPG')";
+		$consulta1="INSERT INTO usuario(Correo,Nombre,Apellidos,contra,Telefono,EsCapitan,Imagen) values('$correo','$nombre','$apellidos','$contrasena','$telefono',0,'default.png')";
 		$consulta2="INSERT INTO jugador (Correo) values('$correo')";
 		if ($db->query($consulta1)) { // Si puede insertar en usuario
 				$db->query($consulta2); // Inserta en Jugador
