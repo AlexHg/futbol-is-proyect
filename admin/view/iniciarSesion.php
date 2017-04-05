@@ -35,5 +35,14 @@
     <br><br>
 </div>
 <?php if(isset($_GET['n']) && strcasecmp($_GET['n'],'nofound') == 0){ ?>
-    <script>alert("Los datos ingresados no son correctos");</script>
+    <script> <div class="overlay-container">
+                        <div class="window-container alerta">
+                            <h3>Datos Incorrectos</h3> 
+                            Los datos ingresados son incorrectos o no se encuentran registrados, favor de verificarlos<br/>
+                            <br/>
+                            <center>
+                            <button class="btn btn-success close" >Aceptar</button>
+                            </center>
+                        </div>
+          </div></script>
 <?php } ?>
