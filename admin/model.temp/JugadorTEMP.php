@@ -7,8 +7,8 @@
  */
 require_once 'conexion.php';
 require_once 'Usuario.php';
-class Jugador extends Usuario{
-    const TABLAJ = 'Jugador';
+class JugadorTEMP extends Usuario{
+    const TABLAJ = 'JugadorTEMP';
     const TABLAS = 'Solicitud';
     const TABLAE_J = 'equipo_jugador';
     private $idJugador;

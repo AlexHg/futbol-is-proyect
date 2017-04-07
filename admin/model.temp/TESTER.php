@@ -6,12 +6,12 @@
  * Time: 11:07
  */
 require_once 'Usuario.php';
-require_once 'Jugador.php';
+require_once 'JugadorTEMP.php';
 
 const TABLAU = 'usuario';
 $persona = new Usuario("doro@gmail.com","pancho","perz Lopez","1234","33333333","doro.jpg",1);
 $persona2 = new Usuario("santuario@gmail.com","luis","santuario Lopez","223","48439473","santi.jpg");
-$jugador1 = new Jugador("criz@gmail.com", "cris", "castro", "98hol8dfdf", "878939473", "cris.jpg", 0);
+$jugador1 = new JugadorTEMP("criz@gmail.com", "cris", "castro", "98hol8dfdf", "878939473", "cris.jpg", 0);
 $conexion = new Conexion();
 $persona->guardar();
 $persona2->guardar();

@@ -53,14 +53,43 @@ class Jugador{
     public static function registrarEquipo($correoJugador,$nombreEquipo,$descEquipo){
         $db = Database::connect();
         $res = $db->query("SELECT NombreEquipo FROM equipo WHERE NombreEquipo='$nombreEquipo'");
-        if(mysqli_num_rows($res) > 0){ // Si ya existe ese nombre
-            return 1;
+        if(mysqli_num_rows($res) < 0){ // Si ya existe ese nombre
         }else{
             $db->query("INSERT INTO capitan (Correo) VALUES ('$correoJugador')");
             $db->query("DELETE FROM jugador WHERE Correo='$correoJugador'");
             $db->query("INSERT INTO equipo (Correo,NombreEquipo,DescripcionUniforme) values ('$correoJugador','$nombreEquipo','$descEquipo')");
             $db->query("UPDATE usuario set EsCapitan='1' where correo='$correoJugador'");
-            return 0;
         }
     }
+        /*
+         * User: criscastro
+         */
+        public static function getInvitacionesAEquipos($correo){
+        $conexion = Database::connect();
+        //tambein puede usarse IDJugador = $IDJugador
+        $consulta ="Select j.IDJugador as IDJugador , u.nombre as capitan, e.NombreEquipo as equipo , u.Imagen as imagenCapitan From jugador j, solicitud s, equipo e, capitan c, usuario u Where j.idjugador = s.idjugador And s.idequipo = e.idequipo And e.idcapitan = c.idcapitan And c.correo = u.correo And s.tipo_solicitud = 1 And j.correo ='$correo'";
+        if ($resultado=$conexion->query($consulta)) {
+            return $resultado;
+        } else {
+            return "Error: " . mysqli_error($conexion);
+        }
+
+    }
+    /*
+     * User: criscastro
+     */
+    public static function aceptarSolicitudDeEquipo($NombreEquipo,$Correo){
+        $db = Database::connect();
+       // revisar que existe usa la misma consulta de arriba $res = $db->query("SELECT IDEquipo FROM equipo WHERE NombreEquipo='$nombreEquipo'");
+        if(mysqli_num_rows($db) <= 0){ // Si no existe
+            return 0;
+        }else{//si existe aceptasolicitud
+            $db->query("INSERT INTO equipo (IDEquipo,IDjugador) VALUES ((SELECT IDEquipo FROM equipo WHERE NombreEquipo='$NombreEquipo'),(SELECT IDJugador FROM jugador WHERE Correo = '$Correo'))");
+            $db->query("DELETE FROM solicitud WHERE IDEquipo = (SELECT IDEquipo FROM equipo WHERE NombreEquipo='$NombreEquipo') AND IDJugador = (SELECT IDJugador FROM jugador WHERE Correo = '$Correo') AND Tipo_Solicitud = '1'");
+            return 1;
+        }
+    }
+
+
+
 }
