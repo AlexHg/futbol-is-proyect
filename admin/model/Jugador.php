@@ -69,7 +69,9 @@ class Jugador{
         public static function getInvitacionesAEquipos($correo){
         $conexion = Database::connect();
         //tambein puede usarse IDJugador = $IDJugador
-        $consulta ="Select j.IDJugador as IDJugador , u.nombre as capitan, e.NombreEquipo as equipo , u.Imagen as imagenCapitan From jugador j, solicitud s, equipo e, capitan c, usuario u Where j.idjugador = s.idjugador And s.idequipo = e.idequipo And e.idcapitan = c.idcapitan And c.correo = u.correo And s.tipo_solicitud = 1 And j.correo ='$correo'";
+        $consulta ="Select j.IDJugador as IDJugador , u.nombre as capitan, e.NombreEquipo as equipo , u.Imagen as imagenCapitan 
+                    From jugador j, solicitud s, equipo e, capitan c, usuario u 
+                    Where j.idjugador = s.idjugador And s.idequipo = e.idequipo And e.idcapitan = c.idcapitan And c.correo = u.correo And s.tipo_solicitud = 1 And j.correo ='$correo'";
         if ($resultado=$conexion->query($consulta)) {
             return $resultado;
         } else {
@@ -82,7 +84,9 @@ class Jugador{
      */
     public static function aceptarSolicitudDeEquipo($NombreEquipo,$Correo){
         $db = Database::connect();
-       // revisar que existe usa la misma consulta de arriba $res = $db->query("SELECT IDEquipo FROM equipo WHERE NombreEquipo='$nombreEquipo'");
+       // revisar que existe usa la misma consulta de arriba
+        //
+        $res = $db->query("Select j.IDJugador as IDJugador , u.nombre as capitan, e.NombreEquipo as equipo , u.Imagen as imagenCapitan From jugador j, solicitud s, equipo e, capitan c, usuario u Where j.idjugador = s.idjugador And s.idequipo = e.idequipo And e.idcapitan = c.idcapitan And c.correo = u.correo And s.tipo_solicitud = 1 And j.correo ='$Correo'");
         if(mysqli_num_rows($db) <= 0){ // Si no existe
             return 0;
         }else{//si existe aceptasolicitud
@@ -90,6 +94,28 @@ class Jugador{
             $db->query("DELETE FROM solicitud WHERE IDEquipo = (SELECT IDEquipo FROM equipo WHERE NombreEquipo='$NombreEquipo') AND IDJugador = (SELECT IDJugador FROM jugador WHERE Correo = '$Correo') AND Tipo_Solicitud = '1'");
             return 1;
         }
+    }
+    /*
+        * User: criscastro
+        * TODO vincular a enviarsolicitud de equipo.php
+        *
+        */
+    public static  function  enviarSolicitudAEquipo($IDEquipo,$correo){
+        $db = Database::connect();
+        $res=$db->query("Select j.IDJugador as IDJugador , u.nombre as capitan, e.NombreEquipo as equipo , u.Imagen as imagenCapitan 
+                                From jugador j, solicitud s, equipo e, capitan c, usuario u 
+                                Where j.idjugador = s.idjugador And s.idequipo = e.idequipo And e.idcapitan = c.idcapitan And c.correo = u.correo 
+                                And s.tipo_solicitud = 1 And j.correo ='$correo' and e.IDEquipo = '$IDEquipo'");
+        if(mysqli_num_rows($res) > 0){ // Si ya la solicitud no la almacena
+            echo 'ya has enviado solicitud a este equipo';
+            return 1;
+        }else{
+                $db->query("INSERT INTO equipo_jugador(IDEquipo, IDJugador)
+				VALUES '$IDEquipo',
+				(SELECT IDJugador from jugador WHERE Correo='$correo'))");
+            echo 'se ha enviado  la solicitud a el equipo ';
+        }
+
     }
 
 
