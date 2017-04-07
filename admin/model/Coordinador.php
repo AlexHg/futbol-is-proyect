@@ -2,7 +2,7 @@
 class Coordinador{
     public static function login($email, $password){
         $db = Database::connect();
-        $sql = "select * from coordinador where Correo='$email' and password='$password'";
+        $sql = "select * from coordinador where Correo='$email' and Contra='$password'";
         if($res=$db->query($sql)){
 			$Datos = mysqli_fetch_array($res, MYSQLI_ASSOC);
 				return $Datos;
