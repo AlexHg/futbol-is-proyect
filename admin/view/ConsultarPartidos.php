@@ -35,7 +35,7 @@
         </tbody>
     </table>  
 </div>
-
+<!--MEnsaje-->
 <div class="overlay-container">
                         <div class="window-container aceptar">
                             <h3>No es posible mostrar la información</h3> 
