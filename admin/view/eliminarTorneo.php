@@ -23,9 +23,25 @@
                 </div>
 
                 <center>
-                    <input type="submit" class="btn btn-success" name="Aceptar" value="Aceptar"/>
+                    <input type="submit" class="btn btn-success" name="Aceptar" value="Aceptar" data-type="alerta"/>
+                    
                 </center>
             </form>
         </div>
     </div>
 </div>
+
+<!-- MENSAJES
+
+<div class="window-container alerta">
+                            <h3>Operación Realizada Exitosamente </h3> 
+                            La operación se realizó exitosamente<br/>
+                            <br/>
+                            <center>
+                            <button class="btn btn-success" >Aceptar</button>
+                            </center>
+   </div>
+
+
+
+-->
