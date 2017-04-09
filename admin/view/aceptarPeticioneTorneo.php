@@ -50,6 +50,7 @@ insert into equipo_torneo (IDEquipo,IDTorneo) values (1,1);
 borramos de solicitud_equipo la solicitud, esta consulta tambien sirve cuando se rechaza un equipo por parte del coordinador
 delete from solicitud_equipo where IDEquipo=1 and IDTorneo=1;
 
+Mensajesss
 
     <script> <div class="overlay-container">
                         <div class="window-container alerta">
