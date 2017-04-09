@@ -1,51 +1,49 @@
-<div id="content-title">
-    <h2>Dar Equipo de Baja de Torneo</h2>
-</div>
-<div id="content-body">
-    <div class="row center-xs">
-        <div class="box">
-            <form class="form-control" role="form">
-                <div class="form-group">
-                    <label class="control-label">Nombre de equipo:</label>
-                    <div class="form-control-cont">
-                        <select class="form-control full" id="EquipoSelect" data-validation="required"  data-validation-error-msg="Campo obligatorio">
-                            <option value=""></option>
-                            <!-- Incluir los option con el sig formato
-                                <option value="1">Cerverus</option>  
-                            -->
-                            
-                            <option>Cerverus</option>
-                            <option>ESCOM United</option>
-                            <option>Cochos FC</option>
-                            <option>Oxigeno</option>
-                        </select>
-                    </div>
-                    <label class="control-label">Capitan:</label>
-                    <div class="form-control-cont">
-                        <input type="text" class="form-control" readonly="" value="Seleccione Equipo" id="CapitanText">
-                    </div>
+ <section id="content">
+                <div id="content-title">
+                         <h2>Baja de Equipos del Torneo</h2>
                 </div>
-                <div class="form-group">
-                    <label class="control-label">Torneo Inscritos:</label>
-                    <div class="form-control-cont">
-                        <select class="form-control full" disabled="" id="TorneoSelect" data-validation="required"  data-validation-error-msg="Campo obligatorio">
-                            <option value="">Seleccione Equipo</option>
-                            <!-- Incluir los option con el sig formato
-                                <option value="1">Soccer</option>  
-                            -->
-                        </select>
-                    </div>
-                </div>
-                <br>
+                <div id="content-body">
+                <form class="form-control" role="form" style="width: 90%">
+                        <div class="form-group">
+                            <label class="control-label">Nombre de Equipo: </label>
+                            <div class="form-control-cont">
+                                <select class="form-control full" id="EquipoSelect" data-validation="required"  data-validation-error-msg="Campo obligatorio">
+                                    <option>Cerverus</option>
+                                    <option>ESCOM United</option>
+                                    <option>Cochos FC</option>
+                                    <option>Oxigeno</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label">Capitán: </label>
+                            <div class="form-control-cont">
+                                <input type="text" class="form-control" disabled="" value="Nombre">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label">Torneos Inscritos:</label>
+                            <div class="form-control-cont">
+                                <select class="form-control full" id="EquipoSelect" data-validation="required"  data-validation-error-msg="Campo obligatorio">
+                                    <option value=""></option>
+                                    <!-- Incluir los option con el sig formato
+                                        <option value="1">Cerverus</option>  
+                                    -->
+                                    <option>Cerverus</option>
+                                    <option>ESCOM United</option>
+                                    <option>Cochos FC</option>
+                                    <option>Oxigeno</option>
+                                </select>
+                            </div>
+                        </div>
+                        </form>
                 <center>
-                    <button type="button" onclick="confirm('¿Esta Seguro de dar este Equipo de Baja?');"class="btn btn-success">Dar Equipo de Baja</button>
-                    <button type="button" onclick="confirm('¿Esta seguro de Cancelar la Operacion?');"class="btn btn-danger btn-rounded">Cancelar</button>
+                    <button type="button" onclick="confirm('¿Esta Seguro de dar este Equipo de Baja?');"class="btn btn-success">Dar de Baja</button>
                 </center>
                 <br>
-            </form>
-        </div>                        
-    </div> 
-</div>
+           </section>
 <script>
     function cambiaOpciones(arreglo){
         var $el = $("#TorneoSelect");
