@@ -92,10 +92,7 @@
     
 </script>
   
-  <!--
-
-Consultas para esta pantalla
-
+<!--Consultas para esta pantalla--
 Para mostrar el nombre de los equipos (para el combobox)
 select NombreEquipo from equipo e,equipo_torneo et where et.idequipo=e.idequipo;
 Para mostrar el nombre del capitan para el equipo que se seleccione
@@ -106,6 +103,8 @@ y despues se van a hacer estas consultas para eliminar el equipo del torneo las 
 select IDTorneo from torneo where Nombre="elnombredeltorneo";
 select IDEquipo from equipo where correo="elcorreodelcapitan";
 delete from equipo_torneo where IDEquipo=1 and IDTorneo=1;
+delete from equipogrupo where IDEquipo=1 and IDTorneo=1;
+delete from juegosresultado where IDEquipo=1 and IDTorneo=1;
 
 Mensajes
 
