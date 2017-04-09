@@ -93,3 +93,10 @@
 					<button type="button" class="btn btn-success" onclick="myFunction3()">Guardar Cambios</button>
 							</div>
 							</form> 
+				<br>
+							<br>
+						    </div>
+						</div>
+					    </section>
+					</section>
+					</div>
