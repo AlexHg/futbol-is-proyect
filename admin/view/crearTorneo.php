@@ -79,6 +79,22 @@
                                     </label>
                         </div>
                         </form>
-                    <center><button type="button" class="btn btn-success">Crear</button></center>
+                    <center><button type="button" class="btn btn-success"  data-type="alerta">Crear</button></center>
                 </div>
           </section>
+<!--Mensajes para esta pantalla
+ <div class="window-container alerta">
+                            <h3>Operación Realizada </h3> 
+                            Los datos ingresados son incorrectos o no se encuentran registrados, favor de verificarlos<br/>
+                            <br/>
+                            <center>
+                            <button class="btn btn-success" >Aceptar</button>
+                            </center>
+   </div>
+
+CONSULTAS PARA ESTA PANTALLA
+
+
+
+
+-->
