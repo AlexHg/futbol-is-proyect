@@ -1,0 +1,37 @@
+<div id="content-title">
+    <h2>Consultar Tabla de Posiciones</h2>
+</div>
+<div id="content-body">
+                    <div class="form-group">
+                            <label class="control-label">Nombre de Torneo</label>
+                            <div class="form-control-cont">
+                                <select class="form-control full">
+                                    <option>Soccer</option>
+                                    <option>Rápido</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+  <button onclick="window.location.href='#'" type="button" class="btn btn-info">Consultar</button>
+    <table class="table table-striped ">
+        <thead>
+            <tr>
+                <th>Fase</th>
+                <th>Torneo</th>
+                <th>Equipo</th>
+                <th>Equipo</th>
+                <th>Horario</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">Inauguración</th>
+                <td>Finales</td>
+                <td>Torneo</td>
+                <td>Equipo1</td>
+                <td>Equipo2</td>
+                <td>Horario</td>
+            </tr>                                                                                   
+        </tbody>
+    </table>  
+</div>
