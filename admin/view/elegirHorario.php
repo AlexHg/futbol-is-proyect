@@ -58,14 +58,6 @@
                             </center>
    </div>
 
-<div class="window-container alerta">
-                            <h3>Modificación fallida </h3> 
-                            El periodo de modificación de horario ya ha finalizado<br/>
-                            <br/>
-                            <center>
-                            <button class="btn btn-success" >Aceptar</button>
-                            </center>
-   </div>
 
 <div class="window-container alerta">
                             <h3>Horario no disponible </h3> 
