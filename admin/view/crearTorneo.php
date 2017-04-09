@@ -82,15 +82,52 @@
                     <center><button type="button" class="btn btn-success"  data-type="alerta">Crear</button></center>
                 </div>
           </section>
+
 <!--Mensajes para esta pantalla
  <div class="window-container alerta">
-                            <h3>Operación Realizada </h3> 
-                            Los datos ingresados son incorrectos o no se encuentran registrados, favor de verificarlos<br/>
+                            <h3>Operación Realizada Exitosamente </h3> 
+                            La operación se realizó exitosamente<br/>
                             <br/>
                             <center>
                             <button class="btn btn-success" >Aceptar</button>
                             </center>
    </div>
+
+ <div class="window-container alerta">
+                            <h3>El nombre del torneo ya existe</h3> 
+                            El nombre del torneo que ingresó ya existe<br/>
+                            <br/>
+                            <center>
+                            <button class="btn btn-danger" >Reintentar</button>
+                            </center>
+                        </div>
+
+ <div class="window-container alerta">
+                            <h3>Datos Incorrectos</h3> 
+                            Los datos ingresados son incorrectos o no se encuentran registrados, favor de verificarlos<br/>
+                            <br/>
+                            <center>
+                            <button class="btn btn-danger" >Reintentar</button>
+                            </center>
+                        </div>
+
+ <div class="window-container alerta">
+                            <h3>No ingresó nombre de torneo</h3> 
+                            No ingresó un nombre de torneo<br/>
+                            <br/>
+                            <center>
+                            <button class="btn btn-danger" >Reintentar</button>
+                            </center>
+                        </div>
+
+ <div class="window-container alerta">
+                            <h3>Deben seleccionarse al menos 4 días de juego</h3> 
+                            Se seleccionaron menos de 4 días de juego<br/>
+                            <br/>
+                            <center>
+                            <button class="btn btn-danger" >Reintentar</button>
+                            </center>
+                        </div>
 
 CONSULTAS PARA ESTA PANTALLA
 
