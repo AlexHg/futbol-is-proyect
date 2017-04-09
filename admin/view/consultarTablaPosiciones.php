@@ -12,7 +12,7 @@
                             </div>
                         </div>
                         
-  <button onclick="window.location.href='#'" type="button" class="btn btn-info">Vista general del torneo</button>
+  <button onclick="window.location.href='#'" type="button" class="btn btn-info">Consultar</button>
     <table class="table table-striped ">
         <thead>
             <tr>
