@@ -44,6 +44,36 @@
     <br>
     <br>
         <center>
-            <button type="button" class="btn btn-success">Elegir Horario</button>
+            <button type="button" class="btn btn-success"  data-type="alerta">Elegir Horario</button>
         </center>
 </div>
+
+    <!-- MENSAJES 
+<div class="window-container alerta">
+                            <h3>Operación Realizada Exitosamente </h3> 
+                            La operación se realizó exitosamente<br/>
+                            <br/>
+                            <center>
+                            <button class="btn btn-success" >Aceptar</button>
+                            </center>
+   </div>
+
+<div class="window-container alerta">
+                            <h3>Modificación fallida </h3> 
+                            El periodo de modificación de horario ya ha finalizado<br/>
+                            <br/>
+                            <center>
+                            <button class="btn btn-success" >Aceptar</button>
+                            </center>
+   </div>
+
+<div class="window-container alerta">
+                            <h3>Horario no disponible </h3> 
+                            El horario elegido no está disponible<br/>
+                            <br/>
+                            <center>
+                            <button class="btn btn-success" >Aceptar</button>
+                            </center>
+   </div>
+
+-->
