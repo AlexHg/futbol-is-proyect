@@ -1,14 +1,13 @@
 <div id="content-title">
-    <h2>Elegir Horario</h2>
+    <h2>Elegir Horario del Partido</h2>
 </div>
 
 <div id="content-body">
-    <div style=" border-top-style: solid;border-bottom-style: solid;">
     <div>
-        <h3>Seleccione el Horario de su preferencia</h3>
+        <h3>Selecciona el Horario de su preferencia</h3>
     </div>
     <br>
-    <form class="form-horizontal" role="form">
+    <form class="form-horizontal" role="form" style="width: 90%">
         <div class="form-group">
             <label class="control-label">HORA</label>
             <div class="form-control-cont">
@@ -43,11 +42,8 @@
         </div>
     </form>
     <br>
-    </div>
     <br>
-    <div style="background-color:#E6E6E6;color:white;padding:20px;">
         <center>
             <button type="button" onclick="alert('Horario registrado EXITOSAMENTE');"class="btn btn-success">Elegir Horario</button>
         </center>
-    </div> 
 </div>
