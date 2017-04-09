@@ -6,9 +6,9 @@
     <div>
         <h3>Selecciona el Horario de su preferencia</h3>
     </div>
-    <br>
-    <form class="form-horizontal" role="form" style="width: 90%">
-        <div class="form-group">
+    <div id="content-body">
+                <form class="form-control" role="form" style="width: 90%">
+         <div class="form-group">
             <label class="control-label">HORA</label>
             <div class="form-control-cont">
                 <select class="form-control full">
