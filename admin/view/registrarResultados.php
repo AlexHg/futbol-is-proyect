@@ -1,86 +1,95 @@
 <div id="content-title">
-    <h2>Registrar Resultados</h2>
-</div>
-<div id="content-body">
-    <h3>Resultados de Torneo de Fútbol Soccer</h3>
-    <table class="table table-striped ">
-        <thead>
-            <tr>
-                <th>#</th>
-                <th>Fecha</th>
-                <th>Hora</th>
-                <th>Grupo</th>
-                <th>Equipo</th>
-                <th>Puntos</th>
-                <th>Puntos</th>
-                <th>Equipo</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>06/03/17</td>
-                <td>12:30 Hrs</td>
-                <td>A</td>
-                <td>Cerveros</td>
-                <td>3</td>
-                <td>0</td>
-                <td>Semillerianos</td>
-            </tr>
-            <tr>
-                <th scope="row">1</th>
-                <td>06/03/17</td>
-                <td>2:30 Hrs</td>
-                <td>B</td>
-                <td>BFFs</td>
-                <td>3</td>
-                <td>2</td>
-                <td>ESCOM UNITED</td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td>08/03/17</td>
-                <td>12:30 Hrs</td>
-                <td>C</td>
-                <td>ESCOMips</td>
-                <td>1</td>
-                <td>2</td>
-                <td>Vengadores</td>
-            </tr>
-        </tbody>
-    </table>
-    <br>
-    <div align="center">
-        <button type="button" class="btn btn-success" onclick="myFunction3()" data-type="alerta" >Guardar Cambios</button>
+                    <h2>Registrar Resultados</h2>
+                </div>
+                <div id="content-body">
 
-        <script>
-            function myFunction3() {
-                <div class="overlay-container">
-                        <div class="window-container alerta">
-                             <h3>No se ha podido guardar los cambios</h3> 
-                             No se han podido guardar los cambios. Uno o más partidos no se han llevado a cabo
-                            <br/>
-                            <center>
-                            <button class="btn btn-danger" >Reintentar</button>
-                            </center>
+
+                    <h3>Resultados de Torneo de Fútbol Soccer y Fútbol Rápido</h3>
+                    <form class="form-control" role="form" style="width: 90%">
+                    <div align="center">
+                   <div class="form-group">
+                            <label class="control-label">Tipo de Torneo </label>
+                            <div class="form-control-cont">
+                                <select class="form-control full">
+                                    <option>Soccer</option>
+                                    <option>Rápido</option>
+                                    
+                                </select>
+                            </div>
+                   </div>
+                     <br>
+                     <br>         
+                    <div>
+                    
+                       </div>
+                         
+                            <div class="form-group">
+                            <label class="control-label">Fecha </label>
+                            <div class="form-control-cont">
+                                <select class="form-control full">
+                                    <option>10/03/2017</option>
+                                    <option>11/03/2017</option>
+                                    <option>12/03/2017</option>
+                                    <option>13/03/2017</option>
+                                    <option>15/03/2017</option>
+                                </select>
+                            </div>
+                            
+                            
+                            <label class="control-label">Hora </label>
+                            <div class="form-control-cont">
+                                <select class="form-control full">
+                                    <option>10:30</option>
+                                    <option>11:00</option>
+                                    <option>12:00</option>
+                                    <option>13:00</option>
+                                    <option>15:00</option>
+                                </select>
+                            </div>
                         </div>
-                    </div>
-            }
-        </script>
-        <script>
-            function myFunction2() {
-                var x;
-                if (confirm("No se han podido guardar los cambios. El partido no se ha llevado a cabo.") == true) {
-                    x = "You pressed OK!";
-                } else {
-                    x = "You pressed Cancel!";
-                }
-                document.getElementById("demo").innerHTML = x;
-            }
-        </script>
-
-
-        <br>
-        <br>
-    </div>
-</div>
+                    <br>
+                    <div align="center">
+                    	<button type="button" class="btn btn-primary" onclick="myFunction3()">Buscar Partido</button>
+                    <br>
+                        <script>
+                            function myFunction3() {
+                                alert("No se han podido guardar los cambios. Uno o más partidos no se han llevado a cabo.");
+                            }
+                        </script>
+                        <script>
+                            function myFunction2() {
+                                var x;
+                                if (confirm("No se han podido guardar los cambios. El partido no se ha llevado a cabo.") == true) {
+                                    x = "You pressed OK!";
+                                } else {
+                                    x = "You pressed Cancel!";
+                                }
+                                document.getElementById("demo").innerHTML = x;
+                            }
+                        </script>
+                        <br>
+                        
+                          <br>
+                       
+							<div class="form-group" >
+                            <label class="control-label">Equipo 1</label>
+                                <div class="form-control-cont">
+                                    <input type="text" class="form-control full" value="Goles Anotados">
+                                </div>
+                            </div>
+                        
+                            <br>
+                           
+                            <div class="form-group" >
+                            <label class="control-label">Equipo 2</label>
+                                <div class="form-control-cont">
+                                    <input type="text" class="form-control full" value="Goles Anotados">
+                                </div>
+                            </div>
+                            </div>
+                              
+                            <div align="center">
+                            	
+					<button type="button" class="btn btn-success" onclick="myFunction3()">Guardar Cambios</button>
+							</div>
+							</form> 
