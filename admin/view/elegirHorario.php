@@ -44,6 +44,6 @@
     <br>
     <br>
         <center>
-            <button type="button" onclick="alert('Horario registrado EXITOSAMENTE');"class="btn btn-success">Elegir Horario</button>
+            <button type="button" class="btn btn-success">Elegir Horario</button>
         </center>
 </div>
