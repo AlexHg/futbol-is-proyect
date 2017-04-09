@@ -1,5 +1,5 @@
 <div id="content-title">
-    <h2>Consultar Tabla de Posiciones</h2>
+    <h2>Tabla de Próximos Partidos</h2>
 </div>
 <div id="content-body">
                     <div class="form-group">
