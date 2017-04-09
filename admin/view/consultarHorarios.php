@@ -88,4 +88,15 @@
         <div id="combine-chart-container" style="height: 320px; padding: 0px; position: relative;" class="flot-chart"></div>
     </div>
     -->
+<!--Mensaje -->
+<div class="overlay-container">
+                        <div class="window-container aceptar">
+                            <h3>No es posible mostrar la información</h3> 
+                            No fue posible mostrar la información, inténtalo más tarde<br/>
+                            <br/>
+                            <center>
+                            <button class="btn btn-success close" >Aceptar</button>
+                            </center>
+                        </div>
+</div>
 </div>
