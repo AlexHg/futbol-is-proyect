@@ -101,16 +101,6 @@
                             <button class="btn btn-danger" >Reintentar</button>
                             </center>
                         </div>
-
- <div class="window-container alerta">
-                            <h3>Datos Incorrectos</h3> 
-                            Los datos ingresados son incorrectos o no se encuentran registrados, favor de verificarlos<br/>
-                            <br/>
-                            <center>
-                            <button class="btn btn-danger" >Reintentar</button>
-                            </center>
-                        </div>
-
  <div class="window-container alerta">
                             <h3>No ingresó nombre de torneo</h3> 
                             No ingresó un nombre de torneo<br/>
