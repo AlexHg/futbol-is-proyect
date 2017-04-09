@@ -42,6 +42,30 @@
                             </center>
    </div>
 
+CONSULTAS
 
+delimiter #
+create procedure e1(in torneo varchar(45))
+begin
+
+
+delete from Equipo_Torneo
+where IDTorneo=(select IDTorneo from Torneo where Nombre like concat(torneo,"%"));
+
+delete from Juego
+where IDTorneo=(select IDTorneo from Torneo where Nombre like concat(torneo,"%"));
+
+delete from juegosresultado
+where IDTorneo=(select IDTorneo from Torneo where Nombre like concat(torneo,"%"));
+
+delete from Horario_Juego
+where IDTorneo=(select IDTorneo from Torneo where Nombre like concat(torneo,"%"));
+
+delete from Torneo
+where IDTorneo=(select IDTorneo from Torneo where Nombre like concat(torneo,"%"));
+
+end #
+
+delimiter ;
 
 -->
