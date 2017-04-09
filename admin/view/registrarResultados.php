@@ -49,29 +49,14 @@
                         </div>
                     <br>
                     <div align="center">
-                    	<button type="button" class="btn btn-primary" onclick="myFunction3()">Buscar Partido</button>
+                    	<button type="button" class="btn btn-primary" data-type="alerta">Buscar Partido</button>
                     <br>
-                        <script>
-                            function myFunction3() {
-                                alert("No se han podido guardar los cambios. Uno o más partidos no se han llevado a cabo.");
-                            }
-                        </script>
-                        <script>
-                            function myFunction2() {
-                                var x;
-                                if (confirm("No se han podido guardar los cambios. El partido no se ha llevado a cabo.") == true) {
-                                    x = "You pressed OK!";
-                                } else {
-                                    x = "You pressed Cancel!";
-                                }
-                                document.getElementById("demo").innerHTML = x;
-                            }
-                        </script>
+                        
                         <br>
                         
                           <br>
                        
-							<div class="form-group" >
+			<div class="form-group" >
                             <label class="control-label">Equipo 1</label>
                                 <div class="form-control-cont">
                                     <input type="text" class="form-control full" value="Goles Anotados">
@@ -90,7 +75,7 @@
                               
                             <div align="center">
                             	
-					<button type="button" class="btn btn-success" onclick="myFunction3()">Guardar Cambios</button>
+					<button type="button" class="btn btn-success" data-type="alerta">Guardar Cambios</button>
 							</div>
 							</form> 
 				<br>
@@ -100,3 +85,27 @@
 					    </section>
 					</section>
 					</div>
+
+<!-- MENSAJES
+
+<div class="window-container alerta">
+                            <h3>Operación Realizada Exitosamente </h3> 
+                            La operación se realizó exitosamente<br/>
+                            <br/>
+                            <center>
+                            <button class="btn btn-success" >Aceptar</button>
+                            </center>
+   </div>
+
+<div class="window-container alerta">
+                            <h3>No se han podido guardar los cambios</h3> 
+                            No se han podido guardar los cambios. Uno o más partidos
+			    no se han llevado a cabo<br/>
+                            <br/>
+                            <center>
+                            <button class="btn btn-danger" >Reintentar</button>
+                            </center>
+   </div>
+
+-->
+
