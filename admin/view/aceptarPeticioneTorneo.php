@@ -54,7 +54,7 @@ delete from solicitud_equipo where IDEquipo=1 and IDTorneo=1;
     <script> <div class="overlay-container">
                         <div class="window-container alerta">
                             <h3>¿Esta seguro de realizar esta operación?</h3> 
-                            Esta seguro de aceptar este equipo en este torneo<br/>
+                            Esta seguro de que deseas aceptar este equipo en este torneo<br/>
                             <br/>
                             <center>
 							<button class="btn btn-success close">Aceptar</button>
