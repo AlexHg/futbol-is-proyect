@@ -121,7 +121,7 @@ select DiayHora from horario_juego h, fase f, torneo t
 where h.idfase=f.idfase
 and h.IDTorneo=t.IDTorneo
 and f.descripcion like "IndicarFase"
-and Nombre like "NombreTorneo"; (Por Nombre)
+and t.Nombre like "NombreTorneo"; (Por Nombre)
     
     -->
 
