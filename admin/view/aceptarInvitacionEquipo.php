@@ -13,10 +13,10 @@
             </tr>
             </thead>
             <tbody>
+
             <?php
+            aceptarSolicitud($_SESSION['email']);
             mostrarInvitaciones($_SESSION['email']);
-            //Cambiar por ID obtenido de la sesión
-            imprimeTabla();
             ?>
             </tbody>
         </table>

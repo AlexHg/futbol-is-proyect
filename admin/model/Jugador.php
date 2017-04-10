@@ -82,11 +82,11 @@ class Jugador{
     /*
      * User: criscastro
      */
-    public static function aceptarSolicitudDeEquipo($NombreEquipo,$Correo){
+    public static function aceptarSolicitudDeEquipo($IDEquipo,$Correo){
         $db = Database::connect();
        // revisar que existe usa la misma consulta de arriba
         //
-        $res = $db->query("Select j.IDJugador as IDJugador , u.nombre as capitan, e.NombreEquipo as equipo , u.Imagen as imagenCapitan From jugador j, solicitud s, equipo e, capitan c, usuario u Where j.idjugador = s.idjugador And s.idequipo = e.idequipo And e.idcapitan = c.idcapitan And c.correo = u.correo And s.tipo_solicitud = 1 And j.correo ='$Correo'");
+        $res = $db->query("Select e.IDEquipo as IDEquipo , j.IDJugador as IDJugador , u.nombre as capitan, e.NombreEquipo as equipo , u.Imagen as imagenCapitan From jugador j, solicitud s, equipo e, capitan c, usuario u Where j.idjugador = s.idjugador And s.idequipo = e.idequipo And e.idcapitan = c.idcapitan And c.correo = u.correo And s.tipo_solicitud = 1 And j.correo ='$Correo' and e.IDEquipo = '$IDEquipo'");
         if(mysqli_num_rows($db) <= 0){ // Si no existe
             return 0;
         }else{//si existe aceptasolicitud
@@ -108,16 +108,16 @@ class Jugador{
                                 And s.tipo_solicitud = 1 And j.correo ='$correo' and e.IDEquipo = '$IDEquipo'");
         if(mysqli_num_rows($res) > 0){ // Si ya la solicitud no la almacena
             echo 'ya has enviado solicitud a este equipo';
-            return 1;
+            return 0;
         }else{
                 $db->query("INSERT INTO equipo_jugador(IDEquipo, IDJugador)
 				VALUES '$IDEquipo',
 				(SELECT IDJugador from jugador WHERE Correo='$correo'))");
             echo 'se ha enviado  la solicitud a el equipo ';
+            return 1;
         }
 
     }
-
 
 
 }
