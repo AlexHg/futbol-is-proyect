@@ -55,3 +55,18 @@
                             </center>
                         </div>
 </div>
+ <!--Consultas
+me muestra todos los equipos que no estan actualente en un torneo en el combo box de la pantalla
+select nombreEquipo from equipo where idEquipo not in(select idEquipo from equipo_torneo);
+me muestra los datos del capitan de este equipo en el label de al ladito (en la pantalla)
+select Nombre,Apellidos from Usuario u, capitan c,equipo e where u.correo=c.correo and c.correo=e.correo and nombreEquipo="al nombre seleccionado del combo box";
+obtengo el correo de ese capitan
+select correo from equipo where NombreEquipo="al nombre seleccionado del combo box";
+lo meto en jugador
+insert into jugador (IDJugador,Correo) values (null,"correo de consulta anterior");
+elimino su equipo y su cuenta de capitan , le cambio sus privilegios de usuario a 0
+delete from equipo where correo="Hector@outlook.com"; -- es el correo de la consulta anterior
+delete from capitan where correo="Hector@outlook.com";--tambien es el correo de la consulta anterior
+update usuario set EsCapitan='0' where correo="Hector@outlook.com";
+
+-->
