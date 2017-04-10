@@ -59,4 +59,14 @@
                             </center>
                         </div>
           </div></script>
+    <script> <div class="overlay-container">
+                        <div class="window-container alerta">
+                            <h3>Operación realizada exitosamente</h3> 
+                            La operación se realizó exitosamente<br/>
+                            <br/>
+                            <center>
+							<button class="btn btn-success close">Aceptar</button>
+                            </center>
+                        </div>
+          </div></script>
 -->
