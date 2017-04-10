@@ -100,3 +100,28 @@
                         </div>
 </div>
 </div>
+
+
+<!-- CONSULTAS
+
+5.1 Consultar horarios
+
+select DiayHora from horario_juego h, fase f, torneo t
+where h.idfase=f.idfase
+and h.IDTorneo=t.IDTorneo
+and f.descripcion like "IndicarFase";
+
+select DiayHora from horario_juego h, fase f, torneo t
+where h.idfase=f.idfase
+and h.IDTorneo=t.IDTorneo
+and f.descripcion like "IndicarFase"
+and t.Tipo_Torneo=1; (Por tipo: Rapido o Normal)
+
+select DiayHora from horario_juego h, fase f, torneo t
+where h.idfase=f.idfase
+and h.IDTorneo=t.IDTorneo
+and f.descripcion like "IndicarFase"
+and Nombre like "NombreTorneo"; (Por Nombre)
+    
+    -->
+
