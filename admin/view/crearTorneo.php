@@ -121,6 +121,23 @@
 
 CONSULTAS PARA ESTA PANTALLA
 
+insert into torneo (Nombre,Tipo_Torneo, Fecha_Inicio, Fecha_Fin, Fecha_Cierre_Inscripcion) values("NombreTorneo",TipoTorneo,"2009-10-09","2009-12-08","2009-12-08");
+select IDTorneo from Torneo
+where Nombre like "NuevoTorneo";
+
+--antes de insertar los dias del torneo revisar si ya tiene 4 dias asignados:
+
+select count(*) from Torneo_grupo g, Torneo t
+where g.IDTorneo=t.IDTorneo 
+and t.Nombre like "NuevoTorneo";
+
+--Si es menor a 4 se puede realizar el siguiente insert para cada uno de los dias de juego, 
+%Dia es el dato seleccionado con los checkbox:
+
+insert into Torneo_Grupo
+values ((select idGrupo from Grupo where dia like "%Dia" ),(select IDTorneo from Torneo
+where Nombre like "NuevoTorneo"));
+
 
 
 
