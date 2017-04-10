@@ -1,4 +1,4 @@
-<div id="content-title">
+ <div id="content-title">
                     <h2>Registrar Resultados</h2>
                 </div>
                 <div id="content-body">
@@ -18,6 +18,18 @@
                             </div>
                    </div>
                      <br>
+                     
+                     <div align="center">
+                   <div class="form-group">
+                            <label class="control-label">Nombre de Torneo </label>
+                            <div class="form-control-cont">
+                                <select class="form-control full">
+                                    <option>Pavo</option>
+                                    <option>Otro nombre :P</option>
+                                    
+                                </select>
+                            </div>
+                   </div>
                      <br>         
                     <div>
                     
@@ -49,14 +61,29 @@
                         </div>
                     <br>
                     <div align="center">
-                    	<button type="button" class="btn btn-primary" data-type="alerta">Buscar Partido</button>
-                    <br>
-                        
+                    	<button type="button" class="btn btn-primary" onclick="myFunction3()">Buscar Partido</button>
+<br>
+                        <script>
+                            function myFunction3() {
+                                alert("No se han podido guardar los cambios. Uno o más partidos no se han llevado a cabo.");
+                            }
+                        </script>
+                        <script>
+                            function myFunction2() {
+                                var x;
+                                if (confirm("No se han podido guardar los cambios. El partido no se ha llevado a cabo.") == true) {
+                                    x = "You pressed OK!";
+                                } else {
+                                    x = "You pressed Cancel!";
+                                }
+                                document.getElementById("demo").innerHTML = x;
+                            }
+                        </script>
                         <br>
                         
                           <br>
                        
-			<div class="form-group" >
+							<div class="form-group" >
                             <label class="control-label">Equipo 1</label>
                                 <div class="form-control-cont">
                                     <input type="text" class="form-control full" value="Goles Anotados">
@@ -75,17 +102,16 @@
                               
                             <div align="center">
                             	
-					<button type="button" class="btn btn-success" data-type="alerta">Guardar Cambios</button>
+					<button type="button" class="btn btn-success" onclick="myFunction3()">Guardar Cambios</button>
 							</div>
 							</form> 
-				<br>
-							<br>
-						    </div>
-						</div>
-					    </section>
-					</section>
-					</div>
-
+                        <br>
+                        <br>
+                    </div>
+                </div>
+            </section>
+        </section>
+        </div>
 <!-- MENSAJES
 
 <div class="window-container alerta">
