@@ -42,12 +42,14 @@
                             </center>
    </div>
 
-CONSULTAS
+CONSULTAS -- para llamar el procedure: call e1("nombre del torneo a eliminar");
 
 delimiter #
 create procedure e1(in torneo varchar(45))
 begin
 
+delete from juegosresultado
+where IDTorneo=(select IDTorneo from Torneo where Nombre like concat(torneo,"%"));
 
 delete from Equipo_Torneo
 where IDTorneo=(select IDTorneo from Torneo where Nombre like concat(torneo,"%"));
@@ -55,14 +57,14 @@ where IDTorneo=(select IDTorneo from Torneo where Nombre like concat(torneo,"%")
 delete from Juego
 where IDTorneo=(select IDTorneo from Torneo where Nombre like concat(torneo,"%"));
 
-delete from juegosresultado
-where IDTorneo=(select IDTorneo from Torneo where Nombre like concat(torneo,"%"));
-
 delete from Horario_Juego
 where IDTorneo=(select IDTorneo from Torneo where Nombre like concat(torneo,"%"));
 
-delete from Torneo
+delete from Torneo_grupo
 where IDTorneo=(select IDTorneo from Torneo where Nombre like concat(torneo,"%"));
+
+delete from Torneo
+where IDTorneo = (select IDTorneo from (SELECT * FROM torneo) as IDT where Nombre like concat(torneo,"%")); 
 
 end #
 
