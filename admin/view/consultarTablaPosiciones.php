@@ -98,3 +98,37 @@
                             </center>
                         </div>
 </div>
+
+<!--CONSULTA
+
+5.2 Consultar tabla de posiciones
+
+select nombreequipo from equipo e, juegosresultado j
+where e.idequipo=j.idequipo
+group by nombreequipo;
+
+ingresar los nombres de equipo de la consulta anterior e ingresarlos
+en el siguiente procedure con call p1("NombreEquipo");
+
+delimiter #
+create procedure p1(in ap varchar(50))
+begin
+select count(*) as juegosTotales from equipo e, JuegosResultado j 
+where e.idequipo=j.idequipo and e.NombreEquipo like concat(ap,"%");
+select count(*) as juegosGanados from equipo e, JuegosResultado j 
+where e.idequipo=j.idequipo and j.golesaFavor>j.golesencontra and e.NombreEquipo like concat(ap,"%");
+select count(*) as juegosEmpatados from equipo e, JuegosResultado j 
+where e.idequipo=j.idequipo and j.golesaFavor=j.golesencontra and e.NombreEquipo like concat(ap,"%");
+select count(*) as juegosPerdidos from equipo e, JuegosResultado j 
+where e.idequipo=j.idequipo and j.golesaFavor<j.golesencontra and e.NombreEquipo like concat(ap,"%");
+select sum(Golesafavor) as golesaFavor from equipo e, JuegosResultado j
+where e.idequipo=j.idequipo
+and e.nombreequipo like concat(ap,"%");
+select sum(Golesencontra) as golesenContra from equipo e, JuegosResultado j
+where e.idequipo=j.idequipo
+and e.nombreequipo like concat(ap,"%");
+end #
+
+
+
+-->
