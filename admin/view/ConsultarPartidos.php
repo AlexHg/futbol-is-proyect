@@ -35,7 +35,7 @@
         </tbody>
     </table>  
 </div>
-<!--MEnsaje-->
+<!--MEnsaje
 <div class="overlay-container">
                         <div class="window-container aceptar">
                             <h3>No es posible mostrar la información</h3> 
@@ -46,3 +46,26 @@
                             </center>
                         </div>
 </div>
+
+----CONSULTA 
+
+create procedure CP(in tipo BOOLEAN)
+begin
+
+
+select e.NombreEquipo as Equipo, f.descripcion as Fase, t.nombre as Torneo, h.DiayHora as Horario
+from equipo e, fase f, juego j, torneo t, horario_juego h
+where j.idEquipo = e.idEquipo
+and j.idHorario = h.IDHorario
+and t.IDTorneo = j.idTorneo
+and f.idfase = j.idfase
+and t.Tipo_Torneo = tipo;
+
+
+end #
+
+delimiter ;
+
+-- para llamar a procedure: call cp(1); (dentro del paréntesis va 0 o 1 dependiendo del tipo de torneo que desea consultarse.
+Devuelve los equipos enfrentados con su fase, torneo y horario
+-->
