@@ -5,8 +5,10 @@ function adiosTorneo(){
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (isset($_POST["ni"])) {
             $seleccionado = $_POST['ni'];
-            if(Torneo::eliminarTorneo("$seleccionado")){
-                echo $seleccionado." eliminado <br>";
+            list($IDTorneo,$nombre)=explode(".",$seleccionado);
+
+            if(Torneo::eliminarTorneo("$IDTorneo")){
+                echo $nombre." eliminado <br>";
             }
         }
         else{
@@ -19,6 +21,6 @@ function adiosTorneo(){
 function listaTorneos(){
     $torneos=Torneo::getTorneos();
     while ($row = $torneos->fetch_array(MYSQLI_ASSOC)) {
-        echo '<option value="'.$row["nombre"].'">'.$row["nombre"].'</option>';
+        echo '<option value="'.$row["IDTorneo"].".".$row["nombre"].'">'.$row["nombre"].'</option>';
     }
 }
