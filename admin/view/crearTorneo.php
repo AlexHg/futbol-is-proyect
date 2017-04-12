@@ -1,5 +1,3 @@
-
- <section id="content">
                 <div id="content-title">
                     <h2>Crear Torneo</h2>
                 </div>
@@ -81,7 +79,6 @@
                         </form>
                     <center><button type="button" class="btn btn-success"  data-type="alerta">Crear</button></center>
                 </div>
-          </section>
 
 <!--Mensajes para esta pantalla
  <div class="window-container alerta">
