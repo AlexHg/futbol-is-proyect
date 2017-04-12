@@ -13,7 +13,7 @@ class Torneo{
 
 public static function getTorneos(){
         $conexion = Database::connect();
-        $consulta ="SELECT nombre from Torneo;";
+        $consulta ="SELECT IDTorneo,nombre from Torneo;";
         if ($resultado=$conexion->query($consulta)) {
             return $resultado;
         } else {
