@@ -12,7 +12,7 @@ function adiosTorneo(){
             }
         }
         else{
-            echo "No hay jugadores seleccionados<br>";
+            echo "No hay Torneo seleccionado<br>";
         }
     }
 }
