@@ -22,7 +22,7 @@
                 <th>Elegir</th>
                 <th>Equipo</th>
                 <th>Capitán</th>
-                <th>imagen</th>
+                <th>Torneo</th>                 
             </tr>
             </thead>
             <tbody>
