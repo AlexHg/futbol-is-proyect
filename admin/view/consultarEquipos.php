@@ -2,8 +2,6 @@
     <h2>Equipos Inscritos</h2>
 </div>
 <div id="content-body">
-    <h2>Torneo de fútbol rápido 2017-1</h2>
-    <h3>Equipos Inscritos</h3>
     <div align="right">
         <button onclick="window.location.href='#'" type="button" class="btn btn-info">Ver partidos</button>
     
@@ -22,6 +20,7 @@
             <th>Goles en contra</th>
             <th>Diferencia</th>
             <th>Puntos</th>
+            <th>Torneo</th><!--Implementar, info necesaria-->
         </tr>
         </thead>
         <tbody>
