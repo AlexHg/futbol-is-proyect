@@ -4,7 +4,7 @@
 </div>
 <div id="content-body" style="display:flex; justify-content:center; align-items:center; min-height:60vh;">
     <center>
-        <form class="form-control" role="form" style="transform:scale(1.2)" method="POST" action="action/iniciarSesion.submit">         
+        <form class="form-control" role="form" style="transform:scale(1)" method="POST" action="action/iniciarSesion.submit">         
             <h3>Ingresa los siguientes datos requeridos:</h3>                 
             <div class="form-group">
                 <label class="control-label">Correo</label>
@@ -46,3 +46,19 @@
                         </div>
           </div></script>
 <?php } ?>
+
+<div style="background:#f9fcd4; padding:1rem;"><pre>
+<b>Datos de ejemplo</b>
+
+Jugador
+    barney@outlook.com
+    oscarito
+
+Capitan
+    Hector@outlook.com
+    12345
+
+Coordinador
+    coordinador@gmail.com
+    diegoelguapo
+</pre></div>
