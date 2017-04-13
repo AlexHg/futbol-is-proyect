@@ -16,7 +16,7 @@
         <li>Santuario Parra Luis Fernando </li>
         <li>Castro Maya Christopher </li>
         <li>Hernández Bautista Yasmine Pilar </li>
-        <li>Diego Cruz Mondragón </li>
+        <li>Cruz Mondragón Diego </li>
     </ul>
     <br><br>
 </div>
