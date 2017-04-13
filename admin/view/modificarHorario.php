@@ -12,6 +12,26 @@
         </div>
        <div id="content-body">
          <form class="form-control" role="form" style="width: 90%">
+             <div class="form-group">
+                            <label class="control-label">Torneo: </label>
+                            <div class="form-control-cont">
+                                <select class="form-control full">
+                                    <option>T1</option>
+                                    <option>T2</option>
+                                    
+                                </select>
+                            </div>
+              </div>
+             <div class="form-group">
+                            <label class="control-label">Nombre de Equipo: </label>
+                            <div class="form-control-cont">
+                                <select class="form-control full">
+                                    <option>E1</option>
+                                    <option>E2</option>
+                                    
+                                </select>
+                            </div>
+              </div>
             <div class="form-group">
                 <label class="control-label">Hora</label>
                 <div class="form-control-cont">
@@ -34,16 +54,6 @@
                     </select>
                 </div>
             </div>
-            <div class="form-group">
-            <label class="control-label">TORNEO</label>
-            <div class="form-control-cont">
-                <select class="form-control full">
-                    <option>Torneo1</option>
-                    <option>Torneo2</option>
-                    <option>Torneo3</option>
-                </select>
-            </div>
-        </div>
         </form>
         <br>
         <br>
