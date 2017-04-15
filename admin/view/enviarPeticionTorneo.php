@@ -39,7 +39,7 @@
 <!--
 <script> <div class="overlay-container">
                         <div class="window-container alerta">
-                            <h3>Cancelar Operación</h3> 
+                            <h3>Confirmación de Cancelación</h3> 
                             Estas seguro de deshacer la operación en curso<br/>
                             <br/>
                             <center>
