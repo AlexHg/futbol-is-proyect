@@ -36,7 +36,7 @@
 <div class="overlay-container">
                         <div class="window-container alerta">
                             <h3>Confirmación de Eliminación de Equipo</h3> 
-                            ¿Esta seguro que desea eliminar el equipo?<br/>
+                            ¿Está seguro que desea eliminar el equipo? Se eliminará toda la información relacionada a este equipo<br/>
                             <br/>
                             <center>
                             <button class="btn btn-success close" data-type="aceptar">Aceptar</button>
