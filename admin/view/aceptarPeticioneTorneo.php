@@ -54,8 +54,8 @@ Mensajesss
 
     <script> <div class="overlay-container">
                         <div class="window-container alerta">
-                            <h3>¿Esta seguro de realizar esta operación?</h3> 
-                            Esta seguro de que deseas aceptar este equipo en este torneo<br/>
+                            <h3>Confirmación de Operación</h3> 
+                            ¿Estás seguro de que deseas aceptar este equipo en este torneo<br/>
                             <br/>
                             <center>
 							<button class="btn btn-success close">Aceptar</button>
