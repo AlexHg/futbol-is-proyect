@@ -52,8 +52,8 @@
 <!--Mensaje acptar solicitud para 1-->
 <div class="overlay-container">
     <div class="window-container alerta">
-        <h3>Confirmación de solicitud de Equipo</h3>
-            ¿Deseas enviar estas solicitudes?
+        <h3>Confirmación de envío de solicitud</h3>
+            ¿Desea enviar estas solicitudes?
         <br/>
         <center>
             <button class="btn btn-success close" class="window-container aceptar" >Aceptar</button>
