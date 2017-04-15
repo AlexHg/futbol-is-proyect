@@ -92,7 +92,7 @@
 
  <div class="window-container alerta">
                             <h3>El nombre del torneo ya existe</h3> 
-                            El nombre del torneo que ingresó ya existe<br/>
+                            El nombre del torneo que ingresó ya existe, por favor ingrese otro nombre para el nuevo torneo<br/>
                             <br/>
                             <center>
                             <button class="btn btn-danger" >Reintentar</button>
