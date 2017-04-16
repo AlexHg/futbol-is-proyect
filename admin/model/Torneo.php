@@ -31,21 +31,6 @@ public static function getTorneos(){
         }
         mysqli_close($conexion);
     }
-        /*
-         *
-         * User:CrisCastro
-         * @param $tipoTorneo: recibe el tipo de torneo soccer o futbol rapido
-         * @param $fechaActual:recibe la fecha actual para saber que torneos estan vigentes (abietos a inscripcion)
-         *
-         * @output $torneosDisponibles : devuelve un arreglo de  filas que muestran los torneos disponibles con sus caracteristicas.
-         * TODO
-         * */
-
-    public static function getTorneosDisponibles($tipoTorneo,$fechaActual){
-    }
-
-
-
 
 
 
