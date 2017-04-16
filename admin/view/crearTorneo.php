@@ -2,79 +2,82 @@
                     <h2>Crear Torneo</h2>
                 </div>
                 <div id="content-body">
-                <form class="form-control" role="form" style="width: 90%">
+                <form class="form-control" role="form" action="action/crearTorneo.submit" method="post" style="width: 90%">
                         <div class="form-group">
                             <label class="control-label">Nombre</label>
                                 <div class="form-control-cont">
-                                    <input type="text" class="form-control full" placeholder="Nombre">
+                                    <input type="text" name="nombre" class="form-control full" placeholder="Nombre">
                                 </div>
                             </div>
                        
                         <div class="form-group">
                             <label class="control-label">Fecha Inicio</label>
                             <div class="form-control-cont">
-                                <input class="form-control full" type="text" id="fechaInicio">
+                                <input class="form-control full" name="fechaInicio" type="text" id="fechaInicio">
                             </div>
                         </div>
                         <script>
                             $( function() {
                                 $( "#fechaInicio" ).datepicker();
+                                $( "#fechaInicio" ).datepicker( "option", "dateFormat", "yy-mm-dd" );
                             } );
                         </script>
                         
                         <div class="form-group">
                             <label class="control-label">Fecha límite inscripcion</label>
                             <div class="form-control-cont">
-                                <input class="form-control full" type="text" id="fechaLimite">
+                                <input class="form-control full" name="fechaLimite" type="text" id="fechaLimite">
                             </div>
                         </div>
                         <script>
                             $( function() {
                                 $( "#fechaLimite" ).datepicker();
+                                $( "#fechaLimite" ).datepicker( "option", "dateFormat", "yy-mm-dd" );
                             } );
                         </script>
                         <div class="form-group">
                             <label class="control-label">Tipo Torneo</label>
                             <div class="form-control-cont">
-                                <select class="form-control full">
-                                    <option>Soccer</option>
-                                    <option>Rápido</option>
+                                <select class="form-control full" name="tipo">
+                                    <option value="1">Soccer</option>
+                                    <option value="2">Rápido</option>
                                 </select>
                             </div>
                         </div>
                          <h1>Días de Juego</h1>
                         <div class="checkbox checkbox-primary">
-                                    <input id="checkbox" type="checkbox" name="diaLunes" checked="">
-                                    <label for="checkbox">
+                                    <input id="checkbox" type="checkbox" value="1" name="dia[]" checked="">
+                                    <label for="checkbox" >
                                        Lunes
                                     </label>
                         </div>
                           <div class="checkbox checkbox-primary">
-                                    <input id="checkbox1" type="checkbox" name="diaMartes" checked="">
-                                    <label for="checkbox1">
+                                    <input id="checkbox1" type="checkbox" value="2" name="dia[]" checked="">
+                                    <label for="checkbox1" >
                                        Martes
                                     </label>
                         </div>
                           <div class="checkbox checkbox-primary">
-                                    <input id="checkbox2" type="checkbox" name="diaMiercoles" checked="">
-                                    <label for="checkbox2">
+                                    <input id="checkbox2" type="checkbox" value="3" name="dia[]" checked="">
+                                    <label for="checkbox2" >
                                        Miércoles
                                     </label>
                         </div>
                           <div class="checkbox checkbox-primary">
-                                    <input id="checkbox3" type="checkbox" name="diaJueves" checked="">
-                                    <label for="checkbox3">
+                                    <input id="checkbox3" type="checkbox" value="4" name="dia[]" checked="">
+                                    <label for="checkbox3" >
                                        Jueves
                                     </label>
                         </div>
                           <div class="checkbox checkbox-primary">
-                                    <input id="checkbox4" type="checkbox" name="diaViernes" checked="">
-                                    <label for="checkbox4">
+                                    <input id="checkbox4" type="checkbox" value="5" name="dia[]" checked="">
+                                    <label for="checkbox4" >
                                        Viernes
                                     </label>
                         </div>
-                        </form>
-                    <center><button type="button" class="btn btn-success"  data-type="alerta">Crear</button></center>
+                        <center><input type="submit" class="btn btn-success" value="Crear" /></center>
+                    </form>
+                    
                 </div>
 <?php
      Notify::alert_if(

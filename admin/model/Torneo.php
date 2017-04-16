@@ -11,7 +11,29 @@ class Torneo{
         mysqli_close($conexion);
     }
 
-public static function getTorneos(){
+    public static function crearTorneo($nombre,$tipo,$fechaInicio,$fechaLimite){        
+        $conexion = Database::connect();
+        $consulta ="INSERT into torneo (Nombre,Tipo_Torneo, Fecha_Inicio, Fecha_Cierre_Inscripcion)values('$nombre',$tipo,'$fechaInicio','$fechaLimite');"; 
+        if ($conexion->query($consulta)) {
+            return true;
+        } else {
+            return "Error: " . mysqli_error($conexion);
+        }
+        mysqli_close($conexion);
+    }
+
+    public static function asignarDiaTorneo($dia, $nombre){        
+        $conexion = Database::connect();
+        $consulta ="INSERT into Torneo_Grupo values ((select idGrupo from Grupo where dia like $dia ),(select IDTorneo from Torneo where Nombre like '$nombre'));";
+        if ($conexion->query($consulta)) {
+            return true;
+        } else {
+            return "Error: " . mysqli_error($conexion);
+        }
+        mysqli_close($conexion);
+    }
+
+    public static function getTorneos(){
         $conexion = Database::connect();
         $consulta ="SELECT IDTorneo,nombre from Torneo;";
         if ($resultado=$conexion->query($consulta)) {
