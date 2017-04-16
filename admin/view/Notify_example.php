@@ -30,7 +30,7 @@
             'Reintentar!',
             isset($_GET['n']) && strcasecmp($_GET['n'],'n') == 0); 
 
-        Notify::alert_activedById('Datos77 Incorrectos',
+        Notify::alert_activedById('Datos77 Incorrectos', 
             'Los datos ingresados son incorrectos o no se encuentran registrados, favor de verificarlos',
             'Reintentar!',
             "hol");

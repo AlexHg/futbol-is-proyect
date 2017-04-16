@@ -98,7 +98,7 @@ class Notify{
                     </div>
                     <div class="modal-footer">
                         <a href="#"><button  class="btn btn-success" onclick="<?php echo $function ?>">Aceptar</button></a>
-                        <a href="#"><button  class="btn btn-success">Cancelar</button></a>
+                        <a href="#"><button  class="btn btn-danger">Cancelar</button></a>
                     </div>
                 </div>
             </div>
@@ -126,7 +126,7 @@ class Notify{
                         </div>
                         <div class="modal-footer">
                             <a href="#"><button  class="btn btn-success" onclick="<?php echo $function ?>">Aceptar</button></a>
-                            <a href="#"><button  class="btn btn-success">Cancelar</button></a>
+                            <a href="#"><button  class="btn btn-danger">Cancelar</button></a>
                         </div>
                     </div>
                 </div>
@@ -154,7 +154,7 @@ class Notify{
                     </div>
                     <div class="modal-footer">
                         <a href="#"><button  class="btn btn-success" onclick="<?php echo $function ?>">Aceptar</button></a>
-                        <a href="#"><button  class="btn btn-success">Cancelar</button></a>
+                        <a href="#"><button  class="btn btn-danger">Cancelar</button></a>
                     </div>
                 </div>
             </div>

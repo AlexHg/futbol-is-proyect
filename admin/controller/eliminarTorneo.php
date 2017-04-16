@@ -6,13 +6,18 @@ function adiosTorneo(){
         if (isset($_POST["ni"])) {
             $seleccionado = $_POST['ni'];
             list($IDTorneo,$nombre)=explode(".",$seleccionado);
-
+            echo $IDTorneo;
             if(Torneo::eliminarTorneo("$IDTorneo")){
-                echo $nombre." eliminado <br>";
+                Notify::confirm('Torneo eliminado correctamente $IDTorneo',
+                    "El torneo ".$nombre." fue eliminado correctamente. ¿Desea eliminar otro Toreno?",
+                    "window.location='eliminarTorneo'");
             }
         }
         else{
-            echo "No hay Torneo seleccionado<br>";
+            Notify::alert(
+                'No seleccionaste ningun torneo',
+                'Asegurate de haber seleccionado un toreo antes de proceder',
+                'Reintentar!');
         }
     }
 }

@@ -1,3 +1,9 @@
+<script>
+    function submitForm(){
+        document.querySelector("#eliminarTorneo").submit();
+    }
+</script>
+
 <div id="content-title">
     <h2>Eliminar Torneo</h2>
 </div>
@@ -8,7 +14,7 @@
            <?php
             adiosTorneo();
             ?>
-            <form method="post" class="form-control-cont" role="form" action="eliminarTorneo">
+            <form id="eliminarTorneo" method="post" class="form-control-cont" role="form" action="eliminarTorneo">
                 <div class="form-control-cont">
 
                     <label class="control-label">Nombre del Torneo:</label>
@@ -23,14 +29,18 @@
                 </div>
 
                 <center>
-                    <input type="submit" class="btn btn-success" name="Aceptar" value="Aceptar" data-type="alerta"/>
+                    <a id="submitFormButton" class="btn btn-success" name="Aceptar">Aceptar</a>
                     
                 </center>
             </form>
         </div>
     </div>
 </div>
-
+<?php
+    Notify::confirm_activedById('Confirmación de Eliminación de Torneo',
+            '¿Está seguro que desea eliminar el Torneo? Se eliminará toda la información relacionada a este',
+            "submitFormButton", "submitForm()");
+?>
 <!-- MENSAJES
 
 <div class="window-container alerta">

@@ -17,8 +17,9 @@
     <link rel="stylesheet" href="source/css/font-awesome.min.css">
     <link rel="stylesheet" href="source/css/themify-icons.css">
     <link rel="stylesheet" href="source/css/notific/modal.css">
+    <link href="source/js/jqueryui/jquery-ui.css" rel="stylesheet">
     <script src="source/js/jquery.js"></script>
-    
+    <script src="source/js/jqueryui/jquery-ui.js"></script>
 </head>
 <body>
     <div id="page-content">

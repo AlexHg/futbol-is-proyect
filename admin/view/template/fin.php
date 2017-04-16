@@ -1,6 +1,7 @@
             </section>
         </section>
     </div>
+    
     <!-- Charts Morris 
     <script src="source/js/rafael.js"></script>
     <script src="source/js/morris/morris.js"></script>

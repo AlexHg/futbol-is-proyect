@@ -4,40 +4,37 @@
                 <div id="content-body">
                 <form class="form-control" role="form" style="width: 90%">
                         <div class="form-group">
-                            <label class="control-label">Nombre de Torneo</label>
+                            <label class="control-label">Nombre</label>
                                 <div class="form-control-cont">
                                     <input type="text" class="form-control full" placeholder="Nombre">
                                 </div>
                             </div>
-                       <h1>
-                       ***CAMBIAR COMBOS DE FECHAS A CALENDAR</h1>
+                       
                         <div class="form-group">
-                            <label class="control-label">Fecha de Inicio</label>
+                            <label class="control-label">Fecha Inicio</label>
                             <div class="form-control-cont">
-                                <select class="form-control full">
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5</option>
-                                </select>
+                                <input class="form-control full" type="text" id="fechaInicio">
                             </div>
                         </div>
-                         <h1>**CAMBIAR COMBOS DE FECHAS A CALENDAR</h1>
+                        <script>
+                            $( function() {
+                                $( "#fechaInicio" ).datepicker();
+                            } );
+                        </script>
+                        
                         <div class="form-group">
-                            <label class="control-label">Fecha límite de inscripción</label>
+                            <label class="control-label">Fecha límite inscripcion</label>
                             <div class="form-control-cont">
-                                <select class="form-control full">
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5</option>
-                                </select>
+                                <input class="form-control full" type="text" id="fechaLimite">
                             </div>
                         </div>
+                        <script>
+                            $( function() {
+                                $( "#fechaLimite" ).datepicker();
+                            } );
+                        </script>
                         <div class="form-group">
-                            <label class="control-label">Tipo de Torneo</label>
+                            <label class="control-label">Tipo Torneo</label>
                             <div class="form-control-cont">
                                 <select class="form-control full">
                                     <option>Soccer</option>
@@ -47,74 +44,65 @@
                         </div>
                          <h1>Días de Juego</h1>
                         <div class="checkbox checkbox-primary">
-                                    <input id="checkbox2" type="checkbox" checked="">
-                                    <label for="checkbox2">
+                                    <input id="checkbox" type="checkbox" name="diaLunes" checked="">
+                                    <label for="checkbox">
                                        Lunes
                                     </label>
                         </div>
                           <div class="checkbox checkbox-primary">
-                                    <input id="checkbox2" type="checkbox" checked="">
-                                    <label for="checkbox2">
+                                    <input id="checkbox1" type="checkbox" name="diaMartes" checked="">
+                                    <label for="checkbox1">
                                        Martes
                                     </label>
                         </div>
                           <div class="checkbox checkbox-primary">
-                                    <input id="checkbox2" type="checkbox" checked="">
+                                    <input id="checkbox2" type="checkbox" name="diaMiercoles" checked="">
                                     <label for="checkbox2">
                                        Miércoles
                                     </label>
                         </div>
                           <div class="checkbox checkbox-primary">
-                                    <input id="checkbox2" type="checkbox" checked="">
-                                    <label for="checkbox2">
+                                    <input id="checkbox3" type="checkbox" name="diaJueves" checked="">
+                                    <label for="checkbox3">
                                        Jueves
                                     </label>
                         </div>
                           <div class="checkbox checkbox-primary">
-                                    <input id="checkbox2" type="checkbox" checked="">
-                                    <label for="checkbox2">
+                                    <input id="checkbox4" type="checkbox" name="diaViernes" checked="">
+                                    <label for="checkbox4">
                                        Viernes
                                     </label>
                         </div>
                         </form>
                     <center><button type="button" class="btn btn-success"  data-type="alerta">Crear</button></center>
                 </div>
-
+<?php
+     Notify::alert_if(
+            'Operación Realizada Exitosamente',
+            'El torneo se creó satisfactoriamente',
+            'Aceptar',
+            isset($_GET['n']) && strcasecmp($_GET['n'],'done') == 0);
+    
+    Notify::alert_if(
+            'El nombre del torneo ya existe',
+            'El nombre del torneo que ingresó ya existe, por favor ingrese otro nombre para el nuevo torneo',
+            'Reintentar',
+            isset($_GET['n']) && strcasecmp($_GET['n'],'usado') == 0); 
+    
+    Notify::alert_if(
+            'No ingresó nombre de torneo',
+            'No ingresó un nombre de torneo',
+            'Reintentar',
+            isset($_GET['n']) && strcasecmp($_GET['n'],'noname') == 0); 
+    
+    Notify::alert_if(
+            'Deben seleccionarse al menos 4 días de juego',
+            'Se seleccionaron menos de 4 días de juego, por favor ingresa mas dias.',
+            'Reintentar',
+            isset($_GET['n']) && strcasecmp($_GET['n'],'nodays') == 0);
+?>
 <!--Mensajes para esta pantalla
- <div class="window-container alerta">
-                            <h3>Operación Realizada Exitosamente </h3> 
-                            La operación se realizó exitosamente<br/>
-                            <br/>
-                            <center>
-                            <button class="btn btn-success" >Aceptar</button>
-                            </center>
-   </div>
-
- <div class="window-container alerta">
-                            <h3>El nombre del torneo ya existe</h3> 
-                            El nombre del torneo que ingresó ya existe, por favor ingrese otro nombre para el nuevo torneo<br/>
-                            <br/>
-                            <center>
-                            <button class="btn btn-danger" >Reintentar</button>
-                            </center>
-                        </div>
- <div class="window-container alerta">
-                            <h3>No ingresó nombre de torneo</h3> 
-                            No ingresó un nombre de torneo<br/>
-                            <br/>
-                            <center>
-                            <button class="btn btn-danger" >Reintentar</button>
-                            </center>
-                        </div>
-
- <div class="window-container alerta">
-                            <h3>Deben seleccionarse al menos 4 días de juego</h3> 
-                            Se seleccionaron menos de 4 días de juego<br/>
-                            <br/>
-                            <center>
-                            <button class="btn btn-danger" >Reintentar</button>
-                            </center>
-                        </div>
+     
 
 CONSULTAS PARA ESTA PANTALLA
 

@@ -30,7 +30,9 @@
 .badge-danger {
   background-color: #d57171;
 }
-
+a.btn, a.btn:hover{
+  text-decoration:none!important;
+}
 .btn {
   border-radius: 2px;
   padding: 6px 14px;
