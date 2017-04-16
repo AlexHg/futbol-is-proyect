@@ -7,8 +7,9 @@
     <script src="source/js/morris/morris.init.js"></script>
     <!-- end Charts Morris -->    
     <!-- Alertas -->
-    <script type="text/javascript" src="source/js/alerts.js"></script>
+    <script src="source/css/notific/modal.js"></script>
     <!-- end Alertas -->
+
     <script>
     function openMenu(){
         document.querySelector('#navigator').style='left:0;';

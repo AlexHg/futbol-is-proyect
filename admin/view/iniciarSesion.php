@@ -26,7 +26,7 @@
             </div>
             <div>
                 <div class="box">
-                    <input id="cancelarInvitacion" type="submit" class="btn btn-primary" value="Iniciar sesión" data-type="alerta"/>
+                    <input type="submit" class="btn btn-primary" value="Iniciar sesión"/>
                     <br><br>
                 </div>
             </div>
@@ -34,18 +34,9 @@
     </center>
     <br><br>
 </div>
-<?php if(isset($_GET['n']) && strcasecmp($_GET['n'],'nofound') == 0){ ?>
-    <script> <div class="overlay-container">
-                        <div class="window-container alerta">
-                            <h3>Datos Incorrectos</h3> 
-                            Los datos ingresados son incorrectos o no se encuentran registrados, favor de verificarlos<br/>
-                            <br/>
-                            <center>
-                            <button class="btn btn-danger" >Reintentar</button>
-                            </center>
-                        </div>
-          </div></script>
-<?php } ?>
+
+<?php Notify::Login_incorrect() ?>
+
 
 <div style="background:#f9fcd4; padding:1rem;"><pre>
 <b>Datos de ejemplo</b>

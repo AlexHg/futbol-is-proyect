@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="modal.css">
+</head>
+<body>
+  
+  
+<button class="modal" data-modal="modal-one">Modal!</button>
+  
+<div class="modal" id="modal-one" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-header">
+      <h2>Modal in CSS?</h2>
+      <a href="#" class="modal-close" aria-hidden="true">×</a>
+    </div>
+    <div class="modal-body">
+      <p>One modal example here! :D</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#" class="btn"><button>OK!</button></a>
+    </div>
+  </div>
+</div>
+<!-- /Modal -->
+
+<script>
+  var modals = document.querySelectorAll("button[data-modal]");
+  for(var i = 0; i < modals.length; i++){
+    console.log(modals[i])
+    modals[i].addEventListener('click', function(){
+      window.location = "#"+this.dataset.modal;
+    })
+  }
+</script>
+</body>
+</html>

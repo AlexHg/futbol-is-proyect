@@ -10,6 +10,8 @@ require "core/Controller.php";
 require "core/Model.php";
 require "core/Session.php";
 
+require "tools/Notify.php";
+
 # Session start 
 session_start();
 
