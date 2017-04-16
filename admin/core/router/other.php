@@ -10,6 +10,11 @@ Flight::route('/designDemo', function(){
     View::render('demo'); #html content
     View::render('template/fin'); #Html footer
 });
+Flight::route('/notify', function(){
+    View::render('template/ini.noaside'); #Html head, menu, header
+    View::render('Notify_example'); #html content
+    View::render('template/fin'); #Html footer
+});
 Flight::route('/user/[0-9]+', function(){
     //Model::use("Consultas.temp");
     //print_r(DatosJugador("capitan@hotmail.com"));

@@ -35,7 +35,14 @@
     <br><br>
 </div>
 
-<?php Notify::Login_incorrect() ?>
+<?php 
+    Notify::alert_if(
+        'Datos Incorrectos',
+        'Los datos ingresados son incorrectos o no se encuentran registrados, favor de verificarlos',
+        'Reintentar!',
+        isset($_GET['n']) && strcasecmp($_GET['n'],'nofound') == 0); 
+        
+?>
 
 
 <div style="background:#f9fcd4; padding:1rem;"><pre>
