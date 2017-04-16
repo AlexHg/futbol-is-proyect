@@ -6,9 +6,8 @@ function adiosTorneo(){
         if (isset($_POST["ni"])) {
             $seleccionado = $_POST['ni'];
             list($IDTorneo,$nombre)=explode(".",$seleccionado);
-            echo $IDTorneo;
             if(Torneo::eliminarTorneo("$IDTorneo")){
-                Notify::confirm('Torneo eliminado correctamente $IDTorneo',
+                Notify::confirm('Torneo eliminado correctamente',
                     "El torneo ".$nombre." fue eliminado correctamente. ¿Desea eliminar otro Toreno?",
                     "window.location='eliminarTorneo'");
             }
