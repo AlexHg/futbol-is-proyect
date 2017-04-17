@@ -6,8 +6,8 @@
                             <label class="control-label">Nombre de Torneo</label>
                             <div class="form-control-cont">
                                 <select class="form-control full">
-                                    <option>Soccer</option>
-                                    <option>Rápido</option>
+                                    <option>Torneo1</option>
+                                    <option>Torneo2</option>
                                 </select>
                             </div>
                         </div>
