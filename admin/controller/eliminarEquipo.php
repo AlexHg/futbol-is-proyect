@@ -4,25 +4,27 @@ Model::load("Equipo");
 
 function adiosEquipo(){
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        if (isset($_POST["ne"])) {
-            $seleccionado = $_POST['ne'];
-            $Capitan=Capitan::getCapitan("$seleccionado");
-            $Cap = $Capitan->fetch_array(MYSQLI_ASSOC);
-            $nombre= $Cap["Nombre"];
-            $apellidos= $Cap["Apellidos"];
-            if(Equipo::eliminarEquipo("$seleccionado","$nombre","$apellidos")){
-                echo $seleccionado." eliminado <br>";
+        if (isset($_POST["equipo"])) {
+            $seleccionado = $_POST['equipo'];
+            list($IDequipo,$nombre)=explode(".",$seleccionado);
+            if(Equipo::eliminarEquipo("$IDequipo")){
+                Notify::confirm('Equipo eliminado correctamente',
+                    "El Equipo".' '.$nombre." fue eliminado correctamente. ¿Desea eliminar otro Equipo?",
+                    "window.location='eliminarEquipo");
             }
         }
         else{
-            echo "No hay jugadores seleccionados<br>";
+            Notify::alert(
+                'No seleccionaste ningun Equipo',
+                'Asegurate de haber seleccionado un Equipo antes de proceder',
+                'Reintentar!');
         }
     }
 }
 
 function listaEquipos(){
-    $equipos=Equipo::getEquipos();
-    while ($row = $equipos->fetch_array(MYSQLI_ASSOC)) {
-        echo '<option value="'.$row["nombreequipo"].'">'.$row["nombreequipo"].'</option>';
+    $equipo=Equipo::getEquipos();
+    while ($row = $equipo->fetch_array(MYSQLI_ASSOC)) {
+       echo '<option value="'.$row["idequipo"].".".$row["NombreEquipo"].'">'.$row["NombreEquipo"].'</option>';
     }
 }
