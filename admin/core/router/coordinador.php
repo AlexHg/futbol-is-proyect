@@ -2,7 +2,7 @@
 Flight::route("/gestionarEquipos", function(){
     //Flight::redirect('/demo');
     Session::accessOnly(array("role" => 3), function(){
-        Controller::run("gestionarEquipos");
+        #Controller::run("gestionarEquipos");
         View::render('template/ini'); #Html head, menu, header
         View::render('gestionarEquipos'); #html content
         View::render('template/fin'); #Html footer
@@ -15,6 +15,16 @@ Flight::route("/eliminarEquipo", function(){
         Controller::run("eliminarEquipo");
         View::render('template/ini'); #Html head, menu, header
         View::render('eliminarEquipo'); #html content
+        View::render('template/fin'); #Html footer
+    });
+});
+
+Flight::route("/eligeTorneo", function(){
+    //Flight::redirect('/demo');
+    Session::accessOnly(array("role" => 3), function(){
+        Controller::run("eligeTorneo");
+        View::render('template/ini'); #Html head, menu, header
+        View::render('eligeTorneo'); #html content
         View::render('template/fin'); #Html footer
     });
 });
@@ -33,7 +43,6 @@ Flight::route("/eliminarTorneo", function(){
 Flight::route("/crearTorneo", function(){
     //Flight::redirect('/demo');
     Session::accessOnly(array("role" => 3), function(){
-        #Controller::run("eliminarTorneo");
         View::render('template/ini'); #Html head, menu, header
         View::render('crearTorneo'); #html content
         View::render('template/fin'); #Html footer
@@ -43,7 +52,7 @@ Flight::route("/crearTorneo", function(){
 Flight::route("/bajaEquipo", function(){
     //Flight::redirect('/demo');
     Session::accessOnly(array("role" => 3), function(){
-        #Controller::run("eliminarTorneo");
+        Controller::run("bajaEquipo");
         View::render('template/ini'); #Html head, menu, header
         View::render('bajaEquipo'); #html content
         View::render('template/fin'); #Html footer
