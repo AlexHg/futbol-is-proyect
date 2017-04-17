@@ -2,7 +2,18 @@
     <h2>Horarios</h2>
 </div>
 <div id="content-body">
-    <h3>Torneo de fútbol rápido 2017-1</h3>
+    <div id="content-body">
+                    <div class="form-group">
+                            <label class="control-label">Nombre de Torneo</label>
+                            <div class="form-control-cont">
+                                <select class="form-control full">
+                                    <option>Torneo1</option>
+                                    <option>Torneo2</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+  <button onclick="window.location.href='#'" type="button" class="btn btn-info">Consultar</button>
     <table class="table table-striped ">
         <thead>
             <tr>
