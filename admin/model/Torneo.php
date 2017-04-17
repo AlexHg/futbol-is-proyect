@@ -10,6 +10,38 @@ class Torneo{
         }
         mysqli_close($conexion);
     }
+    public static function getEquiposTorneo($torneo){
+        $conexion = Database::connect();
+        $consulta ="SELECT e.NombreEquipo as nombre, e.idequipo as id from equipo e,equipo_torneo et where et.idequipo=e.idequipo and et.idtorneo = $torneo";
+        if ($resultado=$conexion->query($consulta)) {
+            return $resultado;
+        } else {
+            return "Error: " . mysqli_error($conexion);
+        }
+        mysqli_close($conexion);
+    }
+    public static function getNombreTorneo($idTorneo){
+        $conexion = Database::connect();
+        $consulta ="SELECT Nombre from torneo where idtorneo = $idTorneo";
+        if ($resultado=$conexion->query($consulta)) {
+            return $resultado;
+        } else {
+            return "Error: " . mysqli_error($conexion);
+        }
+        mysqli_close($conexion);
+    }
+    public static function bajaEquipo($equipo, $torneo){
+        $conexion = Database::connect();
+        $consulta = "DELETE from equipo_torneo where IDEquipo=$equipo and IDTorneo=$torneo";
+        $consulta1 = "DELETE from equipogrupo where IDEquipo=$equipo and IDTorneo=$torneo";
+        $consulta2 = "DELETE from juegosresultado where IDEquipo=$equipo and IDTorneo=$torneo;"; 
+        if ($conexion->query($consulta) && $conexion->query($consulta2) && $conexion->query($consulta1)) {
+            return true;
+        } else {
+            return "Error: " . mysqli_error($conexion);
+        }
+        mysqli_close($conexion);
+    }
 
     public static function crearTorneo($nombre,$tipo,$fechaInicio,$fechaLimite){        
         $conexion = Database::connect();

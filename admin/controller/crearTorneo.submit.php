@@ -1,5 +1,6 @@
 <?php
     Model::load("Torneo");
+
     if( !isset($_POST['nombre']) || strlen($_POST['nombre']) < 1 ){
         Flight::redirect('/crearTorneo?n=noname');
     }

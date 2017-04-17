@@ -19,6 +19,16 @@ Flight::route("/eliminarEquipo", function(){
     });
 });
 
+Flight::route("/eligeTorneo", function(){
+    //Flight::redirect('/demo');
+    Session::accessOnly(array("role" => 3), function(){
+        Controller::run("eligeTorneo");
+        View::render('template/ini'); #Html head, menu, header
+        View::render('eligeTorneo'); #html content
+        View::render('template/fin'); #Html footer
+    });
+});
+
 
 Flight::route("/eliminarTorneo", function(){
     //Flight::redirect('/demo');
@@ -42,7 +52,7 @@ Flight::route("/crearTorneo", function(){
 Flight::route("/bajaEquipo", function(){
     //Flight::redirect('/demo');
     Session::accessOnly(array("role" => 3), function(){
-        #Controller::run("eliminarTorneo");
+        Controller::run("bajaEquipo");
         View::render('template/ini'); #Html head, menu, header
         View::render('bajaEquipo'); #html content
         View::render('template/fin'); #Html footer
