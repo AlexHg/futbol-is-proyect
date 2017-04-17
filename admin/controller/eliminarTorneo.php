@@ -8,14 +8,14 @@ function adiosTorneo(){
             list($IDTorneo,$nombre)=explode(".",$seleccionado);
             if(Torneo::eliminarTorneo("$IDTorneo")){
                 Notify::confirm('Torneo eliminado correctamente',
-                    "El torneo ".$nombre." fue eliminado correctamente. ¿Desea eliminar otro Toreno?",
+                    "El torneo ".' '.$nombre." fue eliminado correctamente. ¿Desea eliminar otro Toreno?",
                     "window.location='eliminarTorneo'");
             }
         }
         else{
             Notify::alert(
                 'No seleccionaste ningun torneo',
-                'Asegurate de haber seleccionado un toreo antes de proceder',
+                'Asegurate de haber seleccionado un torneo antes de proceder',
                 'Reintentar!');
         }
     }
