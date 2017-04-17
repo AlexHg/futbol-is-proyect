@@ -1,60 +1,47 @@
-<div id="content-title">
+
+   <script>
+    function submitForm(){
+        document.querySelector("#eliminarEquipo").submit();
+    }
+</script>
+
+   <div id="content-title">
     <h2>Eliminar Equipo Definitivamente</h2>
 </div>
-<h3>Para eliminar un equipo definitivamente del Sistema, seleccione lo siguiente:</h3>
 <div id="content-body">
-    <div class="row center-xs">
+    <div class="row center-xs center-md center-lg">
         <div class="box">
             <?php
                 adiosEquipo();
             ?>
-            <form method="post" class="form-control" role="form" action="eliminarEquipo">
-                <div class="form-group">
+            <form id="eliminarEquipo" method="post" class="form-control-cont" role="form" action="eliminarEquipo">
+
+                <div class="form-control-cont">
                     <label class="control-label">Nombre de equipo:</label>
                     <div class="form-control-cont">
-                        <select onChange="change(this.value)" name="ne" class="form-control full" id="EquipoSelect">
+                        <select onChange="change(this.value)" name="equipo" class="form-control full" id="EquipoSelect">
                             <?php
                                 listaEquipos();
                             ?>
                         </select>
                     </div>
                 </div>
-                <div class="form-group">
-                    <label class="control-label">Capitan:</label>
-                    <div class="form-control-cont">
-                        <input type="text" class="form-control full" readonly="" value="" id="">
-                    </div>
-                </div>
                 <br>
                 <br>
-                <input type="submit" class="btn btn-success" name="Aceptar" value="Aceptar" data-type="alerta"/>
+                <center>
+                <a id="submitFormButton" class="btn btn-success" name="Aceptar">Aceptar</a>
+                </center>
             </form>
         </div>                        
     </div> 
 </div>
  <!--Mensaje de confirmacion-->
-<div class="overlay-container">
-                        <div class="window-container alerta">
-                            <h3>Confirmación de Eliminación de Equipo</h3> 
-                            ¿Está seguro que desea eliminar el equipo? Se eliminará toda la información relacionada a este equipo<br/>
-                            <br/>
-                            <center>
-                            <button class="btn btn-success close" data-type="aceptar">Aceptar</button>
-                            <button class="btn btn-danger" >Cancelar</button>
-                            </center>
-                        </div>
-</div>
- <!--Mensaje de operacion exitosa-->
-<div class="overlay-container">
-                        <div class="window-container aceptar">
-                            <h3>Operación realizada exitosamente</h3> 
-                            La operación se realizó exitosamente<br/>
-                            <br/>
-                            <center>
-                            <button class="btn btn-success close" >Aceptar</button>
-                            </center>
-                        </div>
-</div>
+<?php
+    Notify::confirm_activedById('Confirmación de Eliminación de Equipo',
+            '¿Está seguro que desea eliminar el Equipo? Se eliminará toda la información relacionada a este',
+            "submitFormButton", "submitForm()");
+?>
+
  <!--Consultas
 me muestra todos los equipos que no estan actualente en un torneo en el combo box de la pantalla
 select nombreEquipo from equipo where idEquipo not in(select idEquipo from equipo_torneo);
