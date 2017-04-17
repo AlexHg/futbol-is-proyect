@@ -27,15 +27,17 @@ class Equipo{
         return $res;
         mysqli_close($conexion);
     }
-    public static function eliminarEquipo($nombreEquipo,$nombreCapitan,$apellidosCapitan){
+
+   public static function eliminarEquipo($IDEquipo){
         $conexion = Database::connect();
-        if ($resultado=$conexion->query("Call p2('$nombreEquipo','$nombreCapitan','$apellidosCapitan')")) {
+        if ($resultado=$conexion->query("DELETE from Equipo WHERE IDequipo='$IDEquipo'")) {
             return 1;
         } else {
             return "Error: " . mysqli_error($conexion);
         }
         mysqli_close($conexion);
     }
+
     public static function eliminarJugadorEquipo($correoEliminar,$idCapitan){
         $conexion = Database::connect();
         $consulta ="DELETE d from equipo_jugador d
@@ -50,10 +52,10 @@ class Equipo{
         }
         mysqli_close($conexion);
     }
+
     public static function getEquipos(){
         $conexion = Database::connect();
-        $consulta ="SELECT nombreequipo from equipo
-                    JOIN equipo_torneo USING(IDEquipo);";
+        $consulta ="SELECT idequipo,NombreEquipo FROM equipo;";
         if ($resultado=$conexion->query($consulta)) {
             return $resultado;
         } else {
@@ -61,6 +63,7 @@ class Equipo{
         }
         mysqli_close($conexion);
     }
+
     public static function getJugadoresEquipo($idCapitan){
         $conexion = Database::connect();
         $consulta ="SELECT usuario.Nombre,usuario.Apellidos,usuario.Correo FROM usuario
@@ -75,6 +78,7 @@ class Equipo{
         }
         mysqli_close($conexion);
     }
+
     public static function aceptarSolicitudDeJugador($idCapitan,$correoJugador){
         $conexion = Database::connect();
         $consulta ="INSERT INTO equipo_jugador(IDEquipo, IDJugador)
@@ -90,6 +94,7 @@ class Equipo{
         mysqli_close($conexion);
 
     }
+
     public static function rechazarSolicitudDeJugador($idCapitan,$correoJugador){
         $conexion = Database::connect();
         $consulta="DELETE FROM solicitud WHERE
@@ -101,4 +106,6 @@ class Equipo{
         }
         mysqli_close($conexion);
     }
+
+
 }
