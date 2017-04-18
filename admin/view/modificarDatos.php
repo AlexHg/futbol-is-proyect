@@ -87,7 +87,7 @@ Notify::alert_if(
 
 Notify::alert_if(
     'Datos NO modificados',
-    'No ha sido posible modificar los datos, intenténtalo de nuevo más tarde',
+    'No ha sido posible modificar los datos, inténtalo de nuevo más tarde',
     'Reintentar',
     isset($_GET['n']) && strcasecmp($_GET['n'],'err') == 0); 
 
