@@ -30,7 +30,7 @@
         <p>¿Estas seguro de registrar este equipo?</p>
         <p>Al hacerlo tu rol cambiara a <strong>Capitan</strong> y deberás volver a iniciar sesión para ver los cambios.</p>
         <p>Una vez que hayas iniciado sesión, podrás enviar solicitudes a Jugadores para unirse a tu equipo.</p>
-        <p>Puedes revertir este proceso dentro de Gestionar Equipo >> Eliminar Equipo. Lo cual regresara tu rol a Jugador.</p>
+        <p>Puedes revertir este proceso contactando al Coordinador del Club de Fútbol, para regresar a tu rol de Jugador.</p>
         <br/>
         <input type="submit" name="submit" value="De Acuerdo" form="registrarEquipo" class="btn btn-success">
         <button class="btn btn-danger close">Regresar</button>
