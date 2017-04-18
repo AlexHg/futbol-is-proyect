@@ -82,25 +82,25 @@
 <?php
      Notify::alert_if(
             'Operación Realizada Exitosamente',
-            'El torneo se creó satisfactoriamente',
+            'La operación se realizó exitosamente',
             'Aceptar',
             isset($_GET['n']) && strcasecmp($_GET['n'],'done') == 0);
     
     Notify::alert_if(
-            'El nombre del torneo ya existe',
+            'Nombre del torneo ya existe',
             'El nombre del torneo que ingresó ya existe, por favor ingrese otro nombre para el nuevo torneo',
             'Reintentar',
             isset($_GET['n']) && strcasecmp($_GET['n'],'usado') == 0); 
     
     Notify::alert_if(
-            'No ingresó nombre de torneo',
+            'No se ingresó nombre de torneo',
             'No ingresó un nombre de torneo',
             'Reintentar',
             isset($_GET['n']) && strcasecmp($_GET['n'],'noname') == 0); 
     
     Notify::alert_if(
             'Deben seleccionarse al menos 4 días de juego',
-            'Se seleccionaron menos de 4 días de juego, por favor ingresa mas dias.',
+            'Se seleccionaron menos de 4 días de juego, por favor ingrese más días.',
             'Reintentar',
             isset($_GET['n']) && strcasecmp($_GET['n'],'nodays') == 0);
 ?>
