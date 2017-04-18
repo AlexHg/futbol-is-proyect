@@ -8,16 +8,16 @@ function adiosEquipo(){
             $seleccionado = $_POST['equipo'];
             list($IDequipo,$nombre)=explode(".",$seleccionado);
             if(Equipo::eliminarEquipo("$IDequipo")){
-                Notify::confirm('Equipo eliminado correctamente',
+                Notify::confirm('Equipo eliminado',
                     "El Equipo".' '.$nombre." fue eliminado correctamente. ¿Desea eliminar otro Equipo?",
                     "window.location='eliminarEquipo");
             }
         }
         else{
             Notify::alert(
-                'No seleccionaste ningun Equipo',
-                'Asegurate de haber seleccionado un Equipo antes de proceder',
-                'Reintentar!');
+                'Equipo no seleccionado',
+                'Seleccione un Equipo a eliminar antes de proceder',
+                'Reintentar');
         }
     }
 }
