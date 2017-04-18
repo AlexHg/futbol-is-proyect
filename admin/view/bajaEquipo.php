@@ -14,12 +14,20 @@
         </div>
     </div>
     <center>
-        <input type="submit" class="btn btn-success" value="Dar de Baja"/>
+        <input type="submit" id="baja" class="btn btn-success" value="Dar de Baja"/>
     </center>
 </form>
-
-
 <br>
+<?php
+    Notify::confirm_activedById('Confirmación de baja de Equipo',
+            '¿Está seguro que desea dar de baja a el equipo?',
+            "baja", "submitForm()");
+    Notify::alert_if(
+            'Operación Realizada Exitosamente',
+            'La operación se realizó exitosamente',
+            'Aceptar',
+            isset($_GET['n']) && strcasecmp($_GET['n'],'done') == 0);
+?>
 
 
   
