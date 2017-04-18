@@ -56,19 +56,21 @@
 </div>
 <?php 
     Notify::confirm_activedById('Confirmación de Registro de Equipo',
-            '¿Estas seguro de registrar este equipo?',
+            '¿Estás seguro de registrar este equipo? Al hacerlo tu rol cambiará a capitán y deberás volver a iniciar sesión para ver los cambios.
+	     Una vez que hayas iniciado sesión, podrás enviar solicitudes a Jugadores para unirse a tu equipo.
+             *Puedes revertir este proceso contactando al Coordinador del Club del Club de fútbol, para regresar tu rol a Jugador.',
             "btnConfirmar", "crearEquipo()");
 
     Notify::alert_if(
             'Operación realizada exitosamente',
-            'Su solicitud ha sido enviada. Si la solicitud es aceptada su equipo será creado y su rol cambiará a capitan.',
+            'La operación se realizó exitosamente',
             'Aceptar',
             isset($_GET['n']) && strcasecmp($_GET['n'],'exito') == 0); 
 
     Notify::alert_if(
-            'El equipo que intentas registrar ya existe',
+            'Equipo Existente',
             'El equipo ya está registrado en el Sistema prueba con otro nombre',
-            'Reintentar!',
+            'Reintentar',
             isset($_GET['n']) && strcasecmp($_GET['n'],'error') == 0); 
 
 ?>
