@@ -54,7 +54,6 @@
         </form>
     </center>
 </div>
-
 <?php 
     Notify::confirm_activedById('Confirmación de Registro de Equipo',
             '¿Estas seguro de registrar este equipo?',
@@ -73,4 +72,5 @@
             isset($_GET['n']) && strcasecmp($_GET['n'],'error') == 0); 
 
 ?>
+
 

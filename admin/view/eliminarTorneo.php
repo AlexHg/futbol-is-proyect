@@ -1,4 +1,5 @@
-<script>
+
+   <script>
     function submitForm(){
         document.querySelector("#eliminarTorneo").submit();
     }
