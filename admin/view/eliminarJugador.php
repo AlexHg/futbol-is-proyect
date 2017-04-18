@@ -1,9 +1,9 @@
  <div id="content-title">
-    <h2>Eliminar Jugador del Equipo</h2>
+    <h2>Gestionar Equipo</h2>
 </div>
 <div id="content-body">
     <h3>Jugadores del Equipo</h3>
-    <h5>Selecciona al jugador que deseas eliminar</h5>
+    <h5>Selecciona a un jugador si deseas eliminarlo</h5>
     <form method="post" id="eliminarJugadorForm">
         <table class="table table-striped ">
             <thead>
