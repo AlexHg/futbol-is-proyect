@@ -1,10 +1,10 @@
 <div id="content-title">
-    <h2>Registrar Jugador</h2>
+    <h2>Registrar Cuenta</h2>
 </div>
 <div id="content-body" style="display:flex; justify-content:center; align-items:center; min-height:60vh;">
     <center>
         <form class="form-control" role="form" method="post" action="action/registrarCuenta.submit">
-            <h3>Ingrese los siguientes datos para crear una cuenta</h3>                  
+            <h3>Ingrese los siguientes datos para crear una cuenta como jugador</h3>                  
             <div class="form-group">
                 <label class="control-label">Nombre</label>
                 <div class="form-control-cont">
@@ -88,16 +88,16 @@
 
 <?php
 Notify::confirm_if(
-    'Su cuenta ha sido creada',
-    '¿Desea ser enviado a la pantalla de inicio de sesión?',
+    'Registro de Cuenta Exitoso',
+    'Cuenta registrada exitosamente',
     isset($_GET['n']) && strcasecmp($_GET['n'],'done') == 0,
     'goToLogin()'); 
 
 
 Notify::alert_if(
-    'Error en la creación de su cuenta',
-    'No ha sido posible modificar sus datos, intentelo de nuevo mas tarde',
-    'Reintentar!',
+    'Creación de Cuenta Fallida',
+    'No ha sido posible registrar la cuenta, inténtalo de nuevo más tarde',
+    'Reintentar',
     isset($_GET['n']) && strcasecmp($_GET['n'],'err') == 0); 
 
 									
