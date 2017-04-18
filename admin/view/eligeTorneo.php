@@ -22,13 +22,13 @@
 <br>
 <?php
 Notify::alert_if(
-    'No se pudo dar de baja el equipo',
-    'Por favor vuelva a intentarlo',
+    'No se dio de baja el equipo',
+    'Por favor vuelva a intentarlo más tarde',
     'Reintentar!',
     isset($_GET['n']) && strcasecmp($_GET['n'],'err') == 0); 
 
  Notify::alert_if(
-    'Equipo dado de baja',
-    'El equipo se dió de baja satisfactoriamente',
+    'Operación realizada exitosamente',
+    'La operación se realizó exitosamente',
     'Aceptar',
     isset($_GET['n']) && strcasecmp($_GET['n'],'done') == 0); 
