@@ -24,7 +24,7 @@
 Notify::alert_if(
     'No se dio de baja el equipo',
     'Por favor vuelva a intentarlo más tarde',
-    'Reintentar!',
+    'Reintentar',
     isset($_GET['n']) && strcasecmp($_GET['n'],'err') == 0); 
 
  Notify::alert_if(
