@@ -38,7 +38,7 @@
  <!--Mensaje de confirmacion-->
 <?php
     Notify::confirm_activedById('Confirmación de Eliminación de Equipo',
-            '¿Está seguro que desea eliminar el Equipo? Se eliminará toda la información relacionada a este',
+            '¿Está seguro que desea eliminar el equipo? Se eliminará toda la información relacionada a este equipo.',
             "submitFormButton", "submitForm()");
 ?>
 
