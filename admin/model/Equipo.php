@@ -30,7 +30,16 @@ class Equipo{
 
    public static function eliminarEquipo($IDEquipo){
         $conexion = Database::connect();
-        if ($resultado=$conexion->query("DELETE from Equipo WHERE IDequipo='$IDEquipo'")) {
+        $sql = "SELECT Correo from Equipo Where IDequipo = '$IDEquipo'";
+        $res = mysqli_query($conexion, $sql);
+        $correo = mysqli_fetch_array($res, MYSQLI_NUM)[0];
+
+        if (
+        $conexion->query("DELETE from Equipo WHERE IDequipo='$IDEquipo'") &&
+        $conexion->query("INSERT into jugador (IDJugador,Correo) values (null,'$correo')") &&
+        $conexion->query("DELETE from capitan where correo='$correo'") &&
+        $conexion->query("UPDATE usuario set EsCapitan=0 where correo='$correo'")
+        ) {
             return 1;
         } else {
             return "Error: " . mysqli_error($conexion);
@@ -107,5 +116,16 @@ class Equipo{
         mysqli_close($conexion);
     }
 
+    public static function enviarSolicitud($IDJugador, $Equipo){
+        $conexion = Database::connect();
+        $sql = "INSERT into solicitud(NombreEquipo,IDJugador,Tipo_Solicitud)values('$Equipo',$IDJugador,1)";
+        if($res1=$conexion->query($sql)){
+            return true;
+        }
+        else {
+            return false;
+            echo "Error: " . mysqli_error($conexion);
+        }
+    }
 
 }

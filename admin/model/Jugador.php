@@ -21,6 +21,14 @@ class Jugador{
         
         mysqli_close($conexion);
     }
+    public static function getIdJugadorByCorreo($Correo){
+        $conexion = Database::connect();
+        $consulta1 = "select IDJugador from jugador where correo ='$Correo'";
+        $res = mysqli_query($conexion, $consulta1);
+        $IDJugador = mysqli_fetch_array($res, MYSQLI_NUM);
+        return $IDJugador[0];
+    }
+    
     
     public static function obtenerTodos(){
         $conexion = Database::connect();
@@ -54,13 +62,13 @@ class Jugador{
         $db = Database::connect();
         $res = $db->query("SELECT NombreEquipo FROM equipo WHERE NombreEquipo='$nombreEquipo'");
         if(mysqli_num_rows($res) > 0){ // Si ya existe ese nombre
-            return 1;
+            return false;
         }else{
             $db->query("INSERT INTO capitan (Correo) VALUES ('$correoJugador')");
             $db->query("DELETE FROM jugador WHERE Correo='$correoJugador'");
             $db->query("INSERT INTO equipo (Correo,NombreEquipo,DescripcionUniforme) values ('$correoJugador','$nombreEquipo','$descEquipo')");
             $db->query("UPDATE usuario set EsCapitan='1' where correo='$correoJugador'");
-            return 0;
+            return true;
         }
     }
         /*

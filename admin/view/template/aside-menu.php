@@ -137,6 +137,11 @@
                     <i class="ti-angle-right submenu-arrow"></i>
                 </a>
                 <ul class="submenu-content">    
+                    <li class="<?php isActive('/consultarEquipos') ?>">
+                        <a href="consultarEquipos">
+                            <span><i class="ti-eye"></i>Consultar Equipos</span>
+                        </a>
+                    </li>   
                     <li class="<?php isActive('/eliminarEquipo') ?>">
                         <a href="eliminarEquipo">
                             <span><i class="ti-minus"></i>Eliminar Equipo</span>

@@ -13,6 +13,33 @@ class Usuario{
 
 		mysqli_close($db);
     }
+	public static function updateDatosUsuario($nombre,$apellido,$telefono,$contrasena,$correo){
+		$conexion = Database::connect();
+		$sql = "update usuario set nombre='$nombre', apellidos='$apellido', telefono='$telefono', contra='$contrasena' where correo='$correo'";
+
+		if($res=$conexion->query($sql)){
+				return true;
+		}
+		else {
+			echo "Error: " . mysqli_error($conexion);
+		}
+	}
+	public static function getDatosUsuario($sesion){
+        $conexion = Database::connect();
+        
+        $sql = "select * from usuario where Correo = '$sesion'";
+        
+        if($res=$conexion->query($sql)){
+            $Datos = mysqli_fetch_array($res, MYSQLI_NUM);
+			
+                return $Datos;
+        }
+        else {
+            return "Error: " . mysqli_error($conexion);
+        }
+        
+        mysqli_close($conexion);
+    }
 
     public static function registrarCuenta($nombre,$apellidos,$correo,$telefono,$contrasena){
 		$db = Database::connect();

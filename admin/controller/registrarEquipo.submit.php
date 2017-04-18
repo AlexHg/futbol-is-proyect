@@ -1,10 +1,18 @@
 <?php
 Model::load("Jugador");
-/*$op = Jugador::registrarEquipo($_SESSION['email'],$_POST['nombreEquipo'],$_POST['uniforme']);
-switch ($op) {
-	case 0: $_SESSION['n'] = "exito"; break;
-	case 1: $_SESSION['n'] = "error"; break;
-	default: echo $op; break;
+Model::load("Equipo");
+
+$Equipo = $_POST["name"];
+$Correo = $_POST["email"];
+$Desc = $_POST["uniforme"];
+
+if(Jugador::registrarEquipo($Correo, $Equipo, $Desc) ){
+	start(array("role"=>2, "rolename"=>"Capitan", "name" => $_SESSION["name"], "email" => $_SESSION["email"], "avatar" => $_SESSION["avatar"]));
+	Flight::redirect('/registrarEquipo?n=exito');
+}else{
+	Flight::redirect('/registrarEquipo?n=error');
+
+
 }
-*/
-Flight::redirect('/registrarEquipo');
+
+

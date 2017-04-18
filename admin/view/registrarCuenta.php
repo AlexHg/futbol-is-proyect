@@ -66,7 +66,11 @@
             </center>
         </div>
     </div>
-    <script>$(document).ready(function(){openWindow("exito")});</script>
+    <script>
+    function goToLogin(){
+        window.location="iniciarSesion"
+    }
+    $(document).ready(function(){openWindow("exito")});</script>
 <?php } else if(isset($_SESSION['n']) && strcasecmp($_SESSION['n'],'error') == 0){
     unset($_SESSION['n'])?>
     <div class="overlay-container">
@@ -81,3 +85,19 @@
     </div>
     <script>$(document).ready(function(){openWindow("error")});</script>
 <?php }?>
+
+<?php
+Notify::confirm_if(
+    'Su cuenta ha sido creada',
+    '¿Desea ser enviado a la pantalla de inicio de sesión?',
+    isset($_GET['n']) && strcasecmp($_GET['n'],'done') == 0,
+    'goToLogin()'); 
+
+
+Notify::alert_if(
+    'Error en la creación de su cuenta',
+    'No ha sido posible modificar sus datos, intentelo de nuevo mas tarde',
+    'Reintentar!',
+    isset($_GET['n']) && strcasecmp($_GET['n'],'err') == 0); 
+
+									

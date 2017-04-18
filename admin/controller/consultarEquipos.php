@@ -4,7 +4,7 @@ Model::load("Equipo");
 
 function print_table(){
     //Reemplazar por id de torneo
-    $equipos = Torneo::getEquipos(1);
+    $equipos = Torneo::getEquiposTorneo2(1);
     $i = 1;
     while ($row = $equipos->fetch_array(MYSQLI_ASSOC)) {
         $nombreequipo=$row["nombreequipo"];
