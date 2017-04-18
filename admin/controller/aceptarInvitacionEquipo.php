@@ -16,7 +16,7 @@ function mostrarInvitaciones(){
         echo '<tr>';
         echo '<th scope="row">';
         //se envia la fila entera para manipular sobre ella
-        echo '<input id="checkbox0c" type="checkbox" name="invitacionesAceptadas[]" value="' .$row['idequipo']. '"</input>';
+        echo '<input id="checkbox0c" type="checkbox" name="invitacionesSeleccionadas[]" value="' .$row['idequipo']. '"</input>';
         echo '<div class="checkbox checkbox-dark">';
         echo '</div>';
         echo '</th>';
@@ -30,14 +30,14 @@ function mostrarInvitaciones(){
 }
 
 
+   function procesarSolicitud(){
 
-   function aceptarSolicitud(){
+        if(isset($_POST["aceptar"])){
 
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            if (isset($_POST["invitacionesAceptadas"])) {
-                $invitacionesAceptadas = $_POST['invitacionesAceptadas'];
 
-
+            if (isset($_POST["invitacionesSeleccionadas"])) {
+                $invitacionesAceptadas = $_POST['invitacionesSeleccionadas'];
                 foreach ($invitacionesAceptadas as $invitacion) {
                     //Cambiar por ID obtenido de sesión
                     //Jugador::aceptarSolicitudDeEquipo($invitacion['equipo'], $correo);
@@ -47,5 +47,27 @@ function mostrarInvitaciones(){
             } else {
                 echo "No hay invitaciones seleccionadas";
             }
+         }
+    }
+
+       else if(isset($_POST["rechazar"])){
+
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            if (isset($_POST["invitacionesSeleccionadas"])) {
+                $invitacionesAceptadas = $_POST['invitacionesSeleccionadas'];
+
+
+                foreach ($invitacionesAceptadas as $invitacion) {
+                    //Cambiar por ID obtenido de sesión
+                    //Jugador::aceptarSolicitudDeEquipo($invitacion['equipo'], $correo);
+                    echo 'Haz rechazado la invitacion al  equipo'.' ' . $invitacion;
+                }
+
+            } else {
+                echo "No hay invitaciones seleccionadas";
+            }
         }
+
+       }
+
     }
