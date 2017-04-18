@@ -7,16 +7,16 @@ function adiosTorneo(){
             $seleccionado = $_POST['ni'];
             list($IDTorneo,$nombre)=explode(".",$seleccionado);
             if(Torneo::eliminarTorneo("$IDTorneo")){
-                Notify::confirm('Torneo eliminado correctamente',
+                Notify::confirm('Torneo Eliminado',
                     "El torneo ".' '.$nombre." fue eliminado correctamente. ¿Desea eliminar otro Toreno?",
                     "window.location='eliminarTorneo'");
             }
         }
         else{
             Notify::alert(
-                'No seleccionaste ningun torneo',
-                'Asegurate de haber seleccionado un torneo antes de proceder',
-                'Reintentar!');
+                'No se seleccionó ningun torneo',
+                'Se debe seleccionado un torneo antes de eliminarlo',
+                'Reintentar');
         }
     }
 }
