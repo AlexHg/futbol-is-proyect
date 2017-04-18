@@ -2,7 +2,7 @@
     <h2>Aceptar Invitacion de Equipo</h2>
 </div>
 <div id="content-body">
-    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
+    <form id="aceptarInvitacionEquipo" method="post" class="form-control-cont" role="form" action="aceptarInvitacionEquipo">
         <table class="table table-striped ">
             <thead>
             <tr>
@@ -15,9 +15,11 @@
             <tbody>
 
             <?php
-            aceptarSolicitud($_SESSION['email']);
-            mostrarInvitaciones($_SESSION['email']);
+
+            mostrarInvitaciones();
+            aceptarSolicitud();
             ?>
+
             </tbody>
         </table>
                      <div class="row center-xs center-sm center-md center-lg">
@@ -32,10 +34,14 @@
                             </div>
                         </div>
                     </div>
+
+
+        </form>
     </div>
+
     <br/>
-    <hr>
     <br/>
+
 <!--Mensaje acptar solicitud para 1-->
  <div class="overlay-container">
                         <div class="window-container alerta">
