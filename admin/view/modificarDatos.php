@@ -80,15 +80,15 @@
 
 Notify::alert_if(
     'Datos modificados',
-    'Los datos se han modificado satisfactoriamente',
+    'Los datos han sido modificados exitosamente',
     'Aceptar',
     isset($_GET['n']) && strcasecmp($_GET['n'],'done') == 0); 
 
 
 Notify::alert_if(
-    'Error en la modificación',
-    'No ha sido posible modificar sus datos, intentelo de nuevo mas tarde',
-    'Reintentar!',
+    'Datos NO modificados',
+    'No ha sido posible modificar los datos, intenténtalo de nuevo más tarde',
+    'Reintentar',
     isset($_GET['n']) && strcasecmp($_GET['n'],'err') == 0); 
 
 									
