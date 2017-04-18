@@ -39,7 +39,7 @@
     Notify::alert_if(
         'Datos Incorrectos',
         'Los datos ingresados son incorrectos o no se encuentran registrados, favor de verificarlos',
-        'Reintentar!',
+        'Reintentar',
         isset($_GET['n']) && strcasecmp($_GET['n'],'nofound') == 0); 
         
 ?>
