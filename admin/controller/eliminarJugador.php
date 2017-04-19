@@ -19,6 +19,10 @@ function seleccionEliminados(){
         }
         else{
             echo "No hay jugadores seleccionados";
+             Notify::alert(
+                'Jugador no seleccionado',
+                'No hay jugadores seleccionados, por favor seleccione al menos uno',
+                'Reintentar');
         }
     }
 } 
