@@ -36,7 +36,6 @@ function mostrarEquipos($tipoTorneo)
                 foreach ($solicitudesSeleccionadas as $solicitud) {
                     //Cambiar por ID obtenido de sesión
                     Jugador::enviarSolicitudAEquipo($solicitud["IDEquipo"],$correo);
-                    echo 'Haz enviado  la invitacion al  equipo' . $solicitud['equipo'];
                      Notify::alert(
                 'Solicitud enviada',
                 'La solicitud fue enviada con éxito',
