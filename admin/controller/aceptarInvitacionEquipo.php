@@ -41,11 +41,17 @@ function mostrarInvitaciones(){
                 foreach ($invitacionesAceptadas as $invitacion) {
                     //Cambiar por ID obtenido de sesión
                     //Jugador::aceptarSolicitudDeEquipo($invitacion['equipo'], $correo);
-                    echo 'Haz aceptado la invitacion al  equipo'.' ' . $invitacion;
+                   Notify::alert(
+                'La invitación fue aceptada',
+                'La invitación fue aceptada exitosamente',
+                'Aceptar');
                 }
 
             } else {
-                echo "No hay invitaciones seleccionadas";
+               Notify::alert(
+                'Invitación no seleccionada',
+                'No hay invitaciones seleccionadas, por favor selecciona al menos una',
+                'Reintentar');
             }
          }
     }
@@ -60,11 +66,17 @@ function mostrarInvitaciones(){
                 foreach ($invitacionesAceptadas as $invitacion) {
                     //Cambiar por ID obtenido de sesión
                     //Jugador::aceptarSolicitudDeEquipo($invitacion['equipo'], $correo);
-                    echo 'Haz rechazado la invitacion al  equipo'.' ' . $invitacion;
+                    Notify::alert(
+                'La invitación fue rechazada',
+                'La invitación fue rechazada exitosamente',
+                'Aceptar');
                 }
 
             } else {
-                echo "No hay invitaciones seleccionadas";
+               Notify::alert(
+                'Invitación no seleccionada',
+                'No hay invitaciones seleccionadas, por favor selecciona al menos una',
+                'Reintentar');
             }
         }
 
