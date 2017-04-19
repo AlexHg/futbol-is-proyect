@@ -41,7 +41,9 @@
     Notify::confirm_activedById('Confirmación de Eliminación de Torneo',
             '¿Está seguro que desea eliminar el Torneo? Se eliminará toda la información relacionada a este',
             "submitFormButton", "submitForm()");
-?>
+?> 
+
+
 <!-- MENSAJES
 
 <div class="window-container alerta">

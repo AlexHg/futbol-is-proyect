@@ -20,9 +20,7 @@ function adiosTorneo(){
         }
     }
 }
-
-
-function listaTorneos(){
+function listaTorneos(){ 
     $torneos=Torneo::getTorneos();
     while ($row = $torneos->fetch_array(MYSQLI_ASSOC)) {
         echo '<option value="'.$row["IDTorneo"].".".$row["nombre"].'">'.$row["nombre"].'</option>';
