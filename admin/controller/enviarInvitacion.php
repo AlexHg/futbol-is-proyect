@@ -6,7 +6,6 @@ function seleccion(){
         if (isset($_POST["seleccionados"])) {
             $jugador = $_POST['seleccionados'];
             foreach ($jugador as $seleccionado){
-                echo "Se envio la invitacion a ".$seleccionado."<br />";
                 Notify::alert('Invitación enviada',
                 'La invitación fue enviada con éxito',
                 'Aceptar');
@@ -17,7 +16,6 @@ function seleccion(){
             }
         }
         else{
-            echo "No se selecciono un Jugador";
              Notify::alert('Jugador no seleccionado',
                 'No hay jugadores seleccionados, por favor seleccione al menos uno',
                 'Reintentar');
