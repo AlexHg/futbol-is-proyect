@@ -49,48 +49,5 @@
 <br/>
 <hr>
 <br/>
-<!--Mensaje acptar solicitud para 1-->
-<div class="overlay-container">
-    <div class="window-container alerta">
-        <h3>Confirmación de envío de solicitud</h3>
-            ¿Desea enviar estas solicitudes?
-        <br/>
-        <center>
-            <button class="btn btn-success close" class="window-container aceptar" >Aceptar</button>
-            <button class="btn btn-danger" >Cancelar</button>
-        </center>
-    </div>
-</div>
-<div class="overlay-container">
-    <div class="window-container aceptar">
-        <h3>Solicitud Aceptada</h3>
-        Ahora eres miembro de este equipo <br/>
-        <br/>
-        <center>
-            <button class="btn btn-success close" >Aceptar</button>
-        </center>
-    </div>
-</div>
-<!--Mensaje acptar solicitud para 2-->
-<div class="overlay-container">
-    <div class="window-container alerta">
-        <h3>Confirmación de Rechazo de Equipo</h3>
-        ¿Estás seguro de que deseas rechazar a este equipo?
-        <br/>
-        <center>
-            <button class="btn btn-success close" class="window-container rechazar" >Aceptar</button>
-            <button class="btn btn-danger" >Cancelar</button>
-        </center>
-    </div>
-</div>
-<div class="overlay-container">
-    <div class="window-container rechazar">
-        <h3>Solicitud Rechazada</h3>
-        La solicitud ha sido rechazada <br/>
-        <br/>
-        <center>
-            <button class="btn btn-success close" >Aceptar</button>
-        </center>
-    </div>
-</div>
+
 
