@@ -31,55 +31,24 @@ function mostrarInvitaciones(){
 
 
    function procesarSolicitud(){
+     $correo=$_SESSION['email'];
 
-        if(isset($_POST["aceptar"])){
 
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             if (isset($_POST["invitacionesSeleccionadas"])) {
                 $invitacionesAceptadas = $_POST['invitacionesSeleccionadas'];
-                foreach ($invitacionesAceptadas as $invitacion) {
-                    //Cambiar por ID obtenido de sesión
-                    //Jugador::aceptarSolicitudDeEquipo($invitacion['equipo'], $correo);
-                   Notify::alert(
-                'La invitación fue aceptada',
-                'La invitación fue aceptada exitosamente',
-                'Aceptar');
+
+                if(isset($_POST["aceptar"])){
+
+                    echo ("funciona");
+                }else if(isset($_POST["rechazar"])){
+                    Jugador::rechazarSolicitudDeEquipo($invitacionesAceptadas,$correo);
                 }
 
             } else {
-               Notify::alert(
-                'Invitación no seleccionada',
-                'No hay invitaciones seleccionadas, por favor selecciona al menos una',
-                'Reintentar');
+                echo "No hay invitaciones seleccionadas";
             }
          }
-    }
-
-       else if(isset($_POST["rechazar"])){
-
-            if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            if (isset($_POST["invitacionesSeleccionadas"])) {
-                $invitacionesAceptadas = $_POST['invitacionesSeleccionadas'];
-
-
-                foreach ($invitacionesAceptadas as $invitacion) {
-                    //Cambiar por ID obtenido de sesión
-                    //Jugador::aceptarSolicitudDeEquipo($invitacion['equipo'], $correo);
-                    Notify::alert(
-                'La invitación fue rechazada',
-                'La invitación fue rechazada exitosamente',
-                'Aceptar');
-                }
-
-            } else {
-               Notify::alert(
-                'Invitación no seleccionada',
-                'No hay invitaciones seleccionadas, por favor selecciona al menos una',
-                'Reintentar');
-            }
-        }
-
-       }
 
     }

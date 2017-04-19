@@ -36,7 +36,7 @@ class Jugador{
         $IDJugador = mysqli_fetch_array($res, MYSQLI_NUM);
         return $IDJugador[0];
     }
-    
+
     
     public static function obtenerTodos(){
         $conexion = Database::connect();
@@ -99,19 +99,38 @@ class Jugador{
     /*
      * User: criscastro
      */
-    public static function aceptarSolicitudDeEquipo($IDEquipo){
-        $db = Database::connect();
-       // revisar que existe usa la misma consulta de arriba
-        //
-        $res = $db->query("Select e.IDEquipo as IDEquipo , j.IDJugador as IDJugador , u.nombre as capitan, e.NombreEquipo as equipo , u.Imagen as imagenCapitan From jugador j, solicitud s, equipo e, capitan c, usuario u Where j.idjugador = s.idjugador And s.idequipo = e.idequipo And e.idcapitan = c.idcapitan And c.correo = u.correo And s.tipo_solicitud = 1  and e.IDEquipo = '$IDEquipo'");
-        if(mysqli_num_rows($db) <= 0){ // Si no existe
-            return 0;
-        }else{//si existe aceptasolicitud
-            $db->query("INSERT INTO equipo (IDEquipo,IDjugador) VALUES ((SELECT IDEquipo FROM equipo WHERE NombreEquipo='$NombreEquipo'),(SELECT IDJugador FROM jugador WHERE Correo = '$Correo'))");
-            $db->query("DELETE FROM solicitud WHERE IDEquipo = (SELECT IDEquipo FROM equipo WHERE NombreEquipo='$NombreEquipo') AND IDJugador = (SELECT IDJugador FROM jugador WHERE Correo = '$Correo') AND Tipo_Solicitud = '1'");
-            return 1;
+
+
+
+    public static function aceptarSolicitudDeEquipo($invitaciones,$correo){
+       $invitacion=$invitaciones;
+       $conexion = Database::connect();
+
+        if($idJugador=$conexion->query("select IDJugador from jugador where Correo='$correo'")){
+            return $idJugador;
+        }else{
+            return "Error: " . mysqli_error($conexion);
         }
-    }
+
+       foreach($invitacion as $IDEquipo){
+       $conexion->query("Insert into Equipo_Jugador (IDEquipo,IDJugador) values('$IDEquipo','$idJugador')");
+       $conexion->query("delete from solicitud where IDEquipo='$IDEquipo'and correo='$correo'");
+       }
+       mysqli_close($conexion);
+
+     }
+
+     public static function rechazarSolicitudDeEquipo($invitaciones,$correo){
+       $invitacion=$invitaciones;
+       $conexion = Database::connect();
+       foreach($invitacion as $IDEquipo){
+       $conexion->query("delete from solicitud where IDEquipo='$IDEquipo'and correo='$correo'");
+       }
+       mysqli_close($conexion);
+
+     }
+
+
     /*
 
         * User: criscastro
