@@ -41,7 +41,7 @@
             'EliminarJugadorBtn',
             'eliminarJugadorFun()'); 
 
-        Notify::alert(
+        Notify::alert_if(
             'Operación realizada exitosamente',
             'La operación se realizó exitosamente',
             'Aceptar',
