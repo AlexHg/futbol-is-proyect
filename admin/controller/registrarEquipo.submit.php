@@ -11,8 +11,6 @@ if(Jugador::registrarEquipo($Correo, $Equipo, $Desc) ){
 	Flight::redirect('/registrarEquipo?n=exito');
 }else{
 	Flight::redirect('/registrarEquipo?n=error');
-
-
 }
 
 

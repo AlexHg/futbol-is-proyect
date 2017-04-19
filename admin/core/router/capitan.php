@@ -18,7 +18,7 @@ Flight::route("/enviarInvitacion", function(){
         View::render('template/fin'); #Html footer
     });
 });
-
+ 
 Flight::route("/elegirHorario", function(){
     //Flight::redirect('/demo');
     Session::accessOnly(array("role" => 2), function(){

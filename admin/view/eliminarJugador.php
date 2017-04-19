@@ -4,7 +4,7 @@
 <div id="content-body">
     <h3>Jugadores del Equipo</h3>
     <h5>Selecciona al jugador que deseas eliminar</h5>
-    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
+    <form method="post" id="eliminarJugadorForm">
         <table class="table table-striped ">
             <thead>
             <tr>
@@ -25,31 +25,26 @@
         </table>
         <br>
         <center>
-            <button id="aceptarInvitacion" type="button" class="btn btn-danger" data-type="alerta">Eliminar</button>
-            <input type="submit" value="Eliminar" class="button" data-type="zoomin" data-type="alerta"/>
+            <input id="EliminarJugadorBtn" type="button" class="btn btn-danger" value="Eliminar" class="button" data-type="zoomin" data-type="alerta"/>
         </center>
     </form>
 </div>
-<!--Mensaje de confirmacion-->
-<div class="overlay-container">
-                        <div class="window-container alerta">
-                            <h3>Confirmación de Eliminación de Jugador</h3> 
-                            ¿Esta seguro que desea eliminar al jugador?<br/>
-                            <br/>
-                            <center>
-                            <button class="btn btn-success close" data-type="aceptar">Aceptar</button>
-                            <button class="btn btn-danger" >Cancelar</button>
-                            </center>
-                        </div>
-</div>
- <!--Mensaje de operacion exitosa-->
-<div class="overlay-container">
-                        <div class="window-container aceptar">
-                            <h3>Operación realizada exitosamente</h3> 
-                            La operación se realizó exitosamente<br/>
-                            <br/>
-                            <center>
-                            <button class="btn btn-success close" >Aceptar</button>
-                            </center>
-                        </div>
-</div>
+<script>
+    function eliminarJugadorFun(){
+        document.querySelector("#eliminarJugadorForm").submit();
+    }
+</script>
+<?php 
+        Notify::confirm_activedById(
+            'Confirmación de Eliminación de Jugador',
+            '¿Esta seguro que desea eliminar al jugador?',
+            'EliminarJugadorBtn',
+            'eliminarJugadorFun()'); 
+
+        Notify::alert(
+            'Operación realizada exitosamente',
+            'La operación se realizó exitosamente',
+            'Aceptar',
+            isset($_GET['n']) && strcasecmp($_GET['n'],'done') == 0); 
+
+?>

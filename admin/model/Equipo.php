@@ -47,15 +47,12 @@ class Equipo{
         mysqli_close($conexion);
     }
 
-    public static function eliminarJugadorEquipo($correoEliminar,$idCapitan){
+    public static function eliminarJugadorEquipo($IDJugador,$idCapitan){
         $conexion = Database::connect();
-        $consulta ="DELETE d from equipo_jugador d
-                    JOIN jugador USING(IDJugador)
-                    JOIN equipo USING(IDEquipo)
-                    JOIN capitan USING(IDCapitan)
-                    WHERE jugador.Correo='$correoEliminar' AND capitan.IDCapitan='$idCapitan';";
+        
+        $consulta ="delete from equipo_jugador where idjugador=$IDJugador and idequipo=$idCapitan;";
         if ($conexion->query($consulta)) {
-            return 1;
+            return true;
         } else {
             return "Error: " . mysqli_error($conexion);
         }
@@ -75,11 +72,7 @@ class Equipo{
 
     public static function getJugadoresEquipo($idCapitan){
         $conexion = Database::connect();
-        $consulta ="SELECT usuario.Nombre,usuario.Apellidos,usuario.Correo FROM usuario
-                    JOIN jugador USING(Correo)
-                    JOIN equipo_jugador USING(IDJugador)
-                    JOIN  equipo USING(IDEquipo)
-                    WHERE IDCapitan ='$idCapitan';";
+        $consulta ="SELECT usuario.Nombre,usuario.Apellidos,usuario.Correo from equipo, usuario, equipo_jugador, jugador WHERE jugador.Correo = usuario.Correo and jugador.IDJugador = equipo_jugador.IDJugador and equipo.IDEquipo = equipo_jugador.IDEquipo and equipo.Correo = 'Hector@outlook.com'";
         if ($resultado=$conexion->query($consulta)) {
             return $resultado;
         } else {

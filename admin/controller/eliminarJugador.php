@@ -1,16 +1,21 @@
 <?php
 Model::load("Equipo");
+Model::load("Jugador");
 function seleccionEliminados(){
     $estado="";
     //$seleccionados=[];
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (isset($_POST["seleccionados"])) {
             $jugador = $_POST['seleccionados'];
+            print_r($jugador);
             foreach ($jugador as $seleccionado){
                 echo $seleccionado." fue eliminado<br />";
                 //Cambiar por ID obtenido de sesión
-                Equipo::eliminarJugadorEquipo($seleccionado,3);
+                echo "J".Jugador::getIdJugadorByCorreo($seleccionado);
+                echo "e".Jugador::getIdJugadorByCorreo($_SESSION['email']);
+                Equipo::eliminarJugadorEquipo(Jugador::getIdJugadorByCorreo($seleccionado),Jugador::getIdJugadorByCorreo($_SESSION['email']));
             }
+            //Flight::redirect('/eliminarJugador?n=done');
         }
         else{
             echo "No hay jugadores seleccionados";
@@ -18,7 +23,9 @@ function seleccionEliminados(){
     }
 } 
 function imprimeTabla(){
-    $resultado =Equipo::getJugadoresEquipo(3);
+    $resultado =Equipo::getJugadoresEquipo(Jugador::getIdJugadorByCorreo($_SESSION['email']));
+    #print_r($resultado);
+    
     while ($row = $resultado->fetch_array(MYSQLI_ASSOC)) {
         echo '<tr>';
         echo '<th scope="row">';

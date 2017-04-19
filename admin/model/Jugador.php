@@ -28,6 +28,14 @@ class Jugador{
         $IDJugador = mysqli_fetch_array($res, MYSQLI_NUM);
         return $IDJugador[0];
     }
+
+    public static function getCorreoByIdJugador($id){
+        $conexion = Database::connect();
+        $consulta1 = "select Correo from jugador where IDJugador ='$id'";
+        $res = mysqli_query($conexion, $consulta1);
+        $IDJugador = mysqli_fetch_array($res, MYSQLI_NUM);
+        return $IDJugador[0];
+    }
     
     
     public static function obtenerTodos(){
