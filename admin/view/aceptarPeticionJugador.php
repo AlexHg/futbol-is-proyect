@@ -15,7 +15,7 @@
     <br>
     <br>
     <div align="center">
-        <input type="submit" class="btn btn-success" name="Aceptar" value="Aceptar"/>
+        <input type="submit" id="acept"class="btn btn-success" name="Aceptar" value="Aceptar"/>
         <input type="submit" class="btn btn-danger btn-rounded" name="Rechazar" value="Rechazar"/>
     </div>
     </form>
@@ -51,37 +51,8 @@
         }
     </script>
 </div>
-<!--
-    <script> <div class="overlay-container">
-                        <div class="window-container alerta">
-                            <h3>Confirmación de Asignación</h3> 
-                            ¿Estas seguro de aceptar a este jugador?<br/>
-                            <br/>
-                            <center>
-							<button class="btn btn-success close">Aceptar</button>
-                            <button class="btn btn-danger close" >Cancelar</button>
-                            </center>
-                        </div>
-          </div></script>
-    <script> <div class="overlay-container">
-                        <div class="window-container alerta">
-                            <h3>Confirmación de Rechazo</h3> 
-                            ¿Estas seguro de rechazar a este jugador?<br/>
-                            <br/>
-                            <center>
-							<button class="btn btn-success close">Aceptar</button>
-                            <button class="btn btn-danger close" >Cancelar</button>
-                            </center>
-                        </div>
-          </div></script>
-    <script> <div class="overlay-container">
-                        <div class="window-container alerta">
-                            <h3>Operación realizada exitosamente</h3> 
-                            La operación se realizó exitosamente<br/>
-                            <br/>
-                            <center>
-							<button class="btn btn-success close">Aceptar</button>
-                            </center>
-                        </div>
-          </div></script>
--->
+<?php
+    Notify::confirm_activedById(' Confirmación de envío de Solicitud',
+            '¿Estás seguro de enviar la(s) solicitud(es)?.',
+            "acept", "submitForm()");
+?>
