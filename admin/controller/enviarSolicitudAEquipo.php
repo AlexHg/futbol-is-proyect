@@ -37,9 +37,16 @@ function mostrarEquipos($tipoTorneo)
                     //Cambiar por ID obtenido de sesión
                     Jugador::enviarSolicitudAEquipo($solicitud["IDEquipo"],$correo);
                     echo 'Haz enviado  la invitacion al  equipo' . $solicitud['equipo'];
+                     Notify::alert(
+                'Solicitud enviada',
+                'La solicitud fue enviada con éxito',
+                'Aceptar');
                 }
             } else {
-                echo "No hay invitaciones seleccionadas";
+                Notify::alert(
+                'Solicitudes no seleccionadas',
+                'No hay solicitudes seleccionadas',
+                'Reintentar');
             }
         }
     }
