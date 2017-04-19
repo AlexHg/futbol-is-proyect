@@ -41,7 +41,8 @@ function mostrarInvitaciones(){
 
                 if(isset($_POST["aceptar"])){
 
-                    echo ("funciona");
+                    Jugador::aceptarSolicitudDeEquipo($invitacionesAceptadas,$correo);
+
                 }else if(isset($_POST["rechazar"])){
                     Jugador::rechazarSolicitudDeEquipo($invitacionesAceptadas,$correo);
                 }

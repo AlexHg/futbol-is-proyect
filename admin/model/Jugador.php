@@ -103,22 +103,28 @@ class Jugador{
 
 
     public static function aceptarSolicitudDeEquipo($invitaciones,$correo){
+        $conexion = Database::connect();
        $invitacion=$invitaciones;
-       $conexion = Database::connect();
+       $idjugador = "";
+       $query = mysqli_query($conexion,"select IDJugador from jugador where Correo='$correo'");
 
-        if($idJugador=$conexion->query("select IDJugador from jugador where Correo='$correo'")){
-            return $idJugador;
-        }else{
-            return "Error: " . mysqli_error($conexion);
-        }
+       if($row = mysqli_fetch_array($query)){
+       //Guardo los datos de la BD en las variables de php
+       $idjugador = $row['IDJugador'];
 
+       }
+        //echo($idjugador);
        foreach($invitacion as $IDEquipo){
-       $conexion->query("Insert into Equipo_Jugador (IDEquipo,IDJugador) values('$IDEquipo','$idJugador')");
+        //echo($IDEquipo);
+       $conexion->query("insert into Equipo_Jugador (IDEquipo,IDJugador) values('$IDEquipo','$idjugador')");
        $conexion->query("delete from solicitud where IDEquipo='$IDEquipo'and correo='$correo'");
        }
+
+
        mysqli_close($conexion);
 
      }
+
 
      public static function rechazarSolicitudDeEquipo($invitaciones,$correo){
        $invitacion=$invitaciones;
