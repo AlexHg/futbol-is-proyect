@@ -14,10 +14,10 @@
             </thead>
             <tbody>
 
-                <?php
-
-            mostrarInvitaciones();
-            procesarSolicitud();
+            <?php
+                procesarSolicitud();
+                mostrarInvitaciones();
+            
             ?>
 
             </tbody>
