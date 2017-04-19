@@ -9,13 +9,18 @@ function aceptarRechazarJugador(){
             if (isset($_POST["seleccionados"])) {
                 $seleccionados = $_POST['seleccionados'];
                 foreach ($seleccionados as $seleccionado){
-                    echo $seleccionado." fue aceptado<br />";
+                Notify::alert(
+                'La solicitud fue aceptada',
+                'La solicitud del jugador fue aceptada exitosamente ',
+                'Aceptar');
                     //Cambiar por ID obtenido de sesión
                     Equipo::aceptarSolicitudDeJugador(3,$seleccionado);
                 }
             }
             else{
-                echo "No hay jugadores seleccionados<br>";
+             Notify::alert('Solicitud no seleccionada',
+                'No hay solicitudes seleccionadas, por favor seleccione al menos una',
+                'Reintentar');
             }
         }
         if (isset($_POST['Rechazar'])) {
@@ -23,13 +28,18 @@ function aceptarRechazarJugador(){
                 $seleccionados = $_POST['seleccionados'];
                 foreach ($seleccionados as $seleccionado){
                     echo $seleccionado." fue rechazado<br />";
+                    Notify::alert('La solicitud fue rechazada',
+                'La solicitud del jugador fue rechazada exitosamente ',
+                'Aceptar');
                     //Cambiar por ID obtenido de sesión
                     $IDCapitan=Capitan::Idcapitan($_SESSION["email"]);
                     Equipo::rechazarSolicitudDeJugador($IDCapitan,$seleccionado);
                 }
             }
             else{
-                echo "No hay jugadores seleccionados<br>";
+                Notify::alert('Solicitud no seleccionada',
+                'No hay solicitudes seleccionadas, por favor selecciona al menos una',
+                'Reintentar');
             }
         }
     }
