@@ -27,6 +27,13 @@ class Equipo{
         return $res;
         mysqli_close($conexion);
     }
+    public static function getIdEquipoByCorreo($Correo){
+        $conexion = Database::connect();
+        $consulta1 = "SELECT IDEquipo FROM equipo where correo ='$Correo'";
+        $res = mysqli_query($conexion, $consulta1);
+        $IDJugador = mysqli_fetch_array($res, MYSQLI_NUM);
+        return $IDJugador[0];
+    }
 
    public static function eliminarEquipo($IDEquipo){
         $conexion = Database::connect();

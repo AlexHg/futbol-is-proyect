@@ -12,8 +12,8 @@ function seleccionEliminados(){
                 echo $seleccionado." fue eliminado<br />";
                 //Cambiar por ID obtenido de sesión
                 echo "J".Jugador::getIdJugadorByCorreo($seleccionado);
-                echo "e".Jugador::getIdJugadorByCorreo($_SESSION['email']);
-                Equipo::eliminarJugadorEquipo(Jugador::getIdJugadorByCorreo($seleccionado),Jugador::getIdJugadorByCorreo($_SESSION['email']));
+                echo "e".Equipo::getIdEquipoByCorreo($_SESSION['email']);
+                Equipo::eliminarJugadorEquipo(Jugador::getIdJugadorByCorreo($seleccionado),Equipo::getIdEquipoByCorreo($_SESSION['email']));
             }
             //Flight::redirect('/eliminarJugador?n=done');
         }
