@@ -42,7 +42,7 @@
                     <i class="ti-angle-right submenu-arrow"></i>    
                 </a>
                 <ul class="submenu-content">
-                    <li class="<?php isActive('/enviarSolicitud') ?>"><a href="enviarSolicitud"><span><i class="ti-plus"></i>Unirse a Un Equipo</span></a></li>      
+                    <li class="<?php isActive('/enviarSolicitudAEquipo') ?>"><a href="enviarSolicitudAEquipo"><span><i class="ti-plus"></i>Unirse a Un Equipo</span></a></li>
                 </ul>
             </li>
         <?php }) ?>

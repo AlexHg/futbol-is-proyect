@@ -1,5 +1,5 @@
 <div id="content-title">
-    <h2>Enviar Invitacion de Equipo</h2>
+    <h2>Enviar solicitud a Equipo</h2>
 </div>
 <div id="content-body">
     <form id="enviarSolicitudAEquipo" method="post" class="form-control-cont" role="form" action="enviarSolicitudAEquipo">
