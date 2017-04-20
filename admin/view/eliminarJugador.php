@@ -36,8 +36,8 @@
 </script>
 <?php 
         Notify::confirm_activedById(
-            'Confirmación de Eliminación de Jugador',
-            '¿Esta seguro que desea eliminar al jugador?',
+            'Eliminación de Jugador',
+            '¿Estás seguro que deseas eliminar al jugador?',
             'EliminarJugadorBtn',
             'eliminarJugadorFun()'); 
 
