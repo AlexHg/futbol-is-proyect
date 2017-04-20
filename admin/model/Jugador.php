@@ -1,6 +1,6 @@
 <?php
 class Jugador{
-    public static function enviarInvitacion(){
+    public static function enviarInvitacion($correojugador,$correocapitan){
         $conexion = Database::connect();
 
         $consulta1 ="select IDEquipo from Equipo e,Capitan c where e.idcapitan=c.idcapitan and c.correo='$correocapitan'";
