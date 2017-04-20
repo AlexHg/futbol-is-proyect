@@ -41,12 +41,12 @@ function procesarSolicitud(){
 
                     Coordinador::rechazarSolicitudDeEquipo($invitacionesAceptadas);
 
-                    echo ("La peticion  ha sido rechazada");
+                    echo ("La petición  ha sido rechazada");
 
                 }
 
             } else {
-                echo "No hay invitaciones seleccionadas";
+                echo "No hay peticiones seleccionadas";
 
             }
          }
