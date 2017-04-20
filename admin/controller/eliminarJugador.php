@@ -16,10 +16,9 @@ function seleccionEliminados(){
             Flight::redirect('/eliminarJugador?n=done');
         }
         else{
-            echo "No hay jugadores seleccionados";
              Notify::alert(
                 'Jugador no seleccionado',
-                'No hay jugadores seleccionados, por favor seleccione al menos uno',
+                'No hay jugadores seleccionados, por favor seleccione uno antes de proceder',
                 'Reintentar');
         }
     }
