@@ -149,9 +149,9 @@
                     </li>     
                 </ul>
             </li>
-            <li class="submenu <?php isActive('/aceptarPeticiones') ?>">
-                <a href="aceptarPeticiones">
-                    <span><i class="ti-folder"></i>Solicitudes</span>
+            <li class="submenu <?php isActive('/aceptarPeticiondeTorneo') ?>">
+                <a href="aceptarPeticiondeTorneo">
+                    <span><i class="ti-folder"></i>Peticiones</span>
                 </a>
             </li>
         <?php }) ?> 
