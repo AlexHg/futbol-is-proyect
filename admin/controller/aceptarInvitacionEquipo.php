@@ -42,24 +42,18 @@ function mostrarInvitaciones(){
                 if(isset($_POST["aceptar"])){
 
                     Jugador::aceptarSolicitudDeEquipo($invitacionesAceptadas,$correo);
-                    Notify::confirm('Invitación Aceptada',
-                    "Ahora eres miembro de este equipo ",
-                    "window.location='aceptarInvitacionEquipo'");
+                    echo("Te haz unido al equipo");
 
 
                 }else if(isset($_POST["rechazar"])){
 
                     Jugador::rechazarSolicitudDeEquipo($invitacionesAceptadas,$correo);
-                   Notify::confirm('Invitación Rechazada',
-                    "La invitación ha sido rechazada",
-                    "window.location='aceptarInvitacionEquipo'");
+                   echo("Solicitud de equipo rechazada");
 
                 }
 
             } else {
-               Notify::confirm('Invitación no seleccionada',
-                    "No hay invitaciones seleccionadas, por favor selecciona una",
-                    "window.location='aceptarInvitacionEquipo'");
+               echo("No hay invitaciones seleccionadas, por favor selecciona una");
 
             }
          }
