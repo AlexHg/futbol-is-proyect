@@ -98,7 +98,24 @@ class Torneo{
         mysqli_close($conexion);
     }
 
+    public static function getInfoByType($tipo){ // Obtiene Nombre, Fecha Inicio e ID a partir del tipo de torneo
+        $conexion = Database::connect();
+        $resultado=$conexion->query("SELECT nombre,fecha_inicio,idtorneo FROM torneo WHERE tipo_torneo=$tipo");
+        if ($resultado) return $resultado;
+        else            return "Error: " . mysqli_error($conexion);
+        mysqli_close($conexion);
+    }
 
+    public static function getDatesByID($idTorneo,$tipo){ // Obtiene los dias que se juega un torneo y retorna una cadena.
+        $ccat = "";
+        $conexion = Database::connect();
+        $resultado=$conexion->query("SELECT g.Dia from torneo t, torneo_grupo tg, grupo g where tipo_torneo=$tipo and t.idtorneo=tg.idtorneo and tg.idgrupo=g.idgrupo and t.idtorneo=$idTorneo");
+        if ($resultado){
+            while($row = $resultado->fetch_array(MYSQLI_ASSOC)) $ccat.=$row['Dia'].', ';
+            return substr($ccat, 0, -1);
+        }else            return "Error: " . mysqli_error($conexion);
+        mysqli_close($conexion);
+    }
 
 }
 

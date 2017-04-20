@@ -55,3 +55,12 @@ Flight::route("/modificarHorario", function(){
         View::render('template/fin'); #Html footer
     });
 });
+
+Flight::route("/inscripcionTorneo", function(){
+    Session::accessOnly(array("role" => 2), function(){
+        Controller::run('enviarPeticionTorneo');
+        View::render('template/ini'); 
+        View::render('enviarPeticionTorneo');
+        View::render('template/fin'); 
+    });
+});
