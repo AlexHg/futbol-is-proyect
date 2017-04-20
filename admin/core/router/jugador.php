@@ -22,6 +22,7 @@ Flight::route('/aceptarInvitacionEquipo', function(){
 Flight::route('/enviarSolicitudAEquipo', function(){
     #if session is not open
     Session::accessOnly(array("role" => 1), function(){
+        Controller::run("enviarSolicitudAEquipo");
         View::render('template/ini'); #Html head, menu, header
         View::render('enviarSolicitudAEquipo'); #html content
         View::render('template/fin'); #Html footer

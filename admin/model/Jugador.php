@@ -145,19 +145,19 @@ class Jugador{
         */
     public static  function  enviarSolicitudAEquipo($IDEquipo,$correo){
         $db = Database::connect();
-        $res=$db->query("Select j.IDJugador as IDJugador , u.nombre as capitan, e.NombreEquipo as equipo , u.Imagen as imagenCapitan 
+       /* $res=mysqli_num_rows($db->query("Select j.IDJugador as IDJugador , u.nombre as capitan, e.NombreEquipo as equipo , u.Imagen as imagenCapitan
                                 From jugador j, solicitud s, equipo e, capitan c, usuario u 
                                 Where j.idjugador = s.idjugador And s.idequipo = e.idequipo And e.idcapitan = c.idcapitan And c.correo = u.correo 
-                                And s.tipo_solicitud = 1 And j.correo ='$correo' and e.IDEquipo = '$IDEquipo'");
-        if(mysqli_num_rows($res) > 0){ // Si ya la solicitud no la almacena
+                                And s.tipo_solicitud = 1 And j.correo ='$correo' and e.IDEquipo = '$IDEquipo'"));*/
+       $res=0;
+        if($res==0){
+            //TODO corregir consulta
+            $db->query("INSERT INTO solicitud (IDEquipo, correo, Tipo_Solicitud) VALUES ('$IDEquipo', '$correo', '1')");
+            echo 'se ha enviado  la solicitud a el equipo '.$IDEquipo.'  por el jugador '.$correo;
+            return 1;
+        }else{ // Si ya existe la solicitud no la almacena
             echo 'ya has enviado solicitud a este equipo';
             return 0;
-        }else{
-                $db->query("INSERT INTO equipo_jugador(IDEquipo, IDJugador)
-				VALUES '$IDEquipo',
-				(SELECT IDJugador from jugador WHERE Correo='$correo'))");
-            echo 'se ha enviado  la solicitud a el equipo ';
-            return 1;
         }
 
     }

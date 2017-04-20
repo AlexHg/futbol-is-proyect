@@ -1,53 +1,46 @@
 <div id="content-title">
-    <h2>Envia una solicitud para unirte a un equipo</h2>
-<h3>Selecciona la categoría a buscar: </h3>
-<center>
-    <button type="button" class="btn btn-dark">Torneo Soccer</button>
-    <button type="button" class="btn btn-primary">Torneo rápido</button>
-</center>
-<br><br>
-</div>
-<h3>Selecciona la categoría a buscar: </h3>
-<center>
-    <button type="button" class="btn btn-dark">Torneo Soccer</button>
-    <button type="button" class="btn btn-primary">Torneo rápido</button>
-</center>
-<br><br>
+    <h2>Enviar Invitacion de Equipo</h2>
 </div>
 <div id="content-body">
-    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
+    <form id="enviarSolicitudAEquipo" method="post" class="form-control-cont" role="form" action="enviarSolicitudAEquipo">
         <table class="table table-striped ">
             <thead>
             <tr>
                 <th>Elegir</th>
                 <th>Equipo</th>
                 <th>Capitán</th>
-                <th>Torneo</th>                 
+                <th>imagen</th>
             </tr>
             </thead>
             <tbody>
 
             <?php
-            enviarSolicitudAEquipo($_SESSION['email']);
-            mostrarEquipos();//se uso futbol rapido por default cambiara con el boton de arriba
+            enviarSolicitudes();
+            mostrarEquipos();
+
             ?>
+
             </tbody>
         </table>
         <div class="row center-xs center-sm center-md center-lg">
             <div class="ol-xs-3 col-md-3 col-lg-3">
                 <div class="box">
-                    <button id="cancelarInvitacion" type="submit" class="btn btn-success" data-type="alerta">Aceptar</button>
+
+                    <!-- cmbiar por un input -->
+                    <button id="btnAceptar" type="submit" class="btn btn-success" data-type="alerta" name="aceptar">Aceptar</button>
+
                 </div>
             </div>
             <div class="col-xs-3 col-md-3 col-lg-3">
                 <div class="box">
-                    <button id="aceptarInvitacion" type="button" class="btn btn-danger" data-type="alerta2">Rechazar</button>
+
+                    <button id="rechazarInvitacion" type="submit" class="btn btn-danger" data-type="alerta2" name="rechazar">Rechazar</button>
+
+
                 </div>
             </div>
         </div>
+
+
+    </form>
 </div>
-<br/>
-<hr>
-<br/>
-
-

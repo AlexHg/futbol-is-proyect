@@ -2,7 +2,7 @@
 class Torneo{
     public static function getEquipos($tipoTorneo=1){// @param $tipoTorneo: recibe si el torneo es de futbol rapido (1) o soccer (0)  si no se  ingresa poner el tipo de torneo como futbol rapido por default
         $conexion = Database::connect();
-        $consulta ="SELECT nombreEquipo,IDEquipo,correo,Imagen FROM torneo JOIN equipo_torneo USING(IDTorneo) JOIN equipo USING(IDEquipo) JOIN capitan USING(correo) JOIN usuario USING (correo) WHERE Tipo_Torneo='$tipoTorneo'";
+        $consulta ="SELECT * FROM torneo JOIN equipo_torneo USING(IDTorneo) JOIN equipo USING(IDEquipo) JOIN capitan USING(correo) JOIN usuario USING (correo) WHERE Tipo_Torneo='$tipoTorneo'";
         if ($resultado=$conexion->query($consulta)) {
             return $resultado;
         } else {

@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cfc29a13-c3ca-4ce8-b0e9-799adeaf3932" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/controller/enviarSolicitudAEquipo.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/view/enviarSolicitudAEquipo.php" />
+    <list default="true" id="cfc29a13-c3ca-4ce8-b0e9-799adeaf3932" name="Default" comment="Añadida Jugador::enviarSolicitudAEquipo, arreglado el query de eliminar torneo,queda pendiente implementacion de el controlador enviarSolicitudAEquipo y su vista">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/controller/aceptarInvitacionEquipo.php" afterPath="$PROJECT_DIR$/admin/controller/aceptarInvitacionEquipo.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/controller/enviarSolicitudAEquipo.php" afterPath="$PROJECT_DIR$/admin/controller/enviarSolicitudAEquipo.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/core/router/jugador.php" afterPath="$PROJECT_DIR$/admin/core/router/jugador.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/model/Jugador.php" afterPath="$PROJECT_DIR$/admin/model/Jugador.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/model/Torneo.php" afterPath="$PROJECT_DIR$/admin/model/Torneo.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/view/aceptarInvitacionEquipo.php" afterPath="$PROJECT_DIR$/admin/view/aceptarInvitacionEquipo.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/view/enviarSolicitudAEquipo.php" afterPath="$PROJECT_DIR$/admin/view/enviarSolicitudAEquipo.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,54 +19,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Jugador.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/model/Jugador.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-272">
-              <caret line="88" column="44" lean-forward="false" selection-start-line="88" selection-start-column="36" selection-end-line="88" selection-end-column="44" />
-              <folding>
-                <marker date="1491845225000" expanded="true" signature="131:230" ph="select IDEqu... Equipo" />
-                <marker date="1491845225000" expanded="true" signature="374:433" ph="select IDJug... jugador" />
-                <marker date="1491845225000" expanded="true" signature="573:666" ph="insert into Solicitud... " />
-                <marker date="1491845225000" expanded="true" signature="974:1035" ph="select Nombr... Usuario" />
-                <marker date="1491845225000" expanded="true" signature="1301:1561" ph="SELECT usuar... usuario" />
-                <marker date="1491845225000" expanded="true" signature="1876:1942" ph="SELECT Nombr... equipo" />
-                <marker date="1491845225000" expanded="true" signature="2073:2127" ph="INSERT INTO capitan... " />
-                <marker date="1491845225000" expanded="true" signature="2155:2204" ph="DELETE FROM " />
-                <marker date="1491845225000" expanded="true" signature="2232:2348" ph="INSERT INTO equipo... " />
-                <marker date="1491845225000" expanded="true" signature="2376:2438" ph="UPDATE usuar... " />
-                <marker date="1491845225000" expanded="true" signature="2711:3083" ph="Select j.IDJ... jugador" />
-                <marker date="1491845225000" expanded="true" signature="3506:3878" ph="Select j.IDJ... jugador" />
-                <marker date="1491845225000" expanded="true" signature="3506:3879" ph="Select j.IDJ... jugador" />
-                <marker date="1491845225000" expanded="true" signature="3506:3890" ph="Select e.IDE... jugador" />
-                <marker date="1491845225000" expanded="true" signature="4037:4207" ph="INSERT INTO equipo... " />
-                <marker date="1491845225000" expanded="true" signature="4086:4148" ph="SELECT IDEqu... equipo" />
-                <marker date="1491845225000" expanded="true" signature="4151:4205" ph="SELECT IDJug... jugador" />
-                <marker date="1491845225000" expanded="true" signature="4235:4436" ph="DELETE FROM " />
-                <marker date="1491845225000" expanded="true" signature="4275:4337" ph="SELECT IDEqu... equipo" />
-                <marker date="1491845225000" expanded="true" signature="4356:4410" ph="SELECT IDJug... jugador" />
-                <marker date="1491845225000" expanded="true" signature="4721:5179" ph="Select j.IDJ... jugador" />
-                <marker date="1491845225000" expanded="true" signature="5383:5514" ph="INSERT INTO equipo_jugador... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="aceptarInvitacionEquipo.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/view/aceptarInvitacionEquipo.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1454">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="81" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="enviarSolicitudAEquipo.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="enviarSolicitudAEquipo.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/view/enviarSolicitudAEquipo.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="12" column="50" lean-forward="false" selection-start-line="12" selection-start-column="50" selection-end-line="12" selection-end-column="50" />
+            <state relative-caret-position="138">
+              <caret line="6" column="19" lean-forward="false" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -76,23 +32,9 @@
       <file leaf-file-name="enviarSolicitudAEquipo.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/controller/enviarSolicitudAEquipo.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="30" column="13" lean-forward="false" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="44" />
+            <state relative-caret-position="247">
+              <caret line="42" column="60" lean-forward="false" selection-start-line="42" selection-start-column="60" selection-end-line="42" selection-end-column="60" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Torneo.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/model/Torneo.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="4" column="230" lean-forward="false" selection-start-line="4" selection-start-column="230" selection-end-line="4" selection-end-column="230" />
-              <folding>
-                <marker date="1491845225000" expanded="true" signature="288:499" ph="SELECT nombr... equipo" />
-                <marker date="1491845225000" expanded="true" signature="808:833" ph="SELECT nombr... Torneo" />
-                <marker date="1491845225000" expanded="true" signature="1182:1227" ph="DELETE from " />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -100,32 +42,98 @@
       <file leaf-file-name="aceptarInvitacionEquipo.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/controller/aceptarInvitacionEquipo.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="259">
-              <caret line="17" column="98" lean-forward="false" selection-start-line="17" selection-start-column="98" selection-end-line="17" selection-end-column="98" />
+            <state relative-caret-position="383">
+              <caret line="32" column="30" lean-forward="false" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="eliminarJugador.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/view/eliminarJugador.php">
+      <file leaf-file-name="aceptarInvitacionEquipo.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/view/aceptarInvitacionEquipo.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
-              <caret line="21" column="20" lean-forward="false" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
-              <folding />
+            <state relative-caret-position="27">
+              <caret line="5" column="4" lean-forward="false" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
+              <folding>
+                <marker date="1492661914000" expanded="true" signature="179:1429" ph="..." />
+                <marker date="1492661914000" expanded="true" signature="304:1422" ph="..." />
+                <marker date="1492661914000" expanded="true" signature="349:760" ph="..." />
+                <marker date="1492661914000" expanded="true" signature="369:578" ph="..." />
+                <marker date="1492661914000" expanded="true" signature="390:557" ph="..." />
+                <marker date="1492661914000" expanded="true" signature="598:743" ph="..." />
+                <marker date="1492661914000" expanded="true" signature="826:1408" ph="..." />
+                <marker date="1492661914000" expanded="true" signature="878:1118" ph="..." />
+                <marker date="1492661914000" expanded="true" signature="912:1099" ph="..." />
+                <marker date="1492661914000" expanded="true" signature="1171:1393" ph="..." />
+                <marker date="1492661914000" expanded="true" signature="1205:1374" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Usuario.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/model/Usuario.php">
+      <file leaf-file-name="Equipo.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/model/Equipo.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
+            <state relative-caret-position="-2053">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
-                <marker date="1491604147000" expanded="true" signature="125:191" ph="SELECT * fro... usuario" />
-                <marker date="1491604147000" expanded="true" signature="524:684" ph="INSERT INTO usuario... " />
-                <marker date="1491604147000" expanded="true" signature="701:747" ph="INSERT INTO jugador... " />
+                <marker date="1492573546000" expanded="true" signature="139:304" ph="select count... equipo" />
+                <marker date="1492573546000" expanded="true" signature="328:528" ph="select count... equipo" />
+                <marker date="1492573546000" expanded="true" signature="552:754" ph="select count... equipo" />
+                <marker date="1492573546000" expanded="true" signature="778:979" ph="select count... equipo" />
+                <marker date="1492573546000" expanded="true" signature="1003:1194" ph="select sum(G... equipo" />
+                <marker date="1492573546000" expanded="true" signature="1218:1413" ph="select sum(G... equipo" />
+                <marker date="1492573546000" expanded="true" signature="2123:2174" ph="SELECT IDEqu... equipo" />
+                <marker date="1492573546000" expanded="true" signature="2435:2489" ph="SELECT Corre... Equipo" />
+                <marker date="1492573546000" expanded="true" signature="2637:2682" ph="DELETE from " />
+                <marker date="1492573546000" expanded="true" signature="2714:2776" ph="INSERT into jugador... " />
+                <marker date="1492573546000" expanded="true" signature="2808:2850" ph="DELETE from " />
+                <marker date="1492573546000" expanded="true" signature="2882:2935" ph="UPDATE usuar... " />
+                <marker date="1492573546000" expanded="true" signature="3238:3305" ph="delete from " />
+                <marker date="1492573546000" expanded="true" signature="3612:3652" ph="SELECT idequ... equipo" />
+                <marker date="1492573546000" expanded="true" signature="3984:4258" ph="SELECT usuar... equipo" />
+                <marker date="1492573546000" expanded="true" signature="4611:4829" ph="INSERT INTO equipo_jugador... " />
+                <marker date="1492573546000" expanded="true" signature="4687:4743" ph="SELECT IDEqu... equipo" />
+                <marker date="1492573546000" expanded="true" signature="4768:4827" ph="SELECT IDJug... jugador" />
+                <marker date="1492573546000" expanded="true" signature="4852:5043" ph="DELETE FROM " />
+                <marker date="1492573546000" expanded="true" signature="4910:4966" ph="SELECT IDEqu... equipo" />
+                <marker date="1492573546000" expanded="true" signature="4983:5042" ph="SELECT IDJug... jugador" />
+                <marker date="1492573546000" expanded="true" signature="5410:5601" ph="DELETE FROM " />
+                <marker date="1492573546000" expanded="true" signature="5468:5524" ph="SELECT IDEqu... equipo" />
+                <marker date="1492573546000" expanded="true" signature="5541:5600" ph="SELECT IDJug... jugador" />
+                <marker date="1492573546000" expanded="true" signature="5915:6005" ph="INSERT into solicitud... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Jugador.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/admin/model/Jugador.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="156" column="0" lean-forward="false" selection-start-line="156" selection-start-column="0" selection-end-line="156" selection-end-column="0" />
+              <folding>
+                <marker date="1492661914000" expanded="true" signature="20:880" ph="..." />
+                <marker date="1492661914000" expanded="true" signature="131:230" ph="select IDEqu... Equipo" />
+                <marker date="1492661914000" expanded="true" signature="374:433" ph="select IDJug... jugador" />
+                <marker date="1492661914000" expanded="true" signature="573:666" ph="insert into Solicitud... " />
+                <marker date="1492661914000" expanded="true" signature="997:1050" ph="select IDJug... jugador" />
+                <marker date="1492661914000" expanded="true" signature="1318:1367" ph="select Corre... jugador" />
+                <marker date="1492661914000" expanded="true" signature="1616:1677" ph="select Nombr... Usuario" />
+                <marker date="1492661914000" expanded="true" signature="1943:2203" ph="SELECT usuar... usuario" />
+                <marker date="1492661914000" expanded="true" signature="2518:2584" ph="SELECT Nombr... equipo" />
+                <marker date="1492661914000" expanded="true" signature="2719:2773" ph="INSERT INTO capitan... " />
+                <marker date="1492661914000" expanded="true" signature="2801:2850" ph="DELETE FROM " />
+                <marker date="1492661914000" expanded="true" signature="2878:2994" ph="INSERT INTO equipo... " />
+                <marker date="1492661914000" expanded="true" signature="3022:3084" ph="UPDATE usuar... " />
+                <marker date="1492661914000" expanded="true" signature="3327:3595" ph="select e.Nom... solicitud" />
+                <marker date="1492661914000" expanded="true" signature="4294:4346" ph="select IDJug... jugador" />
+                <marker date="1492661914000" expanded="true" signature="4627:4707" ph="insert into Equipo_Jugador... " />
+                <marker date="1492661914000" expanded="true" signature="4736:4804" ph="delete from " />
+                <marker date="1492661914000" expanded="true" signature="5080:5148" ph="delete from " />
+                <marker date="1492661914000" expanded="true" signature="5465:5922" ph="Select j.IDJ... jugador" />
+                <marker date="1492661914000" expanded="true" signature="6026:6058" ph="INSERT INTO solicitud... " />
+                <marker date="1492661914000" expanded="true" signature="6026:6119" ph="INSERT INTO solicitud... " />
               </folding>
             </state>
           </provider>
@@ -140,11 +148,12 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/admin/view/aceptarInvitacionEquipo.php" />
-        <option value="$PROJECT_DIR$/admin/model/Jugador.php" />
+        <option value="$PROJECT_DIR$/admin/core/router/jugador.php" />
         <option value="$PROJECT_DIR$/admin/model/Torneo.php" />
+        <option value="$PROJECT_DIR$/admin/view/enviarSolicitudAEquipo.php" />
         <option value="$PROJECT_DIR$/admin/controller/aceptarInvitacionEquipo.php" />
         <option value="$PROJECT_DIR$/admin/controller/enviarSolicitudAEquipo.php" />
-        <option value="$PROJECT_DIR$/admin/view/enviarSolicitudAEquipo.php" />
+        <option value="$PROJECT_DIR$/admin/model/Jugador.php" />
       </list>
     </option>
   </component>
@@ -158,7 +167,7 @@
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1280" />
-    <option name="height" value="712" />
+    <option name="height" value="704" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -175,6 +184,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -315,7 +325,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -344,15 +353,19 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/view/aceptarPeticionJugador.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/view/bajaEquipo.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/view/consultarHorarios.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/view/crearTorneo.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/view/elegirHorario.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/view/eliminarEquipo.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/view/eliminarTorneo.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/view/modificarHorario.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/view/registrarResultados.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/controller/aceptarInvitacionEquipo.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/controller/eliminarJugador.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/controller/eliminarTorneo.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/core/router/capitan.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/core/router/coordinador.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/model/Capitan.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/model/Coordinador.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/model/Torneo.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/view/aceptarInvitacionEquipo.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/view/eliminarJugador.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/view/enviarPeticionTorneo.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/view/template/aside-menu.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/view/template/navigator/coordinador.php</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Created" />
@@ -360,11 +373,10 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="CREATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/view/ConsultarPartidos.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/view/aceptarPeticioneTorneo.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/view/consultarTablaPosiciones.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/view/enviarPeticionTorneo.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/view/modificardatosjugadormensajes.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/controller/aceptarPeticiondeTorneo.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/controller/enviarPeticionTorneo.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/controller/enviarPeticionTorneo.submit.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/view/aceptarPeticiondeTorneo.php</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Deleted" />
@@ -372,7 +384,7 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="true" />
           <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/view/aceptarPeticiones.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/view/aceptarPeticioneTorneo.php</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Restored" />
@@ -549,7 +561,9 @@
       <workItem from="1491604154333" duration="379000" />
       <workItem from="1491714427418" duration="1409000" />
       <workItem from="1491782207938" duration="6745000" />
-      <workItem from="1491801739874" duration="5623000" />
+      <workItem from="1491801739874" duration="6163000" />
+      <workItem from="1492573515067" duration="3263000" />
+      <workItem from="1492644509360" duration="8841000" />
     </task>
     <task id="LOCAL-00001" summary="Añadida Jugador::enviarSolicitudAEquipo, arreglado el query de eliminar torneo,queda pendiente implementacion de el controlador enviarSolicitudAEquipo y su vista">
       <created>1491604397422</created>
@@ -558,23 +572,30 @@
       <option name="project" value="LOCAL" />
       <updated>1491604397422</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Añadida Jugador::enviarSolicitudAEquipo, arreglado el query de eliminar torneo,queda pendiente implementacion de el controlador enviarSolicitudAEquipo y su vista">
+      <created>1491845373469</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1491845373469</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14303000" />
+    <option name="totallyTimeSpent" value="26947000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="712" extended-state="6" />
+    <frame x="0" y="23" width="1280" height="704" extended-state="6" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24453124" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.00622084" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.012598425" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -603,33 +624,204 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/admin/view/enviarSolicitudAEquipo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/core/router/jugador.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="552">
+          <caret line="24" column="47" lean-forward="false" selection-start-line="24" selection-start-column="47" selection-end-line="24" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/controller/aceptarInvitacionEquipo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="18" column="114" lean-forward="false" selection-start-line="18" selection-start-column="98" selection-end-line="18" selection-end-column="114" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/controller/enviarSolicitudAEquipo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="598">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/model/Torneo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" column="39" lean-forward="false" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="39" />
+          <folding>
+            <marker date="1492661914000" expanded="true" signature="288:295" ph="SELECT nombr... equipo" />
+            <marker date="1492661914000" expanded="true" signature="288:458" ph="SELECT nombr... torneo" />
+            <marker date="1492661914000" expanded="true" signature="786:919" ph="SELECT nombr... equipo" />
+            <marker date="1492661914000" expanded="true" signature="1245:1373" ph="SELECT e.Nom... equipo" />
+            <marker date="1492661914000" expanded="true" signature="1706:1749" ph="SELECT Nombr... torneo" />
+            <marker date="1492661914000" expanded="true" signature="2087:2149" ph="DELETE from " />
+            <marker date="1492661914000" expanded="true" signature="2181:2241" ph="DELETE from " />
+            <marker date="1492661914000" expanded="true" signature="2273:2337" ph="DELETE from " />
+            <marker date="1492661914000" expanded="true" signature="2754:2886" ph="INSERT into torneo... " />
+            <marker date="1492661914000" expanded="true" signature="3211:3351" ph="INSERT into Torneo_Grupo... " />
+            <marker date="1492661914000" expanded="true" signature="3245:3286" ph="select idGru... Grupo" />
+            <marker date="1492661914000" expanded="true" signature="3294:3349" ph="select IDTor... Torneo" />
+            <marker date="1492661914000" expanded="true" signature="3648:3682" ph="SELECT IDTor... Torneo" />
+            <marker date="1492661914000" expanded="true" signature="4031:4076" ph="DELETE from " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/admin/model/Jugador.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1491845225000" expanded="true" signature="131:230" ph="select IDEqu... Equipo" />
-            <marker date="1491845225000" expanded="true" signature="374:433" ph="select IDJug... jugador" />
-            <marker date="1491845225000" expanded="true" signature="573:666" ph="insert into Solicitud... " />
-            <marker date="1491845225000" expanded="true" signature="974:1035" ph="select Nombr... Usuario" />
-            <marker date="1491845225000" expanded="true" signature="1301:1561" ph="SELECT usuar... usuario" />
-            <marker date="1491845225000" expanded="true" signature="1876:1942" ph="SELECT Nombr... equipo" />
-            <marker date="1491845225000" expanded="true" signature="2073:2127" ph="INSERT INTO capitan... " />
-            <marker date="1491845225000" expanded="true" signature="2155:2204" ph="DELETE FROM " />
-            <marker date="1491845225000" expanded="true" signature="2232:2348" ph="INSERT INTO equipo... " />
-            <marker date="1491845225000" expanded="true" signature="2376:2438" ph="UPDATE usuar... " />
-            <marker date="1491845225000" expanded="true" signature="2711:3083" ph="Select j.IDJ... jugador" />
-            <marker date="1491845225000" expanded="true" signature="3506:3878" ph="Select j.IDJ... jugador" />
-            <marker date="1491845225000" expanded="true" signature="3506:3879" ph="Select j.IDJ... jugador" />
-            <marker date="1491845225000" expanded="true" signature="3506:3890" ph="Select e.IDE... jugador" />
-            <marker date="1491845225000" expanded="true" signature="4037:4207" ph="INSERT INTO equipo... " />
-            <marker date="1491845225000" expanded="true" signature="4086:4148" ph="SELECT IDEqu... equipo" />
-            <marker date="1491845225000" expanded="true" signature="4151:4205" ph="SELECT IDJug... jugador" />
-            <marker date="1491845225000" expanded="true" signature="4235:4436" ph="DELETE FROM " />
-            <marker date="1491845225000" expanded="true" signature="4275:4337" ph="SELECT IDEqu... equipo" />
-            <marker date="1491845225000" expanded="true" signature="4356:4410" ph="SELECT IDJug... jugador" />
-            <marker date="1491845225000" expanded="true" signature="4721:5179" ph="Select j.IDJ... jugador" />
-            <marker date="1491845225000" expanded="true" signature="5383:5514" ph="INSERT INTO equipo_jugador... " />
+            <marker date="1492661914000" expanded="true" signature="20:880" ph="..." />
+            <marker date="1492661914000" expanded="true" signature="131:230" ph="select IDEqu... Equipo" />
+            <marker date="1492661914000" expanded="true" signature="374:433" ph="select IDJug... jugador" />
+            <marker date="1492661914000" expanded="true" signature="573:666" ph="insert into Solicitud... " />
+            <marker date="1492661914000" expanded="true" signature="997:1050" ph="select IDJug... jugador" />
+            <marker date="1492661914000" expanded="true" signature="1318:1367" ph="select Corre... jugador" />
+            <marker date="1492661914000" expanded="true" signature="1616:1677" ph="select Nombr... Usuario" />
+            <marker date="1492661914000" expanded="true" signature="1943:2203" ph="SELECT usuar... usuario" />
+            <marker date="1492661914000" expanded="true" signature="2518:2584" ph="SELECT Nombr... equipo" />
+            <marker date="1492661914000" expanded="true" signature="2719:2773" ph="INSERT INTO capitan... " />
+            <marker date="1492661914000" expanded="true" signature="2801:2850" ph="DELETE FROM " />
+            <marker date="1492661914000" expanded="true" signature="2878:2994" ph="INSERT INTO equipo... " />
+            <marker date="1492661914000" expanded="true" signature="3022:3084" ph="UPDATE usuar... " />
+            <marker date="1492661914000" expanded="true" signature="3327:3595" ph="select e.Nom... solicitud" />
+            <marker date="1492661914000" expanded="true" signature="4294:4346" ph="select IDJug... jugador" />
+            <marker date="1492661914000" expanded="true" signature="4627:4707" ph="insert into Equipo_Jugador... " />
+            <marker date="1492661914000" expanded="true" signature="4736:4804" ph="delete from " />
+            <marker date="1492661914000" expanded="true" signature="5080:5148" ph="delete from " />
+            <marker date="1492661914000" expanded="true" signature="5465:5922" ph="Select j.IDJ... jugador" />
+            <marker date="1492661914000" expanded="true" signature="6026:6058" ph="INSERT INTO solicitud... " />
+            <marker date="1492661914000" expanded="true" signature="6026:6119" ph="INSERT INTO solicitud... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/view/aceptarInvitacionEquipo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="81" selection-end-column="6" />
+          <folding>
+            <marker date="1492661914000" expanded="true" signature="179:1429" ph="..." />
+            <marker date="1492661914000" expanded="true" signature="304:1422" ph="..." />
+            <marker date="1492661914000" expanded="true" signature="349:760" ph="..." />
+            <marker date="1492661914000" expanded="true" signature="369:578" ph="..." />
+            <marker date="1492661914000" expanded="true" signature="390:557" ph="..." />
+            <marker date="1492661914000" expanded="true" signature="598:743" ph="..." />
+            <marker date="1492661914000" expanded="true" signature="826:1408" ph="..." />
+            <marker date="1492661914000" expanded="true" signature="878:1118" ph="..." />
+            <marker date="1492661914000" expanded="true" signature="912:1099" ph="..." />
+            <marker date="1492661914000" expanded="true" signature="1171:1393" ph="..." />
+            <marker date="1492661914000" expanded="true" signature="1205:1374" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/view/enviarSolicitudAEquipo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="12" column="50" lean-forward="false" selection-start-line="12" selection-start-column="50" selection-end-line="12" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/controller/enviarSolicitudAEquipo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="30" column="13" lean-forward="false" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/model/Torneo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" column="230" lean-forward="false" selection-start-line="4" selection-start-column="230" selection-end-line="4" selection-end-column="230" />
+          <folding>
+            <marker date="1492661914000" expanded="true" signature="288:295" ph="SELECT nombr... equipo" />
+            <marker date="1492661914000" expanded="true" signature="288:458" ph="SELECT nombr... torneo" />
+            <marker date="1492661914000" expanded="true" signature="786:919" ph="SELECT nombr... equipo" />
+            <marker date="1492661914000" expanded="true" signature="1245:1373" ph="SELECT e.Nom... equipo" />
+            <marker date="1492661914000" expanded="true" signature="1706:1749" ph="SELECT Nombr... torneo" />
+            <marker date="1492661914000" expanded="true" signature="2087:2149" ph="DELETE from " />
+            <marker date="1492661914000" expanded="true" signature="2181:2241" ph="DELETE from " />
+            <marker date="1492661914000" expanded="true" signature="2273:2337" ph="DELETE from " />
+            <marker date="1492661914000" expanded="true" signature="2754:2886" ph="INSERT into torneo... " />
+            <marker date="1492661914000" expanded="true" signature="3211:3351" ph="INSERT into Torneo_Grupo... " />
+            <marker date="1492661914000" expanded="true" signature="3245:3286" ph="select idGru... Grupo" />
+            <marker date="1492661914000" expanded="true" signature="3294:3349" ph="select IDTor... Torneo" />
+            <marker date="1492661914000" expanded="true" signature="3648:3682" ph="SELECT IDTor... Torneo" />
+            <marker date="1492661914000" expanded="true" signature="4031:4076" ph="DELETE from " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/controller/aceptarInvitacionEquipo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="17" column="98" lean-forward="false" selection-start-line="17" selection-start-column="98" selection-end-line="17" selection-end-column="98" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/view/eliminarJugador.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="21" column="20" lean-forward="false" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/model/Usuario.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1492573546000" expanded="true" signature="125:191" ph="SELECT * fro... usuario" />
+            <marker date="1492573546000" expanded="true" signature="1356:1516" ph="INSERT INTO usuario... " />
+            <marker date="1492573546000" expanded="true" signature="1533:1579" ph="INSERT INTO jugador... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/model/Jugador.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1492661914000" expanded="true" signature="20:880" ph="..." />
+            <marker date="1492661914000" expanded="true" signature="131:230" ph="select IDEqu... Equipo" />
+            <marker date="1492661914000" expanded="true" signature="374:433" ph="select IDJug... jugador" />
+            <marker date="1492661914000" expanded="true" signature="573:666" ph="insert into Solicitud... " />
+            <marker date="1492661914000" expanded="true" signature="997:1050" ph="select IDJug... jugador" />
+            <marker date="1492661914000" expanded="true" signature="1318:1367" ph="select Corre... jugador" />
+            <marker date="1492661914000" expanded="true" signature="1616:1677" ph="select Nombr... Usuario" />
+            <marker date="1492661914000" expanded="true" signature="1943:2203" ph="SELECT usuar... usuario" />
+            <marker date="1492661914000" expanded="true" signature="2518:2584" ph="SELECT Nombr... equipo" />
+            <marker date="1492661914000" expanded="true" signature="2719:2773" ph="INSERT INTO capitan... " />
+            <marker date="1492661914000" expanded="true" signature="2801:2850" ph="DELETE FROM " />
+            <marker date="1492661914000" expanded="true" signature="2878:2994" ph="INSERT INTO equipo... " />
+            <marker date="1492661914000" expanded="true" signature="3022:3084" ph="UPDATE usuar... " />
+            <marker date="1492661914000" expanded="true" signature="3327:3595" ph="select e.Nom... solicitud" />
+            <marker date="1492661914000" expanded="true" signature="4294:4346" ph="select IDJug... jugador" />
+            <marker date="1492661914000" expanded="true" signature="4627:4707" ph="insert into Equipo_Jugador... " />
+            <marker date="1492661914000" expanded="true" signature="4736:4804" ph="delete from " />
+            <marker date="1492661914000" expanded="true" signature="5080:5148" ph="delete from " />
+            <marker date="1492661914000" expanded="true" signature="5465:5922" ph="Select j.IDJ... jugador" />
+            <marker date="1492661914000" expanded="true" signature="6026:6058" ph="INSERT INTO solicitud... " />
+            <marker date="1492661914000" expanded="true" signature="6026:6119" ph="INSERT INTO solicitud... " />
           </folding>
         </state>
       </provider>
@@ -638,7 +830,19 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="322">
           <caret line="14" column="19" lean-forward="true" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
-          <folding />
+          <folding>
+            <marker date="1492661914000" expanded="true" signature="179:1429" ph="..." />
+            <marker date="1492661914000" expanded="true" signature="304:1422" ph="..." />
+            <marker date="1492661914000" expanded="true" signature="349:760" ph="..." />
+            <marker date="1492661914000" expanded="true" signature="369:578" ph="..." />
+            <marker date="1492661914000" expanded="true" signature="390:557" ph="..." />
+            <marker date="1492661914000" expanded="true" signature="598:743" ph="..." />
+            <marker date="1492661914000" expanded="true" signature="826:1408" ph="..." />
+            <marker date="1492661914000" expanded="true" signature="878:1118" ph="..." />
+            <marker date="1492661914000" expanded="true" signature="912:1099" ph="..." />
+            <marker date="1492661914000" expanded="true" signature="1171:1393" ph="..." />
+            <marker date="1492661914000" expanded="true" signature="1205:1374" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -663,9 +867,20 @@
         <state relative-caret-position="92">
           <caret line="4" column="69" lean-forward="false" selection-start-line="4" selection-start-column="63" selection-end-line="4" selection-end-column="69" />
           <folding>
-            <marker date="1491845225000" expanded="true" signature="288:499" ph="SELECT nombr... equipo" />
-            <marker date="1491845225000" expanded="true" signature="808:833" ph="SELECT nombr... Torneo" />
-            <marker date="1491845225000" expanded="true" signature="1182:1227" ph="DELETE from " />
+            <marker date="1492661914000" expanded="true" signature="288:295" ph="SELECT nombr... equipo" />
+            <marker date="1492661914000" expanded="true" signature="288:458" ph="SELECT nombr... torneo" />
+            <marker date="1492661914000" expanded="true" signature="786:919" ph="SELECT nombr... equipo" />
+            <marker date="1492661914000" expanded="true" signature="1245:1373" ph="SELECT e.Nom... equipo" />
+            <marker date="1492661914000" expanded="true" signature="1706:1749" ph="SELECT Nombr... torneo" />
+            <marker date="1492661914000" expanded="true" signature="2087:2149" ph="DELETE from " />
+            <marker date="1492661914000" expanded="true" signature="2181:2241" ph="DELETE from " />
+            <marker date="1492661914000" expanded="true" signature="2273:2337" ph="DELETE from " />
+            <marker date="1492661914000" expanded="true" signature="2754:2886" ph="INSERT into torneo... " />
+            <marker date="1492661914000" expanded="true" signature="3211:3351" ph="INSERT into Torneo_Grupo... " />
+            <marker date="1492661914000" expanded="true" signature="3245:3286" ph="select idGru... Grupo" />
+            <marker date="1492661914000" expanded="true" signature="3294:3349" ph="select IDTor... Torneo" />
+            <marker date="1492661914000" expanded="true" signature="3648:3682" ph="SELECT IDTor... Torneo" />
+            <marker date="1492661914000" expanded="true" signature="4031:4076" ph="DELETE from " />
           </folding>
         </state>
       </provider>
@@ -699,28 +914,27 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1491845225000" expanded="true" signature="131:230" ph="select IDEqu... Equipo" />
-            <marker date="1491845225000" expanded="true" signature="374:433" ph="select IDJug... jugador" />
-            <marker date="1491845225000" expanded="true" signature="573:666" ph="insert into Solicitud... " />
-            <marker date="1491845225000" expanded="true" signature="974:1035" ph="select Nombr... Usuario" />
-            <marker date="1491845225000" expanded="true" signature="1301:1561" ph="SELECT usuar... usuario" />
-            <marker date="1491845225000" expanded="true" signature="1876:1942" ph="SELECT Nombr... equipo" />
-            <marker date="1491845225000" expanded="true" signature="2073:2127" ph="INSERT INTO capitan... " />
-            <marker date="1491845225000" expanded="true" signature="2155:2204" ph="DELETE FROM " />
-            <marker date="1491845225000" expanded="true" signature="2232:2348" ph="INSERT INTO equipo... " />
-            <marker date="1491845225000" expanded="true" signature="2376:2438" ph="UPDATE usuar... " />
-            <marker date="1491845225000" expanded="true" signature="2711:3083" ph="Select j.IDJ... jugador" />
-            <marker date="1491845225000" expanded="true" signature="3506:3878" ph="Select j.IDJ... jugador" />
-            <marker date="1491845225000" expanded="true" signature="3506:3879" ph="Select j.IDJ... jugador" />
-            <marker date="1491845225000" expanded="true" signature="3506:3890" ph="Select e.IDE... jugador" />
-            <marker date="1491845225000" expanded="true" signature="4037:4207" ph="INSERT INTO equipo... " />
-            <marker date="1491845225000" expanded="true" signature="4086:4148" ph="SELECT IDEqu... equipo" />
-            <marker date="1491845225000" expanded="true" signature="4151:4205" ph="SELECT IDJug... jugador" />
-            <marker date="1491845225000" expanded="true" signature="4235:4436" ph="DELETE FROM " />
-            <marker date="1491845225000" expanded="true" signature="4275:4337" ph="SELECT IDEqu... equipo" />
-            <marker date="1491845225000" expanded="true" signature="4356:4410" ph="SELECT IDJug... jugador" />
-            <marker date="1491845225000" expanded="true" signature="4721:5179" ph="Select j.IDJ... jugador" />
-            <marker date="1491845225000" expanded="true" signature="5383:5514" ph="INSERT INTO equipo_jugador... " />
+            <marker date="1492661914000" expanded="true" signature="20:880" ph="..." />
+            <marker date="1492661914000" expanded="true" signature="131:230" ph="select IDEqu... Equipo" />
+            <marker date="1492661914000" expanded="true" signature="374:433" ph="select IDJug... jugador" />
+            <marker date="1492661914000" expanded="true" signature="573:666" ph="insert into Solicitud... " />
+            <marker date="1492661914000" expanded="true" signature="997:1050" ph="select IDJug... jugador" />
+            <marker date="1492661914000" expanded="true" signature="1318:1367" ph="select Corre... jugador" />
+            <marker date="1492661914000" expanded="true" signature="1616:1677" ph="select Nombr... Usuario" />
+            <marker date="1492661914000" expanded="true" signature="1943:2203" ph="SELECT usuar... usuario" />
+            <marker date="1492661914000" expanded="true" signature="2518:2584" ph="SELECT Nombr... equipo" />
+            <marker date="1492661914000" expanded="true" signature="2719:2773" ph="INSERT INTO capitan... " />
+            <marker date="1492661914000" expanded="true" signature="2801:2850" ph="DELETE FROM " />
+            <marker date="1492661914000" expanded="true" signature="2878:2994" ph="INSERT INTO equipo... " />
+            <marker date="1492661914000" expanded="true" signature="3022:3084" ph="UPDATE usuar... " />
+            <marker date="1492661914000" expanded="true" signature="3327:3595" ph="select e.Nom... solicitud" />
+            <marker date="1492661914000" expanded="true" signature="4294:4346" ph="select IDJug... jugador" />
+            <marker date="1492661914000" expanded="true" signature="4627:4707" ph="insert into Equipo_Jugador... " />
+            <marker date="1492661914000" expanded="true" signature="4736:4804" ph="delete from " />
+            <marker date="1492661914000" expanded="true" signature="5080:5148" ph="delete from " />
+            <marker date="1492661914000" expanded="true" signature="5465:5922" ph="Select j.IDJ... jugador" />
+            <marker date="1492661914000" expanded="true" signature="6026:6058" ph="INSERT INTO solicitud... " />
+            <marker date="1492661914000" expanded="true" signature="6026:6119" ph="INSERT INTO solicitud... " />
           </folding>
         </state>
       </provider>
@@ -730,9 +944,9 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1491604147000" expanded="true" signature="125:191" ph="SELECT * fro... usuario" />
-            <marker date="1491604147000" expanded="true" signature="524:684" ph="INSERT INTO usuario... " />
-            <marker date="1491604147000" expanded="true" signature="701:747" ph="INSERT INTO jugador... " />
+            <marker date="1492573546000" expanded="true" signature="125:191" ph="SELECT * fro... usuario" />
+            <marker date="1492573546000" expanded="true" signature="1356:1516" ph="INSERT INTO usuario... " />
+            <marker date="1492573546000" expanded="true" signature="1533:1579" ph="INSERT INTO jugador... " />
           </folding>
         </state>
       </provider>
@@ -742,9 +956,20 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1491845225000" expanded="true" signature="288:499" ph="SELECT nombr... equipo" />
-            <marker date="1491845225000" expanded="true" signature="808:833" ph="SELECT nombr... Torneo" />
-            <marker date="1491845225000" expanded="true" signature="1182:1227" ph="DELETE from " />
+            <marker date="1492661914000" expanded="true" signature="288:295" ph="SELECT nombr... equipo" />
+            <marker date="1492661914000" expanded="true" signature="288:458" ph="SELECT nombr... torneo" />
+            <marker date="1492661914000" expanded="true" signature="786:919" ph="SELECT nombr... equipo" />
+            <marker date="1492661914000" expanded="true" signature="1245:1373" ph="SELECT e.Nom... equipo" />
+            <marker date="1492661914000" expanded="true" signature="1706:1749" ph="SELECT Nombr... torneo" />
+            <marker date="1492661914000" expanded="true" signature="2087:2149" ph="DELETE from " />
+            <marker date="1492661914000" expanded="true" signature="2181:2241" ph="DELETE from " />
+            <marker date="1492661914000" expanded="true" signature="2273:2337" ph="DELETE from " />
+            <marker date="1492661914000" expanded="true" signature="2754:2886" ph="INSERT into torneo... " />
+            <marker date="1492661914000" expanded="true" signature="3211:3351" ph="INSERT into Torneo_Grupo... " />
+            <marker date="1492661914000" expanded="true" signature="3245:3286" ph="select idGru... Grupo" />
+            <marker date="1492661914000" expanded="true" signature="3294:3349" ph="select IDTor... Torneo" />
+            <marker date="1492661914000" expanded="true" signature="3648:3682" ph="SELECT IDTor... Torneo" />
+            <marker date="1492661914000" expanded="true" signature="4031:4076" ph="DELETE from " />
           </folding>
         </state>
       </provider>
@@ -754,8 +979,8 @@
         <state relative-caret-position="345">
           <caret line="15" column="46" lean-forward="true" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
           <folding>
-            <marker date="1491604147000" expanded="true" signature="135:346" ph="select Nombr... usuario" />
-            <marker date="1491604147000" expanded="true" signature="652:704" ph="select IDCap... capitan" />
+            <marker date="1492661914000" expanded="true" signature="135:346" ph="select Nombr... usuario" />
+            <marker date="1492661914000" expanded="true" signature="652:704" ph="select IDCap... capitan" />
           </folding>
         </state>
       </provider>
@@ -814,8 +1039,8 @@
         <state relative-caret-position="255">
           <caret line="15" column="46" lean-forward="false" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
           <folding>
-            <marker date="1491604147000" expanded="true" signature="135:346" ph="select Nombr... usuario" />
-            <marker date="1491604147000" expanded="true" signature="652:704" ph="select IDCap... capitan" />
+            <marker date="1492661914000" expanded="true" signature="135:346" ph="select Nombr... usuario" />
+            <marker date="1492661914000" expanded="true" signature="652:704" ph="select IDCap... capitan" />
           </folding>
         </state>
       </provider>
@@ -829,45 +1054,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/controller/.php" />
-    <entry file="file://$PROJECT_DIR$/admin/view/eliminarJugador.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="21" column="20" lean-forward="false" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/model/Jugador.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-272">
-          <caret line="88" column="44" lean-forward="false" selection-start-line="88" selection-start-column="36" selection-end-line="88" selection-end-column="44" />
-          <folding>
-            <marker date="1491845225000" expanded="true" signature="131:230" ph="select IDEqu... Equipo" />
-            <marker date="1491845225000" expanded="true" signature="374:433" ph="select IDJug... jugador" />
-            <marker date="1491845225000" expanded="true" signature="573:666" ph="insert into Solicitud... " />
-            <marker date="1491845225000" expanded="true" signature="974:1035" ph="select Nombr... Usuario" />
-            <marker date="1491845225000" expanded="true" signature="1301:1561" ph="SELECT usuar... usuario" />
-            <marker date="1491845225000" expanded="true" signature="1876:1942" ph="SELECT Nombr... equipo" />
-            <marker date="1491845225000" expanded="true" signature="2073:2127" ph="INSERT INTO capitan... " />
-            <marker date="1491845225000" expanded="true" signature="2155:2204" ph="DELETE FROM " />
-            <marker date="1491845225000" expanded="true" signature="2232:2348" ph="INSERT INTO equipo... " />
-            <marker date="1491845225000" expanded="true" signature="2376:2438" ph="UPDATE usuar... " />
-            <marker date="1491845225000" expanded="true" signature="2711:3083" ph="Select j.IDJ... jugador" />
-            <marker date="1491845225000" expanded="true" signature="3506:3878" ph="Select j.IDJ... jugador" />
-            <marker date="1491845225000" expanded="true" signature="3506:3879" ph="Select j.IDJ... jugador" />
-            <marker date="1491845225000" expanded="true" signature="3506:3890" ph="Select e.IDE... jugador" />
-            <marker date="1491845225000" expanded="true" signature="4037:4207" ph="INSERT INTO equipo... " />
-            <marker date="1491845225000" expanded="true" signature="4086:4148" ph="SELECT IDEqu... equipo" />
-            <marker date="1491845225000" expanded="true" signature="4151:4205" ph="SELECT IDJug... jugador" />
-            <marker date="1491845225000" expanded="true" signature="4235:4436" ph="DELETE FROM " />
-            <marker date="1491845225000" expanded="true" signature="4275:4337" ph="SELECT IDEqu... equipo" />
-            <marker date="1491845225000" expanded="true" signature="4356:4410" ph="SELECT IDJug... jugador" />
-            <marker date="1491845225000" expanded="true" signature="4721:5179" ph="Select j.IDJ... jugador" />
-            <marker date="1491845225000" expanded="true" signature="5383:5514" ph="INSERT INTO equipo_jugador... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin/view/eliminarTorneo.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-155">
@@ -892,30 +1078,46 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/admin/view/eliminarJugador.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="21" column="20" lean-forward="false" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/admin/model/Usuario.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1491604147000" expanded="true" signature="125:191" ph="SELECT * fro... usuario" />
-            <marker date="1491604147000" expanded="true" signature="524:684" ph="INSERT INTO usuario... " />
-            <marker date="1491604147000" expanded="true" signature="701:747" ph="INSERT INTO jugador... " />
+            <marker date="1492573546000" expanded="true" signature="125:191" ph="SELECT * fro... usuario" />
+            <marker date="1492573546000" expanded="true" signature="1356:1516" ph="INSERT INTO usuario... " />
+            <marker date="1492573546000" expanded="true" signature="1533:1579" ph="INSERT INTO jugador... " />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/view/torneo.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5625">
+        <state relative-caret-position="-3559">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/controller/aceptarInvitacionEquipo.php">
+    <entry file="file://$PROJECT_DIR$/admin/view/enviarSolicitudAEquipo.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="17" column="98" lean-forward="false" selection-start-line="17" selection-start-column="98" selection-end-line="17" selection-end-column="98" />
+        <state relative-caret-position="138">
+          <caret line="6" column="19" lean-forward="false" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/core/router/jugador.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="24" column="47" lean-forward="false" selection-start-line="24" selection-start-column="47" selection-end-line="24" selection-end-column="47" />
           <folding />
         </state>
       </provider>
@@ -923,36 +1125,123 @@
     <entry file="file://$PROJECT_DIR$/admin/model/Torneo.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="92">
-          <caret line="4" column="230" lean-forward="false" selection-start-line="4" selection-start-column="230" selection-end-line="4" selection-end-column="230" />
+          <caret line="4" column="28" lean-forward="false" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
           <folding>
-            <marker date="1491845225000" expanded="true" signature="288:499" ph="SELECT nombr... equipo" />
-            <marker date="1491845225000" expanded="true" signature="808:833" ph="SELECT nombr... Torneo" />
-            <marker date="1491845225000" expanded="true" signature="1182:1227" ph="DELETE from " />
+            <marker date="1492661914000" expanded="true" signature="288:295" ph="SELECT nombr... equipo" />
+            <marker date="1492661914000" expanded="true" signature="288:458" ph="SELECT nombr... torneo" />
+            <marker date="1492661914000" expanded="true" signature="786:919" ph="SELECT nombr... equipo" />
+            <marker date="1492661914000" expanded="true" signature="1245:1373" ph="SELECT e.Nom... equipo" />
+            <marker date="1492661914000" expanded="true" signature="1706:1749" ph="SELECT Nombr... torneo" />
+            <marker date="1492661914000" expanded="true" signature="2087:2149" ph="DELETE from " />
+            <marker date="1492661914000" expanded="true" signature="2181:2241" ph="DELETE from " />
+            <marker date="1492661914000" expanded="true" signature="2273:2337" ph="DELETE from " />
+            <marker date="1492661914000" expanded="true" signature="2754:2886" ph="INSERT into torneo... " />
+            <marker date="1492661914000" expanded="true" signature="3211:3351" ph="INSERT into Torneo_Grupo... " />
+            <marker date="1492661914000" expanded="true" signature="3245:3286" ph="select idGru... Grupo" />
+            <marker date="1492661914000" expanded="true" signature="3294:3349" ph="select IDTor... Torneo" />
+            <marker date="1492661914000" expanded="true" signature="3648:3682" ph="SELECT IDTor... Torneo" />
+            <marker date="1492661914000" expanded="true" signature="4031:4076" ph="DELETE from " />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/view/aceptarInvitacionEquipo.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1454">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="81" selection-end-column="6" />
+        <state relative-caret-position="27">
+          <caret line="5" column="4" lean-forward="false" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
+          <folding>
+            <marker date="1492661914000" expanded="true" signature="179:1429" ph="..." />
+            <marker date="1492661914000" expanded="true" signature="304:1422" ph="..." />
+            <marker date="1492661914000" expanded="true" signature="349:760" ph="..." />
+            <marker date="1492661914000" expanded="true" signature="369:578" ph="..." />
+            <marker date="1492661914000" expanded="true" signature="390:557" ph="..." />
+            <marker date="1492661914000" expanded="true" signature="598:743" ph="..." />
+            <marker date="1492661914000" expanded="true" signature="826:1408" ph="..." />
+            <marker date="1492661914000" expanded="true" signature="878:1118" ph="..." />
+            <marker date="1492661914000" expanded="true" signature="912:1099" ph="..." />
+            <marker date="1492661914000" expanded="true" signature="1171:1393" ph="..." />
+            <marker date="1492661914000" expanded="true" signature="1205:1374" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/model/Equipo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2053">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1492573546000" expanded="true" signature="139:304" ph="select count... equipo" />
+            <marker date="1492573546000" expanded="true" signature="328:528" ph="select count... equipo" />
+            <marker date="1492573546000" expanded="true" signature="552:754" ph="select count... equipo" />
+            <marker date="1492573546000" expanded="true" signature="778:979" ph="select count... equipo" />
+            <marker date="1492573546000" expanded="true" signature="1003:1194" ph="select sum(G... equipo" />
+            <marker date="1492573546000" expanded="true" signature="1218:1413" ph="select sum(G... equipo" />
+            <marker date="1492573546000" expanded="true" signature="2123:2174" ph="SELECT IDEqu... equipo" />
+            <marker date="1492573546000" expanded="true" signature="2435:2489" ph="SELECT Corre... Equipo" />
+            <marker date="1492573546000" expanded="true" signature="2637:2682" ph="DELETE from " />
+            <marker date="1492573546000" expanded="true" signature="2714:2776" ph="INSERT into jugador... " />
+            <marker date="1492573546000" expanded="true" signature="2808:2850" ph="DELETE from " />
+            <marker date="1492573546000" expanded="true" signature="2882:2935" ph="UPDATE usuar... " />
+            <marker date="1492573546000" expanded="true" signature="3238:3305" ph="delete from " />
+            <marker date="1492573546000" expanded="true" signature="3612:3652" ph="SELECT idequ... equipo" />
+            <marker date="1492573546000" expanded="true" signature="3984:4258" ph="SELECT usuar... equipo" />
+            <marker date="1492573546000" expanded="true" signature="4611:4829" ph="INSERT INTO equipo_jugador... " />
+            <marker date="1492573546000" expanded="true" signature="4687:4743" ph="SELECT IDEqu... equipo" />
+            <marker date="1492573546000" expanded="true" signature="4768:4827" ph="SELECT IDJug... jugador" />
+            <marker date="1492573546000" expanded="true" signature="4852:5043" ph="DELETE FROM " />
+            <marker date="1492573546000" expanded="true" signature="4910:4966" ph="SELECT IDEqu... equipo" />
+            <marker date="1492573546000" expanded="true" signature="4983:5042" ph="SELECT IDJug... jugador" />
+            <marker date="1492573546000" expanded="true" signature="5410:5601" ph="DELETE FROM " />
+            <marker date="1492573546000" expanded="true" signature="5468:5524" ph="SELECT IDEqu... equipo" />
+            <marker date="1492573546000" expanded="true" signature="5541:5600" ph="SELECT IDJug... jugador" />
+            <marker date="1492573546000" expanded="true" signature="5915:6005" ph="INSERT into solicitud... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/controller/aceptarInvitacionEquipo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="383">
+          <caret line="32" column="30" lean-forward="false" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/controller/enviarSolicitudAEquipo.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="30" column="13" lean-forward="false" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="44" />
+        <state relative-caret-position="247">
+          <caret line="42" column="60" lean-forward="false" selection-start-line="42" selection-start-column="60" selection-end-line="42" selection-end-column="60" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/view/enviarSolicitudAEquipo.php">
+    <entry file="file://$PROJECT_DIR$/admin/model/Jugador.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="12" column="50" lean-forward="false" selection-start-line="12" selection-start-column="50" selection-end-line="12" selection-end-column="50" />
-          <folding />
+        <state relative-caret-position="289">
+          <caret line="156" column="0" lean-forward="false" selection-start-line="156" selection-start-column="0" selection-end-line="156" selection-end-column="0" />
+          <folding>
+            <marker date="1492661914000" expanded="true" signature="20:880" ph="..." />
+            <marker date="1492661914000" expanded="true" signature="131:230" ph="select IDEqu... Equipo" />
+            <marker date="1492661914000" expanded="true" signature="374:433" ph="select IDJug... jugador" />
+            <marker date="1492661914000" expanded="true" signature="573:666" ph="insert into Solicitud... " />
+            <marker date="1492661914000" expanded="true" signature="997:1050" ph="select IDJug... jugador" />
+            <marker date="1492661914000" expanded="true" signature="1318:1367" ph="select Corre... jugador" />
+            <marker date="1492661914000" expanded="true" signature="1616:1677" ph="select Nombr... Usuario" />
+            <marker date="1492661914000" expanded="true" signature="1943:2203" ph="SELECT usuar... usuario" />
+            <marker date="1492661914000" expanded="true" signature="2518:2584" ph="SELECT Nombr... equipo" />
+            <marker date="1492661914000" expanded="true" signature="2719:2773" ph="INSERT INTO capitan... " />
+            <marker date="1492661914000" expanded="true" signature="2801:2850" ph="DELETE FROM " />
+            <marker date="1492661914000" expanded="true" signature="2878:2994" ph="INSERT INTO equipo... " />
+            <marker date="1492661914000" expanded="true" signature="3022:3084" ph="UPDATE usuar... " />
+            <marker date="1492661914000" expanded="true" signature="3327:3595" ph="select e.Nom... solicitud" />
+            <marker date="1492661914000" expanded="true" signature="4294:4346" ph="select IDJug... jugador" />
+            <marker date="1492661914000" expanded="true" signature="4627:4707" ph="insert into Equipo_Jugador... " />
+            <marker date="1492661914000" expanded="true" signature="4736:4804" ph="delete from " />
+            <marker date="1492661914000" expanded="true" signature="5080:5148" ph="delete from " />
+            <marker date="1492661914000" expanded="true" signature="5465:5922" ph="Select j.IDJ... jugador" />
+            <marker date="1492661914000" expanded="true" signature="6026:6058" ph="INSERT INTO solicitud... " />
+            <marker date="1492661914000" expanded="true" signature="6026:6119" ph="INSERT INTO solicitud... " />
+          </folding>
         </state>
       </provider>
     </entry>
