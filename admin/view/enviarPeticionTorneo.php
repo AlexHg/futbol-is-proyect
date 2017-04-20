@@ -23,53 +23,21 @@
     </center>
 </form>
 </div>
-<!--
-<script> <div class="overlay-container">
-                        <div class="window-container alerta">
-                            <h3>Confirmación de Cancelación</h3> 
-                            Estas seguro de deshacer la operación en curso<br/>
-                            <br/>
-                            <center>
-							<button class="btn btn-success close">Aceptar</button>
-                            <button class="btn btn-danger close" >Cancelar</button>
-                            </center>
-                        </div>
-          </div></script>
-    <script> <div class="overlay-container">
-                        <div class="window-container alerta">
-                            <h3>Confirmación de envio</h3> 
-                            ¿Estas seguro de realizar esta operación, cambiara tu perfil de usuario?<br/>
-                            <br/>
-                            <center>
-							<button class="btn btn-success close">Aceptar</button>
-                            <button class="btn btn-danger close" >Cancelar</button>
-                            </center>
-                        </div>
-          </div></script>
-    <script> <div class="overlay-container">
-                        <div class="window-container alerta">
-                            <h3>Operación realizada exitosamente</h3> 
-                            La operación se realizó exitosamente<br/>
-                            <br/>
-                            <center>
-							<button class="btn btn-success close">Aceptar</button>
-                            </center>
-                        </div>
-          </div></script>
--->
+
 <?php
 Notify::alert_if(
-    'Peticion enviada correctamente',
-    'El coordinador debera aprovar la peticion antes de poder elejir tu horario',
+    'Petición Enviada',
+    'El coordinador del Club de Fútbol deberá aprobar la petición antes de poder elegir tu horario de partido',
     'Aceptar',
     isset($_GET['n']) && strcasecmp($_GET['n'],'exito') == 0); 
 Notify::alert_if(
-    'Error! Peticion se encuentra en espera',
-    'Ya habias enviado esta solicitud antes, porfavor espera a que el coordinador la aprueve',
+    'Peticion en Espera',
+    'Ya habías enviado una petición para este torneo antes, por favor espera a que el coordinador del Club de Fútbol la apruebe',
     'Regresar',
     isset($_GET['n']) && strcasecmp($_GET['n'],'espera') == 0); 
 Notify::alert_if(
-    'Error! Torneo ya inscrito',
-    'Tu equipo ya esta inscrito al torneo seleccionado',
+    'Torneo ya Inscrito',
+    'Tu equipo ya está inscrito al torneo seleccionado',
     'Regresar',
     isset($_GET['n']) && strcasecmp($_GET['n'],'aprovado') == 0); 
+?>
