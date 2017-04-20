@@ -44,8 +44,12 @@
                 <ul class="submenu-content">
                     <li class="<?php isActive('/enviarSolicitud') ?>"><a href="enviarSolicitud"><span><i class="ti-plus"></i>Unirse a Un Equipo</span></a></li>      
                 </ul>
+                <ul class="submenu-content">
+                    <li class="<?php isActive('/aceptarInvitacionEquipo') ?>"><a href="aceptarInvitacionEquipo"><span><i class="ti-email"></i>Invitaciones de Equipos</span></a></li>
+                </ul>
             </li>
-        <?php }) ?> 
+        <?php }) ?>
+
         <?php Session::showOnly(array("role" => 2 ), function(){ ?>
             <li class="<?php isActive('/') ?>">
                 <a href="home">
