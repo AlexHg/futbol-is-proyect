@@ -14,7 +14,7 @@ function adiosTorneo(){
         }
         else{
             Notify::alert(
-                'No se seleccionó ningun torneo',
+                'No se seleccionó ningún torneo',
                 'Se debe seleccionar un torneo antes de eliminarlo',
                 'Reintentar');
         }
