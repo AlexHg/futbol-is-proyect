@@ -1,40 +1,48 @@
-  <div id="content-title">
+<div id="content-title">
     <h2>Aceptar Petición</h2>
 </div>
 <div id="content-body">
-    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
+    <form id="aceptarPeticiondeTorneo" method="post" class="form-control-cont" role="form" action="aceptarPeticiondeTorneo">
         <table class="table table-striped ">
             <thead>
-            <tr>
-                <th>Elegir</th>
-                <th>Equipo</th>
-                <th>Capitán</th>
-                <th>Torneo</th>
-            </tr>
+                <tr>
+                    <th>Elegir</th>
+                    <th>Equipo</th>
+                    <th>Capitán</th>
+                    <th>Torneo</th>
+                </tr>
             </thead>
             <tbody>
-            <?php
-            
+                <?php
+            procesarSolicitud();
+            mostrarSolicitudes();
+
             ?>
             </tbody>
         </table>
-                     <div class="row center-xs center-sm center-md center-lg">
-                        <div class="ol-xs-3 col-md-3 col-lg-3">
-                            <div class="box">
-                                <button id="cancelarInvitacion" type="submit" class="btn btn-success" data-type="alerta">Aceptar</button>
-                            </div>
-                        </div>
-                        <div class="col-xs-3 col-md-3 col-lg-3">
-                            <div class="box">
-                                <button id="aceptarInvitacion" type="button" class="btn btn-danger" data-type="alerta2">Rechazar</button>
-                            </div>
-                        </div>
-                    </div>
+        <div class="row center-xs center-sm center-md center-lg">
+            <div class="ol-xs-3 col-md-3 col-lg-3">
+                <div class="box">
+
+                    <!-- cmbiar por un input -->
+                    <button type="submit" class="btn btn-success" data-type="alerta" name="aceptar">Aceptar</button>
+
+                </div>
+            </div>
+            <div class="col-xs-3 col-md-3 col-lg-3">
+                <div class="box">
+
+                    <button type="submit" class="btn btn-danger" data-type="alerta2" name="rechazar">Rechazar</button>
+
+
+                </div>
+            </div>
+        </div>
     </form>
- </div>
-    <br/>
-    <hr>
-    <br/>
+</div>
+<br/>
+<hr>
+<br/>
 <!--Consultas para esta pantalla--
 Para obtener el ID del equipo y el id del torneo de las solicitudes al coordinador
 select IDEquipo,IDTorneo from solicitud_equipo;
@@ -54,7 +62,7 @@ Mensajesss
 
     <script> <div class="overlay-container">
                         <div class="window-container alerta">
-                            <h3>Confirmación de Operación</h3> 
+                            <h3>Confirmación de Operación</h3>
                             ¿Estás seguro de que deseas aceptar este equipo en este torneo<br/>
                             <br/>
                             <center>
@@ -63,10 +71,10 @@ Mensajesss
                             </center>
                         </div>
           </div></script>
-	
+
     <script> <div class="overlay-container">
                         <div class="window-container alerta">
-                            <h3>Operación realizada exitosamente</h3> 
+                            <h3>Operación realizada exitosamente</h3>
                             La operación se realizó exitosamente<br/>
                             <br/>
                             <center>

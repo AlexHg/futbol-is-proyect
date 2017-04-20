@@ -40,6 +40,16 @@ Flight::route("/eliminarTorneo", function(){
     });
 });
 
+Flight::route("/aceptarPeticiondeTorneo", function(){
+    //Flight::redirect('/demo');
+    Session::accessOnly(array("role" => 3), function(){
+        Controller::run("aceptarPeticiondeTorneo");
+        View::render('template/ini'); #Html head, menu, header
+        View::render('aceptarPeticiondeTorneo'); #html content
+        View::render('template/fin'); #Html footer
+    });
+});
+
 Flight::route("/crearTorneo", function(){
     //Flight::redirect('/demo');
     Session::accessOnly(array("role" => 3), function(){
