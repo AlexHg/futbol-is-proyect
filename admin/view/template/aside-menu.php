@@ -82,8 +82,8 @@
                     <li><a href="registrarEquipo"><span><i class="ti-plus"></i>Nuevo Equipo</span></a></li>
                 </ul>
             </li>
-            <li class="submenu <?php isActive('/jugadores') ?>">
-                <a href="jugadores">
+            <li class="submenu <?php isActive('/enviarInvitación') ?>">
+                <a href="#">
                     <span> 
                         <i class="ti-user"></i>Jugadores
                     </span>
@@ -94,15 +94,11 @@
                     <li class="<?php isActive('/eliminarJugador') ?>"><a href="eliminarJugador"><span><i class="ti-minus"></i>Eliminar Jugador</span></a></li>
                 </ul>
             </li>
-            <li class="submenu <?php isActive('/solicitudes') ?>">
-                <a href="#">
-                    <span><i class="ti-folder"></i>Solicitudes</span>
+            <li class="submenu <?php isActive('/aceptarPeticionJugador') ?>">
+                <a href="aceptarPeticionJugador">
+                    <span><i class="ti-folder"></i>Peticiones</span>
                     <i class="ti-angle-right submenu-arrow"></i>    
                 </a>
-                <ul class="submenu-content">
-                    <li class="<?php isActive('/enviarSolicitud') ?>"><a href="enviarSolicitud"><span><i class="ti-plus"></i>Unirse a Un Equipo</span></a></li>
-                    <li class="<?php isActive('/aceptarSolicitudJugador') ?>"><a href="aceptarSolicitudJugador"><span><i class="ti-minus"></i>Aceptar Solicitudes</span></a></li>
-                </ul>
             </li>
         <?php }) ?> 
         <?php Session::showOnly(array("role" => 3 ), function(){ ?>

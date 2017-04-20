@@ -41,4 +41,53 @@ class Capitan{
         mysqli_close($conexion);
         return $result1;
     }
+
+    //peticiones
+    public static function getPeticionesAEquipo($correo){
+        $conexion = Database::connect();
+        if ($resultado=$conexion->query("select u.Nombre as nombre, u.Apellidos as apellido,e.idequipo as idequipo, j.IDJugador as idjugador, j.Correo as correo  from solicitud s,Equipo e,jugador j,usuario u where e.idequipo=s.idequipo and s.tipo_solicitud=0 and s.correo=u.correo and u.Correo=j.Correo and e.Correo='$correo'")) {
+            return $resultado;
+        } else {
+            return "Error: " . mysqli_error($conexion);
+        }
+            mysqli_close($conexion);
+
+    }
+
+
+     public static function aceptarPeticionJugador($invitaciones){
+        $conexion = Database::connect();
+        $invitacion=$invitaciones;
+
+       foreach($invitacion as $datos){
+       // echo($datos);
+        list($idequipo,$idjugador,$correoj)=explode(",",$datos);
+
+            //echo ("$idtorneo");
+            //echo ("$idequipo");
+       $conexion->query("insert into equipo_jugador (IDEquipo,IDJugador) values('$idequipo','$idjugador')");
+       $conexion->query("delete from solicitud  where tipo_solicitud=0 and IDEquipo='$idequipo'and correo='$correoj'");
+       }
+
+       mysqli_close($conexion);
+     }
+
+
+     public static function rechazarPeticionJugador($invitaciones){
+       $invitacion=$invitaciones;
+       $conexion = Database::connect();
+
+       foreach($invitacion as $datos){
+       // echo($datos);
+        list($idequipo,$idjugador,$correoj)=explode(",",$datos);
+
+            //echo ("$idtorneo");
+            //echo ("$idequipo");
+       $conexion->query("delete from solicitud  where tipo_solicitud=0 and IDEquipo='$idequipo'and correo='$correoj'");
+       }
+       mysqli_close($conexion);
+
+     }
+
+
 }
