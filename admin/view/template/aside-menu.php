@@ -36,16 +36,13 @@
                     <li class="<?php isActive('/registrarEquipo') ?>"><a href="registrarEquipo"><span><i class="ti-plus"></i>Nuevo Equipo</span></a></li>
                 </ul>
             </li>
-            <li class="submenu <?php isActive('/solicitudess') ?>">
-                <a href="solicitudess">
-                    <span><i class="ti-folder"></i>Solicitudes</span>
+            <li class="submenu <?php isActive('/aceptarInvitacionEquipo') ?>">
+                <a href="aceptarInvitacionEquipo">
+                    <span><i class="ti-email"></i>Invitaciones</span>
                     <i class="ti-angle-right submenu-arrow"></i>    
                 </a>
                 <ul class="submenu-content">
                     <li class="<?php isActive('/enviarSolicitud') ?>"><a href="enviarSolicitud"><span><i class="ti-plus"></i>Unirse a Un Equipo</span></a></li>      
-                </ul>
-                <ul class="submenu-content">
-                    <li class="<?php isActive('/aceptarInvitacionEquipo') ?>"><a href="aceptarInvitacionEquipo"><span><i class="ti-email"></i>Invitaciones de Equipos</span></a></li>
                 </ul>
             </li>
         <?php }) ?>
