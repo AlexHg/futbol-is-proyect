@@ -143,23 +143,16 @@ class Jugador{
         * TODO vincular a enviarsolicitud de equipo.php
         *
         */
-    public static  function  enviarSolicitudAEquipo($IDEquipo,$correo){
+    public static function enviarSolicitudAEquipo($IDEquipo,$correo){
         $db = Database::connect();
-       /* $res=mysqli_num_rows($db->query("Select j.IDJugador as IDJugador , u.nombre as capitan, e.NombreEquipo as equipo , u.Imagen as imagenCapitan
-                                From jugador j, solicitud s, equipo e, capitan c, usuario u 
-                                Where j.idjugador = s.idjugador And s.idequipo = e.idequipo And e.idcapitan = c.idcapitan And c.correo = u.correo 
-                                And s.tipo_solicitud = 1 And j.correo ='$correo' and e.IDEquipo = '$IDEquipo'"));*/
-       $res=0;
-        if($res==0){
-            //TODO corregir consulta
-            $db->query("INSERT INTO solicitud (IDEquipo, correo, Tipo_Solicitud) VALUES ('$IDEquipo', '$correo', '1')");
-            echo 'se ha enviado  la solicitud a el equipo '.$IDEquipo.'  por el jugador '.$correo;
-            return 1;
-        }else{ // Si ya existe la solicitud no la almacena
-            echo 'ya has enviado solicitud a este equipo';
-            return 0;
-        }
-
+        
+        if($db->query("SELECT * FROM solicitud WHERE IDEquipo = $IDEquipo AND correo = '".$_SESSION['email']."' AND Tipo_Solicitud=1 LIMIT 1")->num_rows>0) return -1; // El Jugador Ya envio solicitud a este equipo
+        if($db->query("SELECT * FROM solicitud WHERE IDEquipo = $IDEquipo AND correo = '".$_SESSION['email']."' AND Tipo_Solicitud=0 LIMIT 1")->num_rows>0) return -2; // El Capitan ya envio invitacion a este jugador
+        $result = $db->query("INSERT INTO solicitud (IDEquipo, correo, Tipo_Solicitud) VALUES ('$IDEquipo', '$correo', '1')");
+        if($result) return 0;
+        else        "Error: " . mysqli_error($conexion);
+        
+        mysqli_close($db);
     }
 
 

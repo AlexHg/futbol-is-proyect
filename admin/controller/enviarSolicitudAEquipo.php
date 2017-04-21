@@ -40,12 +40,14 @@ function mostrarEquipos(){
                $invitacionesAceptadas = $_POST['invitacionesSeleccionadas'];
                if(isset($_POST["aceptar"])){
                     foreach ($invitacionesAceptadas as $aceptada)
-                   Jugador::enviarSolicitudAEquipo($aceptada,$correo);
-                   echo("Las solicitudes han sido enviadas");
-
-
+                   $op = Jugador::enviarSolicitudAEquipo($aceptada,$correo);
+                 switch ($op) {
+                   case -2: echo("Ya has enviado solicitud a este equipo previamente."); break;
+                   case -1: echo("Ya tienes una invitacion pendiende del equipo seleccionado."); break;
+                   case 0: echo("Las solicitudes han sido enviadas"); break;
+                   default: echo($op); break; // Otro Error
+                 }
                }else if(isset($_POST["rechazar"])){
-
                    echo ("La solicitud ha sido rechazada");
 
                }
