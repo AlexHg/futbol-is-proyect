@@ -91,7 +91,7 @@
                 </a>
                 <ul class="submenu-content">
                     <li class="<?php isActive('/enviarInvitación') ?>"><a href="enviarInvitacion"><span><i class="ti-plus"></i>Invitar Jugador</span></a></li>
-                    <li class="<?php isActive('/eliminarJugador') ?>"><a href="eliminarJugador"><span><i class="ti-minus"></i>Eliminar Jugador</span></a></li>
+                    <li class="<?php isActive('/eliminarJugador') ?>"><a href="eliminarJugador"><span><i class="ti-minus"></i>Gestionar Equipo</span></a></li>
                 </ul>
             </li>
             <li class="submenu <?php isActive('/aceptarPeticionJugador') ?>">
