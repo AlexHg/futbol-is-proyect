@@ -118,6 +118,7 @@
                 </a>
                 <ul class="submenu-content">
                     <li class="<?php isActive('/crearTorneo') ?>"><a href="crearTorneo"><span><i class="ti-plus"></i>Nuevo Torneo</span></a></li>
+                    <li class="<?php isActive('/eligeTorneo_Partido') ?>"><a href="eligeTorneo_Partido"><span><i class="ti-plus"></i>Nuevo Partido</span></a></li>
                     <li class="<?php isActive('/eliminarTorneo') ?>"><a href="eliminarTorneo"><span><i class="ti-minus"></i>Eliminar Torneo</span></a></li>
                     <li class="<?php isActive('/eligeTorneo') ?>"><a href="eligeTorneo"><span><i class="ti-close"></i>Dar Equipo de Baja</span></a></li>
                     <li class="<?php isActive('/registrarResultados') ?>"><a href="registrarResultados"><span><i class="ti-pencil-alt"></i>Registrar Resultados</span></a></li> 

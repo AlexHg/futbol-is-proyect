@@ -117,5 +117,52 @@ class Torneo{
         mysqli_close($conexion);
     }
 
+    public static function getDiaHoraTorneo($torneo){
+        $conexion = Database::connect();
+        //echo("Recibi ID:".$torneo);
+        $consulta ="SELECT diayhora,idhorario from horario_juego hj where idtorneo=$torneo and hj.idhorario not in (select hj.idhorario from juego j,horario_juego hj where hj.idhorario=j.idhorario)";
+        //echo($consulta);
+        if ($resultado=$conexion->query($consulta)) {
+            return $resultado;
+        } else {
+            return "Error: " . mysqli_error($conexion);
+        }
+        mysqli_close($conexion);
+    }
+    public static function horariosFull($idTorneo){
+        $db = Database::connect();
+        if($db->query("SELECT diayhora,idhorario from horario_juego hj where idtorneo=$idTorneo and hj.idhorario not in (select hj.idhorario from juego j,horario_juego hj where hj.idhorario=j.idhorario)")->num_rows>0) 
+            return false;
+        else return true;
+    }
+
+    public static function getTorneosCurDate(){
+        $conexion = Database::connect();
+        $resultado=$conexion->query("SELECT IDTorneo,Nombre from torneo where curdate()<Fecha_Fin");
+        if ($resultado) return $resultado;
+        else return "Error: " . mysqli_error($conexion);
+        mysqli_close($conexion); //--//
+    }    
+
+    public static function getFases(){
+        $conexion = Database::connect();
+        $resultado=$conexion->query("SELECT * from fase");
+        if ($resultado) return $resultado;
+        else return "Error: " . mysqli_error($conexion);
+        mysqli_close($conexion); //--//
+    } 
+
+    public static function crearPartido($idEquipo1,$idEquipo2,$idHorario,$idFase,$idTorneo){
+        $conexion = Database::connect();
+        $idJuego = $conexion->query("SELECT max(idjuego) as max from juego where idtorneo=$idTorneo")->fetch_array(MYSQLI_ASSOC)['max'] + 1;
+        $resultado=$conexion->query("INSERT INTO juego (idEquipo,idtorneo,idjuego,idfase,idhorario) values($idEquipo1,$idTorneo,$idJuego,$idFase,$idHorario)");
+        if(!$resultado) return "Error: " . mysqli_error($conexion);
+        else{
+            $resultado=$conexion->query("INSERT INTO juego (idEquipo,idtorneo,idjuego,idfase,idhorario) values($idEquipo2,$idTorneo,$idJuego,$idFase,$idHorario)");
+            if($resultado) return 0;
+            else return "Error: " . mysqli_error($conexion);
+        }
+        mysqli_close($conexion); //--//*/
+    }
 }
 

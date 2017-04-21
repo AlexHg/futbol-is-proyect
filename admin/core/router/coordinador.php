@@ -78,3 +78,23 @@ Flight::route("/registrarResultados", function(){
         View::render('template/fin'); #Html footer
     });
 });
+
+
+Flight::route("/eligeTorneo_Partido", function(){
+    //Flight::redirect('/demo');
+    Session::accessOnly(array("role" => 3), function(){
+        Controller::run("eligeTorneo");
+        View::render('template/ini'); #Html head, menu, header
+        View::render('eligeTorneo_Partido'); #html content
+        View::render('template/fin'); #Html footer
+    });
+});
+Flight::route("/crearPartido", function(){
+    //Flight::redirect('/demo');
+    Session::accessOnly(array("role" => 3), function(){
+        Controller::run("crearPartido");
+        View::render('template/ini'); #Html head, menu, header
+        View::render('crearPartido'); #html content
+        View::render('template/fin'); #Html footer
+    });
+});
