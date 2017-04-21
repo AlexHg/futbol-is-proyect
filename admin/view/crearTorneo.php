@@ -39,8 +39,8 @@
                             <label class="control-label">Tipo Torneo</label>
                             <div class="form-control-cont">
                                 <select class="form-control full" name="tipo">
-                                    <option value="1">Soccer</option>
-                                    <option value="2">Rápido</option>
+                                    <option value="0">Soccer</option>
+                                    <option value="1">Rápido</option>
                                 </select>
                             </div>
                         </div>
