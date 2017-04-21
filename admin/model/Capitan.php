@@ -55,7 +55,7 @@ class Capitan{
     }
 
 
-     public static function aceptarPeticionJugador($invitaciones){
+    public static function aceptarPeticionJugador($invitaciones){
         $conexion = Database::connect();
         $invitacion=$invitaciones;
 
@@ -73,7 +73,7 @@ class Capitan{
      }
 
 
-     public static function rechazarPeticionJugador($invitaciones){
+    public static function rechazarPeticionJugador($invitaciones){
        $invitacion=$invitaciones;
        $conexion = Database::connect();
 
@@ -88,6 +88,14 @@ class Capitan{
        mysqli_close($conexion);
 
      }
+
+    public static function enviarInvitacion($correojugador,$correocapitan){
+        $conexion = Database::connect();
+        $IDEquipo = mysqli_fetch_array(mysqli_query($conexion,"SELECT IDEquipo from Equipo where Correo='$correocapitan'"), MYSQLI_NUM);
+        if (mysqli_query($conexion, "INSERT into Solicitud(IDEquipo,correo,Tipo_Solicitud) values($IDEquipo[0],'$correojugador',1)")) return 1;
+        else return "Error: " . mysqli_error($conexion);        
+        mysqli_close($conexion); //--//
+    }
 
 
 }

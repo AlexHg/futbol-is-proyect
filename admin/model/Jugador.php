@@ -1,26 +1,5 @@
 <?php
 class Jugador{
-    public static function enviarInvitacion($correojugador,$correocapitan){
-        $conexion = Database::connect();
-
-        $consulta1 ="select IDEquipo from Equipo e,Capitan c where e.idcapitan=c.idcapitan and c.correo='$correocapitan'";
-        $res = mysqli_query($conexion, $consulta1);
-        $IDEquipo = mysqli_fetch_array($res, MYSQLI_NUM);
-        
-        $consulta2 = "select IDJugador from jugador where Correo='$correojugador'";
-        $aux = mysqli_query($conexion, $consulta2);
-        $IDJugador = mysqli_fetch_array($aux, MYSQLI_NUM); 
-        
-        $sql = "insert into Solicitud(IDEquipo,IDJugador,Tipo_Solicitud) values($IDEquipo[0],$IDJugador[0],1)";
-        
-        if (mysqli_query($conexion, $sql)) {
-            return 1;
-        } else {
-            return "Error: " . mysqli_error($conexion);
-        }
-        
-        mysqli_close($conexion);
-    }
     public static function getIdJugadorByCorreo($Correo){
         $conexion = Database::connect();
         $consulta1 = "select IDJugador from jugador where correo ='$Correo'";
@@ -146,9 +125,9 @@ class Jugador{
     public static function enviarSolicitudAEquipo($IDEquipo,$correo){
         $db = Database::connect();
         
-        if($db->query("SELECT * FROM solicitud WHERE IDEquipo = $IDEquipo AND correo = '".$_SESSION['email']."' AND Tipo_Solicitud=1 LIMIT 1")->num_rows>0) return -1; // El Jugador Ya envio solicitud a este equipo
-        if($db->query("SELECT * FROM solicitud WHERE IDEquipo = $IDEquipo AND correo = '".$_SESSION['email']."' AND Tipo_Solicitud=0 LIMIT 1")->num_rows>0) return -2; // El Capitan ya envio invitacion a este jugador
-        $result = $db->query("INSERT INTO solicitud (IDEquipo, correo, Tipo_Solicitud) VALUES ('$IDEquipo', '$correo', '1')");
+        if($db->query("SELECT * FROM solicitud WHERE IDEquipo = $IDEquipo AND correo = '".$_SESSION['email']."' AND Tipo_Solicitud=0 LIMIT 1")->num_rows>0) return -1; // El Jugador Ya envio solicitud a este equipo
+        if($db->query("SELECT * FROM solicitud WHERE IDEquipo = $IDEquipo AND correo = '".$_SESSION['email']."' AND Tipo_Solicitud=1 LIMIT 1")->num_rows>0) return -2; // El Capitan ya envio invitacion a este jugador
+        $result = $db->query("INSERT INTO solicitud (IDEquipo, correo, Tipo_Solicitud) VALUES ('$IDEquipo', '$correo', '0')");
         if($result) return 0;
         else        "Error: " . mysqli_error($conexion);
         

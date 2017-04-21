@@ -1,24 +1,18 @@
 <?php
 Model::load("Jugador");
+Model::load("Capitan");
 function seleccion(){
     $estado="";
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (isset($_POST["seleccionados"])) {
             $jugador = $_POST['seleccionados'];
             foreach ($jugador as $seleccionado){
-                Notify::alert('Invitación enviada',
-                'La invitación fue enviada con éxito',
-                'Aceptar');
-                //Cambiar por Correo obtenido de sesión
-                $mensaje=Jugador::enviarInvitacion($seleccionado,$_SESSION["email"]);
-                echo $mensaje;
-                
+                Capitan::enviarInvitacion($seleccionado,$_SESSION["email"]);
             }
+            Flight::redirect('enviarInvitacion?n=exito');
         }
         else{
-             Notify::alert('Jugador no seleccionado',
-                'No hay jugadores seleccionados, por favor seleccione al menos uno',
-                'Reintentar');
+            Flight::redirect('enviarInvitacion?n=err');
         }
     }
 }
