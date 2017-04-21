@@ -1,5 +1,5 @@
 <div id="content-title">
-    <h2>Envia una petición para inscribirte a un Torneo</h2>
+    <h2>Envía una petición para inscribirte a un Torneo</h2>
 </div>
 <h3>Torneos Disponibles: </h3>
 <form action="action/enviarPeticionTorneo.submit" method="post">
