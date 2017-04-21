@@ -23,7 +23,7 @@
                 </a>
             </li>
             <li class="<?php isActive('/horarios') ?>">
-                <a href="horarios">
+                <a href="/">
                     <span><i class="ti-medall"></i>Horarios</span>
                 </a>
             </li>
@@ -69,7 +69,7 @@
                 </ul>
             </li>
             <li class="<?php isActive('/horarios') ?>">
-                <a href="horarios">
+                <a href="/">
                     <span><i class="ti-medall"></i>Horarios</span>
                 </a>
             </li>
@@ -124,7 +124,7 @@
                 </ul>
             </li>
             <li class="<?php isActive('/horarios') ?>">
-                <a href="horarios">
+                <a href="/">
                     <span><i class="ti-medall"></i>Horarios</span>
                 </a>
             </li>
