@@ -1,4 +1,6 @@
-
+.checkbox>label{
+    position: absolute!important;
+}
 @media (max-width: 990px){
     #navigator{
         position: fixed;
