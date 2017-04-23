@@ -56,8 +56,7 @@
 </div>
 <?php 
     Notify::confirm_activedById('Confirmación de Registro de Equipo',
-            '¿Estás seguro de registrar este equipo? Al hacerlo tu rol cambiará a capitán y deberás volver a iniciar sesión para ver los cambios.
-	     Una vez que hayas iniciado sesión, podrás enviar solicitudes a Jugadores para unirse a tu equipo.
+            '¿Estás seguro de registrar este equipo? Al hacerlo tu rol cambiará a capitán y podrás enviar solicitudes a Jugadores para unirse a tu equipo.
              *Puedes revertir este proceso contactando al Coordinador del Club del Club de fútbol, para regresar tu rol a Jugador.',
             "btnConfirmar", "crearEquipo()");
 
