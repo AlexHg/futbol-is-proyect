@@ -29,14 +29,3 @@
          <center><button type="submit" class="btn btn-success" data-type="alerta">Enviar Invitación</button></center>
     </center>
 </form>
-<?php
-Notify::alert_if(
-    'Invitación enviada',
-    'La invitación fue enviada con éxito',
-    'Aceptar',
-    isset($_GET['n']) && strcasecmp($_GET['n'],'exito') == 0);
-Notify::alert_if(
-    'Jugador no seleccionado',
-    'No hay jugadores seleccionados, por favor seleccione al menos uno',
-    'Reintentar',
-    isset($_GET['n']) && strcasecmp($_GET['n'],'err') == 0); 
