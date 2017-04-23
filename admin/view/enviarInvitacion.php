@@ -1,12 +1,6 @@
 <div id="content-title">
     <h2>Envia una Invitación para agregar jugadores</h2>
 </div>
-<h3>Selecciona la categoría a buscar: </h3>
-                <center>
-                <button type="button" class="btn btn-dark">Torneo Soccer</button>
-                <button type="button" class="btn btn-primary">Torneo rápido</button>
-                </center>
-
 <br><br>
 
 <h3>Jugadores Disponibles: </h3>
