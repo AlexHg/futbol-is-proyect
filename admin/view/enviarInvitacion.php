@@ -1,7 +1,7 @@
 <div id="content-title">
-    <h2>Envia una Invitación para agregar jugadores</h2>
+    <h2>Envía una Invitación para agregar jugadores</h2>
 </div>
-<br><br>
+
 
 <h3>Jugadores Disponibles: </h3>
 <form action="enviarInvitacion" method="post">
