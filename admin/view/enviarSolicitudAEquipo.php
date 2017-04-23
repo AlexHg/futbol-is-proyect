@@ -31,14 +31,6 @@
 
                 </div>
             </div>
-            <div class="col-xs-3 col-md-3 col-lg-3">
-                <div class="box">
-
-                    <button id="rechazarInvitacion" type="submit" class="btn btn-danger" data-type="alerta2" name="rechazar">Rechazar</button>
-
-
-                </div>
-            </div>
         </div>
 
 
