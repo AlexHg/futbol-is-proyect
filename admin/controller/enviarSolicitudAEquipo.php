@@ -53,7 +53,7 @@ function mostrarEquipos(){
                    break;
                    case 0:
                    ?>
-                   <div style="background-color:#81F781; height:30px; padding-top:10px; padding-left: 30px;"><b>La solicitud ha sido enviada</b></div>
+                   <div style="background-color:#81F781; height:30px; padding-top:10px; padding-left: 30px;"><b>La solicitud fue enviada con éxito</b></div>
                    <?php
                    break;
                    default: echo($op); break; // Otro Error
@@ -65,7 +65,7 @@ function mostrarEquipos(){
 
            } else {
                ?>
-            <div style="background-color:#F5A9A9; height:30px; padding-top:10px; padding-left: 30px;"><b>No hay invitaciones seleccionadas</b></div>
+            <div style="background-color:#F5A9A9; height:30px; padding-top:10px; padding-left: 30px;"><b>No hay solicitudes seleccionadas, por favor seleccione una</b></div>
             <?php
 
            }
