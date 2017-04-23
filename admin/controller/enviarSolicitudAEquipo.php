@@ -42,9 +42,20 @@ function mostrarEquipos(){
                     foreach ($invitacionesAceptadas as $aceptada)
                    $op = Jugador::enviarSolicitudAEquipo($aceptada,$correo);
                  switch ($op) {
-                   case -2: echo("Ya has enviado solicitud a este equipo previamente."); break;
-                   case -1: echo("Ya tienes una invitacion pendiende del equipo seleccionado."); break;
-                   case 0: echo("Las solicitudes han sido enviadas"); break;
+                   case -2:
+                   ?>
+                   <div style="background-color:#F5DA81; height:30px; padding-top:10px; padding-left: 30px;"><b>Ya eres mienbro de este equipo</b></div>
+                    <?php      
+                   break;
+                   case -1: ?> 
+                   <div style="background-color:#A9D0F5; height:30px; padding-top:10px; padding-left: 30px;"><b>Ya habías enviado una solictud para este equipo antes, por favor espera a que el capitán la apruebe</b></div> 
+                   <?php
+                   break;
+                   case 0:
+                   ?>
+                   <div style="background-color:#81F781; height:30px; padding-top:10px; padding-left: 30px;"><b>La solicitud ha sido enviada</b></div>
+                   <?php
+                   break;
                    default: echo($op); break; // Otro Error
                  }
                }else if(isset($_POST["rechazar"])){
@@ -53,7 +64,9 @@ function mostrarEquipos(){
                }
 
            } else {
-               echo "No hay invitaciones seleccionadas";
+               ?>
+            <div style="background-color:#F5A9A9; height:30px; padding-top:10px; padding-left: 30px;"><b>No hay invitaciones seleccionadas</b></div>
+            <?php
 
            }
        }
