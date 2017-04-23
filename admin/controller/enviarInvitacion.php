@@ -9,10 +9,14 @@ function seleccion(){
             foreach ($jugador as $seleccionado){
                 Capitan::enviarInvitacion($seleccionado,$_SESSION["email"]);
             }
-            Flight::redirect('enviarInvitacion?n=exito');
+                    ?>
+                   <div style="background-color:#81F781; height:30px; padding-top:10px; padding-left: 30px;"><b>La invitación fue enviada con éxito</b></div>
+                   <?php
         }
         else{
-            Flight::redirect('enviarInvitacion?n=err');
+            ?>
+            <div style="background-color:#F5A9A9; height:30px; padding-top:10px; padding-left: 30px;"><b>No hay jugadores seleccionados, por favor seleccione uno</b></div>
+            <?php
         }
     }
 }
