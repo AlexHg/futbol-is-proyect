@@ -34,19 +34,25 @@ function procesarSolicitud(){
                 if(isset($_POST["aceptar"])){
 
                     Coordinador::aceptarSolicitudDeEquipo($invitacionesAceptadas);
-                    echo("El equipo se ha unido al torneo");
+                    ?>
+                   <div style="background-color:#81F781; height:30px; padding-top:10px; padding-left: 30px;"><b>Petición aceptada</b></div>
+                   <?php
 
 
                 }else if(isset($_POST["rechazar"])){
 
                     Coordinador::rechazarSolicitudDeEquipo($invitacionesAceptadas);
 
-                    echo ("La petición  ha sido rechazada");
+                     ?>
+                   <div style="background-color:#81F781; height:30px; padding-top:10px; padding-left: 30px;"><b>Petición rechazada</b></div>
+                   <?php
 
                 }
 
             } else {
-                echo "No hay peticiones seleccionadas";
+             ?>
+            <div style="background-color:#F5A9A9; height:30px; padding-top:10px; padding-left: 30px;"><b>No hay peticiones seleccionadas, por favor selecciona una</b></div>
+            <?php
 
             }
          }
