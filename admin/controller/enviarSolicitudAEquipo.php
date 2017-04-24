@@ -44,7 +44,7 @@ function mostrarEquipos(){
                  switch ($op) {
                    case -2:
                    ?>
-                   <div style="background-color:#F5DA81; height:30px; padding-top:10px; padding-left: 30px;"><b>Ya eres mienbro de este equipo</b></div>
+                   <div style="background-color:#F5DA81; height:30px; padding-top:10px; padding-left: 30px;"><b>Ya eres miembro de este equipo</b></div>
                     <?php      
                    break;
                    case -1: ?> 
