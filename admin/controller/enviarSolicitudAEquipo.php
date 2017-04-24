@@ -48,7 +48,7 @@ function mostrarEquipos(){
                     <?php      
                    break;
                    case -1: ?> 
-                   <div style="background-color:#A9D0F5; height:30px; padding-top:10px; padding-left: 30px;"><b>Ya habías enviado una solictud para este equipo antes, por favor espera a que el capitán la apruebe</b></div> 
+                   <div style="background-color:#A9D0F5; height:30px; padding-top:10px; padding-left: 30px;"><b>Ya habías enviado una solicitud para este equipo antes, por favor espera a que el capitán la apruebe</b></div> 
                    <?php
                    break;
                    case 0:
