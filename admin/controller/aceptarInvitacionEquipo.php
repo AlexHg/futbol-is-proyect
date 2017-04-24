@@ -42,18 +42,24 @@ function mostrarInvitaciones(){
                 if(isset($_POST["aceptar"])){
 
                     Jugador::aceptarSolicitudDeEquipo($invitacionesAceptadas,$correo);
-                    echo("Te haz unido al equipo");
+                    ?>
+                   <div style="background-color:#81F781; height:30px; padding-top:10px; padding-left: 30px;"><b>Invitación aceptada</b></div>
+                   <?php
 
 
                 }else if(isset($_POST["rechazar"])){
 
                     Jugador::rechazarSolicitudDeEquipo($invitacionesAceptadas,$correo);
-                   echo("Solicitud de equipo rechazada");
+                   ?>
+                   <div style="background-color:#81F781; height:30px; padding-top:10px; padding-left: 30px;"><b>Invitación rechazada</b></div>
+                   <?php
 
                 }
 
             } else {
-               echo("No hay invitaciones seleccionadas, por favor selecciona una");
+                ?>
+            <div style="background-color:#F5A9A9; height:30px; padding-top:10px; padding-left: 30px;"><b>No hay invitaciones seleccionadas, por favor selecciona una</b></div>
+            <?php
 
             }
          }
