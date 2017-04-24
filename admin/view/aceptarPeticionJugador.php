@@ -1,5 +1,5 @@
 <div id="content-title">
-    <h2>Aceptar Petición de Jugador</h2>
+    <h2>Aceptar Solicitud de Jugador</h2>
 </div>
 <h3>Peticiones de jugadores que quieren unirse a tu equipo: </h3>
 <div id="content-body">
