@@ -33,19 +33,25 @@ function procesarSolicitud(){
                 if(isset($_POST["aceptar"])){
 
                     Capitan::aceptarPeticionJugador($invitacionesAceptadas);
-                    echo("El jugador se ha unido a tu equipo");
+                   ?>
+                   <div style="background-color:#81F781; height:30px; padding-top:10px; padding-left: 30px;"><b>Solicitud aceptada</b></div>
+                   <?php
 
 
                 }else if(isset($_POST["rechazar"])){
 
                     Capitan::rechazarPeticionJugador($invitacionesAceptadas);
 
-                    echo ("La petición  ha sido rechazada");
+                    ?>
+                   <div style="background-color:#81F781; height:30px; padding-top:10px; padding-left: 30px;"><b>Solicitud rechazada</b></div>
+                   <?php
 
                 }
 
             } else {
-                echo "No hay peticiones seleccionadas";
+                ?>
+            <div style="background-color:#F5A9A9; height:30px; padding-top:10px; padding-left: 30px;"><b>No hay solicitudes seleccionadas, por favor selecciona una</b></div>
+            <?php
 
             }
          }
