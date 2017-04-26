@@ -15,7 +15,7 @@
              <div class="form-group">
                 <label class="control-label">Torneo: </label>
                 <div class="form-control-cont">
-                    <select class="form-control full">
+                    <select class="form-control full" data-validation="required"  data-validation-error-msg="Campo obligatorio">
                         <option>T1</option>
                         <option>T2</option>
                         
@@ -25,7 +25,7 @@
              <div class="form-group">
                 <label class="control-label">Nombre de Equipo: </label>
                 <div class="form-control-cont">
-                    <select class="form-control full">
+                    <select class="form-control full" data-validation="required"  data-validation-error-msg="Campo obligatorio">
                         <option>E1</option>
                         <option>E2</option>
                         
