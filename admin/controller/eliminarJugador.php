@@ -5,7 +5,7 @@ function seleccionEliminados(){
     $estado="";
     //$seleccionados=[];
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        if (isset($_POST["seleccionados"])) {
+        if (isset($_POST["seleccionados"]) && count($_POST['seleccionados']) > 0) {
             $jugador = $_POST['seleccionados'];
             print_r($jugador);
             foreach ($jugador as $seleccionado){
