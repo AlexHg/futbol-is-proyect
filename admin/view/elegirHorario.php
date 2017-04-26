@@ -13,7 +13,7 @@
         <div class="form-group">
             <label class="control-label">TORNEO</label>
             <div class="form-control-cont">
-                <select class="form-control full">
+                <select class="form-control full" data-validation="required"  data-validation-error-msg="Campo obligatorio">
                     <option>Torneo1</option>
                     <option>Torneo2</option>
                     <option>Torneo3</option>
@@ -23,7 +23,7 @@
         <div class="form-group">
             <label class="control-label">DIA</label>
             <div class="form-control-cont">
-                <select class="form-control full">
+                <select class="form-control full" data-validation="required"  data-validation-error-msg="Campo obligatorio">
                     <option>Lunes</option>
                     <option>Martes</option>
                     <option>Miércoles</option>
@@ -34,7 +34,7 @@
         <div class="form-group">
             <label class="control-label">HORA</label>
             <div class="form-control-cont">
-                <select class="form-control full">
+                <select class="form-control full" data-validation="required"  data-validation-error-msg="Campo obligatorio">
                     <option>12:00 pm - 13:30 pm</option>
                     <option>13:30 pm - 15:00 pm </option>
                 </select>
