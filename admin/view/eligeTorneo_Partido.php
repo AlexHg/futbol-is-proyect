@@ -7,7 +7,7 @@
     <div class="form-group">
         <label class="control-label">Torneo: </label>
         <div class="form-control-cont">
-            <select name="torneo" class="form-control full" id="TorneoSelect">
+            <select name="torneo" class="form-control full" id="TorneoSelect" data-validation="required"  data-validation-error-msg="Campo obligatorio">
                 <?php
                     listaTorneosActuales();
                 ?>
