@@ -29,7 +29,7 @@ function imprimeTabla(){
     while ($row = $resultado->fetch_array(MYSQLI_ASSOC)) {
         echo '<tr>';
         echo '<th scope="row">';
-        echo '<input id="checkbox0c" type="checkbox" name="seleccionados[]" value="'.$row["Correo"].'"</input>';
+        echo '<input class="checkbox0c" type="checkbox" name="seleccionados[]" value="'.$row["Correo"].'"</input>';
         echo '<div class="checkbox checkbox-dark">';
         echo '</div>';
         echo '</th>';
