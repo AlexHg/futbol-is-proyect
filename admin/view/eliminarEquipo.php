@@ -19,7 +19,7 @@
                 <div class="form-control-cont">
                     <label class="control-label">Nombre de equipo:</label>
                     <div class="form-control-cont">
-                        <select onChange="change(this.value)" name="equipo" class="form-control full" id="EquipoSelect">
+                        <select onChange="change(this.value)" name="equipo" class="form-control full" id="EquipoSelect" data-validation="required"  data-validation-error-msg="Campo obligatorio">
                             <?php
                                 listaEquipos();
                             ?>
