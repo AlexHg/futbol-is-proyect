@@ -15,7 +15,7 @@
             <div class="form-group">
                 <label class="control-label">Password</label>
                 <div class="form-control-cont">
-                    <input name="pass" type="password" class="form-control full" data-validation="length" data-validation-length="6-15"  data-validation-error-msg="Se ha omitido contraseña" placeholder="************">
+                    <input name="pass" type="password" class="form-control full" data-validation="length" data-validation-length="5-15"  data-validation-error-msg="Se ha omitido contraseña" placeholder="************">
                 </div>
             </div>
             <div>
