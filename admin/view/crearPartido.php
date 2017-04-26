@@ -11,7 +11,7 @@
         <div class="form-group">
             <label class="control-label">Equipo1</label>
             <div class="form-control-cont">
-                <select name="equipo1" class="form-control full" form="crearPartidoForm">
+                <select name="equipo1" class="form-control full" form="crearPartidoForm" data-validation="required"  data-validation-error-msg="Campo obligatorio">
                     <?php selectEquipos(); ?>
                 </select>
             </div>
@@ -19,7 +19,7 @@
         <div class="form-group">
             <label class="control-label">Equipo2</label>
             <div class="form-control-cont">
-                <select name="equipo2" class="form-control full" form="crearPartidoForm">
+                <select name="equipo2" class="form-control full" form="crearPartidoForm" data-validation="required"  data-validation-error-msg="Campo obligatorio">
                     <?php selectEquipos(); ?>
                 </select>
             </div>
@@ -27,7 +27,7 @@
         <div class="form-group">
             <label class="control-label">Dia y Hora</label>
             <div class="form-control-cont">
-                <select name="horario" class="form-control full" form="crearPartidoForm">
+                <select name="horario" class="form-control full" form="crearPartidoForm" data-validation="required"  data-validation-error-msg="Campo obligatorio">
                     <?php selectTiempo(); ?>
                 </select>
             </div>
@@ -35,7 +35,7 @@
         <div class="form-group">
             <label class="control-label">Fase</label>
             <div class="form-control-cont">
-                <select name="fase" class="form-control full" form="crearPartidoForm">
+                <select name="fase" class="form-control full" form="crearPartidoForm" data-validation="required"  data-validation-error-msg="Campo obligatorio">
                     <?php selectFase(); ?>
                 </select>
             </div>
