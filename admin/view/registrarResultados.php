@@ -10,7 +10,7 @@
                    <div class="form-group">
                             <label class="control-label">Tipo de Torneo </label>
                             <div class="form-control-cont">
-                                <select class="form-control full">
+                                <select class="form-control full" data-validation="required"  data-validation-error-msg="Campo obligatorio">
                                     <option>Soccer</option>
                                     <option>Rápido</option>
                                     
@@ -23,7 +23,7 @@
                    <div class="form-group">
                             <label class="control-label">Nombre de Torneo </label>
                             <div class="form-control-cont">
-                                <select class="form-control full">
+                                <select class="form-control full" data-validation="required"  data-validation-error-msg="Campo obligatorio">
                                     <option>Pavo</option>
                                     <option>Otro nombre :P</option>
                                     
@@ -38,7 +38,7 @@
                             <div class="form-group">
                             <label class="control-label">Fecha </label>
                             <div class="form-control-cont">
-                                <select class="form-control full">
+                                <select class="form-control full" data-validation="required"  data-validation-error-msg="Campo obligatorio">
                                     <option>10/03/2017</option>
                                     <option>11/03/2017</option>
                                     <option>12/03/2017</option>
@@ -50,7 +50,7 @@
                             
                             <label class="control-label">Hora </label>
                             <div class="form-control-cont">
-                                <select class="form-control full">
+                                <select class="form-control full" data-validation="required"  data-validation-error-msg="Campo obligatorio">
                                     <option>10:30</option>
                                     <option>11:00</option>
                                     <option>12:00</option>
@@ -85,7 +85,7 @@
 			    <div class="form-group">
                             <label class="control-label">Equipo 1 </label>
                             <div class="form-control-cont">
-                                <select class="form-control full">
+                                <select class="form-control full" data-validation="required"  data-validation-error-msg="Campo obligatorio">
                                     <option>1</option>
                                     <option>2</option>
 				    <option>3</option>
@@ -113,7 +113,7 @@
 			 <div class="form-group">
                             <label class="control-label">Equipo 1 </label>
                             <div class="form-control-cont">
-                                <select class="form-control full">
+                                <select class="form-control full" data-validation="required"  data-validation-error-msg="Campo obligatorio">
                                     <option>1</option>
                                     <option>2</option>
 				    <option>3</option>
