@@ -67,7 +67,7 @@
         <div class="form-group">
             <label class="control-label">Password</label>
             <div class="form-control-cont">
-                <input type="password" name="pass" class="form-control full" id="pass" value="<?php echo $Datos[3]; ?>" data-validation="length" data-validation-length="6-15" data-validation-error-msg="La contraseña debe de tener entre 6 a 15 caracteres.">
+                <input type="password" name="pass" class="form-control full" id="pass" value="<?php echo $Datos[3]; ?>" data-validation="length" data-validation-length="5-15" data-validation-error-msg="La contraseña debe de tener entre 5 a 15 caracteres.">
             </div>
         </div>
 
