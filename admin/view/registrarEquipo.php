@@ -39,14 +39,14 @@
             <div class="form-group">
                 <label class="control-label">Correo</label>
                     <div class="form-control-cont">
-                        <input type="text" class="form-control full" id="Correo" name="email" readonly value="<?php echo $_SESSION['email'] ?>">
+                        <input type="text" class="form-control full" id="Correo" name="email" readonly value="<?php echo $_SESSION['email'] ?>" >
                     </div>
             </div>						
             <br>
             <label class="control-label"><b>Descripcion del Uniforme</b></label>
             <div class="form-group">
                 <div class="form-control-cont">
-                    <textarea class="form-control full" rows="1" name="uniforme" data-validation="required" data-validation-error-msg="Se ha omitido la descripcion del uniforme" form="crearEquipoForm"></textarea>
+                    <textarea class="form-control full" rows="1" name="uniforme" data-validation="required" data-validation-error-msg="Se ha omitido la descripción del uniforme" form="crearEquipoForm"></textarea>
                 </div>
             </div>
             <button type="button" class="button btn btn-primary" id="btnConfirmar" data-type="confirmar">Registrar</button>
