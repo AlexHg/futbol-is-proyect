@@ -6,14 +6,14 @@
                         <div class="form-group">
                             <label class="control-label">Nombre</label>
                                 <div class="form-control-cont">
-                                    <input type="text" name="nombre" class="form-control full" placeholder="Nombre">
+                                    <input type="text" name="nombre" class="form-control full" placeholder="Nombre" data-validation="alphanumeric" data-validation-error-msg="Campo obligatorio">
                                 </div>
                             </div>
                        
                         <div class="form-group">
                             <label class="control-label">Fecha Inicio</label>
                             <div class="form-control-cont">
-                                <input class="form-control full" name="fechaInicio" type="text" id="fechaInicio">
+                                <input class="form-control full" name="fechaInicio" type="text" id="fechaInicio" data-validation="date" data-validation-format="yy-mm-dd" data-validation-help="Formato de fecha yy-mm-dd">
                             </div>
                         </div>
                         <script>
@@ -26,7 +26,7 @@
                         <div class="form-group">
                             <label class="control-label">Fecha límite inscripcion</label>
                             <div class="form-control-cont">
-                                <input class="form-control full" name="fechaLimite" type="text" id="fechaLimite">
+                                <input class="form-control full" name="fechaLimite" type="text" id="fechaLimite" data-validation="date" data-validation-format="yy-mm-dd" data-validation-help="Formato de fecha yy-mm-dd">
                             </div>
                         </div>
                         <script>
@@ -38,7 +38,7 @@
                         <div class="form-group">
                             <label class="control-label">Tipo Torneo</label>
                             <div class="form-control-cont">
-                                <select class="form-control full" name="tipo">
+                                <select class="form-control full" name="tipo" data-validation="required"  data-validation-error-msg="Campo obligatorio">
                                     <option value="0">Soccer</option>
                                     <option value="1">Rápido</option>
                                 </select>
