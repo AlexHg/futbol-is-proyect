@@ -39,35 +39,35 @@
         <div class="form-group">
             <label class="control-label">Nombre</label>
                 <div class="form-control-cont">
-                    <input type="text" name="name" class="form-control full" id="name" value="<?php echo $Datos[1]; ?>">
+                    <input type="text" name="name" class="form-control full" id="name" value="<?php echo $Datos[1]; ?>" onkeydown="return soloLetras(event)" data-validation="required"  data-validation-error-msg="Se ha omitido el nombre">
                 </div>
         </div>
         
         <div class="form-group">
             <label class="control-label">Apellidos</label>
                 <div class="form-control-cont">
-                    <input type="text" name="lastname" class="form-control full" id="lastname" value="<?php echo $Datos[2]; ?>">
+                    <input type="text" name="lastname" class="form-control full" id="lastname" value="<?php echo $Datos[2]; ?>" onkeydown="return soloLetras(event)" data-validation="required"  data-validation-error-msg="Se ha omitido el apellido">
                 </div>
         </div>
         
         <div class="form-group">
             <label class="control-label" for="example-email">Correo</label>
             <div class="form-control-cont">
-                <input type="email" id="email" name="mail" class="form-control full" readonly value="<?php echo $Datos[0]; ?>">
+                <input type="email" id="email" name="mail" class="form-control full" readonly value="<?php echo $Datos[0]; ?>" data-validation="email" data-validation-error-msg-email="Email no válido">
             </div>
         </div>
         
         <div class="form-group">
             <label >Telefono</label>
             <div class="form-control-cont">
-                <input type="text" name="phone" class="form-control full" id="phone" value="<?php echo $Datos[4]; ?>">
+                <input type="text" name="phone" class="form-control full" id="phone" value="<?php echo $Datos[4]; ?>" data-validation="required length"  data-validation-length="10" data-validation-error-msg="Se ha omitido el teléfono">
             </div>
         </div>
         
         <div class="form-group">
             <label class="control-label">Password</label>
             <div class="form-control-cont">
-                <input type="password" name="pass" class="form-control full" id="pass" value="<?php echo $Datos[3]; ?>">
+                <input type="password" name="pass" class="form-control full" id="pass" value="<?php echo $Datos[3]; ?>" data-validation="length" data-validation-length="6-15" data-validation-error-msg="La contraseña debe de tener entre 6 a 15 caracteres.">
             </div>
         </div>
 
