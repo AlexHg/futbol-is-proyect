@@ -13,7 +13,7 @@
                         <div class="form-group">
                             <label class="control-label">Fecha Inicio</label>
                             <div class="form-control-cont">
-                                <input class="form-control full" name="fechaInicio" type="text" id="fechaInicio" data-validation="date" data-validation-format="yy-mm-dd" data-validation-help="Formato de fecha yy-mm-dd">
+                                <input class="form-control full" name="fechaInicio" type="text" id="fechaInicio" data-validation="date" data-validation-help="Formato de fecha yy-mm-dd">
                             </div>
                         </div>
                         <script>
@@ -26,7 +26,7 @@
                         <div class="form-group">
                             <label class="control-label">Fecha límite inscripcion</label>
                             <div class="form-control-cont">
-                                <input class="form-control full" name="fechaLimite" type="text" id="fechaLimite" data-validation="date" data-validation-format="yy-mm-dd" data-validation-help="Formato de fecha yy-mm-dd">
+                                <input class="form-control full" name="fechaLimite" type="text" id="fechaLimite" data-validation="date"  data-validation-help="Formato de fecha yy-mm-dd">
                             </div>
                         </div>
                         <script>
