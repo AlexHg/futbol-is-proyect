@@ -19,7 +19,7 @@
                 </div>
             </div>
             <div>
-                No tienes una cuenta?<a href='registrarCuenta'> Registrate</a>
+                ¿No tienes una cuenta?<a href='registrarCuenta'> Regístrate</a>
                 <br><br>
                 <a href='recuperarCuenta'>Recuperar Contraseña</a>
                 <br><br>
