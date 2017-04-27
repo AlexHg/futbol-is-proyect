@@ -9,7 +9,7 @@ function adiosEquipo(){
             list($IDequipo,$nombre)=explode(".",$seleccionado);
             if(Equipo::eliminarEquipo("$IDequipo")){
                 Notify::confirm('Equipo eliminado',
-                    "El Equipo".' '.$nombre." fue eliminado correctamente. ¿Desea eliminar otro Equipo?",
+                    "El Equipo".' '.$nombre." fue eliminado correctamente.",
                     "window.location='eliminarEquipo");
             }
         }
