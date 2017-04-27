@@ -72,6 +72,12 @@
             'Reintentar',
             isset($_GET['n']) && strcasecmp($_GET['n'],'error') == 0); 
 
+    Notify::alert_if(
+            'Equipo sin nombre',
+            'El equipo que se intenta registrar no tiene un nombre valido. Por favor vuelva a intentarlo',
+            'Reintentar',
+            isset($_GET['n']) && strcasecmp($_GET['n'],'noname') == 0); 
+
 ?>
 
 
