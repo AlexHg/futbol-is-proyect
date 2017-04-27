@@ -48,8 +48,7 @@
                     <img src="<?php echo $_SESSION['avatar'] ?>" alt="">
                 </a>
                 <ul id="profil">
-                    <li><a href=""><i class="ti-user"></i>Perfil</a></li>
-                    <li><a href=""><i class="ti-settings"></i>Configuración</a></li>
+                    <li><a href="modificarDatos"><i class="ti-settings"></i>Modificar Datos</a></li>
                     <li style="border-top: 1px solid #e5e5e5;"><a href="action/sesion.cerrar"><i class="ti-power-off"></i>Cerrar sesión</a></li>
 
                 </ul>
