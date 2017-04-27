@@ -27,7 +27,7 @@
                 <div class="box">
 
                     <!-- cmbiar por un input -->
-                    <button id="btnAceptar" type="submit" class="btn btn-success" data-type="alerta" name="aceptar">Aceptar</button>
+                    <button id="btnAceptar" type="submit" class="btn btn-success" data-type="alerta" name="aceptar">Enviar</button>
 
                 </div>
             </div>
