@@ -27,6 +27,13 @@ class Equipo{
         return $res;
         mysqli_close($conexion);
     }
+    public static function numeroJugadoresEquipo($correo){
+        $consulta = 'SELECT count(*) from Equipo_jugador as ej, equipo as e where ej.idEquipo=e.idEquipo and e.correo="$correo"';
+        $conexion = Database::connect();
+        $res = mysqli_query($conexion, $consulta);
+        $jugadores = mysqli_fetch_array($res, MYSQLI_NUM);
+        return $jugadores[0];
+    }
     public static function getIdEquipoByCorreo($Correo){
         $conexion = Database::connect();
         $consulta1 = "SELECT IDEquipo FROM equipo where correo ='$Correo'";

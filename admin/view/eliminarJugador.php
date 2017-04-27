@@ -6,6 +6,7 @@
     <h5>Selecciona a un jugador si deseas eliminarlo</h5>
     <form method="post" id="eliminarJugadorForm">
     <span id="noselect" style="display:none;"><div style="background-color:#F5A9A9; height:30px; padding-top:10px; padding-left: 30px;"><b>No hay jugadores seleccionados, por favor selecciona uno</b></div></span>
+    <?php alerta_pocosJugadores(); ?>
         <table class="table table-striped ">
             <thead>
             <tr>
