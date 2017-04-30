@@ -8,7 +8,7 @@ function adiosTorneo(){
             list($IDTorneo,$nombre)=explode(".",$seleccionado);
             if(Torneo::eliminarTorneo("$IDTorneo")){
                 Notify::confirm('Torneo Eliminado',
-                    "El torneo ".' '.$nombre." fue eliminado correctamente. ¿Desea eliminar otro Toreno?",
+                    "El torneo ".' '.$nombre." fue eliminado correctamente.",
                     "window.location='eliminarTorneo'");
             }
         }
