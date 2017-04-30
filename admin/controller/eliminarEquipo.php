@@ -8,9 +8,8 @@ function adiosEquipo(){
             $seleccionado = $_POST['equipo'];
             list($IDequipo,$nombre)=explode(".",$seleccionado);
             if(Equipo::eliminarEquipo("$IDequipo")){
-                Notify::confirm('Equipo eliminado',
-                    "El Equipo".' '.$nombre." fue eliminado correctamente.",
-                    "window.location='eliminarEquipo");
+                Notify::alert_if('Operación realizada exitosamente',"El Equipo".' '.$nombre." fue eliminado correctamente.",
+                                'Aceptar',"window.location='eliminarEquipo"); 
             }
         }
         else{
