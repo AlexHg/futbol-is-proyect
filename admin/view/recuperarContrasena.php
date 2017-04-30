@@ -13,20 +13,18 @@
             </div>
             <div>
                 <br>
-                <button type="button" class="btn btn-primary" data-type="alerta">Recuperar Contraseña</button>
+                <button type="button" id="correo" class="btn btn-primary" data-type="alerta">Recuperar Contraseña</button>
                 <br><br>
             </div>
         </form>
     </center>
 </div>
  <!--Mensaje de confirmacion-->
-<div class="overlay-container">
-                        <div class="window-container alerta">
-                            <h3>Confirmación de Correo Electrónico</h3> 
-                            Se envió la contraseña por correo electrónico<br/>
-                            <br/>
-                            <center>
-                            <button class="btn btn-success close">Aceptar</button>
-                            </center>
-                        </div>
-</div>
+
+<?php
+ Notify::alert_activedById('Correo Enviado', 
+            'Se ha enviado la contraseña por correo electrónico.',
+            'Aceptar',
+            "correo"); 
+
+ ?>
