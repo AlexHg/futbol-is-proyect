@@ -2,7 +2,7 @@
                     <h2>Crear Torneo</h2>
                 </div>
                 <div id="content-body">
-                <form class="form-control" role="form" action="action/crearTorneo.submit" method="post" style="width: 90%">
+                <form class="form-control" role="form" action="action/crearTorneo.submit" method="post" style="width: 70%">
                         <div class="form-group">
                             <label class="control-label">Nombre</label>
                                 <div class="form-control-cont">
