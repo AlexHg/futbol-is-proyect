@@ -46,31 +46,31 @@
                         </div>
                          <h1>Días de Juego</h1>
                         <div class="checkbox checkbox-primary">
-                                    <input id="checkbox" type="checkbox" value="lunes" name="dia[]" checked="">
+                                    <input id="checkbox" type="checkbox" value="lunes" name="dia[]" >
                                     <label for="checkbox" >
                                        Lunes
                                     </label>
                         </div>
                           <div class="checkbox checkbox-primary">
-                                    <input id="checkbox1" type="checkbox" value="martes" name="dia[]" checked="">
+                                    <input id="checkbox1" type="checkbox" value="martes" name="dia[]" >
                                     <label for="checkbox1" >
                                        Martes
                                     </label>
                         </div>
                           <div class="checkbox checkbox-primary">
-                                    <input id="checkbox2" type="checkbox" value="miercoles" name="dia[]" checked="">
+                                    <input id="checkbox2" type="checkbox" value="miercoles" name="dia[]" >
                                     <label for="checkbox2" >
                                        Miércoles
                                     </label>
                         </div>
                           <div class="checkbox checkbox-primary">
-                                    <input id="checkbox3" type="checkbox" value="jueves" name="dia[]" checked="">
+                                    <input id="checkbox3" type="checkbox" value="jueves" name="dia[]" >
                                     <label for="checkbox3" >
                                        Jueves
                                     </label>
                         </div>
                           <div class="checkbox checkbox-primary">
-                                    <input id="checkbox4" type="checkbox" value="viernes" name="dia[]" checked="">
+                                    <input id="checkbox4" type="checkbox" value="viernes" name="dia[]">
                                     <label for="checkbox4" >
                                        Viernes
                                     </label>
