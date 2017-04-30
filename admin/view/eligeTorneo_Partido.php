@@ -24,7 +24,7 @@
 // ACTUALIZAR
 Notify::alert_if(
     'Operacion Denegada',
-    'Debes seleccionar al menos un torneo',
+    'Se debe seleccionar al menos un torneo',
     'Reintentar',
     isset($_GET['n']) && strcasecmp($_GET['n'],'err') == 0); 
 
@@ -35,13 +35,13 @@ Notify::alert_if(
     isset($_GET['n']) && strcasecmp($_GET['n'],'done') == 0); 
 
   Notify::alert_if(
-    'Error: Torneo Lleno',
+    'Torneo Lleno',
     'Ya no existen horarios disponibles para este torneo',
     'Aceptar',
     isset($_GET['n']) && strcasecmp($_GET['n'],'full') == 0); 
 
     Notify::alert_if(
-    'Error: Mismo Equipo',
-    'No puedes seleccionar al mismo equipo al crear una partida',
+    'Enfrentamiento con el mismo equipo',
+    'Se ha seleccionado el mismo equipos para el enfrentamiento',
     'Reintentar',
     isset($_GET['n']) && strcasecmp($_GET['n'],'sameTeam') == 0); 
