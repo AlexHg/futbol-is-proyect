@@ -10,7 +10,37 @@ class Torneo{
         }
         mysqli_close($conexion);
     }
-
+    public static function registrarResultado($equipo1, $equipo2, $juego, $goles1, $goles2, $torneo, $fase){
+        $conexion = Database::connect();
+        $insert1 = "INSERT INTO JuegosResultado (idequipo,idjuego,golesafavor,golesencontra,idtorneo,idfase)values($equipo1, $juego, $goles1, $goles2, $torneo, $fase)";
+        $insert2 = "INSERT INTO JuegosResultado (idequipo,idjuego,golesafavor,golesencontra,idtorneo,idfase)values($equipo2, $juego, $goles1, $goles2, $torneo, $fase)";
+        if ($conexion->query($insert1) && $conexion->query($insert2)) {
+            return true;
+        } else {
+            return "Error: " . mysqli_error($conexion);
+        }
+        mysqli_close($conexion);
+    }
+    public static function getPartidosSinJugar(){
+        $conexion = Database::connect();
+        $consulta ="SELECT j.idjuego as juego, hj.diayhora as horario, f.descripcion as fase, f.IDFase as IDFase, t.nombre as torneo, t.IDTorneo as IDTorneo, SUBSTRING_INDEX(SUBSTRING_INDEX(GROUP_CONCAT(j.idEquipo), ',', 1), ',', -1) as equipo1, SUBSTRING_INDEX(SUBSTRING_INDEX(GROUP_CONCAT(j.idEquipo), ',', 2), ',', -1) as equipo2 from juego j, horario_juego hj, torneo t,fase f where idjuego not in (select jr.idjuego from juegosresultado jr) and j.idhorario=hj.idhorario and j.idfase=f.idfase and j.idtorneo=t.idtorneo group by(idjuego)";
+        if ($resultado=$conexion->query($consulta)) {
+            return $resultado;
+        } else {
+            return "Error: " . mysqli_error($conexion);
+        }
+        mysqli_close($conexion);
+    }
+    public static function getPartidosSinJugarByTorneo($IDTorneo){
+        $conexion = Database::connect();
+        $consulta ="SELECT j.idjuego, hj.diayhora as horario, f.descripcion as fase, t.nombre as torneo, SUBSTRING_INDEX(SUBSTRING_INDEX(GROUP_CONCAT(j.idEquipo), ',', 1), ',', -1) as equipo1, SUBSTRING_INDEX(SUBSTRING_INDEX(GROUP_CONCAT(j.idEquipo), ',', 2), ',', -1) as equipo2 from juego j, horario_juego hj, torneo t,fase f where idjuego not in (select jr.idjuego from juegosresultado jr) and j.idhorario=hj.idhorario and j.idfase=f.idfase and j.idtorneo=t.idtorneo and j.idtorneo = $IDTorneo group by(idjuego);";
+        if ($resultado=$conexion->query($consulta)) {
+            return $resultado;
+        } else {
+            return "Error: " . mysqli_error($conexion);
+        }
+        mysqli_close($conexion);
+    }
     public static function getEquiposTorneo2($tipoTorneo){
         $conexion = Database::connect();
         $consulta ="SELECT nombreequipo FROM torneo JOIN equipo_torneo USING(IDTorneo) JOIN equipo USING(IDEquipo) JOIN capitan USING(correo) JOIN usuario USING (correo) WHERE Tipo_Torneo='$tipoTorneo'";

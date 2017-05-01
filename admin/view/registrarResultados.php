@@ -1,155 +1,36 @@
  <div id="content-title">
-                    <h2>Registrar Resultados</h2>
-                </div>
-                <div id="content-body">
+    <h2>Registrar Resultados</h2>
+</div>
+<div id="content-body">
+    <h3>Elija el partido al cual desea registrar un resultado</h3>
+    <table class="table table-striped ">
+        <thead>
+            <tr>
+                <th>VS</th>
+                <th>Fase</th>
+                <th>Torneo</th>
+                <th>Horario</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php tabla_juegos_sin_resultado() ?>
+        </tbody>
+    </table>        
+</div>
+<?php
+Notify::alert_if(
+        'Operación realizada exitosamente',
+        'La operación se realizó exitosamente',
+        'Aceptar',
+        isset($_GET['n']) && strcasecmp($_GET['n'],'done') == 0); 
 
-
-                    <h3>Resultados de Torneo de Fútbol Soccer y Fútbol Rápido</h3>
-                    <form class="form-control" role="form" style="width: 90%">
-                    <div align="center">
-                   <div class="form-group">
-                            <label class="control-label">Tipo de Torneo </label>
-                            <div class="form-control-cont">
-                                <select class="form-control full" data-validation="required"  data-validation-error-msg="Campo obligatorio">
-                                    <option>Soccer</option>
-                                    <option>Rápido</option>
-                                    
-                                </select>
-                            </div>
-                   </div>
-                     <br>
-                     
-                     <div align="center">
-                   <div class="form-group">
-                            <label class="control-label">Nombre de Torneo </label>
-                            <div class="form-control-cont">
-                                <select class="form-control full" data-validation="required"  data-validation-error-msg="Campo obligatorio">
-                                    <option>Pavo</option>
-                                    <option>Otro nombre :P</option>
-                                    
-                                </select>
-                            </div>
-                   </div>
-                     <br>         
-                    <div>
-                    
-                       </div>
-                         
-                            <div class="form-group">
-                            <label class="control-label">Fecha </label>
-                            <div class="form-control-cont">
-                                <select class="form-control full" data-validation="required"  data-validation-error-msg="Campo obligatorio">
-                                    <option>10/03/2017</option>
-                                    <option>11/03/2017</option>
-                                    <option>12/03/2017</option>
-                                    <option>13/03/2017</option>
-                                    <option>15/03/2017</option>
-                                </select>
-                            </div>
-                            
-                            
-                            <label class="control-label">Hora </label>
-                            <div class="form-control-cont">
-                                <select class="form-control full" data-validation="required"  data-validation-error-msg="Campo obligatorio">
-                                    <option>10:30</option>
-                                    <option>11:00</option>
-                                    <option>12:00</option>
-                                    <option>13:00</option>
-                                    <option>15:00</option>
-                                </select>
-                            </div>
-                        </div>
-                    <br>
-                    <div align="center">
-                    	<button type="button" class="btn btn-primary" onclick="myFunction3()">Buscar Partido</button>
-<br>
-                        <script>
-                            function myFunction3() {
-                                alert("No se han podido guardar los cambios. Uno o más partidos no se han llevado a cabo.");
-                            }
-                        </script>
-                        <script>
-                            function myFunction2() {
-                                var x;
-                                if (confirm("No se han podido guardar los cambios. El partido no se ha llevado a cabo.") == true) {
-                                    x = "You pressed OK!";
-                                } else {
-                                    x = "You pressed Cancel!";
-                                }
-                                document.getElementById("demo").innerHTML = x;
-                            }
-                        </script>
-                        <br>
-                        
-                          <br>
-			    <div class="form-group">
-                            <label class="control-label">Equipo 1 </label>
-                            <div class="form-control-cont">
-                                <select class="form-control full" data-validation="required"  data-validation-error-msg="Campo obligatorio">
-                                    <option>1</option>
-                                    <option>2</option>
-				    <option>3</option>
-                                    <option>4</option>
-				    <option>5</option>
-                                    <option>6</option>
-				    <option>7</option>
-                                    <option>8</option>
-				    <option>9</option>
-                                    <option>10</option>
-				    <option>11</option>
-                                    <option>12</option>
-				    <option>13</option>
-                                    <option>14</option>
-				    <option>15</option>
-                                    <option>16</option>
-				    <option>17</option>
-                                    <option>18</option>
-				    <option>19</option>
-                                    <option>20</option>
-                                </select>
-                            </div>
-                   	</div>
-                        <br>
-			 <div class="form-group">
-                            <label class="control-label">Equipo 1 </label>
-                            <div class="form-control-cont">
-                                <select class="form-control full" data-validation="required"  data-validation-error-msg="Campo obligatorio">
-                                    <option>1</option>
-                                    <option>2</option>
-				    <option>3</option>
-                                    <option>4</option>
-				    <option>5</option>
-                                    <option>6</option>
-				    <option>7</option>
-                                    <option>8</option>
-				    <option>9</option>
-                                    <option>10</option>
-				    <option>11</option>
-                                    <option>12</option>
-				    <option>13</option>
-                                    <option>14</option>
-				    <option>15</option>
-                                    <option>16</option>
-				    <option>17</option>
-                                    <option>18</option>
-				    <option>19</option>
-                                    <option>20</option>
-                                </select>
-                            </div>
-                   	</div>
-                              
-                            <div align="center">
-                            	
-					<button type="button" class="btn btn-success" onclick="myFunction3()">Guardar Cambios</button>
-							</div>
-		</form> 
-                        <br>
-                        <br>
-                    </div>
-                </div>
-            </section>
-        </section>
-        </div>
+Notify::alert_if(
+        'Equipo Existente',
+        'No se han podido guardar los cambios. Uno o más partidos no se han llevado a cabo',
+        'Reintentar',
+        isset($_GET['n']) && strcasecmp($_GET['n'],'error') == 0); 
+?>
 <!-- MENSAJES
 
 <div class="window-container alerta">

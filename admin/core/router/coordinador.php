@@ -72,7 +72,7 @@ Flight::route("/bajaEquipo", function(){
 Flight::route("/registrarResultados", function(){
     //Flight::redirect('/demo');
     Session::accessOnly(array("role" => 3), function(){
-        #Controller::run("eliminarTorneo");
+        Controller::run("registrarResultados");
         View::render('template/ini'); #Html head, menu, header
         View::render('registrarResultados'); #html content
         View::render('template/fin'); #Html footer
