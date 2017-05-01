@@ -3,8 +3,9 @@
 Flight::route("/", function(){
     //Flight::redirect('/demo');
     Session::access(array("minRole" => 1), function(){
+        Controller::run("resumen");
         View::render('template/ini'); #Html head, menu, header
-        View::render('blank'); #html content
+        View::render('resumen'); #html content
         View::render('template/fin'); #Html footer
     });
 });

@@ -88,6 +88,39 @@ class Torneo{
         mysqli_close($conexion);
     }
 
+    public static function getListTorneosSoccer(){
+        $conexion = Database::connect();
+        $consulta ="SELECT * from Torneo where Tipo_Torneo = 1";
+        if ($resultado=$conexion->query($consulta)) {
+            return $resultado;
+        } else {
+            return "Error: " . mysqli_error($conexion);
+        }
+        mysqli_close($conexion);
+    }
+
+    public static function getListTorneosRapido(){
+        $conexion = Database::connect();
+        $consulta ="SELECT * from Torneo where Tipo_Torneo = 2";
+        if ($resultado=$conexion->query($consulta)) {
+            return $resultado;
+        } else {
+            return "Error: " . mysqli_error($conexion);
+        }
+        mysqli_close($conexion);
+    }
+    
+    public static function getCountEquiposTorneo($IDTorneo){
+        $conexion = Database::connect();
+        $consulta ="SELECT count(*) as count FROM equipo_torneo WHERE IDTorneo = $IDTorneo";
+        if ($resultado=$conexion->query($consulta)) {
+            return $resultado;
+        } else {
+            return "Error: " . mysqli_error($conexion);
+        }
+        mysqli_close($conexion);
+    }
+
      public static function eliminarTorneo($IDTorneo){
         $conexion = Database::connect();
         if ($resultado=$conexion->query("DELETE from torneo WHERE IDTorneo='$IDTorneo'")) {
