@@ -11,6 +11,13 @@
             <li class="<?php isActive('/') ?>">
                 <a href="home">
                     <span>
+                        <i class="ti-hand-open"></i>Bienvenida
+                    </span>
+                </a>
+            </li>
+            <li class="<?php isActive('/resumen') ?>">
+                <a href="resumen">
+                    <span>
                         <i class="ti-dashboard"></i>Resumen
                     </span>
                 </a>
@@ -22,11 +29,7 @@
                     </span>
                 </a>
             </li>
-            <li class="<?php isActive('/horarios') ?>">
-                <a href="/">
-                    <span><i class="ti-medall"></i>Horarios</span>
-                </a>
-            </li>
+
             <li class="submenu <?php isActive('/consultarEquipos') ?>">
                 <a href="consultarEquipos">
                     <span><i class="ti-heart"></i>Equipos</span>
@@ -50,6 +53,13 @@
         <?php Session::showOnly(array("role" => 2 ), function(){ ?>
             <li class="<?php isActive('/') ?>">
                 <a href="home">
+                    <span>
+                        <i class="ti-dashboard"></i>Bienvenida
+                    </span>
+                </a>
+            </li>
+            <li class="<?php isActive('/resumen') ?>">
+                <a href="resumen">
                     <span>
                         <i class="ti-dashboard"></i>Resumen
                     </span>
@@ -104,6 +114,13 @@
         <?php Session::showOnly(array("role" => 3 ), function(){ ?>
             <li class="<?php isActive('/') ?>">
                 <a href="home">
+                    <span>
+                        <i class="ti-dashboard"></i>Bienvenida
+                    </span>
+                </a>
+            </li>
+            <li class="<?php isActive('/resumen') ?>">
+                <a href="resumen">
                     <span>
                         <i class="ti-dashboard"></i>Resumen
                     </span>

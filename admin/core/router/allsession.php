@@ -2,6 +2,27 @@
 #Inicio - Raiz
 Flight::route("/", function(){
     //Flight::redirect('/demo');
+    Session::showOnly(array("role" => 1), function(){
+        //Controller::run("resumen");
+        View::render('template/ini'); #Html head, menu, header
+        View::render('bienvenidaJugador'); #html content
+        View::render('template/fin'); #Html footer
+    });
+    Session::showOnly(array("role" => 2), function(){
+        //Controller::run("resumen");
+        View::render('template/ini'); #Html head, menu, header
+        View::render('bienvenidaCapitan'); #html content
+        View::render('template/fin'); #Html footer
+    });
+    Session::showOnly(array("role" => 3), function(){
+        //Controller::run("resumen");
+        View::render('template/ini'); #Html head, menu, header
+        View::render('bienvenidaCoordinador'); #html content
+        View::render('template/fin'); #Html footer
+    });
+});
+
+Flight::route("/resumen", function(){
     Session::access(array("minRole" => 1), function(){
         Controller::run("resumen");
         View::render('template/ini'); #Html head, menu, header
