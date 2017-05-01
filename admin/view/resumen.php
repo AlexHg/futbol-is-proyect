@@ -36,23 +36,13 @@
         </tbody>
     </table> 
 
-    <h3>Equipos registrados</h3>
-    <table class="table table-striped ">
-        <thead>
-            <tr>
-                <th>#</th>
-                <th>Nombre</th>
-                <th>Inicio</th>
-                <th>Limite de inscripciones</th>
-                <th>Finalización</th>
-                <th>Equipos registrados</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php tabla_torneos_rapido() ?>
-        </tbody>
-    </table> 
+    <br><br><br>
+    <h2>Tablas de resultados</h2>
+    <?php tablas_resultados_Torneos() ?>
 
+    <br><br><br>
+    <h2>Tablas de resultados</h2>
+    <?php #tablas_posiciones_Torneos(); ?>
 </div>
 
 

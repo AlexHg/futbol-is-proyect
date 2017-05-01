@@ -22,6 +22,17 @@ class Torneo{
         mysqli_close($conexion);
     }
 
+    public static function getResultadosTorneo($torneo){
+        $conexion = Database::connect();
+        $consulta ="SELECT SUBSTRING_INDEX(SUBSTRING_INDEX(GROUP_CONCAT(distinct jr.idEquipo), ',', 1), ',', -1) as equipo1, SUBSTRING_INDEX(SUBSTRING_INDEX(GROUP_CONCAT(distinct jr.idEquipo), ',', 2), ',', -1) as equipo2,SUBSTRING_INDEX(SUBSTRING_INDEX(group_concat(distinct jr.golesafavor), ',', 1), ',', -1) as goles1,SUBSTRING_INDEX(SUBSTRING_INDEX(group_concat(distinct jr.golesafavor), ',', 2), ',', -1) as goles2,f.descripcion as jornada ,t.nombre as torneo,hj.diayhora as horario from juegosresultado jr, juego j, horario_juego hj,fase f , torneo t where hj.idhorario=j.idjuego and j.idjuego=jr.idjuego and j.idjuego=1 and jr.idfase=f.idfase and jr.idtorneo=t.idtorneo  and t.idTorneo = $torneo group by hj.diayhora,jr.idfase,jr.idtorneo;";
+        if ($resultado=$conexion->query($consulta)) {
+            return $resultado;
+        } else {
+            return "Error: " . mysqli_error($conexion);
+        }
+        mysqli_close($conexion);
+    }
+
     public static function getEquiposTorneo($torneo){
         $conexion = Database::connect();
         $consulta ="SELECT e.NombreEquipo as nombre, e.idequipo as id from equipo e,equipo_torneo et where et.idequipo=e.idequipo and et.idtorneo = $torneo";
@@ -101,7 +112,7 @@ class Torneo{
 
     public static function getListTorneosRapido(){
         $conexion = Database::connect();
-        $consulta ="SELECT * from Torneo where Tipo_Torneo = 2";
+        $consulta ="SELECT * from Torneo where Tipo_Torneo = 0";
         if ($resultado=$conexion->query($consulta)) {
             return $resultado;
         } else {

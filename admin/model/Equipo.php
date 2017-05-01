@@ -41,6 +41,13 @@ class Equipo{
         $IDJugador = mysqli_fetch_array($res, MYSQLI_NUM);
         return $IDJugador[0];
     }
+    public static function getEquipoById($id){
+        $conexion = Database::connect();
+        $consulta1 = "SELECT * FROM equipo where IDEquipo =$id";
+        $res = mysqli_query($conexion, $consulta1);
+        $IDJugador = mysqli_fetch_array($res, MYSQLI_ASSOC);
+        return $IDJugador;
+    }
 
    public static function eliminarEquipo($IDEquipo){
         $conexion = Database::connect();
