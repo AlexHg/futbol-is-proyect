@@ -20,7 +20,10 @@ Flight::route("/", function(){
         View::render('bienvenidaCoordinador'); #html content
         View::render('template/fin'); #Html footer
     });
-});
+    Session::showNoRole(function(){
+        Flight::redirect('/iniciarSesion');
+    });
+}); 
 
 Flight::route("/resumen", function(){
     Session::access(array("minRole" => 1), function(){

@@ -52,6 +52,11 @@ class Session{
                 $callback();
         }
     }
+    public static function showNoRole(callable $callback){
+        if(!isset($_SESSION["role"])){
+            $callback();
+        }
+    }
     public static function roleName($num){
         if($num == 1){
             return "Jugador";
