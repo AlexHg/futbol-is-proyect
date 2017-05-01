@@ -2,7 +2,7 @@
     <h2>Envía una petición para inscribirte a un Torneo</h2>
 </div>
 <h3>Torneos Disponibles: </h3>
-<form action="action/enviarPeticionTorneo.submit" method="post">
+<form action="inscripcionTorneo" method="post">
     <table class="table table-striped " style="overflow-x: hidden; overflow-y: scroll;">
         <thead>
             <tr>
@@ -13,7 +13,10 @@
             </tr>
         </thead>
         <tbody>
-            <?php mostrarTorneos(); ?>
+            <?php 
+            seleccion();
+            mostrarTorneos();
+            ?>
         </tbody>
     </table> 
 
