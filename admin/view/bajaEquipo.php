@@ -19,9 +19,7 @@
 </form>
 <br>
 <?php
-    Notify::confirm_activedById('Confirmación de baja de Equipo',
-            '¿Está seguro que desea dar de baja a el equipo?',
-            "baja", "submitForm()");
+ 
     Notify::alert_if(
             'Operación Realizada Exitosamente',
             'La operación se realizó exitosamente',
