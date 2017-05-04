@@ -29,8 +29,8 @@ function tabla_juegos_sin_resultado(){
                                     <a href="#" class="modal-close" aria-hidden="true">×</a>
                                 </div>
                                 <div class="modal-body" style="text-align:center;">
-                                    <label for="equipo1res">Goles de <?php echo $equipo1 ?>:</label><input type="number" name="equipo1res" id="equipo1res" value="0"><br><br>
-                                    <label for="equipo2res">Goles de <?php echo $equipo2 ?>:</label><input type="number" name="equipo2res" name="equipo2res" value="0">
+                                    <label for="equipo1res">Goles de <?php echo $equipo1 ?>:</label><br><input type="number" min="0" name="equipo1res" id="equipo1res" value="0"><br><br>
+                                    <label for="equipo2res">Goles de <?php echo $equipo2 ?>:</label><br><input type="number" min="0" name="equipo2res" name="equipo2res" value="0">
                                 </div>
                                 <div class="modal-footer">
                                     <input type="submit" class="btn btn-primary" value="Registrar resultados">
