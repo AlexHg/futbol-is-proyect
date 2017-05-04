@@ -27,6 +27,16 @@ Flight::route('/recuperarCuenta', function(){
     });
 });
 
+Flight::route('/recuperarContrasena', function(){
+    #if session is not open
+    Session::preAccess(function(){
+        Controller::run("recuperarContrasena");
+        View::render('template/ini.noaside'); #Html head, menu, header
+        View::render('recuperarContrasena'); #html content
+        View::render('template/fin'); #Html footer
+    });
+});
+
 # Final - Sin sesión ni permisos
 
 
