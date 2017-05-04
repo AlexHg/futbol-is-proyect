@@ -12,6 +12,7 @@ require "core/Session.php";
 
 require "tools/Notify.php";
 
+
 # Session start 
 session_start();
 

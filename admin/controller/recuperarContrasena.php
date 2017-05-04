@@ -7,15 +7,12 @@
  *
  * don't touch my code  :) , really  don't touch it -.-
  */
-require '../tools/PHPMailerAutoload.php';
+require 'tools/PHPMailerAutoload.php';
 function processingForm(){
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
         if (isset($_POST["example-email"])) {
             $email = $_POST['example-email'];
-
             if(isset($_POST["enviar"])){
-                echo $email;
                sendPass($email);
 
 
@@ -43,7 +40,7 @@ function sendPass($email){
         $row = mysqli_fetch_array($query);
         /*TODO encriptacion del password y desencriptacion aqui  , hacer que reciba el pass del gmail usado atraves de la bd */
         //sendEmail($row['Correo'],$row['Nombre'],encrypt_decrypt('decrypt', $row['contra']));
-
+        echo 'enviando';
         sendEmail($row['Correo'],$row['Nombre'],$row['contra']);
     } else {// no existe en la base de datos
             echo "Error: " . mysqli_error($conexion);
