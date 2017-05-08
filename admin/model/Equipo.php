@@ -28,7 +28,7 @@ class Equipo{
         mysqli_close($conexion);
     }
     public static function numeroJugadoresEquipo($correo){
-        $consulta = 'SELECT count(*) from Equipo_jugador as ej, equipo as e where ej.idEquipo=e.idEquipo and e.correo="$correo"';
+        $consulta = 'SELECT count(usuario.Correo) from equipo, usuario, equipo_jugador, jugador WHERE jugador.Correo = usuario.Correo and jugador.IDJugador = equipo_jugador.IDJugador and equipo.IDEquipo = equipo_jugador.IDEquipo and equipo.Correo ="'.$correo.'"';
         $conexion = Database::connect();
         $res = mysqli_query($conexion, $consulta);
         $jugadores = mysqli_fetch_array($res, MYSQLI_NUM);
@@ -93,7 +93,7 @@ class Equipo{
 
     public static function getJugadoresEquipo($idCapitan){
         $conexion = Database::connect();
-        $consulta ="SELECT usuario.Nombre,usuario.Apellidos,usuario.Correo from equipo, usuario, equipo_jugador, jugador WHERE jugador.Correo = usuario.Correo and jugador.IDJugador = equipo_jugador.IDJugador and equipo.IDEquipo = equipo_jugador.IDEquipo and equipo.Correo = 'Hector@outlook.com'";
+        $consulta ="SELECT usuario.Nombre,usuario.Apellidos,usuario.Correo from equipo, usuario, equipo_jugador, jugador WHERE jugador.Correo = usuario.Correo and jugador.IDJugador = equipo_jugador.IDJugador and equipo.IDEquipo = equipo_jugador.IDEquipo and equipo.Correo = '".$idCapitan."'";
         if ($resultado=$conexion->query($consulta)) {
             return $resultado;
         } else {

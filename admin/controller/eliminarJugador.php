@@ -1,13 +1,14 @@
 <?php
 Model::load("Equipo");
 Model::load("Jugador");
+
 function alerta_pocosJugadores(){
     
     $jugadoresNum = Equipo::numeroJugadoresEquipo($_SESSION['email']);
     if( $jugadoresNum < 11){
          ?>
             <div style="background-color:#F5A9A9; height:30px; padding-top:10px; padding-left: 30px;">
-                <b>Tiene <?php echo $jugadoresNum ?> en su equipo. Recuerde que el numero ideal son 11 jugadores. </b>
+                <b>Tiene <?php echo $jugadoresNum ?> jugadores en su equipo. Recuerde que el numero ideal son 11 jugadores. </b>
             </div>
         <?php
     }
@@ -35,7 +36,8 @@ function seleccionEliminados(){
     }
 } 
 function imprimeTabla(){
-    $resultado =Equipo::getJugadoresEquipo(Jugador::getIdJugadorByCorreo($_SESSION['email']));
+    
+    $resultado =Equipo::getJugadoresEquipo($_SESSION['email']);
     #print_r($resultado);
     
     while ($row = $resultado->fetch_array(MYSQLI_ASSOC)) {

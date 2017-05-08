@@ -2,7 +2,7 @@
 class Jugador{
     public static function getIdJugadorByCorreo($Correo){
         $conexion = Database::connect();
-        $consulta1 = "select IDJugador from jugador where correo ='$Correo'";
+        $consulta1 = "SELECT IDJugador from jugador where correo ='".$Correo."'";
         $res = mysqli_query($conexion, $consulta1);
         $IDJugador = mysqli_fetch_array($res, MYSQLI_NUM);
         return $IDJugador[0];
