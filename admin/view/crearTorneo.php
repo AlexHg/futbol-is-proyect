@@ -1,3 +1,4 @@
+
                 <div id="content-title">
                     <h2>Crear Torneo</h2>
                 </div>
@@ -10,7 +11,7 @@
                                 </div>
                             </div>
                        
-                        <div class="form-group">
+                       <!-- <div class="form-group">
                             <label class="control-label">Fecha Inicio</label>
                             <div class="form-control-cont">
                                 <input class="form-control full" name="fechaInicio" type="text" id="fechaInicio" data-validation="date" data-validation-help="Formato de fecha yy-mm-dd">
@@ -21,9 +22,9 @@
                                 $( "#fechaInicio" ).datepicker();
                                 $( "#fechaInicio" ).datepicker( "option", "dateFormat", "yy-mm-dd" );
                             } );
-                        </script>
+                        </script>-->
                         
-                        <div class="form-group">
+                        <!--<div class="form-group">
                             <label class="control-label">Fecha límite inscripcion</label>
                             <div class="form-control-cont">
                                 <input class="form-control full" name="fechaLimite" type="text" id="fechaLimite" data-validation="date"  data-validation-help="Formato de fecha yy-mm-dd">
@@ -34,7 +35,7 @@
                                 $( "#fechaLimite" ).datepicker();
                                 $( "#fechaLimite" ).datepicker( "option", "dateFormat", "yy-mm-dd" );
                             } );
-                        </script>
+                        </script>-->
                         <div class="form-group">
                             <label class="control-label">Tipo Torneo</label>
                             <div class="form-control-cont">
@@ -103,6 +104,12 @@
             'Se seleccionaron menos de 4 días de juego, por favor ingrese más días.',
             'Reintentar',
             isset($_GET['n']) && strcasecmp($_GET['n'],'nodays') == 0);
+
+    Notify::alert_if(
+            'No ha seleccionado ni un dia de juego',
+            'Por favor ingrese al menos 4 dias de juego.',
+            'Reintentar',
+            isset($_GET['n']) && strcasecmp($_GET['n'],'zdays') == 0);
 ?>
 <!--Mensajes para esta pantalla
      
