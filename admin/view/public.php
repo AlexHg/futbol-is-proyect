@@ -11,7 +11,7 @@
         <link href="source/css/style.css" rel="stylesheet">
         <link href="source/css/custom.css" rel="stylesheet">
         <link href="source/css/own.css" rel="stylesheet">
-        
+        <base target="_parent">
     </head>
     <body>
         <div class="site-wrapper clearfix">
@@ -22,7 +22,7 @@
                 <div class="header__top-bar clearfix">
                     <div class="container">
                     <ul class="nav-account">
-                        <li class="nav-account__item"><a href="admin" data-toggle="modal" data-target="#modal-login-register-tabs">Acceder a mi cuenta</a></li>
+                        <li class="nav-account__item"><a href="home" data-toggle="modal" data-target="#modal-login-register-tabs">Acceder a mi cuenta</a></li>
                     </ul>
                     </div>
                 </div>
