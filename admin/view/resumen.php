@@ -53,7 +53,7 @@
         var tabla_div = variable_conTabla;
         var tabla_html = tabla_div.replace(/ /g, '%20');
         tmpElemento.href = data_type + ', ' + tabla_html;
-        tmpElemento.download = 'Donativos.xls';
+        tmpElemento.download = 'Reporte club de futból.xls';
         tmpElemento.click();
     }
 </script>
