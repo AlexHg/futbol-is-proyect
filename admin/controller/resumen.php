@@ -10,7 +10,7 @@ function tabla_resultados_torneo($torneo){
         ?>
             <tr>
                 <th scope="row"><?php echo $equipo1." VS ".$equipo2 ?></th>
-                <td><?php echo $partido["goles1"]." - ".$partido["goles2"] ?></td>
+                <td><?php echo $partido["goles1"]." a ".$partido["goles2"] ?></td>
                 <td><?php echo $partido["jornada"] ?></td>
                 <td><?php echo $partido["horario"] ?></td>
             </tr>

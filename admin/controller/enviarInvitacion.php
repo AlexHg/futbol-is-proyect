@@ -9,9 +9,9 @@ function seleccion(){
             foreach ($jugador as $seleccionado){
                 Capitan::enviarInvitacion($seleccionado,$_SESSION["email"]);
             }
-                    ?>
-                   <div style="background-color:#81F781; height:30px; padding-top:10px; padding-left: 30px;"><b>La invitación fue enviada con éxito</b></div>
-                   <?php
+            ?>
+                <div style="background-color:#81F781; height:30px; padding-top:10px; padding-left: 30px;"><b>La invitación fue enviada con éxito</b></div>
+            <?php
         }
         else{
             ?>
@@ -23,14 +23,14 @@ function seleccion(){
 
 function imprimirTabla(){
     $res = Jugador::obtenerTodos();
-    while($resultados = $res->fetch_array(MYSQLI_ASSOC)){
+    $i = 0;
+    while($resultados = $res->fetch_array(MYSQLI_ASSOC)){ $i++;
         echo '<tr>
-            <th>    
-                <div class="checkbox checkbox-primary">
-                <input id="checkbox0c" type="checkbox" name="seleccionados[]" value="'.$resultados["Correo"].'">
-                <label for="checkbo0c">
-                </label>
-                </div>
+                <th>    
+                    <div class="checkbox checkbox-primary">
+                        <input id="checkbox'.$i.'" type="checkbox" name="seleccionados[]" value="'.$resultados["Correo"].'">
+                        <label for="checkbox'.$i.'"></label>
+                    </div>
                 </th>
                 <td>'.$resultados["Nombre"].'</td>
                 <td>'.$resultados["Apellidos"].'</td>
