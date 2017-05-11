@@ -15,15 +15,8 @@
                     </span>
                 </a>
             </li>
-            <li class="<?php isActive('/resumen') ?>">
-                <a href="#">
-                    <span>
-                        <i class="ti-dashboard"></i>Resumen
-                    </span>
-                </a>
-            </li>
             <li class="submenu <?php isActive('/torneo') ?>">
-                <a href="#">
+                <a href="/">
                     <span>
                         <i class="ti-crown"></i>Torneos
                     </span>
@@ -57,16 +50,8 @@
                         <i class="ti-dashboard"></i>Bienvenida
                     </span>
                 </a>
-            </li>
-            <li class="<?php isActive('/resumen') ?>">
-                <a href="#">
-                    <span>
-                        <i class="ti-dashboard"></i>Resumen
-                    </span>
-                </a>
-            </li>
             <li class="submenu <?php isActive('/torneo') ?>">
-                <a href="#">
+                <a href="/">
                     <span>
                         <i class="ti-crown"></i>Torneos
                     </span>
