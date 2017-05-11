@@ -16,7 +16,7 @@
                 </a>
             </li>
             <li class="<?php isActive('/resumen') ?>">
-                <a href="resumen">
+                <a href="#">
                     <span>
                         <i class="ti-dashboard"></i>Resumen
                     </span>
@@ -59,7 +59,7 @@
                 </a>
             </li>
             <li class="<?php isActive('/resumen') ?>">
-                <a href="resumen">
+                <a href="#">
                     <span>
                         <i class="ti-dashboard"></i>Resumen
                     </span>
