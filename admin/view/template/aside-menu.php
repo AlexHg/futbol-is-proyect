@@ -66,7 +66,7 @@
                 </a>
             </li>
             <li class="submenu <?php isActive('/torneo') ?>">
-                <a href="torneo">
+                <a href="#">
                     <span>
                         <i class="ti-crown"></i>Torneos
                     </span>
@@ -74,8 +74,6 @@
                 </a>
                 <ul class="submenu-content">
                     <li class="<?php isActive('/inscripcionTorneo') ?>"><a href="inscripcionTorneo"><span><i class="ti-pencil-alt"></i>Inscribir a Torneo</span></a></li>
-                    <li class="<?php isActive('/elegirHorario') ?>"><a href="elegirHorario"><span><i class="ti-alarm-clock"></i>Elejir Horario de Partido</span></a></li>
-                    <li class="<?php isActive('/modificarHorario') ?>"><a href="modificarHorario"><span><i class="ti-settings"></i>Modificar Horario de Partido</span></a></li>
                 </ul>
             </li>
             <li class="<?php isActive('/horarios') ?>">
@@ -127,7 +125,7 @@
                 </a>
             </li>
             <li class="submenu <?php isActive('/torneo') ?>">
-                <a href="torneo">
+                <a href="#">
                     <span>
                         <i class="ti-crown"></i>Torneos
                     </span>
