@@ -96,9 +96,9 @@ class Torneo{
         mysqli_close($conexion);
     }
 
-    public static function crearTorneo($nombre,$tipo/*,$fechaInicio,$fechaLimite*/){        
+    public static function crearTorneo($nombre,$tipo,$fechaInicio,$fechaLimite){        
         $conexion = Database::connect();
-        $consulta ="INSERT into torneo (Nombre,Tipo_Torneo)values('$nombre',$tipo);"; 
+        $consulta ="INSERT into torneo (Nombre,Tipo_Torneo, Fecha_Inicio, Fecha_Cierre_Inscripcion)values('$nombre',$tipo,'$fechaInicio','$fechaLimite');";
         if ($conexion->query($consulta)) {
             return true;
         } else {
