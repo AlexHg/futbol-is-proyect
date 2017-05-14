@@ -27,7 +27,7 @@
             </div>
 
             <div class="form-group">
-                <label class="control-label">Telefono</label>
+                <label class="control-label">Teléfono</label>
                 <div class="form-control-cont">
                     <input type="text" class="form-control full" name="telefono" onkeydown="return soloNumeros(event)" data-validation="required length" data-validation-length="10"  data-validation-error-msg="Se ha omitido el teléfono">
                 </div>
