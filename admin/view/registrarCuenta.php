@@ -95,8 +95,8 @@ Notify::confirm_if(
 
 
 Notify::alert_if(
-    'Creación de Cuenta Fallida',
-    'No ha sido posible registrar la cuenta, inténtalo de nuevo más tarde',
+    'Datos Incorrectos',
+    'Los datos ingresados son incorrectos o ya se encuentran registrados, favor de verificarlos',
     'Reintentar',
     isset($_GET['n']) && strcasecmp($_GET['n'],'err') == 0); 
 
