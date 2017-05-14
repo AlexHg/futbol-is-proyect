@@ -58,7 +58,7 @@
         </div>
         
         <div class="form-group">
-            <label >Telefono</label>
+            <label >Teléfono</label>
             <div class="form-control-cont">
                 <input type="text" name="phone" class="form-control full" id="phone" value="<?php echo $Datos[4]; ?>" data-validation="required length"  data-validation-length="10" data-validation-error-msg="Se ha omitido el teléfono">
             </div>
