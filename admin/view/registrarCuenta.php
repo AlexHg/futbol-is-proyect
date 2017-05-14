@@ -48,7 +48,7 @@
 
             </div>
             <br><br>
-            <input type="submit" name="submit" value="Regístrarse" class="btn btn-primary" data-type="alerta">
+            <input type="submit" name="submit" value="Registrarse" class="btn btn-primary" data-type="alerta">
             <br><br>
         </form>
     </center>
