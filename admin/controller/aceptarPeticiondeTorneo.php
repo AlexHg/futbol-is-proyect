@@ -51,7 +51,7 @@ function procesarSolicitud(){
 
             } else {
              ?>
-            <div style="background-color:#F5A9A9; height:30px; padding-top:10px; padding-left: 30px;"><b>No hay peticiones seleccionadas, por favor selecciona una</b></div>
+            <div style="background-color:#F5A9A9; height:30px; padding-top:10px; padding-left: 30px;"><b>No hay peticiones seleccionadas, por favor seleccione una</b></div>
             <?php
 
             }
