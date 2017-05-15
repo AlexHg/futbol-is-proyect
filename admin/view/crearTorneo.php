@@ -101,12 +101,12 @@
     
     Notify::alert_if(
             'Deben seleccionarse al menos 4 días de juego',
-            'Se seleccionaron menos de 4 días de juego, por favor ingrese más días.',
+            'Por favor ingrese al menos 4 dias de juego.',
             'Reintentar',
             isset($_GET['n']) && strcasecmp($_GET['n'],'nodays') == 0);
 
     Notify::alert_if(
-            'No ha seleccionado ni un dia de juego',
+            'Deben seleccionarse al menos 4 días de juego ',
             'Por favor ingrese al menos 4 dias de juego.',
             'Reintentar',
             isset($_GET['n']) && strcasecmp($_GET['n'],'zdays') == 0);
