@@ -1,5 +1,5 @@
 <div id="content-title">
-    <h2>Aceptar Invitacion de Equipo</h2>
+    <h2>Aceptar Invitación de Equipo</h2>
 </div>
 <h3>Estas son las invitaciones de los capitanes que te quieren en su equipo: </h3>
 <div id="content-body">
