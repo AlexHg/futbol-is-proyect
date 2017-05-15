@@ -14,7 +14,6 @@
                 <th>Nombre</th>
                 <th>Apellido</th>
                 <th>Correo</th>
-                <th>Avatar</th>
             </tr>
             </thead>
             <tbody>
