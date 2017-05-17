@@ -6,9 +6,6 @@
  * Time: 00:16
  * don't touch my code  :) , really  don't touch it -.-
  */
-include '../core/Database.php';
-include  '../core/Config.php';
-include  '../controller/recuperarContrasena.php';
 
 function encrypt_decrypt($action, $string) {
     $output = false;
@@ -33,7 +30,7 @@ function encrypt_decrypt($action, $string) {
 
     return $output;
 }
-///****************TESTER********////
+/****************TESTER******
 $plain_txt = "operacion marmota";
 echo "Plain Text = $plain_txt\n";
 
@@ -52,5 +49,4 @@ $query = mysqli_query($conexion,"SELECT Nombre,Correo  FROM usuario WHERE Correo
 $row = mysqli_fetch_array($query);
 echo '<span style="color: white;background-color: #1d937c">'.'gato miau :3'.'</span>';
 sendPass('djcriz5@gmail.com');
-
-/**************************END TESTER*****/
+/************************END TESTER*****/

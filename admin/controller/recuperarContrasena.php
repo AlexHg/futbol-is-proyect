@@ -8,15 +8,15 @@
  * don't touch my code  :) , really  don't touch it -.-
  */
 require 'tools/PHPMailerAutoload.php';
+require 'tools/sec.php';
 function processingForm(){
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        echo  'hello there';
         if (isset($_POST["example-email"])) {
             $email = $_POST['example-email'];
             if(isset($_POST["enviar"])){
                sendPass($email);
-
-
-
+                    echo  $email;
             }else if(isset($_POST["rechazar"])){
 
                //TODO

@@ -22,6 +22,7 @@ Flight::route("/", function(){
     });
     Session::showNoRole(function(){
         Flight::redirect('/iniciarSesion');
+
     });
 }); 
 
