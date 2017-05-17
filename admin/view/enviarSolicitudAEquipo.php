@@ -9,7 +9,6 @@
                 <th>Elegir</th>
                 <th>Equipo</th>
                 <th>Capitán</th>
-                <th>imagen</th>
             </tr>
             </thead>
             <tbody>
