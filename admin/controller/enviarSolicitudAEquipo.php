@@ -23,7 +23,6 @@ function mostrarEquipos(){
         echo '</th>';
         echo '<td>' . $row['NombreEquipo'] . '</td>';
         echo '<td>' . $row['Nombre'] . '</td>';
-        echo '<td>' . $row['Imagen'] . '</td>';
         echo '</tr>';
 
     }
