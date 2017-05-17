@@ -40,7 +40,7 @@
                 </div>
             </div>
             <br>
-            <div class="form-group">
+            <div class="form-group" style="display:none;">
                 <label class="control-label" >Elija su avatar</label>
                 <input type="file" class="filestyle" data-buttonname="btn-default" id="image" accept="image/*" tabindex="-1" style="position: absolute; clip: rect(0px 0px 0px 0px);">
                 <div style="margin-left:20px;"></div>
