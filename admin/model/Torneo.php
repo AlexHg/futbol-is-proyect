@@ -239,5 +239,15 @@ class Torneo{
         }
         mysqli_close($conexion); //--//*/
     }
+    public static function recibirDias($IDTorneo){
+        $conexion = Database::connect();
+        $consulta ="select GROUP_CONCAT(distinct g.dia) as dias from grupo g,torneo t, torneo_grupo tg where g.idGrupo=tg.idgrupo and tg.idtorneo=$IDTorneo";
+        if ($resultado=$conexion->query($consulta)) {
+            return $resultado;
+        } else {
+            return "Error: " . mysqli_error($conexion);
+        }
+        mysqli_close($conexion);
+    }
 }
 

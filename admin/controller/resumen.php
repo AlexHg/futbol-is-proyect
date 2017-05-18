@@ -83,15 +83,14 @@ function tabla_torneos_soccer_index(){
     $torneosList = Torneo::getListTorneosSoccer();
     while ($torneo = $torneosList->fetch_array(MYSQLI_ASSOC)) {
         $countEquipos = Torneo::getCountEquiposTorneo($torneo["IDTorneo"])->fetch_array(MYSQLI_ASSOC)["count"];
-
+        $dia=Torneo::recibirDias($torneo["IDTorneo"])->fetch_array(MYSQLI_ASSOC)["dias"];
         ?>
             <tr>
                 <th scope="row"><?php echo $torneo["IDTorneo"] ?></th>
                 <td><?php echo $torneo["Nombre"] ?></td>
                 <td><?php echo $torneo["Fecha_Inicio"] ?></td>
                 <td><?php echo $torneo["Fecha_Fin"] ?></td>
-                <td><?php echo $torneo["Fecha_Cierre_Inscripcion"] ?></td>
-
+                <td><?php echo $dia ?></td>
             </tr>
         <?php
     }
@@ -101,14 +100,14 @@ function tabla_torneos_rapido_index(){
     $torneosList = Torneo::getListTorneosRapido();
     while ($torneo = $torneosList->fetch_array(MYSQLI_ASSOC)) {
         $countEquipos = Torneo::getCountEquiposTorneo($torneo["IDTorneo"])->fetch_array(MYSQLI_ASSOC)["count"];
-
+        $dia=Torneo::recibirDias($torneo["IDTorneo"])->fetch_array(MYSQLI_ASSOC)["dias"];
         ?>
             <tr>
                 <th scope="row"><?php echo $torneo["IDTorneo"] ?></th>
                 <td><?php echo $torneo["Nombre"] ?></td>
                 <td><?php echo $torneo["Fecha_Inicio"] ?></td>
                 <td><?php echo $torneo["Fecha_Fin"] ?></td>
-                <td><?php echo $torneo["Fecha_Cierre_Inscripcion"] ?></td>
+                <td><?php echo $dia ?></td>
 
             </tr>
         <?php

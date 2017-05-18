@@ -118,7 +118,7 @@
                             <!-- Match Preview -->
                             <?php tablas_resultados_Torneos_index() ?>
 
-                            
+
                         </div>
                         <!-- Match Preview / End -->
                     </aside>
@@ -131,58 +131,72 @@
         <div style="margin-top:4rem;"></div>
 
         <div class="container" id="principal-content">
-            <div class="col-md-8">
-                <aside class="widget card widget--sidebar widget-game-result">
-                    <div class="widget__title card__header card__header--has-btn">
-                        <h4>Ultimo partido Torneo 26 - Fútbol rapido</h4>
-                        <a href="#" class="btn btn-default btn-outline btn-xs card-header__button">Ver todos</a>
-                    </div>
-                    <div class="widget__content card__content">
-                        <!-- Game Score -->
-                        <div class="widget-game-result__section" style="display:flex;justify-content: center;">
-                            <div class="widget-game-result__section-inner" style="max-width: 450px;">
-                                <header class="widget-game-result__header">
-                                    <h3 class="widget-game-result__title">Cuarto de final</h3>
-                                    <time class="widget-game-result__date" datetime="2016-03-24">VIERNES 25 DE MARZO</time>
-                                </header>
+            <div class="col-md-12">
 
-                                <div class="widget-game-result__main">
-                                    <!-- 1st Team -->
-                                    <div class="widget-game-result__team widget-game-result__team--first">
-                                        <figure class="widget-game-result__team-logo">
-                                            <a href="#"><img src="source/img/alchemists_last_game_results_big.png" alt=""></a>
-                                        </figure>
-                                        <div class="widget-game-result__team-info">
-                                            <h5 class="widget-game-result__team-name">Alchemists</h5>
-                                            <div class="widget-game-result__team-desc">Elric Bros School</div>
-                                        </div>
-                                    </div>
-                                    <!-- 1st Team / End -->
+                <div class="container">
+                    <aside class="widget widget--sidebar card widget-preview col-md-12">
+                        <div class="widget__content card__content">
+                            <div class="widget__title card__header card__header--has-btn">
+                                <h4>Torneos</h4>
 
-                                    <div class="widget-game-result__score-wrap">
-                                        <div class="widget-game-result__score">
-                                            <span class="widget-game-result__score-result widget-game-result__score-result--winner">2</span> <span class="widget-game-result__score-dash">-</span> <span class="widget-game-result__score-result widget-game-result__score-result--loser">0</span>
-                                        </div>
-                                        <div class="widget-game-result__score-label">Final Score</div>
-                                    </div>
-
-                                    <!-- 2nd Team -->
-                                    <div class="widget-game-result__team widget-game-result__team--second">
-                                        <figure class="widget-game-result__team-logo">
-                                            <a href="#"><img src="source/img/logo-l-clovers--sm.png" alt=""></a>
-                                        </figure>
-                                        <div class="widget-game-result__team-info">
-                                            <h5 class="widget-game-result__team-name">Clovers</h5>
-                                            <div class="widget-game-result__team-desc">St Paddy's Institute</div>
-                                        </div>
-                                    </div>
-                                    <!-- 2nd Team / End -->
-                                </div>
                             </div>
+                            <!-- Match Preview -->
+                               <h5> Torneos de f. soccer</h5>
+
+                            <table class="table  table-striped ">
+
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Nombre</th>
+                                        <th>Inicio</th>
+                                        <th>Limite de inscripciones</th>
+                                        <th>Dias</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php tabla_torneos_soccer_index() ?>
+                                </tbody>
+                            </table>
+                            <br>
+                            <h5>Torneos de f. rapido</h5>
+                            <table class="table table-striped ">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Nombre</th>
+                                        <th>Inicio</th>
+                                        <th>Limite de inscripciones</th>
+                                        <th>Dias</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php tabla_torneos_rapido_index() ?>
+                                </tbody>
+                            </table>
+
                         </div>
-                        <!-- Game Score / End -->
-                    </div>
-                </aside>
+                        <!-- Match Preview / End -->
+                    </aside>
+                </div>
+
+                <div class="container">
+                    <aside class="widget card widget--sidebar widget-game-result">
+
+                        <div class="widget__content card__content">
+                            <!-- Game Score -->
+
+
+
+
+
+
+                            <!-- Game Score / End -->
+                        </div>
+                    </aside>
+                </div>
                 <div class="main-news-banner main-news-banner--soccer-ball">
                     <div class="main-news-banner__inner">
                         <div class="posts posts--simple-list posts--simple-list--xlg">
@@ -205,59 +219,6 @@
                     </div>
 
                 </div>
-            </div>
-            <div class="col-md-4">
-                <aside class="widget card widget--sidebar widget-standings">
-                    <div class="widget__title card__header card__header--has-btn">
-                        <h4>Torneos</h4>
-
-                    </div>
-                    <div class="widget__content card__content">
-                        <div class="table-responsive">
-                            <table class="table table-hover table-standings">
-                            <h5> Torneos de f. soccer</h5>
-
-                                <table class="table table-striped table-responsive ">
-
-                                    <thead>
-
-
-
-                                        <tr>
-                                            <th>#</th>
-                                            <th>Nombre</th>
-                                            <th>Inicio</th>
-                                            <th>Limite de inscripciones</th>
-                                            <th>Finalización</th>
-
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <?php tabla_torneos_soccer_index() ?>
-                                    </tbody>
-                                </table>
-
-                                <h5>Torneos de f. rapido</h5>
-                                <table class="table table-striped table-responsive  ">
-                                    <thead>
-                                        <tr>
-                                            <th>#</th>
-                                            <th>Nombre</th>
-                                            <th>Inicio</th>
-                                            <th>Limite de inscripciones</th>
-                                            <th>Finalización</th>
-
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <?php tabla_torneos_rapido_index() ?>
-                                    </tbody>
-                                </table>
-
-                            </table>
-                        </div>
-                    </div>
-                </aside>
             </div>
         </div>
 
