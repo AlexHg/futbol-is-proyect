@@ -19,6 +19,15 @@
     <link rel="stylesheet" href="source/css/alerts.css">
     <link rel="stylesheet" href="source/css/notific/modal.css">
     <script src="source/js/jquery.js"></script>
+    <script type="text/javascript">
+        
+        window.smartlook||(function(d) {
+        var o=smartlook=function(){ o.api.push(arguments)},h=d.getElementsByTagName('head')[0];
+        var c=d.createElement('script');o.api=new Array();c.async=true;c.type='text/javascript';
+        c.charset='utf-8';c.src='https://rec.smartlook.com/recorder.js';h.appendChild(c);
+        })(document);
+        smartlook('init', 'b1870c0caf443a359541cb9c16950ad6e36f1698');
+    </script>
 </head>
 <body>
     <div id="page-content">
