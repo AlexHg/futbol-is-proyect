@@ -267,5 +267,20 @@ class Torneo{
         $conexion = Database::connect();
         return $conexion->query("SELECT Tipo_Torneo from torneo where Nombre='$nombreTorneo'")->fetch_array(MYSQLI_ASSOC)['Tipo_Torneo'];
     }
+
+    public static function getIdByNombre($nombreTorneo){
+        $conexion = Database::connect();
+        return $conexion->query("SELECT IDTorneo from torneo WHERE Nombre='$nombreTorneo'")->fetch_array(MYSQLI_ASSOC)['IDTorneo'];
+    }
+
+    public static function getPartidosTorneo($idTorneo){
+        $conexion = Database::connect();
+        if($resultado = $conexion->query("SELECT j.idjuego, hj.diayhora as horario, f.descripcion as fase, t.nombre as torneo, GROUP_CONCAT(distinct e.nombreequipo) as equipo from juego j, horario_juego hj, torneo t,fase f,equipo e where idjuego not in (select jr.idjuego from juegosresultado jr) and  e.idequipo=j.idequipo and j.idhorario=hj.idhorario and j.idfase=f.idfase and j.idtorneo=t.idtorneo and t.idtorneo=$idTorneo group by(idjuego)")){
+            return $resultado;
+        }else{
+            return "Error: " . mysqli_error($conexion);
+        }
+        mysqli_close($conexion);
+    }
 }
 

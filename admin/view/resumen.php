@@ -1,57 +1,67 @@
 <div id="content-title">
     <!--<h2 style="display:flex;justify-content:space-between;">Resumen <small><small><button class="btn btn-primary" onclick="descargarExcel(Tablas)">Generar Reporte .XLS</button></small></small></h2> 
-    -->
+-->
 </div>
 <div id="content-body">
-            <center><h3>Selecciona la informacion que deseas desplegar:</h3></center>
-        <form role="form" method="POST" action="resumen">         
-            <div class="form-group" style="display: block;text-align: center;">
-                <div class="form-control-cont">
-                    <select class="form-control half" style="width: 50%" id="reporteSelect" name="reporteSelect">
-                        <option>Tabla General de Torneo</option>
-                        <option>Enfrantamientos Por Partido</option>
-                    </select>
-                </div>
+    <center><h3>Selecciona la informacion que deseas desplegar:</h3></center>
+    <form role="form" method="POST" action="resumen">         
+        <div class="form-group" style="display: block;text-align: center;">
+            <div class="form-control-cont">
+                <select class="form-control half" style="width: 50%" id="reporteSelect" name="reporteSelect">
+                    <option>Tabla General de Torneo</option>
+                    <option>Enfrentamientos Por Partido</option>
+                </select>
             </div>
-            <div id="extraReporte1" class="form-group" style="display: flex;width: 50%;margin-left: 25%">
-                <label class="control-label">Torneo</label>
-                <div class="form-control-cont">
-                    <select class="form-control full" name="nombreTorneo" id="torneoSelect">
-                        <?php enlistarTorneos(); ?>
-                    </select>
-                </div>
-                <label class="control-label">Fase</label>
-                <div class="form-control-cont">
-                    <select class="form-control full" name="fase" id="faseSelect">
-                        <option>Actual</option>
-                        <option>Jornada1</option>
-                        <option>Jornada2</option>
-                        <option>Jornada3</option>
-                        <option>Cuartos de Final</option>
-                        <option>Semifinal</option>
-                        <option>Octavos de Final</option>
-                        <option>Final</option>
-                        <?php //enlistarFases() ?>
-                    </select>
-                </div>
+        </div>
+        <div id="extraReporte1" class="form-group" style="display: flex;width: 50%;margin-left: 25%">
+            <label class="control-label">Torneo</label>
+            <div class="form-control-cont">
+                <select class="form-control full" name="nombreTorneo" id="torneoSelect">
+                    <?php enlistarTorneos(); ?>
+                </select>
             </div>
-            <div class="form-group half" style="text-align: right;width: 76%">
-                <div class="form-control-cont">
-                    <input type="submit" name="generate" class="btn btn-primary" value="Generar">                  
-                </div>
+            <label class="control-label">Fase</label>
+            <div class="form-control-cont">
+                <select class="form-control full" name="fase" id="faseSelect">
+                    <option>Actual</option>
+                    <option>Jornada1</option>
+                    <option>Jornada2</option>
+                    <option>Jornada3</option>
+                    <option>Cuartos de Final</option>
+                    <option>Semifinal</option>
+                    <option>Octavos de Final</option>
+                    <option>Final</option>
+                    <?php //enlistarFases() ?>
+                </select>
             </div>
-        </form>
-        <hr/> 
-        <?php
-            mostrarReporte();
-        ?>
+        </div>
+        <div id="extraReporte2" class="form-group" style="display: none;width: 50%;margin-left: 25%">
+            <label class="control-label">Torneo</label>
+            <div class="form-control-cont">
+                <select class="form-control full" name="nombreTorneo2" id="torneoSelect">
+                    <?php enlistarTorneos(); ?>
+                </select>
+            </div>
+        </div>
+        <div class="form-group half" style="text-align: right;width: 76%">
+            <div class="form-control-cont">
+                <input type="submit" name="generate" class="btn btn-primary" value="Generar">                  
+            </div>
+        </div>
+    </form>
+    <hr/>
+<?php
+mostrarReporte();
+?>
 <script type="text/javascript">
     $("#reporteSelect").on('change', function() {
         var sel = $("#reporteSelect").val();
         if (sel=='Tabla General de Torneo') {
             $("#extraReporte1").css("display", "flex");
+            $("#extraReporte2").css("display", "none");
         }else{
             $("#extraReporte1").css("display", "none");
+            $("#extraReporte2").css("display", "flex");
         }
     });  
 </script>

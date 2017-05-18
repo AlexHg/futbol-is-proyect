@@ -12,6 +12,24 @@ function enlistarTorneos(){
 function mostrarReporte(){
     if(isset($_POST['reporteSelect'])){
     switch ($_POST['reporteSelect']) {
+        case 'Enfrentamientos Por Partido': // 2
+        echo "<h2>Partidos sin Resultados Registrados Torneo: ".$_POST['nombreTorneo2']."</h2>";
+            $resultado = Torneo::getPartidosTorneo(Torneo::getIdByNombre($_POST['nombreTorneo2']));
+            if($resultado->num_rows > 0){
+                echo '<form role="form" method="POST" action="action/resumen.submit" target="_blank"><div class="form-group"><table style="text-align: center" width="100%"><tr>';
+                $index = 0;
+                while ($partido = $resultado->fetch_array(MYSQLI_ASSOC)) {
+                    $equipo1 = explode(',', $partido['equipo'])[0];
+                    $equipo2 = explode(',', $partido['equipo'])[1];
+                    if($index==3){ echo "</tr><tr>"; $index =0; }
+                    echo '<td><h4>'.$equipo1.'</h4><h2>VS</h2><h4>'.$equipo2.'</h4><button type="submit" class="btn btn-primary" value="'.$partido['idjuego'].'" name="Partido">Imprimir</button></td>';
+                    $index++;
+                }
+                echo '</tr></table></div></form>';
+            }else{
+                echo "No hay partidos sin jugar en este Torneo";
+            }
+        break;
         case 'Tabla General de Torneo': // 3
             $resultado = Torneo::getResultadosTorneo($_POST['nombreTorneo']);
             $tipo = Torneo::getTipo($_POST['nombreTorneo']);
