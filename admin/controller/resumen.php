@@ -44,12 +44,22 @@ function mostrarReporte(){
             arsort($tablaGeneral); //DESC
             echo '<table class="table table-striped"><tr><th>#</th><th>Equipo</th><th>Puntos</th></tr>'; // Primer Fila
             $pos = 0;
+            $index = 0;
+            $prev = 0;
             foreach ($tablaGeneral as $key => $value) {
+                $index++;
                 echo '<tr>';
-                echo "<td>".++$pos."</td>";
+                if($value == $prev)
+                    echo "<td>".$pos."</td>";
+                else{
+                    $pos = $index;
+                    echo "<td>".$pos."</td>";
+                }
                 echo "<td>".$key."</td>";
                 echo "<td>".$value."</td>";
                 echo '</tr>';
+                $prev = $value;
+
             }
             break;
         
