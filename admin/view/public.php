@@ -108,7 +108,7 @@
             <div class="covershow"></div>
             <div class="contentshow ">
                 <div class="container" align="center">
-                    <h1 class="page-heading__title"><span style="font-size:45px;">CLUB DE Fútbol & Fútbol RAPIDO </span><br><span class="highlight">PROXIMOS PARTIDOS</span> </h1>
+                    <h1 class="page-heading__title"><span style="font-size:45px;">CLUB DE Fútbol & Fútbol RÁPIDO </span><br><span class="highlight">PRÓXIMOS PARTIDOS</span> </h1>
                 </div>
 
                 <div class="container">
