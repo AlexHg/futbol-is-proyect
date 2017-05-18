@@ -15,7 +15,7 @@ function seleccion(){
         }
         else{
             ?>
-            <div style="background-color:#F5A9A9; height:30px; padding-top:10px; padding-left: 30px;"><b>No hay jugadores seleccionados, por favor seleccione uno</b></div>
+            <div style="background-color:#F5A9A9; height:30px; padding-top:10px; padding-left: 30px;"><b>No hay jugadores seleccionados, por favor selecciona uno</b></div>
             <?php
         }
     }
