@@ -13,8 +13,8 @@
                 <a href="#">Help</a>
                 <a href="#">Contact</a>-->
             </nav>
-            <nav>
-                <a href="#" id="notification">
+            <nav >
+                <a href="#" id="notification" style="display:none;">
                     <i class="ti-bell" style="position:relative;">
                         <span class="badge badge-danger" style="position:absolute; top:0;right:-15px;">32</span>
                     </i>

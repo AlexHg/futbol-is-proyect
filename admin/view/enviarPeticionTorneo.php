@@ -6,7 +6,7 @@
     <table class="table table-striped " style="overflow-x: hidden; overflow-y: scroll;">
         <thead>
             <tr>
-                <th><span><i class="ti-layout-width-full"></i></span> Nombre de Torneo</th>
+                <th>Nombre de Torneo</th>
                 <th>Fecha de Inicio</th>
                 <th>Días de Juego</th>
                 <th>Tipo de Torneo</th>
