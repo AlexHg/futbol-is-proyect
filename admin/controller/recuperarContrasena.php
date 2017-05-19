@@ -11,18 +11,9 @@ require 'tools/PHPMailerAutoload.php';
 require 'tools/sec.php';
 function processingForm(){
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        echo  'hello there';
         if (isset($_POST["example-email"])) {
             $email = $_POST['example-email'];
-            if(isset($_POST["enviar"])){
                sendPass($email);
-                    echo  $email;
-            }else if(isset($_POST["rechazar"])){
-
-               //TODO
-
-            }
-
         } else {
             ?>
             <div style="background-color:#F5A9A9; height:30px; padding-top:10px; padding-left: 30px;"><b>No haz introducido un correo valido</b></div>
@@ -30,6 +21,7 @@ function processingForm(){
 
         }
     }
+
 
 }
 function sendPass($email){
@@ -40,7 +32,7 @@ function sendPass($email){
         $row = mysqli_fetch_array($query);
         /*TODO encriptacion del password y desencriptacion aqui  , hacer que reciba el pass del gmail usado atraves de la bd */
         //sendEmail($row['Correo'],$row['Nombre'],encrypt_decrypt('decrypt', $row['contra']));
-        echo 'enviando';
+        //echo 'enviando';
         sendEmail($row['Correo'],$row['Nombre'],$row['contra']);
     } else {// no existe en la base de datos
             echo "Error: " . mysqli_error($conexion);
@@ -55,7 +47,7 @@ function sendEmail($recipient,$nameRecipient,$password){
 // 0 = off (production)
 // 1 = client messages
 // 2 = client and server messages
-    $mail->SMTPDebug = 2;
+    $mail->SMTPDebug = 0;
 //define gmail as smtp server
     $mail->Host = 'smtp.gmail.com';
 //  use 587 port  for tls encrypting
@@ -68,8 +60,6 @@ function sendEmail($recipient,$nameRecipient,$password){
     $mail->Username = "sistemadefutbolescom@gmail.com";
     $dc_txt = encrypt_decrypt('decrypt', 'RUdwM1V4dGxIdzRNNWJrMzA0VVlPSjdYQndTazZ6SStNcTdSeUVXWEJGTT0=');
     $mail->Password = $dc_txt;
-    echo '<p style="background-color: #3ebc4b">'.$dc_txt.'</p>';
-
 //defining recipient (email,(optional) name)
     $mail->SetFrom('sistemadefutbolescom@gmail.com', 'Diego de Sistema de futbol escom');
 /*@var $recipient: email recipient
@@ -87,6 +77,6 @@ function sendEmail($recipient,$nameRecipient,$password){
     if (!$mail->Send()) {
         echo "Error: " . $mail->ErrorInfo;
     } else {
-        echo "Se ha enviado el correo de recuperacion exitosamente!";
+       echo "Se ha enviado el correo de recuperacion exitosamente!";
     }
 }

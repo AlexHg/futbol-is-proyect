@@ -3,7 +3,7 @@
 </div>
 <div id="content-body" style="display:flex; justify-content:center; align-items:center; min-height:60vh;">
     <center>   
-            <form class="form-control" role="form" method="post" action="action/recuperarContrasena" style="transform:scale(1.2)">
+            <form class="form-control" role="form" method="post" action="recuperarCuenta" style="transform:scale(1.2)">
 
             <h3>Ingrese su correo electronico<br><small style="font-weight:400">Le enviaremos la información de recuperación</small></h3>  
             <div class="form-group">
@@ -13,6 +13,9 @@
                 </div>
             </div>
             <div>
+                <?php
+                processingForm();
+                ?>
                 <br>
                 <input type="submit" name="submit" value="Registrarse" class="btn btn-primary" data-type="alerta">
                 <br><br>
