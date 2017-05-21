@@ -32,10 +32,11 @@
             <div class="header__top-bar clearfix">
                 <div class="container">
                     <ul class="nav-account">
-                        <li class="nav-account__item"><a href="home" data-toggle="modal" data-target="#modal-login-register-tabs">Acceder a mi cuenta</a></li>
+                        <li class="nav-account__item"><a href="home" data-toggle="modal" data-target="#modal-login-register-tabs"  style="font-size:20px";>Acceder a mi cuenta</a></li>
                     </ul>
                 </div>
             </div>
+            <br>
             <!-- Header Top Bar / End -->
 
             <!-- Header Secondary -->
@@ -62,17 +63,16 @@
                         <!-- Header Logo / End -->
 
                         <!-- Main Navigation -->
+
                         <nav class="main-nav clearfix">
                             <ul class="main-nav__list">
 
                                 <li class="active"><a href="#">Inicio</a></li>
-                                <li><a href="#">Unirme al club</a></li>
-                                <li><a href="#">Formar o unirme a un equipo</a></li>
-                                <li><a href="#">Torneos</a></li>
-                                <li><a href="#">Horarios</a></li>
-                                <li><a href="#">Contacto</a></li>
-
-
+                                <li><a href="#">Conócenos</a></li>
+                                <li><a href="#"> Reglamentos Generales </a></li>
+                                <li><a href="#"> Galería </a></li>
+                                <li><a href="#">Consejos</a></li>
+                                <li><a href="#">Contáctanos</a></li>
                             </ul>
                         </nav>
                         <!-- Main Navigation / End -->
@@ -131,6 +131,7 @@
                         <!-- Match Preview / End -->
                     </aside>
                 </div>
+                
 
             </div>
 
@@ -149,7 +150,7 @@
 
                             </div>
                             <!-- Match Preview -->
-                               <h5> Torneos de f. soccer</h5>
+                               <h5> Torneos de Fútbol Soccer</h5>
 
                             <table class="table  table-striped ">
 
@@ -159,7 +160,7 @@
                                         <th>Nombre</th>
                                         <th>Inicio</th>
                                         <th>Limite de inscripciones</th>
-                                        <th>Dias</th>
+                                        <th>Días de juego</th>
 
                                     </tr>
                                 </thead>
@@ -168,7 +169,7 @@
                                 </tbody>
                             </table>
                             <br>
-                            <h5>Torneos de f. rapido</h5>
+                            <h5>Torneos de Fútbol Rápido</h5>
                             <table class="table table-striped ">
                                 <thead>
                                     <tr>
@@ -176,7 +177,7 @@
                                         <th>Nombre</th>
                                         <th>Inicio</th>
                                         <th>Limite de inscripciones</th>
-                                        <th>Dias</th>
+                                        <th>Días de juego</th>
 
                                     </tr>
                                 </thead>
@@ -214,12 +215,8 @@
                                         <span class="label posts__cat-label">Club de Fútbol</span>
                                     </div>
                                     <h6 class="posts__title"><a href="#">¡Forma parte del <span class="main-news-banner__highlight">Club de Fútbol</span> hoy mismo!</a></h6>
-
-                                    <div class="posts__excerpt">
-                                        Lorem ipsum dolor sit amet, consectetur adipisi nel elit, sed do eiusmod tempor incididunt ut labore et dolore.
-                                    </div>
                                     <div class="posts__more">
-                                        <a href="#" class="btn btn-inverse btn-sm btn-outline btn-icon-right btn-condensed">Envíar solicitud <i class="fa fa-plus text-primary"></i></a>
+                                        <a href="#" class="btn btn-inverse btn-sm btn-outline btn-icon-right btn-condensed">¡Regístrate ahora! <i class="fa fa-plus text-primary"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -239,3 +236,4 @@
 </body>
 
 </html>
+
