@@ -127,6 +127,7 @@ class Jugador{
         
         if($db->query("SELECT * FROM solicitud WHERE IDEquipo = $IDEquipo AND correo = '".$_SESSION['email']."' AND Tipo_Solicitud=0 LIMIT 1")->num_rows>0) return -1; // El Jugador Ya envio solicitud a este equipo
         if($db->query("SELECT * FROM solicitud WHERE IDEquipo = $IDEquipo AND correo = '".$_SESSION['email']."' AND Tipo_Solicitud=1 LIMIT 1")->num_rows>0) return -2; // El Capitan ya envio invitacion a este jugador
+        if($db->query("SELECT * FROM jugador,equipo_jugador WHERE equipo_jugador.IDJugador = jugador.IDJugador AND equipo_jugador.IDEquipo = ".$IDEquipo." AND jugador.Correo = '".$_SESSION['email']."' LIMIT 1")->num_rows>0) return -3; // El Jugador ya esta en el equipo
         $result = $db->query("INSERT INTO solicitud (IDEquipo, correo, Tipo_Solicitud) VALUES ('$IDEquipo', '$correo', '0')");
         if($result) return 0;
         else        "Error: " . mysqli_error($conexion);

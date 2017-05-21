@@ -41,9 +41,14 @@ function mostrarEquipos(){
                     foreach ($invitacionesAceptadas as $aceptada)
                    $op = Jugador::enviarSolicitudAEquipo($aceptada,$correo);
                  switch ($op) {
-                   case -2:
+                   case -3:
                    ?>
                    <div style="background-color:#F5DA81; height:30px; padding-top:10px; padding-left: 30px;"><b>Ya eres miembro de este equipo</b></div>
+                   <?php
+                   break;
+                   case -2:
+                   ?>
+                   <div style="background-color:#F5DA81; height:30px; padding-top:10px; padding-left: 30px;"><b>El capitán de este equipo ya te envió una Invitación</b></div>
                     <?php      
                    break;
                    case -1: ?> 
