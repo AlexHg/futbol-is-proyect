@@ -120,7 +120,7 @@
                 </div>
 
                 <div class="container">
-                    <aside class="widget widget--sidebar card widget-preview col-md-12">
+                    <aside class="widget widget--sidebar card widget-preview col-md-12" style="overflow-y:scroll;max-height:400px;">
                         <div class="widget__content card__content">
 
                             <!-- Match Preview -->
@@ -129,7 +129,7 @@
 
                         </div>
                         <!-- Match Preview / End -->
-                    </aside>
+                    </aside> 
                 </div>
                 
 
@@ -139,11 +139,11 @@
 
         <div style="margin-top:4rem;"></div>
 
-        <div class="container" id="principal-content">
+        <div class="container" id="principal-content" style="padding-left: 0px;padding-right: 0px;">
             <div class="col-md-12">
 
-                <div class="container">
-                    <aside class="widget widget--sidebar card widget-preview col-md-12">
+                <div class="container" style="padding-left: 0px;padding-right: 0px;">
+                    <aside class="widget widget--sidebar card widget-preview col-md-12" style="padding-left: 0px;padding-right: 0px;">
                         <div class="widget__content card__content">
                             <div class="widget__title card__header card__header--has-btn">
                                 <h4>Torneos</h4>
