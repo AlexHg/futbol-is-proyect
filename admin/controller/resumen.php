@@ -204,23 +204,36 @@ function tabla_torneos_rapido_index(){
 
 function tablas_resultados_Torneos_index(){
     $torneosList = Torneo::getTorneos();
-    while ($torneo = $torneosList->fetch_array(MYSQLI_ASSOC)) {
-
-        ?>
+    while ($torneo = $torneosList->fetch_array(MYSQLI_ASSOC)) {        
+        $resultado = Torneo::getPartidosSinJugarByTorneo($torneo["IDTorneo"]);
+        if($resultado->num_rows > 0){
+            ?>
             <h3>Torneo: <?php echo $torneo["nombre"] ?></h3>
             <table class="table table-striped ">
                 <thead>
                     <tr>
-                        <th>VS</th>
-                        <th>Resultados</th>
-                        <th>Jornada</th>
+                        <th>Partido</th>
+                        <th>Fase</th>
                         <th>Fecha y hora</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <?php tabla_resultados_torneo($torneo["IDTorneo"]) ?>
-                </tbody>
+            <?php
+            while($partido = $resultado->fetch_array(MYSQLI_ASSOC)){
+            $equipo1 = Equipo::getEquipoById($partido["equipo1"])["NombreEquipo"];
+            $equipo2 = Equipo::getEquipoById($partido["equipo2"])["NombreEquipo"]; 
+            ?>
+                <tr>
+                    <th scope="row"><?php echo $equipo1." VS ".$equipo2 ?></th>
+                    <td><?php echo $partido["fase"] ?></td>
+                    <td><?php echo $partido["horario"] ?></td>
+                </tr>
+            <?php
+            }
+            ?>
+            </tbody>
             </table>
-        <?php
+            <?php
+        }
     }
 }

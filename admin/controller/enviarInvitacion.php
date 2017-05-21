@@ -29,7 +29,6 @@ function imprimirTabla(){
                 <th>    
                     <div class="checkbox checkbox-primary">
                         <input id="checkbox'.$i.'" type="radio" name="seleccionados[]" value="'.$resultados["Correo"].'">
-                        <label for="checkbox'.$i.'"></label>
                     </div>
                 </th>
                 <td>'.$resultados["Nombre"].'</td>
