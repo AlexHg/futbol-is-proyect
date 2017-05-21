@@ -128,7 +128,7 @@
                 </a>
             </li>
             <li class="submenu <?php isActive('/gestionarEquipos') ?>">
-                <a href="gestionarEquipos">
+                <a href="#">
                     <span><i class="ti-heart"></i>Equipos</span>
                     <i class="ti-angle-right submenu-arrow"></i>
                 </a>
