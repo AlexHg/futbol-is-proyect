@@ -45,7 +45,7 @@
                     </a></li>
                 </ul>
                 <a href="#" id="profile">
-                    <img src="<?php echo $_SESSION['avatar'] ?>" alt="">
+                    <img src="source/img/avatar/default.png" alt="">
                 </a>
                 <ul id="profil">
                     <li><a href="modificarDatos"><i class="ti-settings"></i>Modificar Datos</a></li>
