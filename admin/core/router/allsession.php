@@ -3,7 +3,7 @@
 Flight::route("/", function(){
     //Flight::redirect('/demo');
     Session::showOnly(array("role" => 1), function(){
-        //Controller::run("resumen");
+        Controller::run("bienvenidaJugador");
         View::render('template/ini'); #Html head, menu, header
         View::render('bienvenidaJugador'); #html content
         View::render('template/fin'); #Html footer

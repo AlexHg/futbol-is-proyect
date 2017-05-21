@@ -135,5 +135,14 @@ class Jugador{
         mysqli_close($db);
     }
 
+    public static function getEquipos(){
+        $db = Database::connect();
+
+        $result = $db->query("SELECT equipo.nombreEquipo, CONCAT(usuario.Nombre,' ',usuario.Apellidos) as nombreCapitan,equipo.DescripcionUniforme from equipo,capitan,usuario,jugador,equipo_jugador WHERE jugador.IDJugador = equipo_jugador.IDJugador AND equipo.IDEquipo = equipo_jugador.IDEquipo AND usuario.Correo = capitan.Correo AND equipo.Correo = capitan.Correo AND jugador.Correo = '".$_SESSION['email']."'");
+        if($result) return $result;
+        else        "Error: " . mysqli_error($conexion);
+        
+        mysqli_close($db);
+    }
 
 }
