@@ -2,7 +2,7 @@
     <h2>Equipos Inscritos</h2>
 </div>
 <div id="content-body">
-   <h2>Equipos de futbol rapido</h2>
+   <h2>Equipos de futbol Rápido</h2>
     <table class="table table-striped " id="example"  cellspacing="0" width="100%">
         <thead>
         <tr>
@@ -22,7 +22,7 @@
             <?php print_table() ?>
         </tbody>
     </table>
-    <h2>Equipos de soccer</h2>
+    <h2>Equipos de Soccer</h2>
     <table class="table table-striped " id="example"  cellspacing="0" width="100%">
         <thead>
         <tr>

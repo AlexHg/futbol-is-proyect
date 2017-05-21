@@ -5,7 +5,7 @@
     <center>   
             <form class="form-control" role="form" method="post" action="recuperarCuenta" style="transform:scale(1.2)">
 
-            <h3>Ingrese su correo electronico<br><small style="font-weight:400">Le enviaremos la información de recuperación</small></h3>  
+            <h3>Ingrese su correo electrónico<br><small style="font-weight:400">Le enviaremos la información de recuperación</small></h3>  
             <div class="form-group">
                 <label class="control-label" for="example-email">Correo</label>
                 <div class="form-control-cont">

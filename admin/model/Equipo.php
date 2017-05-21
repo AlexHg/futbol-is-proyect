@@ -142,4 +142,20 @@ class Equipo{
         }
     }
 
+    public static function obtenerJugadoresDePartido($idPartido){
+        $conexion = Database::connect();
+        if($res1=$conexion->query("select e.nombreEquipo,u.nombre,u.apellidos, \"\" as numero_de_jugador 
+from equipo e, usuario u, jugador j, equipo_jugador ej,juego ju
+where ej.idEquipo=e.idEquipo 
+and j.idjugador=ej.idjugador 
+and j.correo=u.correo 
+and ju.idEquipo=e.idEquipo
+and ju.idjuego=$idPartido")) return $res1;
+        else {
+            return "Error: " . mysqli_error($conexion);
+            echo "Error: " . mysqli_error($conexion);
+        }
+
+    }
+
 }

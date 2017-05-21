@@ -25,7 +25,7 @@
                         </script>
                         
                         <div class="form-group">
-                            <label class="control-label">Fecha límite inscripcion</label>
+                            <label class="control-label">Fecha límite inscripción</label>
                             <div class="form-control-cont">
                                 <input class="form-control full" name="fechaLimite" type="text" id="fechaLimite" data-validation="date"  data-validation-help="Formato de fecha yy-mm-dd">
                             </div>
@@ -47,31 +47,31 @@
                         </div>
                          <h1>Días de Juego</h1>
                         <div class="checkbox checkbox-primary">
-                                    <input id="checkbox" type="checkbox" value="lunes" name="dia[]" >
+                                    <input id="checkbox" type="checkbox" value="Lunes" name="dia[]" >
                                     <label for="checkbox" >
                                        Lunes
                                     </label>
                         </div>
                           <div class="checkbox checkbox-primary">
-                                    <input id="checkbox1" type="checkbox" value="martes" name="dia[]" >
+                                    <input id="checkbox1" type="checkbox" value="Martes" name="dia[]" >
                                     <label for="checkbox1" >
                                        Martes
                                     </label>
                         </div>
                           <div class="checkbox checkbox-primary">
-                                    <input id="checkbox2" type="checkbox" value="miercoles" name="dia[]" >
+                                    <input id="checkbox2" type="checkbox" value="Miercoles" name="dia[]" >
                                     <label for="checkbox2" >
                                        Miércoles
                                     </label>
                         </div>
                           <div class="checkbox checkbox-primary">
-                                    <input id="checkbox3" type="checkbox" value="jueves" name="dia[]" >
+                                    <input id="checkbox3" type="checkbox" value="Jueves" name="dia[]" >
                                     <label for="checkbox3" >
                                        Jueves
                                     </label>
                         </div>
                           <div class="checkbox checkbox-primary">
-                                    <input id="checkbox4" type="checkbox" value="viernes" name="dia[]">
+                                    <input id="checkbox4" type="checkbox" value="Viernes" name="dia[]">
                                     <label for="checkbox4" >
                                        Viernes
                                     </label>
@@ -101,13 +101,13 @@
     
     Notify::alert_if(
             'Deben seleccionarse al menos 4 días de juego',
-            'Por favor ingrese al menos 4 dias de juego.',
+            'Por favor ingrese al menos 4 días de juego.',
             'Reintentar',
             isset($_GET['n']) && strcasecmp($_GET['n'],'nodays') == 0);
 
     Notify::alert_if(
             'Deben seleccionarse al menos 4 días de juego ',
-            'Por favor ingrese al menos 4 dias de juego.',
+            'Por favor ingrese al menos 4 días de juego.',
             'Reintentar',
             isset($_GET['n']) && strcasecmp($_GET['n'],'zdays') == 0);
 ?>

@@ -54,7 +54,19 @@ class Torneo{
 
     public static function getResultadosTorneo($torneo){
         $conexion = Database::connect();
-        $consulta ="SELECT SUBSTRING_INDEX(SUBSTRING_INDEX(GROUP_CONCAT(distinct jr.idEquipo), ',', 1), ',', -1) as equipo1, SUBSTRING_INDEX(SUBSTRING_INDEX(GROUP_CONCAT(distinct jr.idEquipo), ',', 2), ',', -1) as equipo2,SUBSTRING_INDEX(SUBSTRING_INDEX(group_concat(distinct jr.golesafavor), ',', 1), ',', -1) as goles1,SUBSTRING_INDEX(SUBSTRING_INDEX(group_concat(distinct jr.golesafavor), ',', 2), ',', -1) as goles2,f.descripcion as jornada ,t.nombre as torneo,hj.diayhora as horario from juegosresultado jr, juego j, horario_juego hj,fase f , torneo t where hj.idhorario=j.idjuego and j.idjuego=jr.idjuego and j.idjuego=1 and jr.idfase=f.idfase and jr.idtorneo=t.idtorneo  and t.idTorneo = $torneo group by hj.diayhora,jr.idfase,jr.idtorneo;";
+        $consulta ="SELECT distinct j.idjuego, SUBSTRING_INDEX(SUBSTRING_INDEX(GROUP_CONCAT(distinct jr.idEquipo), ',', 1), ',', -1) as equipo1,
+ SUBSTRING_INDEX(SUBSTRING_INDEX(GROUP_CONCAT(distinct jr.idEquipo), ',', 2), ',', -1) as equipo2 ,
+ SUBSTRING_INDEX(SUBSTRING_INDEX(group_concat(distinct jr.golesafavor), ',', 1), ',', -1) as golesequipo1,
+ SUBSTRING_INDEX(SUBSTRING_INDEX(group_concat(distinct jr.golesafavor), ',', 2), ',', -1) as golesequipo2,
+ f.descripcion as jornada
+ from juegosresultado jr, juego j, horario_juego hj,fase f , torneo t 
+ where hj.idhorario=j.idjuego 
+ and j.idjuego=jr.idjuego 
+ and jr.idfase=f.idfase 
+ and jr.idtorneo=t.idtorneo 
+ and t.nombre=\"$torneo\"
+ group by hj.diayhora,jr.idfase,jr.idtorneo
+ order by idjuego asc;";
         if ($resultado=$conexion->query($consulta)) {
             return $resultado;
         } else {
@@ -121,7 +133,7 @@ class Torneo{
 
     public static function getTorneos(){
         $conexion = Database::connect();
-        $consulta ="SELECT IDTorneo,nombre from Torneo;";
+        $consulta ="SELECT IDTorneo,nombre,Fecha_Inicio from torneo;";
         if ($resultado=$conexion->query($consulta)) {
             return $resultado;
         } else {
@@ -132,7 +144,7 @@ class Torneo{
 
     public static function getListTorneosSoccer(){
         $conexion = Database::connect();
-        $consulta ="SELECT * from Torneo where Tipo_Torneo = 1";
+        $consulta ="SELECT * from torneo where Tipo_Torneo = 1";
         if ($resultado=$conexion->query($consulta)) {
             return $resultado;
         } else {
@@ -143,7 +155,7 @@ class Torneo{
 
     public static function getListTorneosRapido(){
         $conexion = Database::connect();
-        $consulta ="SELECT * from Torneo where Tipo_Torneo = 0";
+        $consulta ="SELECT * from torneo where Tipo_Torneo = 0";
         if ($resultado=$conexion->query($consulta)) {
             return $resultado;
         } else {
@@ -238,6 +250,37 @@ class Torneo{
             else return "Error: " . mysqli_error($conexion);
         }
         mysqli_close($conexion); //--//*/
+    }
+    
+    public static function recibirDias($IDTorneo){
+        $conexion = Database::connect();
+        $consulta ="select GROUP_CONCAT(distinct g.dia) as dias from grupo g,torneo t, torneo_grupo tg where g.idGrupo=tg.idgrupo and tg.idtorneo=$IDTorneo";
+        if ($resultado=$conexion->query($consulta)) {
+            return $resultado;
+        } else {
+            return "Error: " . mysqli_error($conexion);
+        }
+        mysqli_close($conexion);
+    }
+
+    public static function getTipo($nombreTorneo){
+        $conexion = Database::connect();
+        return $conexion->query("SELECT Tipo_Torneo from torneo where Nombre='$nombreTorneo'")->fetch_array(MYSQLI_ASSOC)['Tipo_Torneo'];
+    }
+
+    public static function getIdByNombre($nombreTorneo){
+        $conexion = Database::connect();
+        return $conexion->query("SELECT IDTorneo from torneo WHERE Nombre='$nombreTorneo'")->fetch_array(MYSQLI_ASSOC)['IDTorneo'];
+    }
+
+    public static function getPartidosTorneo($idTorneo){
+        $conexion = Database::connect();
+        if($resultado = $conexion->query("SELECT j.idjuego, hj.diayhora as horario, f.descripcion as fase, t.nombre as torneo, GROUP_CONCAT(distinct e.nombreequipo) as equipo from juego j, horario_juego hj, torneo t,fase f,equipo e where idjuego not in (select jr.idjuego from juegosresultado jr) and  e.idequipo=j.idequipo and j.idhorario=hj.idhorario and j.idfase=f.idfase and j.idtorneo=t.idtorneo and t.idtorneo=$idTorneo group by(idjuego)")){
+            return $resultado;
+        }else{
+            return "Error: " . mysqli_error($conexion);
+        }
+        mysqli_close($conexion);
     }
 }
 

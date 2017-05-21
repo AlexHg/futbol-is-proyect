@@ -22,7 +22,6 @@ function mostrarInvitaciones(){
         echo '</th>';
         echo '<td>' . $row['equipo'] . '</td>';
         echo '<td>' . $row['capitan'] . '</td>';
-        echo '<td>' . $row['imagenCapitan'] . '</td>';
         echo '</tr>';
 
     }

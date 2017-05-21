@@ -18,7 +18,7 @@
             <li class="submenu <?php isActive('/torneo') ?>">
                 <a href="/">
                     <span>
-                        <i class="ti-crown"></i>Torneos
+                        <i class="ti-crown"></i>Consultar Horarios
                     </span>
                 </a>
             </li>
@@ -29,16 +29,19 @@
                     <i class="ti-angle-right submenu-arrow"></i>
                 </a>
                 <ul class="submenu-content">
-                    <li class="<?php isActive('/registrarEquipo') ?>"><a href="registrarEquipo"><span><i class="ti-plus"></i>Nuevo Equipo</span></a></li>
+                    <li class="<?php isActive('/registrarEquipo') ?>"><a href="registrarEquipo"><span><i class="ti-plus"></i>Crear Equipo</span></a></li>
                 </ul>
             </li>
             <li class="submenu <?php isActive('/aceptarInvitacionEquipo') ?>">
-                <a href="aceptarInvitacionEquipo">
+                <a href="#">
                     <span><i class="ti-email"></i>Invitaciones</span>
                     <i class="ti-angle-right submenu-arrow"></i>    
                 </a>
                 <ul class="submenu-content">
                     <li class="<?php isActive('/enviarSolicitudAEquipo') ?>"><a href="enviarSolicitudAEquipo"><span><i class="ti-plus"></i>Unirse a Un Equipo</span></a></li>
+                </ul>
+                <ul class="submenu-content">
+                    <li class="<?php isActive('/enviarSolicitudAEquipo') ?>"><a href="aceptarInvitacionEquipo"><span><i class="ti-plus"></i>Aceptar invitación de Equipo</span></a></li>
                 </ul>
             </li>
         <?php }) ?>
@@ -51,7 +54,7 @@
                     </span>
                 </a>
             <li class="submenu <?php isActive('/torneo') ?>">
-                <a href="/">
+                <a href="#">
                     <span>
                         <i class="ti-crown"></i>Torneos
                     </span>
@@ -63,17 +66,8 @@
             </li>
             <li class="<?php isActive('/horarios') ?>">
                 <a href="/">
-                    <span><i class="ti-medall"></i>Horarios</span>
+                    <span><i class="ti-medall"></i>Consultar Horarios</span>
                 </a>
-            </li>
-            <li class="submenu <?php isActive('/consultarEquipos') ?>">
-                <a href="#">
-                    <span><i class="ti-heart"></i>Equipos</span>
-                    <i class="ti-angle-right submenu-arrow"></i>
-                </a>
-                <ul class="submenu-content">
-                    <li><a href="registrarEquipo"><span><i class="ti-plus"></i>Nuevo Equipo</span></a></li>
-                </ul>
             </li>
             <li class="submenu <?php isActive('/enviarInvitación') ?>">
                 <a href="#">
@@ -88,10 +82,14 @@
                 </ul>
             </li>
             <li class="submenu <?php isActive('/aceptarPeticionJugador') ?>">
-                <a href="aceptarPeticionJugador">
-                    <span><i class="ti-folder"></i>Peticiones</span>
+                <a href="">
+                    <span><i class="ti-folder"></i>Solicitudes</span>
                     <i class="ti-angle-right submenu-arrow"></i>    
                 </a>
+                 <ul class="submenu-content">
+                    <li class="<?php isActive('/enviarInvitación') ?>"><a href="aceptarPeticionJugador"><span><i class="ti-plus"></i>Aceptar Solicitudes</span></a></li>
+                </ul>
+
             </li>
         <?php }) ?> 
         <?php Session::showOnly(array("role" => 3 ), function(){ ?>
@@ -117,16 +115,16 @@
                     <i class="ti-angle-right submenu-arrow"></i>
                 </a>
                 <ul class="submenu-content">
-                    <li class="<?php isActive('/crearTorneo') ?>"><a href="crearTorneo"><span><i class="ti-plus"></i>Nuevo Torneo</span></a></li>
-                    <li class="<?php isActive('/eligeTorneo_Partido') ?>"><a href="eligeTorneo_Partido"><span><i class="ti-plus"></i>Nuevo Partido</span></a></li>
+                    <li class="<?php isActive('/crearTorneo') ?>"><a href="crearTorneo"><span><i class="ti-plus"></i>Crear Torneo</span></a></li>
+                    <li class="<?php isActive('/eligeTorneo_Partido') ?>"><a href="eligeTorneo_Partido"><span><i class="ti-plus"></i>Crear Partido</span></a></li>
                     <li class="<?php isActive('/eliminarTorneo') ?>"><a href="eliminarTorneo"><span><i class="ti-minus"></i>Eliminar Torneo</span></a></li>
                     <li class="<?php isActive('/eligeTorneo') ?>"><a href="eligeTorneo"><span><i class="ti-close"></i>Dar de Baja Equipo</span></a></li>
-                    <li class="<?php isActive('/registrarResultados') ?>"><a href="registrarResultados"><span><i class="ti-pencil-alt"></i>Registrar Resultados</span></a></li> 
+                    <li class="<?php isActive('/registrarResultados') ?>"><a href="registrarResultados"><span><i class="ti-pencil-alt"></i>Registrar Resultados de los Partidos</span></a></li> 
                 </ul>
             </li>
             <li class="<?php isActive('/horarios') ?>">
                 <a href="/">
-                    <span><i class="ti-medall"></i>Horarios</span>
+                    <span><i class="ti-medall"></i>Consultar Horarios</span>
                 </a>
             </li>
             <li class="submenu <?php isActive('/gestionarEquipos') ?>">
@@ -148,9 +146,16 @@
                 </ul>
             </li>
             <li class="submenu <?php isActive('/aceptarPeticiondeTorneo') ?>">
-                <a href="aceptarPeticiondeTorneo">
+                <a href="">
                     <span><i class="ti-folder"></i>Peticiones</span>
                 </a>
+                <ul class="submenu-content">    
+                    <li class="<?php isActive('/consultarEquipos') ?>">
+                        <a href="aceptarPeticiondeTorneo">
+                            <span><i class="ti-eye"></i>Aceptar Peticiones de Inscripción</span>
+                        </a>
+                    </li>       
+                </ul>
             </li>
         <?php }) ?> 
     </ul>
