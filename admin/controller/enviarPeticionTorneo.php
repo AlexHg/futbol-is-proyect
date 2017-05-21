@@ -37,14 +37,12 @@ function seleccion(){
 }
 
 function mostrarTipoTorneo($tipo){
-    global $index; $index++;
+    global $index; 
     $array = Torneo::getInfoByType($tipo);
     while($row = $array->fetch_array(MYSQLI_ASSOC)){
         echo '<td>
-        <div class="checkbox">
-            <input id="checkbox'.$index.'" type="checkbox" name="seleccionados[]" value="'.$row['idtorneo'].'">
-            <label for="checkbox'.$index.'">'.$row['nombre'].'</label>
-        </div>
+        <input id="checkbox0c" type="radio" name="seleccionados[]" value="' .$row['idtorneo']. '"</input>
+        <label>'.$row['nombre'].'</label>
         </td>';
         echo '<td>'.$row['fecha_inicio'].'</td>';
         echo '<td>'.Torneo::getDatesByID($row['idtorneo'],$tipo).'</td>';

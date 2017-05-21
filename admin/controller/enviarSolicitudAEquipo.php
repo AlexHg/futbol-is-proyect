@@ -17,7 +17,7 @@ function mostrarEquipos(){
         echo '<tr>';
         echo '<th scope="row">';
         //se envia la fila entera para manipular sobre ella
-        echo '<input id="checkbox0c" type="checkbox" name="invitacionesSeleccionadas[]" value="' .$row['IDEquipo']. '"</input>';
+        echo '<input id="checkbox0c" type="radio" name="invitacionesSeleccionadas[]" value="' .$row['IDEquipo']. '"</input>';
         echo '<div class="checkbox checkbox-dark">';
         echo '</div>';
         echo '</th>';

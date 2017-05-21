@@ -175,7 +175,7 @@ function tabla_torneos_soccer_index(){
                 <th scope="row"><?php echo $torneo["IDTorneo"] ?></th>
                 <td><?php echo $torneo["Nombre"] ?></td>
                 <td><?php echo $torneo["Fecha_Inicio"] ?></td>
-                <td><?php echo $torneo["Fecha_Fin"] ?></td>
+                <td><?php echo $torneo["Fecha_Cierre_Inscripcion"] ?></td>
                 <td><?php echo $dia ?></td>
             </tr>
         <?php
@@ -192,7 +192,7 @@ function tabla_torneos_rapido_index(){
                 <th scope="row"><?php echo $torneo["IDTorneo"] ?></th>
                 <td><?php echo $torneo["Nombre"] ?></td>
                 <td><?php echo $torneo["Fecha_Inicio"] ?></td>
-                <td><?php echo $torneo["Fecha_Fin"] ?></td>
+                <td><?php echo $torneo["Fecha_Cierre_Inscripcion"] ?></td>
                 <td><?php echo $dia ?></td>
 
             </tr>

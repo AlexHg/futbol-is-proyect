@@ -11,7 +11,7 @@ function mostrarSolicitudes(){
         echo '<tr>';
         echo '<th scope="row">';
         //se envia la fila entera para manipular sobre ella
-        echo '<input id="checkbox0c" type="checkbox" name="invitacionesSeleccionadas[]" value="' .$row['idtorneo'].",".$row['idequipo']. '"</input>';
+        echo '<input id="checkbox0c" type="radio" name="invitacionesSeleccionadas[]" value="' .$row['idtorneo'].",".$row['idequipo']. '"</input>';
         echo '<div class="checkbox checkbox-dark">';
         echo '</div>';
         echo '</th>';
