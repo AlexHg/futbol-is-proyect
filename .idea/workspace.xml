@@ -4,10 +4,8 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cfc29a13-c3ca-4ce8-b0e9-799adeaf3932" name="Default" comment="Fixed: Envia correctamente el correo de recuperaciona la cuenta solicitada&#10;Error: no errores&#10;Pending:  dar diseño al mensjae que se envia y agregar notificaciones">
+    <list default="true" id="cfc29a13-c3ca-4ce8-b0e9-799adeaf3932" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/controller/recuperarContrasena.php" afterPath="$PROJECT_DIR$/admin/controller/recuperarContrasena.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/view/recuperarContrasena.php" afterPath="$PROJECT_DIR$/admin/view/recuperarContrasena.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -31,10 +29,9 @@
       <file leaf-file-name="recuperarContrasena.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/admin/controller/recuperarContrasena.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="116">
+            <state relative-caret-position="-1194">
               <caret line="10" column="9" lean-forward="false" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
               <folding>
-                <element signature="e#463#547#0#HTML" expanded="true" />
                 <marker date="1495218018000" expanded="true" signature="737:802" ph="SELECT Nombr... usuario" />
                 <marker date="1495218018000" expanded="true" signature="2688:2726" ph="..." />
               </folding>
@@ -55,11 +52,9 @@
       <file leaf-file-name="recuperarContrasena.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/view/recuperarContrasena.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="343">
-              <caret line="31" column="23" lean-forward="true" selection-start-line="28" selection-start-column="1" selection-end-line="31" selection-end-column="23" />
-              <folding>
-                <element signature="n#style#0;n#small#0;n#h3#0;n#form#0;n#center#0;n#div#1;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="713">
+              <caret line="31" column="23" lean-forward="false" selection-start-line="28" selection-start-column="1" selection-end-line="31" selection-end-column="23" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -77,7 +72,7 @@
       <file leaf-file-name="temporal.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/core/router/temporal.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-611">
+            <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
@@ -97,7 +92,7 @@
       <file leaf-file-name="nosession.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/core/router/nosession.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
+            <state relative-caret-position="506">
               <caret line="22" column="26" lean-forward="false" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
               <folding />
             </state>
@@ -352,6 +347,136 @@
       <recent name="$PROJECT_DIR$/admin/core/router" />
     </key>
   </component>
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/controller/aceptarInvitacionEquipo.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/controller/enviarInvitacion.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/controller/enviarSolicitudAEquipo.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/controller/resumen.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/model/Equipo.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/model/Torneo.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/view/aceptarInvitacionEquipo.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/view/consultarEquipos.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/view/crearTorneo.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/view/enviarPeticionTorneo.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/view/modificarDatos.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/view/public.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/view/recuperarContrasena.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/view/resumen.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/view/template/aside-menu.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/view/template/header.nosession.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/view/template/header.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/view/template/ini.noaside.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/view/template/ini.php</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/controller/resumen.submit.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/source/img/box.jpg</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -467,7 +592,8 @@
       <workItem from="1494813750265" duration="55000" />
       <workItem from="1494814823213" duration="266000" />
       <workItem from="1495047929119" duration="4894000" />
-      <workItem from="1495128944725" duration="2455000" />
+      <workItem from="1495128944725" duration="2723000" />
+      <workItem from="1495341116390" duration="20000" />
     </task>
     <task id="LOCAL-00001" summary="Añadida Jugador::enviarSolicitudAEquipo, arreglado el query de eliminar torneo,queda pendiente implementacion de el controlador enviarSolicitudAEquipo y su vista">
       <created>1491604397422</created>
@@ -518,28 +644,34 @@
       <option name="project" value="LOCAL" />
       <updated>1495050748673</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Fixed: Envia correctamente el correo de recuperaciona la cuenta solicitada&#10;Error: no errores&#10;Pending:  dar diseño al mensjae que se envia y agregar notificaciones">
+      <created>1495218178111</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1495218178112</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71137000" />
+    <option name="totallyTimeSpent" value="71425000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="704" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24453124" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32913387" sideWeight="0.496875" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32913387" sideWeight="0.503125" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.012598425" sideWeight="0.525" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.012598425" sideWeight="0.478125" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.012598425" sideWeight="0.475" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32913387" sideWeight="0.496875" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -768,7 +900,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -776,7 +907,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -784,7 +914,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="17" column="21" lean-forward="true" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -808,13 +937,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="496">
           <caret line="24" column="9" lean-forward="false" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
-          <folding>
-            <marker date="1492573546000" expanded="true" signature="125:191" ph="SELECT * fro... usuario" />
-            <marker date="1492573546000" expanded="true" signature="524:649" ph="update usuar... " />
-            <marker date="1492573546000" expanded="true" signature="886:932" ph="select * fro... usuario" />
-            <marker date="1492573546000" expanded="true" signature="1356:1516" ph="INSERT INTO usuario... " />
-            <marker date="1492573546000" expanded="true" signature="1533:1579" ph="INSERT INTO jugador... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -822,7 +944,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -830,7 +951,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -838,7 +958,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
           <caret line="7" column="9" lean-forward="false" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -846,7 +965,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="46">
           <caret line="2" column="23" lean-forward="false" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -854,7 +972,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="276">
           <caret line="12" column="27" lean-forward="false" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -886,7 +1003,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="552">
           <caret line="24" column="47" lean-forward="false" selection-start-line="24" selection-start-column="47" selection-end-line="24" selection-end-column="47" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -894,7 +1010,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
           <caret line="6" column="19" lean-forward="false" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -908,7 +1023,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/core/router/temporal.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-611">
+        <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
@@ -924,7 +1039,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/core/router/nosession.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
+        <state relative-caret-position="506">
           <caret line="22" column="26" lean-forward="false" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
           <folding />
         </state>
@@ -942,7 +1057,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-578">
           <caret line="23" column="3" lean-forward="false" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -969,20 +1083,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/view/recuperarContrasena.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="31" column="23" lean-forward="true" selection-start-line="28" selection-start-column="1" selection-end-line="31" selection-end-column="23" />
-          <folding>
-            <element signature="n#style#0;n#small#0;n#h3#0;n#form#0;n#center#0;n#div#1;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="713">
+          <caret line="31" column="23" lean-forward="false" selection-start-line="28" selection-start-column="1" selection-end-line="31" selection-end-column="23" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/controller/recuperarContrasena.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
+        <state relative-caret-position="-1194">
           <caret line="10" column="9" lean-forward="false" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
           <folding>
-            <element signature="e#463#547#0#HTML" expanded="true" />
             <marker date="1495218018000" expanded="true" signature="737:802" ph="SELECT Nombr... usuario" />
             <marker date="1495218018000" expanded="true" signature="2688:2726" ph="..." />
           </folding>
