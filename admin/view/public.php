@@ -216,7 +216,7 @@
                                     </div>
                                     <h6 class="posts__title"><a href="#">¡Forma parte del <span class="main-news-banner__highlight">Club de Fútbol</span> hoy mismo!</a></h6>
                                     <div class="posts__more">
-                                        <a href="#" class="btn btn-inverse btn-sm btn-outline btn-icon-right btn-condensed">¡Regístrate ahora! <i class="fa fa-plus text-primary"></i></a>
+                                        <a href='registrarCuenta' class="btn btn-inverse btn-sm btn-outline btn-icon-right btn-condensed">¡Regístrate ahora! <i class="fa fa-plus text-primary"></i></a>
                                     </div>
                                 </div>
                             </div>
