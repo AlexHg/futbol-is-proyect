@@ -48,7 +48,9 @@
                     <img src="source/img/avatar/default.png" alt="">
                 </a>
                 <ul id="profil">
+                <?php Session::hideFrom(array("role" => 3 ), function(){ ?>
                     <li><a href="modificarDatos"><i class="ti-settings"></i>Modificar Datos</a></li>
+                <?php }); ?>
                     <li style="border-top: 1px solid #e5e5e5;"><a href="action/sesion.cerrar"><i class="ti-power-off"></i>Cerrar sesión</a></li>
 
                 </ul>

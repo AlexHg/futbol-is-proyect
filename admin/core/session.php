@@ -57,6 +57,13 @@ class Session{
             $callback();
         }
     }
+    public static function hideFrom($dataAccess,callable $callback){
+        if(isset($_SESSION["role"])){
+            if($_SESSION["role"] != $dataAccess["role"] )
+                $callback();
+        }
+    }
+
     public static function roleName($num){
         if($num == 1){
             return "Jugador";
