@@ -7,7 +7,7 @@
                         <div class="form-group">
                             <label class="control-label">Nombre</label>
                                 <div class="form-control-cont">
-                                    <input type="text" name="nombre" class="form-control full" placeholder="Nombre" data-validation="alphanumeric" data-validation-error-msg="Campo obligatorio">
+                                    <input type="text" name="nombre" class="form-control full" placeholder="Nombre" data-validation="required" data-validation-error-msg="Campo obligatorio">
                                 </div>
                             </div>
                        

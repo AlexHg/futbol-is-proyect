@@ -122,7 +122,7 @@ class Torneo{
 
     public static function asignarDiaTorneo($dia, $nombre){        
         $conexion = Database::connect();
-        $consulta ="INSERT into Torneo_Grupo values ((select idGrupo from Grupo where dia like $dia ),(select IDTorneo from Torneo where Nombre like '$nombre'));";
+        $consulta ="INSERT into Torneo_Grupo values ((select idGrupo from Grupo where dia like '$dia' ),(select IDTorneo from Torneo where Nombre like '$nombre'));";
         if ($conexion->query($consulta)) {
             return true;
         } else {
