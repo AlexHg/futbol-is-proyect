@@ -5,7 +5,7 @@
                 <div id="content-body">
                 <form class="form-control" role="form" action="action/crearTorneo.submit" method="post" style="width: 70%">
                         <div class="form-group">
-                            <label class="control-label">Nombre</label>
+                            <label class="control-label">Nombre de Torneo</label>
                                 <div class="form-control-cont">
                                     <input type="text" name="nombre" class="form-control full" placeholder="Nombre" data-validation="required" data-validation-error-msg="Campo obligatorio">
                                 </div>
