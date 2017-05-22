@@ -9,7 +9,7 @@
     <div id="content-body">
     <form  method="post" class="form-control" role="form" action="action/crearPartido.submit" style="width: 90%" id="crearPartidoForm">
         <div class="form-group">
-            <label class="control-label">Equipo1</label>
+            <label class="control-label">Equipo Local</label>
             <div class="form-control-cont">
                 <select name="equipo1" class="form-control full" form="crearPartidoForm" data-validation="required"  data-validation-error-msg="Campo obligatorio">
                     <?php selectEquipos(); ?>
@@ -17,7 +17,7 @@
             </div>
         </div>
         <div class="form-group">
-            <label class="control-label">Equipo2</label>
+            <label class="control-label">Equipo Visitante</label>
             <div class="form-control-cont">
                 <select name="equipo2" class="form-control full" form="crearPartidoForm" data-validation="required"  data-validation-error-msg="Campo obligatorio">
                     <?php selectEquipos(); ?>
