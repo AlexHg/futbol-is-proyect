@@ -110,7 +110,7 @@ class Torneo{
 
     public static function crearTorneo($nombre,$tipo,$fechaInicio,$fechaLimite){        
         $conexion = Database::connect();
-        $consulta ="INSERT into torneo (Nombre,Tipo_Torneo, Fecha_Inicio, Fecha_Cierre_Inscripcion)values('$nombre',$tipo,'$fechaInicio','$fechaLimite');";
+        $consulta ="INSERT into torneo (Nombre,Tipo_Torneo, Fecha_Inicio, Fecha_Fin, Fecha_Cierre_Inscripcion)values('$nombre',$tipo,'$fechaInicio',DATE_ADD('$fechaInicio', INTERVAL 5 MONTH),'$fechaLimite');";
         if ($conexion->query($consulta)) {
             return true;
         } else {
