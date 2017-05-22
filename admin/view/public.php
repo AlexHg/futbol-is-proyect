@@ -32,7 +32,7 @@
             <div class="header__top-bar clearfix">
                 <div class="container">
                     <ul class="nav-account">
-                        <li class="nav-account__item"><a href="home" data-toggle="modal" data-target="#modal-login-register-tabs"  style="font-size:20px";>Acceder a mi cuenta</a></li>
+                        <li class="nav-account__item"><a href="home" data-toggle="modal" data-target="#modal-login-register-tabs"  style="font-size:35px";>Acceder a mi cuenta</a></li>
                     </ul>
                 </div>
             </div>
