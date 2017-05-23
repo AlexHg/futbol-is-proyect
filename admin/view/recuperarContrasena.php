@@ -9,7 +9,7 @@
             <div class="form-group">
                 <label class="control-label" for="example-email">Correo</label>
                 <div class="form-control-cont">
-                    <input type="email"  class="form-control full"  data-validation="email" data-validation-error-msg="email no válido" id="example-email" name="example-email" class="form-control" placeholder="alex@ingdesoft.com.mx">
+                    <input type="email"  class="form-control full"  data-validation="email required" data-validation-error-msg-required="No has proporcionado un correo válido, verifique su entrada" data-validation-error-msg-email="Correo electrónico no válido" id="example-email" name="example-email" class="form-control" placeholder="alex@ingdesoft.com.mx">
                 </div>
             </div>
             <div>
