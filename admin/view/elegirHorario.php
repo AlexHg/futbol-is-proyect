@@ -13,7 +13,7 @@
         <div class="form-group">
             <label class="control-label">TORNEO</label>
             <div class="form-control-cont">
-                <select class="form-control full" data-validation="required"  data-validation-error-msg="Campo obligatorio">
+                <select class="form-control full" data-validation="required"  data-validation-error-msg="No hay torneos seleccionados, por favor seleccione uno.">
                     <option>Torneo1</option>
                     <option>Torneo2</option>
                     <option>Torneo3</option>
