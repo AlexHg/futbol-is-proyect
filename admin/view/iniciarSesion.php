@@ -9,13 +9,13 @@
             <div class="form-group">
                 <label class="control-label">Correo</label>
                 <div class="form-control-cont">
-                    <input name="email" type="email"  class="form-control full"  data-validation="email" data-validation-error-msg="No has proporcionado un correo válido, verifique su entrada" id="example-email"  class="form-control" placeholder="alex@ingdesoft.com.mx">
+                    <input name="email" type="email"  class="form-control full"  data-validation="email required" data-validation-error-msg-required="No has proporcionado un correo válido, verifique su entrada" data-validation-error-msg-email="Correo electrónico no válido" id="example-email"  class="form-control" placeholder="alex@ingdesoft.com.mx">
                 </div>
             </div>
             <div class="form-group">
                 <label class="control-label">Contraseña</label>
                 <div class="form-control-cont">
-                    <input name="pass" type="password" class="form-control full" data-validation="length" data-validation-length="5-15"  data-validation-error-msg="Se ha omitido contraseña" placeholder="************">
+                    <input name="pass" type="password" class="form-control full" data-validation="length required" data-validation-length="6-15" data-validation-error-msg-length="La contraseña debe de tener entre 6 a 15 caracteres" data-validation-error-msg-required="Se ha omitido contraseña" placeholder="************">
                 </div>
             </div>
             <div>
