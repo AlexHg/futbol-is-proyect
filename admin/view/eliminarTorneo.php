@@ -21,7 +21,7 @@
                     <label class="control-label">Nombre del Torneo:</label>
 
                     <div class="form-control-cont">
-                        <select onChange="change(this.value)" name="ni" class="form-control full" id="TorneoSelect" data-validation="required"  data-validation-error-msg="Campo obligatorio">
+                        <select onChange="change(this.value)" name="ni" class="form-control full" id="TorneoSelect" data-validation="required"  data-validation-error-msg="Se debe seleccionar un torneo antes de eliminarlo.">
                             <?php
                                 listaTorneos();
                             ?>
