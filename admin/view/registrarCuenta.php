@@ -22,21 +22,21 @@
             <div class="form-group">
                 <label class="control-label">Correo</label>
                 <div class="form-control-cont">
-                    <input type="required email" name="correo" class="form-control full" data-validation="email" data-validation-error-msg-required="No has proporcionado un correo valido, verifique su entrada" data-validation-error-msg-email="Email no válido">
+                    <input type="required email" name="correo" class="form-control full" data-validation="email required" data-validation-error-msg-required="No has proporcionado un correo válido, verifique su entrada" data-validation-error-msg-email="Correo electrónico no válido">
                 </div>
             </div>
 
             <div class="form-group">
                 <label class="control-label">Teléfono</label>
                 <div class="form-control-cont">
-                    <input type="text" class="form-control full" name="telefono" onkeydown="return soloNumeros(event)" data-validation="required length" data-validation-length="10"  data-validation-error-msg="Se ha omitido el teléfono">
+                    <input type="text" class="form-control full" name="telefono" onkeydown="return soloNumeros(event)" data-validation="required length" data-validation-length="10" data-validation-error-msg-required="Se ha omitido el teléfono" data-validation-error-msg-length="La contraseña debe de tener 10 dígitos.">
                 </div>
             </div>
             
             <div class="form-group">
                 <label class="control-label">Contraseña</label>
                 <div class="form-control-cont">
-                    <input type="password" class="form-control full" name="contrasena" data-validation="length" data-validation-length="6-15" data-validation-error-msg="La contraseña debe de tener entre 6 a 15 caracteres." placeholder="************">
+                    <input type="password" class="form-control full" name="contrasena" data-validation="length required" data-validation-length="6-15" data-validation-error-msg-length="La contraseña debe de tener entre 6 a 15 caracteres" data-validation-error-msg-required="Se ha omitido contraseña"  placeholder="************">
                 </div>
             </div>
             <br>
