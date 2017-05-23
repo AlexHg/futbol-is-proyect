@@ -53,21 +53,21 @@
         <div class="form-group">
             <label class="control-label" for="example-email">Correo</label>
             <div class="form-control-cont">
-                <input type="email" id="email" name="mail" class="form-control full" readonly value="<?php echo $Datos[0]; ?>" data-validation="email" data-validation-error-msg-email="Email no válido">
+                <input type="email" id="email" name="mail" class="form-control full" readonly value="<?php echo $Datos[0]; ?>" data-validation="email required" data-validation-error-msg-required="No has proporcionado un correo válido, verifique su entrada" data-validation-error-msg-email="Correo electrónico no válido" id="example-email">
             </div>
         </div>
         
         <div class="form-group">
             <label >Teléfono</label>
             <div class="form-control-cont">
-                <input type="text" name="phone" class="form-control full" id="phone" value="<?php echo $Datos[4]; ?>" data-validation="required length"  data-validation-length="10" data-validation-error-msg="Se ha omitido el teléfono">
+                <input type="text" name="phone" class="form-control full" id="phone" value="<?php echo $Datos[4]; ?>" data-validation="required length" data-validation-length="10" data-validation-error-msg-required="Se ha omitido el teléfono" data-validation-error-msg-length="La contraseña debe de tener 10 dígitos.">
             </div>
         </div>
         
         <div class="form-group">
             <label class="control-label">Contraseña</label>
             <div class="form-control-cont">
-                <input type="password" name="pass" class="form-control full" id="pass" value="<?php echo $Datos[3]; ?>" data-validation="length" data-validation-length="5-15" data-validation-error-msg="La contraseña debe de tener entre 5 a 15 caracteres.">
+                <input type="password" name="pass" class="form-control full" id="pass" value="<?php echo $Datos[3]; ?>" data-validation="length required" data-validation-length="6-15" data-validation-error-msg-length="La contraseña debe de tener entre 6 a 15 caracteres" data-validation-error-msg-required="Se ha omitido contraseña">
             </div>
         </div>
 
