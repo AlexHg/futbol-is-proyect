@@ -8,7 +8,7 @@
         <label class="control-label">Equipo: </label>
         <div class="form-control-cont">
             <input type="hidden" name="torneo" value="<?php echo idTorneo(); ?>">
-            <select class="form-control full" name="equipo" id="EquipoSelect" data-validation="required"  data-validation-error-msg="Campo obligatorio">
+            <select class="form-control full" name="equipo" id="EquipoSelect" data-validation="required"  data-validation-error-msg="Seleccione un equipo antes de proceder">
                 <?php selectEquipos(); ?>
             </select>
         </div>
