@@ -69,8 +69,8 @@ function sendEmail($recipient,$nameRecipient,$password){
     $mail->Subject = 'Recuperacion de Password';
 /*define mail body in html format
     $mail->MsgHTML(file_get_contents('correomaquetado.html'), dirname(ruta_al_archivo));*/
- $mail->msgHTML('<h1>'.$nameRecipient.', haz solicitado la recuperacion de tu password aqui esta tu password :</h1>
- <br> <span style="color: white;background-color: #1d937c">'.$password.'</span><br> recomendamos que cambies tu password lo mas pronto posible ');
+ $mail->msgHTML($nameRecipient.', haz solicitado la recuperacion de tu password aqui esta tu password :
+ <br> <h1><span style="color: white;background-color: #1d937c">'.$password.'</span></h1><br> recomendamos que cambies tu password lo mas pronto posible ');
 /*altern mail body if html is blocked */
     $mail->AltBody = $nameRecipient.'haz solicitado la recuperacion de tu password, aqui esta tu clave de acceso '.$password.' te recomendamos que cambies tu pasword lo mas pronto posible.';
 //Enviamos el correo

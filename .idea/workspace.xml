@@ -4,8 +4,9 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cfc29a13-c3ca-4ce8-b0e9-799adeaf3932" name="Default" comment="">
+    <list default="true" id="cfc29a13-c3ca-4ce8-b0e9-799adeaf3932" name="Default" comment="Fixed: Envia correctamente el correo de recuperaciona la cuenta solicitada&#10;Error: no errores&#10;Pending:  dar diseño al mensjae que se envia y agregar notificaciones">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/controller/recuperarContrasena.php" afterPath="$PROJECT_DIR$/admin/controller/recuperarContrasena.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,11 +30,12 @@
       <file leaf-file-name="recuperarContrasena.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/admin/controller/recuperarContrasena.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1194">
-              <caret line="10" column="9" lean-forward="false" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+            <state relative-caret-position="124">
+              <caret line="67" column="21" lean-forward="true" selection-start-line="67" selection-start-column="21" selection-end-line="67" selection-end-column="21" />
               <folding>
-                <marker date="1495218018000" expanded="true" signature="737:802" ph="SELECT Nombr... usuario" />
-                <marker date="1495218018000" expanded="true" signature="2688:2726" ph="..." />
+                <element signature="e#463#547#0#HTML" expanded="true" />
+                <marker date="1495511456000" expanded="true" signature="737:802" ph="SELECT Nombr... usuario" />
+                <marker date="1495511456000" expanded="true" signature="2680:2718" ph="..." />
               </folding>
             </state>
           </provider>
@@ -52,8 +54,8 @@
       <file leaf-file-name="recuperarContrasena.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/view/recuperarContrasena.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="713">
-              <caret line="31" column="23" lean-forward="false" selection-start-line="28" selection-start-column="1" selection-end-line="31" selection-end-column="23" />
+            <state relative-caret-position="-205">
+              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -84,7 +86,30 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="552">
               <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-              <folding />
+              <folding>
+                <marker date="1495511361000" expanded="true" signature="35:1000" ph="..." />
+                <marker date="1495511361000" expanded="true" signature="51:999" ph="..." />
+                <marker date="1495511361000" expanded="true" signature="107:361" ph="..." />
+                <marker date="1495511361000" expanded="true" signature="138:360" ph="..." />
+                <marker date="1495511361000" expanded="true" signature="386:632" ph="..." />
+                <marker date="1495511361000" expanded="true" signature="417:631" ph="..." />
+                <marker date="1495511361000" expanded="true" signature="657:907" ph="..." />
+                <marker date="1495511361000" expanded="true" signature="688:906" ph="..." />
+                <marker date="1495511361000" expanded="true" signature="934:996" ph="..." />
+                <marker date="1495511361000" expanded="true" signature="945:995" ph="..." />
+                <marker date="1495511361000" expanded="true" signature="1019:1304" ph="..." />
+                <marker date="1495511361000" expanded="true" signature="1042:1303" ph="..." />
+                <marker date="1495511361000" expanded="true" signature="1063:1300" ph="..." />
+                <marker date="1495511361000" expanded="true" signature="1097:1299" ph="..." />
+                <marker date="1495511361000" expanded="true" signature="1322:1661" ph="..." />
+                <marker date="1495511361000" expanded="true" signature="1352:1660" ph="..." />
+                <marker date="1495511361000" expanded="true" signature="1406:1657" ph="..." />
+                <marker date="1495511361000" expanded="true" signature="1440:1656" ph="..." />
+                <marker date="1495511361000" expanded="true" signature="1679:1828" ph="..." />
+                <marker date="1495511361000" expanded="true" signature="1699:1827" ph="..." />
+                <marker date="1495511361000" expanded="true" signature="1753:1824" ph="..." />
+                <marker date="1495511361000" expanded="true" signature="1787:1823" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -190,6 +215,7 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -330,7 +356,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -362,24 +387,23 @@
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="UPDATED" />
           <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/controller/aceptarInvitacionEquipo.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/controller/aceptarPeticionJugador.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/controller/aceptarPeticiondeTorneo.php</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/controller/enviarInvitacion.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/controller/enviarPeticionTorneo.php</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/controller/enviarSolicitudAEquipo.php</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/controller/resumen.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/model/Equipo.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/core/router/allsession.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/core/session.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/model/Jugador.php</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/model/Torneo.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/view/aceptarInvitacionEquipo.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/view/consultarEquipos.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/view/bajaEquipo.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/view/bienvenidaJugador.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/view/crearPartido.php</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/view/crearTorneo.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/view/enviarPeticionTorneo.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/view/modificarDatos.php</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/view/public.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/view/recuperarContrasena.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/view/resumen.php</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/view/template/aside-menu.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/view/template/header.nosession.php</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/view/template/header.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/view/template/ini.noaside.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/view/template/ini.php</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Created" />
@@ -387,8 +411,8 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="CREATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/controller/resumen.submit.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/source/img/box.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/controller/bienvenidaJugador.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/admin/source/img/avatar/coordinador.png</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Deleted" />
@@ -593,7 +617,8 @@
       <workItem from="1494814823213" duration="266000" />
       <workItem from="1495047929119" duration="4894000" />
       <workItem from="1495128944725" duration="2723000" />
-      <workItem from="1495341116390" duration="20000" />
+      <workItem from="1495341116390" duration="128000" />
+      <workItem from="1495499287922" duration="1231000" />
     </task>
     <task id="LOCAL-00001" summary="Añadida Jugador::enviarSolicitudAEquipo, arreglado el query de eliminar torneo,queda pendiente implementacion de el controlador enviarSolicitudAEquipo y su vista">
       <created>1491604397422</created>
@@ -651,25 +676,33 @@
       <option name="project" value="LOCAL" />
       <updated>1495218178112</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Fixed: Envia correctamente el correo de recuperaciona la cuenta solicitada&#10;Error: no errores&#10;Pending:  dar diseño al mensjae que se envia y agregar notificaciones">
+      <created>1495341154451</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1495341154451</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71425000" />
+    <option name="totallyTimeSpent" value="72764000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="704" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24453124" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.012598425" sideWeight="0.525" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32283464" sideWeight="0.528125" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32283464" sideWeight="0.471875" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.012598425" sideWeight="0.475" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32913387" sideWeight="0.496875" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1033,7 +1066,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="552">
           <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1495511361000" expanded="true" signature="35:1000" ph="..." />
+            <marker date="1495511361000" expanded="true" signature="51:999" ph="..." />
+            <marker date="1495511361000" expanded="true" signature="107:361" ph="..." />
+            <marker date="1495511361000" expanded="true" signature="138:360" ph="..." />
+            <marker date="1495511361000" expanded="true" signature="386:632" ph="..." />
+            <marker date="1495511361000" expanded="true" signature="417:631" ph="..." />
+            <marker date="1495511361000" expanded="true" signature="657:907" ph="..." />
+            <marker date="1495511361000" expanded="true" signature="688:906" ph="..." />
+            <marker date="1495511361000" expanded="true" signature="934:996" ph="..." />
+            <marker date="1495511361000" expanded="true" signature="945:995" ph="..." />
+            <marker date="1495511361000" expanded="true" signature="1019:1304" ph="..." />
+            <marker date="1495511361000" expanded="true" signature="1042:1303" ph="..." />
+            <marker date="1495511361000" expanded="true" signature="1063:1300" ph="..." />
+            <marker date="1495511361000" expanded="true" signature="1097:1299" ph="..." />
+            <marker date="1495511361000" expanded="true" signature="1322:1661" ph="..." />
+            <marker date="1495511361000" expanded="true" signature="1352:1660" ph="..." />
+            <marker date="1495511361000" expanded="true" signature="1406:1657" ph="..." />
+            <marker date="1495511361000" expanded="true" signature="1440:1656" ph="..." />
+            <marker date="1495511361000" expanded="true" signature="1679:1828" ph="..." />
+            <marker date="1495511361000" expanded="true" signature="1699:1827" ph="..." />
+            <marker date="1495511361000" expanded="true" signature="1753:1824" ph="..." />
+            <marker date="1495511361000" expanded="true" signature="1787:1823" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1073,7 +1129,7 @@
         <state relative-caret-position="690">
           <caret line="30" column="19" lean-forward="true" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
           <folding>
-            <element signature="e#6#146#0#PHP" expanded="true" />
+            <element signature="e#6#146#0#PHP" expanded="false" />
             <marker date="1495050526000" expanded="true" signature="1295:1363" ph="SELECT Nombr... usuario" />
             <marker date="1495050526000" expanded="true" signature="1421:1459" ph="..." />
             <marker date="1495050526000" expanded="true" signature="1460:1461" ph="..." />
@@ -1083,19 +1139,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/view/recuperarContrasena.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="713">
-          <caret line="31" column="23" lean-forward="false" selection-start-line="28" selection-start-column="1" selection-end-line="31" selection-end-column="23" />
+        <state relative-caret-position="-205">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/controller/recuperarContrasena.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1194">
-          <caret line="10" column="9" lean-forward="false" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+        <state relative-caret-position="124">
+          <caret line="67" column="21" lean-forward="true" selection-start-line="67" selection-start-column="21" selection-end-line="67" selection-end-column="21" />
           <folding>
-            <marker date="1495218018000" expanded="true" signature="737:802" ph="SELECT Nombr... usuario" />
-            <marker date="1495218018000" expanded="true" signature="2688:2726" ph="..." />
+            <element signature="e#463#547#0#HTML" expanded="true" />
+            <marker date="1495511456000" expanded="true" signature="737:802" ph="SELECT Nombr... usuario" />
+            <marker date="1495511456000" expanded="true" signature="2680:2718" ph="..." />
           </folding>
         </state>
       </provider>
