@@ -19,7 +19,7 @@
                 <div class="form-control-cont">
                     <label class="control-label">Nombre de equipo:</label>
                     <div class="form-control-cont">
-                        <select onChange="change(this.value)" name="equipo" class="form-control full" id="EquipoSelect" data-validation="required"  data-validation-error-msg="Campo obligatorio">
+                        <select onChange="change(this.value)" name="equipo" class="form-control full" id="EquipoSelect" data-validation="required"  data-validation-error-msg="Seleccione un equipo a eliminar antes de proceder">
                             <?php
                                 listaEquipos();
                             ?>
