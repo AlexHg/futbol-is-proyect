@@ -4,9 +4,8 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cfc29a13-c3ca-4ce8-b0e9-799adeaf3932" name="Default" comment="Fixed: Envia correctamente el correo de recuperaciona la cuenta solicitada&#10;Error: no errores&#10;Pending:  dar diseño al mensjae que se envia y agregar notificaciones">
+    <list default="true" id="cfc29a13-c3ca-4ce8-b0e9-799adeaf3932" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/controller/recuperarContrasena.php" afterPath="$PROJECT_DIR$/admin/controller/recuperarContrasena.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -618,7 +617,7 @@
       <workItem from="1495047929119" duration="4894000" />
       <workItem from="1495128944725" duration="2723000" />
       <workItem from="1495341116390" duration="128000" />
-      <workItem from="1495499287922" duration="1231000" />
+      <workItem from="1495499287922" duration="1301000" />
     </task>
     <task id="LOCAL-00001" summary="Añadida Jugador::enviarSolicitudAEquipo, arreglado el query de eliminar torneo,queda pendiente implementacion de el controlador enviarSolicitudAEquipo y su vista">
       <created>1491604397422</created>
@@ -683,11 +682,18 @@
       <option name="project" value="LOCAL" />
       <updated>1495341154451</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Fixed: Envia correctamente el correo de recuperaciona la cuenta solicitada&#10;Error: no errores&#10;Pending:  dar diseño al mensjae que se envia y agregar notificaciones">
+      <created>1495511620799</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1495511620799</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72764000" />
+    <option name="totallyTimeSpent" value="72834000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="704" extended-state="6" />
