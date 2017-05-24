@@ -17,7 +17,7 @@
                 processingForm();
                 ?>
                 <br>
-                <input type="submit" name="submit" value="Registrarse" class="btn btn-primary" data-type="alerta">
+                <input type="submit" name="submit" value="Recuperar" class="btn btn-primary" data-type="alerta">
                 <br><br>
             </div>
         </form>
