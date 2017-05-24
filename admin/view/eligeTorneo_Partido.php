@@ -42,6 +42,6 @@ Notify::alert_if(
 
     Notify::alert_if(
     'Enfrentamiento con el mismo equipo',
-    'Se ha seleccionado el mismo equipos para el enfrentamiento',
+    'Se ha seleccionado el mismo equipo para el enfrentamiento',
     'Reintentar',
     isset($_GET['n']) && strcasecmp($_GET['n'],'sameTeam') == 0); 
