@@ -44,7 +44,7 @@
         
 ?>
 
-
+<!--
 <div style="background:#f9fcd4; padding:1rem;"><pre>
 <b>Datos de ejemplo</b>
 
@@ -60,3 +60,4 @@ Coordinador
     coordinador@gmail.com
     diegoelguapo
 </pre></div>
+-->
