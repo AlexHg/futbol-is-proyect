@@ -66,7 +66,6 @@
 
                                 <li class="active"><a href="#">Inicio</a></li>
                                 <li><a href="#">Conócenos</a></li>
-                                <li><a href="#"> Reglamentos Generales </a></li>
                                 <li><a href="#">Contáctanos</a></li>
                                 <li><a href="home">Acceder a mi cuenta</a></li>
                                 <li><a href="registrarCuenta">Registrarse</a></li>
