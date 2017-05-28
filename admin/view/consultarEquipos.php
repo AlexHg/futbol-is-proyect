@@ -8,18 +8,12 @@
         <tr>
             <th>#</th>
             <th>Equipo</th>
-            <th>Juegos totales</th>
-            <th>Juegos ganados</th>
-            <th>Juegos empatados</th>
-            <th>Juegos perdidos</th>
-            <th>Goles a favor</th>
-            <th>Goles en contra</th>
-            <th>Diferencia</th>
-            <th>Puntos</th>
+            <th>Capitán</th>
+            <th>Torneos</th>
         </tr>
         </thead>
         <tbody>
-            <?php print_table() ?>
+            <?php mostrarRapido() ?>
         </tbody>
     </table>
     <h2>Equipos de Soccer</h2>
@@ -28,14 +22,8 @@
         <tr>
             <th>#</th>
             <th>Equipo</th>
-            <th>Juegos totales</th>
-            <th>Juegos ganados</th>
-            <th>Juegos empatados</th>
-            <th>Juegos perdidos</th>
-            <th>Goles a favor</th>
-            <th>Goles en contra</th>
-            <th>Diferencia</th>
-            <th>Puntos</th>
+            <th>Capitán</th>
+            <th>Torneos</th>
         </tr>
         </thead>
         <tbody>

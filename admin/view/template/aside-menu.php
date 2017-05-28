@@ -3,7 +3,7 @@
     <div id="user">
         <h3>
             <span style="overflow: hidden;max-height: 19px;display: block;"><?php echo $_SESSION["name"]; ?></span>
-            <small><?php echo $_SESSION["rolename"]; ?></small>
+            <?php listarEquipos() ?>
         </h3>
     </div>
     <ul>

@@ -2,52 +2,38 @@
 Model::load("Torneo");
 Model::load("Equipo");
 
-function print_table(){
-    //Reemplazar por id de torneo
+function printEquipo($nombreequipo,$num){
+    $torneos = Equipo::getTorneos($nombreequipo);
+    if($torneos->num_rows > 0){ // Esta Inscrito en torneos, concatenar todos.
+        $torneos_array = array();
+        while ($row = $torneos->fetch_array(MYSQLI_ASSOC)) $torneos_array[] = $row['torneos'];
+        $torneos_string = implode(", ", $torneos_array);
+    }else{
+        $torneos_string = "Ningun Torneo Inscrito";
+    }        
+    echo '<tr>';
+    echo '<th scope="row">'.$num,'</th>';
+    echo '<td>'.$nombreequipo.'</td>';
+    echo '<td>'.Equipo::getCapitan($nombreequipo);.'</td>';
+    echo '<td>'.$torneos_string.'</td>';
+    echo '</tr>';
+}
+
+
+function mostrarRapido(){
     $equipos = Torneo::getEquiposTorneo2(1);
     $i = 1;
     while ($row = $equipos->fetch_array(MYSQLI_ASSOC)) {
-        $nombreequipo=$row["nombreequipo"];
-        $resultados =Equipo::getResultados($nombreequipo);
-        $puntos=$resultados[2]*3+$resultados[3];
-        $diferencia=$resultados[5]-$resultados[6];
-        echo '<tr>';
-        echo '<th scope="row">'.$i,'</th>';
-        echo '<td>'.$nombreequipo.'</td>';
-        echo '<td>'.$resultados[1].'</td>';
-        echo '<td>'.$resultados[2].'</td>';
-        echo '<td>'.$resultados[3].'</td>';
-        echo '<td>'.$resultados[4].'</td>';
-        echo '<td>'.$resultados[5].'</td>';
-        echo '<td>'.$resultados[6].'</td>';
-        echo '<td>'.$diferencia.'</td>';
-        echo '<td>'.$puntos.'</td>';
-        echo '</tr>';
+        printEquipo($row["nombreequipo"],$i);
         $i++;
     }
 }
 
-    function mostrarSoccer(){
-    //Reemplazar por id de torneo
+function mostrarSoccer(){
     $equipos = Torneo::getEquiposTorneo2(0);
     $i = 1;
     while ($row = $equipos->fetch_array(MYSQLI_ASSOC)) {
-        $nombreequipo=$row["nombreequipo"];
-        $resultados =Equipo::getResultados($nombreequipo);
-        $puntos=$resultados[2]*3+$resultados[3];
-        $diferencia=$resultados[5]-$resultados[6];
-        echo '<tr>';
-        echo '<th scope="row">'.$i,'</th>';
-        echo '<td>'.$nombreequipo.'</td>';
-        echo '<td>'.$resultados[1].'</td>';
-        echo '<td>'.$resultados[2].'</td>';
-        echo '<td>'.$resultados[3].'</td>';
-        echo '<td>'.$resultados[4].'</td>';
-        echo '<td>'.$resultados[5].'</td>';
-        echo '<td>'.$resultados[6].'</td>';
-        echo '<td>'.$diferencia.'</td>';
-        echo '<td>'.$puntos.'</td>';
-        echo '</tr>';
+        printEquipo($row["nombreequipo"],$i);
         $i++;
     }
 }
