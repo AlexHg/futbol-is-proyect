@@ -35,8 +35,8 @@ Notify::alert_if(
     isset($_GET['n']) && strcasecmp($_GET['n'],'done') == 0); 
 
   Notify::alert_if(
-    'Torneo Lleno',
-    'Ya no existen horarios disponibles para este torneo',
+    'Horarios no disponibles',
+    'No hay horarios disponibles para este torneo, ya que no tiene equipos inscritos o bien ya han sido seleccionados todos los horarios',
     'Aceptar',
     isset($_GET['n']) && strcasecmp($_GET['n'],'full') == 0); 
 
