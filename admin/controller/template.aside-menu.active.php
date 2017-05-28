@@ -8,6 +8,7 @@ function isActive($url){
 function listarEquipos(){
     switch($_SESSION['role']){
         case 1: // Jugador
+        if(!class_exists('Jugador')) Model::load("Jugador");
             $equipos = Jugador::getEquipos();
             if($equipos->num_rows > 0){
                 echo "<small>Jugador de:</small>";
@@ -19,7 +20,7 @@ function listarEquipos(){
             }
         break;
         case 2: // Capitan
-            Model::load("Equipo");
+        if(!class_exists('Equipo')) Model::load("Equipo");
             echo "<small> Capitán de ".Equipo::getNombreByCorreo($_SESSION["email"])."</small>";
         break;
         default:

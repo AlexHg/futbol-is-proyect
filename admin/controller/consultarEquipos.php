@@ -14,7 +14,7 @@ function printEquipo($nombreequipo,$num){
     echo '<tr>';
     echo '<th scope="row">'.$num,'</th>';
     echo '<td>'.$nombreequipo.'</td>';
-    echo '<td>'.Equipo::getCapitan($nombreequipo);.'</td>';
+    echo '<td>'.Equipo::getCapitan($nombreequipo).'</td>';
     echo '<td>'.$torneos_string.'</td>';
     echo '</tr>';
 }
