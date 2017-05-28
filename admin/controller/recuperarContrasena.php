@@ -77,6 +77,6 @@ function sendEmail($recipient,$nameRecipient,$password){
     if (!$mail->Send()) {
         echo "Error: " . $mail->ErrorInfo;
     } else {
-       echo "Se ha enviado el correo de recuperacion exitosamente!";
+       echo "Se ha enviado el correo de recuperacion exitosamente";
     }
 }
