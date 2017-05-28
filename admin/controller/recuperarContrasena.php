@@ -69,10 +69,10 @@ function sendEmail($recipient,$nameRecipient,$password){
     $mail->Subject = 'Recuperacion de Password';
 /*define mail body in html format
     $mail->MsgHTML(file_get_contents('correomaquetado.html'), dirname(ruta_al_archivo));*/
- $mail->msgHTML($nameRecipient.', haz solicitado la recuperacion de tu password aqui esta tu password :
- <br> <h1><span style="color: white;background-color: #1d937c">'.$password.'</span></h1><br> recomendamos que cambies tu password lo mas pronto posible ');
+ $mail->msgHTML($nameRecipient.',  la contraseña de tu cuenta dentro del Sistema del Club de Fútbol de ESCOM es:
+ <br> <h1><span style="color: white;background-color: #1d937c">'.$password.'</span></h1><br> Te recomendamos cambiarla pronto, dentro de la opción Modificar Datos.');
 /*altern mail body if html is blocked */
-    $mail->AltBody = $nameRecipient.'haz solicitado la recuperacion de tu password, aqui esta tu clave de acceso '.$password.' te recomendamos que cambies tu pasword lo mas pronto posible.';
+    $mail->AltBody = $nameRecipient.' la contraseña de tu cuenta dentro del Sistema del Club de Fútbol de ESCOM es: '.$password.' Te recomendamos cambiarla pronto, dentro de la opción de Modificar Datos.';
 //Enviamos el correo
     if (!$mail->Send()) {
         echo "Error: " . $mail->ErrorInfo;
