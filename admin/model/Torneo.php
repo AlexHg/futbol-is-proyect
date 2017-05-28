@@ -23,7 +23,7 @@ class Torneo{
     }
     public static function getPartidosSinJugar(){
         $conexion = Database::connect();
-        $consulta ="SELECT j.idjuego as juego, hj.diayhora as horario, f.descripcion as fase, f.IDFase as IDFase, t.nombre as torneo, t.IDTorneo as IDTorneo, SUBSTRING_INDEX(SUBSTRING_INDEX(GROUP_CONCAT(j.idEquipo), ',', 1), ',', -1) as equipo1, SUBSTRING_INDEX(SUBSTRING_INDEX(GROUP_CONCAT(j.idEquipo), ',', 2), ',', -1) as equipo2 from juego j, horario_juego hj, torneo t,fase f where idjuego not in (select jr.idjuego from juegosresultado jr) and j.idhorario=hj.idhorario and j.idfase=f.idfase and j.idtorneo=t.idtorneo group by(idjuego)";
+        $consulta ="SELECT j.idjuego as juego, hj.diayhora as horario, f.descripcion as fase, f.IDFase as IDFase, t.nombre as torneo, t.IDTorneo as IDTorneo, SUBSTRING_INDEX(SUBSTRING_INDEX(GROUP_CONCAT(DISTINCT j.idEquipo), ',', 1), ',', -1) as equipo1, SUBSTRING_INDEX(SUBSTRING_INDEX(GROUP_CONCAT(DISTINCT j.idEquipo), ',', 2), ',', -1) as equipo2 from juego j, horario_juego hj, torneo t,fase f where idjuego not in (select jr.idjuego from juegosresultado jr) and j.idhorario=hj.idhorario and j.idfase=f.idfase and j.idtorneo=t.idtorneo group by(idjuego)";
         if ($resultado=$conexion->query($consulta)) {
             return $resultado;
         } else {
@@ -33,7 +33,7 @@ class Torneo{
     }
     public static function getPartidosSinJugarByTorneo($IDTorneo){
         $conexion = Database::connect();
-        $consulta ="SELECT j.idjuego, hj.diayhora as horario, f.descripcion as fase, t.nombre as torneo, SUBSTRING_INDEX(SUBSTRING_INDEX(GROUP_CONCAT(j.idEquipo), ',', 1), ',', -1) as equipo1, SUBSTRING_INDEX(SUBSTRING_INDEX(GROUP_CONCAT(j.idEquipo), ',', 2), ',', -1) as equipo2 from juego j, horario_juego hj, torneo t,fase f where idjuego not in (select jr.idjuego from juegosresultado jr) and j.idhorario=hj.idhorario and j.idfase=f.idfase and j.idtorneo=t.idtorneo and j.idtorneo = $IDTorneo group by(idjuego);";
+        $consulta ="SELECT j.idjuego, hj.diayhora as horario, f.descripcion as fase, t.nombre as torneo, SUBSTRING_INDEX(SUBSTRING_INDEX(GROUP_CONCAT(DISTINCT j.idEquipo), ',', 1), ',', -1) as equipo1, SUBSTRING_INDEX(SUBSTRING_INDEX(GROUP_CONCAT(DISTINCT j.idEquipo), ',', 2), ',', -1) as equipo2 from juego j, horario_juego hj, torneo t,fase f where idjuego not in (select jr.idjuego from juegosresultado jr) and j.idhorario=hj.idhorario and j.idfase=f.idfase and j.idtorneo=t.idtorneo and j.idtorneo = $IDTorneo group by(idjuego);";
         if ($resultado=$conexion->query($consulta)) {
             return $resultado;
         } else {
