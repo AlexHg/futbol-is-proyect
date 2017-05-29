@@ -61,7 +61,7 @@ function sendEmail($recipient,$nameRecipient,$password){
     $dc_txt = encrypt_decrypt('decrypt', 'RUdwM1V4dGxIdzRNNWJrMzA0VVlPSjdYQndTazZ6SStNcTdSeUVXWEJGTT0=');
     $mail->Password = $dc_txt;
 //defining recipient (email,(optional) name)
-    $mail->SetFrom('sistemadefutbolescom@gmail.com', 'Diego de Sistema de futbol escom');
+    $mail->SetFrom('sistemadefutbolescom@gmail.com', 'Sistema de Futbol ESCOM');
 /*@var $recipient: email recipient
  *@var $namerecipient: name of the recipient*/
     $mail->AddAddress($recipient, $nameRecipient);
@@ -69,10 +69,10 @@ function sendEmail($recipient,$nameRecipient,$password){
     $mail->Subject = 'Recuperacion de Password';
 /*define mail body in html format
     $mail->MsgHTML(file_get_contents('correomaquetado.html'), dirname(ruta_al_archivo));*/
- $mail->msgHTML($nameRecipient.',  la contraseña de tu cuenta dentro del Sistema del Club de Fútbol de ESCOM es:
- <br> <h1><span style="color: white;background-color: #1d937c">'.$password.'</span></h1><br> Te recomendamos cambiarla pronto, dentro de la opción Modificar Datos.');
+ $mail->msgHTML($nameRecipient.',  la contrasena de tu cuenta dentro del Sistema del Club de Futbol de ESCOM es:
+ <br> <h1><span style="color: white;background-color: #1d937c">'.$password.'</span></h1><br> Te recomendamos cambiarla pronto, dentro de la opcion Modificar Datos.');
 /*altern mail body if html is blocked */
-    $mail->AltBody = $nameRecipient.' la contraseña de tu cuenta dentro del Sistema del Club de Fútbol de ESCOM es: '.$password.' Te recomendamos cambiarla pronto, dentro de la opción de Modificar Datos.';
+    $mail->AltBody = $nameRecipient.' la contrasena de tu cuenta dentro del Sistema del Club de Futbol de ESCOM es: '.$password.' Te recomendamos cambiarla pronto, dentro de la opcion de Modificar Datos.';
 //Enviamos el correo
     if (!$mail->Send()) {
         echo "Error: " . $mail->ErrorInfo;
