@@ -32,18 +32,15 @@
                     <li class="<?php isActive('/registrarEquipo') ?>"><a href="registrarEquipo"><span><i class="ti-plus"></i>Crear Equipo</span></a></li>
                 </ul>
             </li>
-            <li class="submenu <?php isActive('/aceptarInvitacionEquipo') ?>">
-                <a href="#">
-                    <span><i class="ti-email"></i>Invitaciones</span>
-                    <i class="ti-angle-right submenu-arrow"></i>    
-                </a>
-                <ul class="submenu-content">
-                    <li class="<?php isActive('/enviarSolicitudAEquipo') ?>"><a href="enviarSolicitudAEquipo"><span><i class="ti-plus"></i>Unirse a Un Equipo</span></a></li>
-                </ul>
-                <ul class="submenu-content">
-                    <li class="<?php isActive('/enviarSolicitudAEquipo') ?>"><a href="aceptarInvitacionEquipo"><span><i class="ti-plus"></i>Aceptar invitación de Equipo</span></a></li>
-                </ul>
+            <li class="<?php isActive('/enviarSolicitudAEquipo') ?>">
+                <a href="enviarSolicitudAEquipo"><span><i class="ti-plus"></i>Unirse a Un Equipo</span></a>
             </li>
+            <li class="<?php isActive('/enviarSolicitudAEquipo') ?>">
+                <a href="aceptarInvitacionEquipo">
+                    <span><i class="ti-plus"></i>Aceptar invitación de Equipo</span>
+                </a>
+            </li>
+            
         <?php }) ?>
 
         <?php Session::showOnly(array("role" => 2 ), function(){ ?>

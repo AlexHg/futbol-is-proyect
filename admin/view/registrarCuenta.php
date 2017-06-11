@@ -67,13 +67,16 @@
         </div>
     </div>
     <script>
-    function goToLogin(){
-        window.location="iniciarSesion"
-    }
-    $(document).ready(function(){openWindow("exito")});</script>
+        function goToLogin(){
+            window.location="iniciarSesion"
+        }
+        $(document).ready(function(){openWindow("exito")});
+    </script>
+
+
 <?php } else if(isset($_SESSION['n']) && strcasecmp($_SESSION['n'],'error') == 0){
     unset($_SESSION['n'])?>
-    <div class="overlay-container">
+    <!--<div class="overlay-container">
         <div class="window-container error">
             <h3>Correo Existente</h3>
             <center>La cuenta ya ha sido registrada anteriormente</center>
@@ -83,11 +86,11 @@
             </center>
         </div>
     </div>
-    <script>$(document).ready(function(){openWindow("error")});</script>
+    <script>$(document).ready(function(){openWindow("error")});</script>-->
 <?php }?>
 
 <?php
-Notify::confirm_if(
+Notify::alert_if_and(
     'Registro de Cuenta Exitoso',
     'Cuenta registrada exitosamente',
     isset($_GET['n']) && strcasecmp($_GET['n'],'done') == 0,

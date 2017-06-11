@@ -45,7 +45,7 @@
                     </a></li>
                 </ul>
                 <a href="#" id="profile">
-                    <img src="source/img/avatar/default.png" alt="">
+                    <img src="source/img/avatar/default.png" alt=""> &nbsp;&nbsp;<span>Opciones</span>
                 </a>
                 <ul id="profil">
                 <?php Session::hideFrom(array("role" => 3 ), function(){ ?>
