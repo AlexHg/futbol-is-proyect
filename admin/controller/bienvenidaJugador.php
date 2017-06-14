@@ -21,7 +21,7 @@ function enlistarEquipos(){
         <tr>
             <td>'.++$index.'</td>
             <td>'.$equipo['nombreEquipo'].'</td>
-            <td>'.$equipo['nombreCapitan'].'</td>
+            <td>'.$equipo['nombreCapitan'].' - Tel: '.$equipo['TelCapitan'].'</td>
             <td>'.$equipo['DescripcionUniforme'].'</td>
         </tr>';
         }
